@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Work.css"; // Ensure you have the necessary CSS
@@ -6,7 +6,7 @@ import "./Work.css"; // Ensure you have the necessary CSS
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 800px)": function() {
         gsap.to(".racesWrapper .races", {
@@ -16,7 +16,7 @@ const Work = () => {
             scroller: "body",
             markers: true,
             start: "top 15%",
-            end: "top -300%",
+            end: "top -150%",
             scrub: 2,
             pin: true
           }
