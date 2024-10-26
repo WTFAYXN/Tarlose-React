@@ -48,7 +48,7 @@ const Work = () => {
                 <div className="sub-card-cont d-flex">
 
                     <a href="./work_live.html" className="card_link">
-                    <div className="works-card-1 ">
+                    <div className="works-card-2 ">
                         <div className="cards-headding d-flex justify-content-between">
                             <div className="title-work-card">
                                 <h3>Cyberkalki</h3>
@@ -59,7 +59,7 @@ const Work = () => {
                         </div>
 
                         <div className="work-img-cont">
-                            <img src={Cyberkalki} className="img-thumbnail" alt=""/>
+                            <img src={Cyberkalki} className="rounded img-fluid" alt=""/>
                         </div>
 
                     </div>
