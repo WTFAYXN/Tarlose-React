@@ -31,6 +31,8 @@ import Client from "../assets/svgs/Client-Centric.svg";
 import Partnership from "../assets/svgs/Partnership.svg";
 import Results from "../assets/svgs/Results.svg";
 import Work from "../components/Work-slider/Work";
+import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
+import FAQ from "../components/Faqs/Faq";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -370,6 +372,101 @@ const Home = () => {
 
 
                     <Work />
+
+
+
+
+
+
+                                            
+                                    {/* <!-- About Us  --> */}
+
+                        <div className="card text-bg-dark">
+                            <img src="./assets/images/image-2.png" className="card-img" alt="..."/>
+                            <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <h5 className="card-title">What our Clients say About us</h5>
+                                <p className="card-text">At Tarlose, we take pride in delivering exceptional digital products and
+                                    services
+                                    that drive success for our clients. Here's what some of our satisfied clients have to say about
+                                    their experience working with us</p>
+                            </div>
+                        </div>
+{/* 
+                        <!-- testimonials design  --> */}
+
+
+                        <div className="container">
+                            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 ">
+
+                                <div className="col p-0">
+
+                                    <div className="test-col">
+                                        <div className="text-white">
+                                            <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
+                                            <p>Their team's expertise in web development and design resulted in a visually stunning
+                                                and
+                                                user-friendly e-commerce platform. Our online sales have skyrocketed, and we
+                                                couldn't be
+                                                happier.
+                                            </p>
+                                        </div>
+                                        <div className="testi-cont d-flex  text-white ">
+
+                                            <div className="test-name d-flex  rounded">
+                                                <img src="assets/svg/Profile.svg" alt="" />
+
+                                                <div className="test-sub-cont">
+                                                    <h6>John Smith</h6>
+                                                    <p>CEO of Chic Boutique</p>
+                                                </div>
+                                                <button className="test-btn">Open Website</button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div className="col p-0 ">
+
+                                    <div className="test-col">
+                                        <div className="text-white">
+                                            <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
+                                            <p>Their team's expertise in web development and design resulted in a visually stunning
+                                                and
+                                                user-friendly e-commerce platform. Our online sales have skyrocketed, and we
+                                                couldn't be
+                                                happier.
+                                            </p>
+                                        </div>
+                                        <div className="testi-cont d-flex text-white">
+
+                                            <div className="test-name d-flex rounded">
+                                                <img src="assets/svg/Profile.svg" alt="" />
+
+                                                <div className="test-sub-cont">
+                                                    <h6>John Smith</h6>
+                                                    <p>CEO of Chic Boutique</p>
+                                                </div>
+                                                <button className="test-btn">Open Website</button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <ThreeRowSlider />
+
+
+
+                        {/* <!-- FAQ  --> */}
+
+                        <FAQ />
 
       <Footer />
     </>

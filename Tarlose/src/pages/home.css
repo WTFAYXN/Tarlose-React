@@ -401,3 +401,32 @@ video {
 .exp-col {
     border: 1px solid #262626;
 }
+
+
+
+/* testimonial design  */
+
+.test-name {
+    background-color: rgba(36, 36, 36, 0.20);
+    padding: 20px;
+    gap: 1rem;
+}
+
+.test-btn {
+    background-color: #262626;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 18px;
+    font-size: 14px;
+}
+
+.test-col {
+    padding: 5rem;
+    border: 1px solid #262626;
+
+}
+
+.test-sub-cont {
+    padding: 0 20px;
+}
