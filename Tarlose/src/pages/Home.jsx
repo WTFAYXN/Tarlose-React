@@ -7,7 +7,10 @@ import "./home.css";
 import HeroVideo from "../assets/videos-audio/universe.mp4";
 import TarloseTheme from "../assets/videos-audio/tarlose-theme-sound.mp3";
 import gsap from "gsap";
-
+import cardBg from "../assets/svgs/cardbg.svg";
+import WebDev from "../assets/svgs/WebsiteDevelopment.svg";
+import GraphicDesign from "../assets/svgs/Design.svg";
+import Marketing from "../assets/svgs/Marketing.svg";
 // Companies Logo
 import AleviaWellness from "../assets/trusted-companies/alevia-wellness.png";
 import Amorfume from "../assets/trusted-companies/Amorfume.png";
@@ -185,6 +188,98 @@ const Home = () => {
         
                 </div>
             </div>
+
+            {/* Services  */}
+
+            <div className="container" id="Service">
+                <h5 className="text-center text-white">Our service</h5>
+                <h3 className="text-center mb-5 text-white headding-ser-para text-capitalize">More than just code a
+                    comprehensive digital
+                    solution for your digital needs
+                </h3>
+
+                <section className="cards-scroll">
+                    <div className="card-row">
+
+
+                        <div className="card">
+                            <div className="card__body">
+                                <img src={cardBg} alt="" className="card_img" />
+                                <div className="overlay-img"></div>
+                                <div className="card__content card-img-overlay">
+
+                                    <div className="card-para-cont">
+                                        <h4 className="num-card">1</h4>
+                                        <h4 className="card-headding">Website Development</h4>
+                                            <p>We use innovative solutions to create and/or improve <br/> customized
+                                                software.</p>
+                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                    </div>
+
+
+
+                                    <div className="img-wrapper">
+                                        <img src={WebDev} alt=""/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card__body">
+                                <img src={cardBg} alt="" className="card_img" />
+                                <div className="overlay-img"></div>
+                                <div className="card__content card-img-overlay">
+
+                                    <div className="card-para-cont">
+                                        <h4 className="num-card m-0">2</h4>
+                                        <h4 className="card-headding py-3">Graphic <br/> Design</h4>
+                                            <p>We use innovative solutions to create and/or improve <br/> customized
+                                                software.</p>
+                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                    </div>
+
+
+
+                                    <div className="img-wrapper">
+                                        <img src={GraphicDesign} alt=""/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card__body">
+                                <img src={cardBg} alt="" className="card_img"/>
+                                <div className="overlay-img"></div>
+                                <div className="card__content card-img-overlay">
+
+                                    <div className="card-para-cont">
+                                        <h4 className="num-card">3</h4>
+                                        <h4 className="card-headding py-3">Marketing</h4>
+                                            <p>We use innovative solutions to create and/or improve <br /> customized
+                                                software.</p>
+                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                    </div>
+
+
+
+                                    <div className="img-wrapper">
+                                        <img src={Marketing} alt="" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+
+            </div>
+
 
       <Footer />
     </>
