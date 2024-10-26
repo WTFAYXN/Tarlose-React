@@ -30,6 +30,7 @@ import Expertise from "../assets/svgs/Expertise.svg";
 import Client from "../assets/svgs/Client-Centric.svg";
 import Partnership from "../assets/svgs/Partnership.svg";
 import Results from "../assets/svgs/Results.svg";
+import Work from "../components/Work-slider/Work";
 
 const Home = () => {
   const trackRef = useRef(null);
