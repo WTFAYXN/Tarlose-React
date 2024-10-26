@@ -1,36 +1,30 @@
-import "./Work.css";
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./Work.css"; // Ensure you have the necessary CSS
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
+  useEffect(() => {
+    ScrollTrigger.matchMedia({
+      "(min-width: 800px)": function() {
+        gsap.to(".racesWrapper .races", {
+          transform: "translateX(-220%)",
+          scrollTrigger: {
+            trigger: ".racesWrapper",
+            scroller: "body",
+            markers: true,
+            start: "top 15%",
+            end: "top -300%",
+            scrub: 2,
+            pin: true
+          }
+        });
+      }
+    });
+  }, []);
 
-
-    // scroll-slider 
-
-// Work Card animation 
-
-ScrollTrigger.matchMedia({
-    "(min-width: 800px)": function(){
-      gsap.to(".racesWrapper .races",{
-    transform:"translateX(-220%)",
-    scrollTrigger:{
-      trigger:" .racesWrapper",
-      scroller:"body",
-      // markers:true,
-      start:"top 15%",
-      end:"top -300%",
-      scrub:2,
-      pin:true
-      
-    }
-  
-  })
-    }
-  })
-  
     return(
         <>
         {/* <!-- gsap scroll-slider  -->
