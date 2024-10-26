@@ -368,6 +368,8 @@ const Home = () => {
                     </div>
 
 
+                    <Work />
+
       <Footer />
     </>
   );
