@@ -389,3 +389,15 @@ video {
 }
 
 
+
+
+/* experience section  */
+
+.exp-card {
+    padding: 5rem 5rem 0 5rem;
+
+}
+
+.exp-col {
+    border: 1px solid #262626;
+}

@@ -26,6 +26,11 @@ import Verifiers from "../assets/trusted-companies/verifiers.png";
 import Platforms from "../components/Platforms/Platforms";
 
 
+import Expertise from "../assets/svgs/Expertise.svg";
+import Client from "../assets/svgs/Client-Centric.svg";
+import Partnership from "../assets/svgs/Partnership.svg";
+import Results from "../assets/svgs/Results.svg";
+
 const Home = () => {
   const trackRef = useRef(null);
   const controlBtnRef = useRef(null);
@@ -280,6 +285,88 @@ const Home = () => {
             </div>
 
             <Platforms />
+
+
+            {/* Why choose us */}
+
+                            
+
+                    <div className="card text-bg-dark">
+                        <img src="./assets/images/image-2.png" className="card-img" alt="..."/>
+                        <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                            <h5 className="card-title">Why Choose Tarlose?</h5>
+                            <p className="card-text">Experience excellence in digital craftsmanship with our team of skilled
+                                professionals dedicated to delivering exceptional results.</p>
+                        </div>
+                    </div>
+
+                    <div className="container">
+                        <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
+
+                            <div className="col p-0 m-0 exp-col">
+                                <div className="exp-card">
+                                    <div className="d-flex align-items-center gap-4">
+                                        <img src={Expertise} alt=""/>
+                                        <h6>Expertise</h6>
+                                    </div>
+                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                        understanding
+                                        of
+                                        the
+                                        digital
+                                        landscape. We stay updated with the latest industry trends and best practices to deliver
+                                        cutting-edge solutions.</p>
+                                </div>
+                            </div>
+                            <div className="col  p-0 m-0 exp-col">
+                                <div className="exp-card ">
+                                    <div className="d-flex align-items-center gap-4">
+                                    <img src={Client} alt=""/>
+                                        <h6>Client-Centric Approach</h6>
+                                    </div>
+                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                        understanding
+                                        of
+                                        the
+                                        digital
+                                        landscape. We stay updated with the latest industry trends and best practices to deliver
+                                        cutting-edge solutions.</p>
+                                </div>
+                            </div>
+                            <div className="col p-0 m-0 exp-col">
+                                <div className="exp-card">
+                                    <div className="d-flex align-items-center gap-4">
+                                       <img src={Results} alt=""/>
+                                        <h6>Results-Driven Solutions</h6>
+                                    </div>
+                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                        understanding
+                                        of
+                                        the
+                                        digital
+                                        landscape. We stay updated with the latest industry trends and best practices to deliver
+                                        cutting-edge solutions.</p>
+                                </div>
+                            </div>
+                            <div className="col p-0 m-0 exp-col">
+                                <div className="exp-card">
+                                    <div className="d-flex align-items-center gap-4">
+                                        <img src={Partnership} alt=""/>
+                                        <h6>Collaborative Partnership</h6>
+                                    </div>
+                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                        understanding
+                                        of
+                                        the
+                                        digital
+                                        landscape. We stay updated with the latest industry trends and best practices to deliver
+                                        cutting-edge solutions.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
 
       <Footer />
     </>
