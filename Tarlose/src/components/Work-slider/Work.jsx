@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Work.css"; // Ensure you have the necessary CSS
-
+import Cyberkalki from "../../assets/Work/Cyberkalki.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
@@ -51,15 +51,15 @@ const Work = () => {
                     <div className="works-card-1 ">
                         <div className="cards-headding d-flex justify-content-between">
                             <div className="title-work-card">
-                                <h3>My App</h3>
-                                <h6 id="display-text">App | 2024</h6>
+                                <h3>Cyberkalki</h3>
+                                <h6 id="display-text">Wordpress Website | 2024</h6>
                             </div>
 
                             <p className="m-0">Case study</p>
                         </div>
 
                         <div className="work-img-cont">
-                            <img src="assets/images/sample-card-img.avif" className="img-thumbnail" alt=""/>
+                            <img src={Cyberkalki} className="img-thumbnail" alt=""/>
                         </div>
 
                     </div>
