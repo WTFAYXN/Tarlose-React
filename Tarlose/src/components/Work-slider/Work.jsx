@@ -13,12 +13,12 @@ const Work = () => {
           transform: "translateX(-220%)",
           scrollTrigger: {
             trigger: ".racesWrapper",
-            scroller: "body",
+            // scroller: "body",
             markers: true,
-            start: "top 15%",
-            end: "top -150%",
+            start: "top 10%",
+            end: "top 300%",
             scrub: 2,
-            pin: true
+            pin: true,
           }
         });
       }
@@ -29,7 +29,7 @@ const Work = () => {
         <>
         {/* <!-- gsap scroll-slider  -->
 
-<!-- work section  -->
+            <!-- work section  -->
  */}
 
 
