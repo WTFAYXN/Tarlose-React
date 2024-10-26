@@ -1,14 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import Home from './pages/Home'
+import { useState } from 'react';
+import './App.css';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
 
+
   return (
-    <>
-    <Home />
-   
-    </>
-  )
+      <div className="App">
+    <Router>
+        <Routes>
+          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="/" element={<Home />} />
+        </Routes>
+    </Router>
+      </div>
+  );
 }
 
-export default App
+export default App;
