@@ -23,6 +23,7 @@ import BediGroup from "../assets/trusted-companies/the-bedi-group.png";
 import Uniekart from "../assets/trusted-companies/uniekart.png";
 import NehaSavara from "../assets/trusted-companies/healwithneha.png";
 import Verifiers from "../assets/trusted-companies/verifiers.png";
+import Platforms from "../components/Platforms/Platforms";
 
 
 const Home = () => {
@@ -276,10 +277,9 @@ const Home = () => {
 
                     </div>
                 </section>
-
-
             </div>
 
+            <Platforms />
 
       <Footer />
     </>
