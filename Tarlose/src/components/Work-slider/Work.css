@@ -13,16 +13,28 @@
     text-decoration: none;
 }
 
-.works-card-1 {
+.works-card-2 {
     padding: 1.815rem 2.815rem 2.815rem;
     /* background-color: #559295; */
-    background-image: linear-gradient(#62a2a4, #13474a);
+    background-image: linear-gradient(#9C0808, #202020);
+    /* background-color: #9C0808; */
 
     border-radius: 20px;
     width: 34.375rem;
     min-height: 34rem;
     transition: 500ms;
-    box-shadow: 0px 10px 50px rgba(85, 146, 149, 0.30);
+    box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
+}
+.works-card-1 {
+    padding: 1.815rem 2.815rem 2.815rem;
+    /* background-color: #559295; */
+    background-image: linear-gradient(#8cd34a, #202020);
+
+    border-radius: 20px;
+    width: 34.375rem;
+    min-height: 34rem;
+    transition: 500ms;
+    box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
 }
 
 .work-cont {
@@ -36,6 +48,8 @@
 .works-cards-cont {
     /* width: 50%; */
     width:calc(100% / 2);
+    /* width: 460px;
+    height: 380px; */
 
 }
 
@@ -87,7 +101,7 @@
 
 .sub-card-cont  {
     margin-left: 50px;
-    gap: 30px;
+    gap: 2.625rem;
 }
 .races {
 	/* width:fit-content; */
