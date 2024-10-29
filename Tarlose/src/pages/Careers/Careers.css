@@ -1,0 +1,62 @@
+body {
+    color: #fff !important;
+  }
+
+.carrer-cont {
+    background-color: #262626 ;
+    display: inline-block;
+    padding: 12px 14px;
+}
+
+.career-card {
+    padding-top: 100px;
+}
+
+.inner-card {
+    padding-right: 50px;
+}
+
+.inner-card-hedding {
+    /* color:#8d6a9f; */
+    font-family: Gilroy-SemiBold;
+
+
+}
+
+.hr-divider {
+    border: 4px solid #262626;
+    /* margin: 0 !important; */
+}
+
+.start-pro-cont {
+    background-color: rgba(36, 36, 36, 0.20);
+    padding: 24px 40px;
+}
+
+.btn-start {
+    color: #fff;
+    padding: 18px 34px;
+    background-color: #8d6a9f;
+    font-weight: 500;
+}
+
+.collab-txt {
+    background-color: #262626;
+    padding: 14px 20px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .start-pro-cont{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

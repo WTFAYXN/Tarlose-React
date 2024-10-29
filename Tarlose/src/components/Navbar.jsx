@@ -8,7 +8,7 @@ const Navbar =() => {
         <>
          <nav className="navbar navbar-expand-lg p-0">
             <div className="container">
-                <a className="navbar-brand p-0" href="index.html">
+                <a className="navbar-brand p-0" href="/">
                     <img src={logo} alt="Tarlose" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -19,7 +19,7 @@ const Navbar =() => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
                         <li className="nav-item">
-                            <a className="nav-link active" href="index.html">Home</a>
+                            <a className="nav-link active" href="/">Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#Service">Services</a>
@@ -31,7 +31,7 @@ const Navbar =() => {
                             <a className="nav-link" href="About.html">About</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="Career.html">Careers</a>
+                            <a className="nav-link" href="/career">Careers</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="Blog.html">Blogs</a>
