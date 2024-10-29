@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/Logos/Tarlose.svg";
 
+const Navbar = () => {
+  const [activeLink, setActiveLink] = useState(() => {
+    return localStorage.getItem('activeNavLink') || '/';
+  });
 
-const Navbar =() => { 
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('#navList .nav-link');
+
+    function removeActiveClass() {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        removeActiveClass();
+        this.classList.add('active');
+        localStorage.setItem('activeNavLink', this.getAttribute('href'));
+        setActiveLink(this.getAttribute('href'));
+      });
+    });
+
+    const currentLink = document.querySelector(`#navList .nav-link[href="${activeLink}"]`);
+    if (currentLink) {
+      removeActiveClass();
+      currentLink.classList.add('active');
+    }
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', function(event) {
+          removeActiveClass();
+          this.classList.add('active');
+          localStorage.setItem('activeNavLink', this.getAttribute('href'));
+          setActiveLink(this.getAttribute('href'));
+        });
+      });
+    };
+  }, [activeLink]);
+
     return (
         <>
          <nav className="navbar navbar-expand-lg p-0">
@@ -28,13 +68,13 @@ const Navbar =() => {
                             <a className="nav-link" href="#Work">Work</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="About.html">About</a>
+                            <a className="nav-link" href="/about">About</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/career">Careers</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="Blog.html">Blogs</a>
+                            <a className="nav-link" href="/blogs">Blogs</a>
                         </li>
                     </ul>
                     <button type="button" className="nav-btn px-4 py-2 rounded border-0">
