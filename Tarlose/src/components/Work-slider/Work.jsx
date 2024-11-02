@@ -7,22 +7,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   useLayoutEffect(() => {
-    ScrollTrigger.matchMedia({
-      "(min-width: 800px)": function() {
-        gsap.to(".racesWrapper .races", {
-          transform: "translateX(-220%)",
-          scrollTrigger: {
-            trigger: ".racesWrapper",
-            // scroller: "body",
-            markers: true,
-            start: "top 10%",
-            end: "top 300%",
-            scrub: 2,
-            pin: true,
-          }
-        });
-      }
+    let ctx = gsap.context(() => {
+      ScrollTrigger.matchMedia({
+        "(min-width: 800px)": function () {
+          // Horizontal scroll animation
+          gsap.to(".races", {
+            x: "-220%", 
+            scrollTrigger: {
+              trigger: ".racesWrapper",
+              start: "top 10%",
+              end: "top -300%",
+              scrub: 2,
+              pin: true,
+            //   markers: true 
+            }
+          });
+        }
+      });
     });
+
+    // Clean up ScrollTrigger instances on component unmount
+    return () => ctx.revert();
   }, []);
 
     return(
@@ -33,8 +38,8 @@ const Work = () => {
  */}
 
 
-<div className="racesWrapper text-white" id="Work">
-    <div className="races">
+<div className="racesWrapper text-white" id="Work" >
+    <div className="races" >
         <div className="work-cont">
             <h2 className="work-headding">We let <span>our work</span> speak for itself.</h2>
             <p className="work-para">Our experts develop customized native apps and software solutions with

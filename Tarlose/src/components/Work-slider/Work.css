@@ -2,8 +2,8 @@
 
 /* work section  */
 
-/* 
-.racesWrapper {
+
+/* .racesWrapper {
     height: 100vh;
     margin: 10rem 0 !important;
 } */
@@ -106,6 +106,6 @@
 .races {
 	/* width:fit-content; */
 	display:flex;
-    width: calc(100% / 1);
+    /* width: calc(100% / 1); */
 	/* flex-wrap:nowrap; */
 }
