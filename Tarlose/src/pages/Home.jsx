@@ -1,4 +1,4 @@
-import React, {  useRef, useEffect, useLayoutEffect  } from "react";
+import React, { useRef, useEffect, useLayoutEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
@@ -35,173 +35,163 @@ import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
 import FAQ from "../components/Faqs/Faq";
 
 const Home = () => {
-  const trackRef = useRef(null);
-  const controlBtnRef = useRef(null);
+    const trackRef = useRef(null);
+    const controlBtnRef = useRef(null);
 
-  useEffect(() => {
-    const track = trackRef.current;
-    const controlBtn = controlBtnRef.current;
+    useEffect(() => {
+        const track = trackRef.current;
+        const controlBtn = controlBtnRef.current;
 
-    const playPause = () => {
-      if (track.paused) {
-        track.play();
-        controlBtn.className = "pause";
-      } else {
-        track.pause();
-        controlBtn.className = "play";
-      }
-    };
+        const playPause = () => {
+            if (track.paused) {
+                track.play();
+                controlBtn.className = "pause";
+            } else {
+                track.pause();
+                controlBtn.className = "play";
+            }
+        };
 
-    const handleTrackEnded = () => {
-      controlBtn.className = "play";
-    };
+        const handleTrackEnded = () => {
+            controlBtn.className = "play";
+        };
 
-    controlBtn.addEventListener("click", playPause);
-    track.addEventListener("ended", handleTrackEnded);
+        controlBtn.addEventListener("click", playPause);
+        track.addEventListener("ended", handleTrackEnded);
 
-    // Cleanup event listeners on component unmount
-    return () => {
-      controlBtn.removeEventListener("click", playPause);
-      track.removeEventListener("ended", handleTrackEnded);
-    };
-  }, []);
+        // Cleanup event listeners on component unmount
+        return () => {
+            controlBtn.removeEventListener("click", playPause);
+            track.removeEventListener("ended", handleTrackEnded);
+        };
+    }, []);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from("#home h1", {
-        y: 100,
-        opacity: 0,
-        delay: 0.5,
-        duration: 0.9,
-        stagger: 0.3
-      });
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from("#home h1", {
+                y: 100,
+                opacity: 0,
+                delay: 0.5,
+                duration: 0.9,
+                stagger: 0.3
+            });
 
-      gsap.from("#home .content-home", {
-        y: 100,
-        opacity: 0,
-        delay: 1.5,
-        duration: 0.9,
-        stagger: 0.3
-      });
+            gsap.from("#home .content-home", {
+                y: 100,
+                opacity: 0,
+                delay: 1.5,
+                duration: 0.9,
+                stagger: 0.3
+            });
 
-      gsap.from("#btn-fade", {
-        y: 100,
-        opacity: 0,
-        delay: 1.7,
-        duration: 0.9,
-        stagger: 0.3
-      });
-    });
+            gsap.from("#btn-fade", {
+                y: 100,
+                opacity: 0,
+                delay: 1.7,
+                duration: 0.9,
+                stagger: 0.3
+            });
+        });
 
-    // Cleanup GSAP context on component unmount
-    return () => ctx.revert();
-  }, []);
+        // Cleanup GSAP context on component unmount
+        return () => ctx.revert();
+    }, []);
 
-  return (
-    <>
-      <Cursor />
-      <Navbar />
-      <div className="container hero" id="home">
-        <video autoPlay loop muted>
-          <source src={HeroVideo} type="video/mp4" />
-        </video>
+    return (
+        <>
+            <Cursor />
+            <Navbar />
+            <div className="container hero" id="home">
+                <video autoPlay loop muted>
+                    <source src={HeroVideo} type="video/mp4" />
+                </video>
 
-        <audio id="track" ref={trackRef}>
-          <source src={TarloseTheme} type="audio/mpeg" />
-        </audio>
+                <audio id="track" ref={trackRef}>
+                    <source src={TarloseTheme} type="audio/mpeg" />
+                </audio>
 
-        <div id="player-container">
-          <div id="play-pause" className="play" ref={controlBtnRef}>
-            Play
-          </div>
-        </div>
+                <div id="player-container">
+                    <div id="play-pause" className="play" ref={controlBtnRef}>
+                        Play
+                    </div>
+                </div>
 
-        <h1 className="text-white text-center main-heading-text">
-          Design. Develop. Dominate.
-        </h1>
-        <div className="content-home d-flex justify-content-center align-items-center my-5 ">
-          <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
-            <p>for</p>
-            <p>
-              <span>Startups</span>
-            </p>
-            <p>,</p>
-            <p>
-              <span>Agencies</span>
-            </p>
-            <p>,</p>
-            <p>
-              <span>SMBs</span>
-            </p>
-            <p>and</p>
-            <p>
-              <span>Social Good</span>
-            </p>
-          </div>
-        </div>
+                <h1 className="text-white text-center main-heading-text">
+                    Design. Develop. Dominate.
+                </h1>
+                <div className="content-home d-flex justify-content-center align-items-center my-5 ">
+                    <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
+                        <p>for</p>
+                        <p>
+                            <span>Startups</span>
+                        </p>
+                        <p>,</p>
+                        <p>
+                            <span>Agencies</span>
+                        </p>
+                        <p>,</p>
+                        <p>
+                            <span>SMBs</span>
+                        </p>
+                        <p>and</p>
+                        <p>
+                            <span>Social Good</span>
+                        </p>
+                    </div>
+                </div>
 
-        <div className="d-flex justify-content-center">
-          <div id="btn-fade">
-            <a href="#Work">
-              <button className="btn btn-work px-3 py-2" type="button">
-                Our Works
-              </button>
-            </a>
-            <a href="tel: 91+8291617114">
-              <button className="btn btn-contact px-3 py-2" type="button">
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+                <div className="d-flex justify-content-center">
+                    <div id="btn-fade">
+                        <a href="#Work">
+                            <button className="btn btn-work px-3 py-2" type="button">
+                                Our Works
+                            </button>
+                        </a>
+                        <a href="tel: 91+8291617114">
+                            <button className="btn btn-contact px-3 py-2" type="button">
+                                Contact Us
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-      <div className=" container marquee-title-cont">
+            <div className=" container marquee-title-cont">
                 <p className="m-0 marquee-title rounded-5 ">Trusted By 50+ Companies</p>
             </div>
-{/* 
+            {/* 
             <!-- scroller section  -->
 
             <!-- companies logo  --> */}
 
             <div className="slider my-5">
                 <div className="slide-track">
-                    <div className="slide">
-                        <img src={Uniekart} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={Amorfume} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={Bettermind} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={TheHausCo} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={MaavisProjects} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={Cyberkalki} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={AleviaWellness} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={NehaSavara} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={BediGroup} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={Verifiers} alt="" />
-                    </div>
-                    <div className="slide">
-                        <img src={BiryaniBar} alt="" />
-                    </div>
-        
+                    <div className="slide"><img src={Uniekart} alt="" /></div>
+                    <div className="slide"><img src={Amorfume} alt="" /></div>
+                    <div className="slide"><img src={Bettermind} alt="" /></div>
+                    <div className="slide"><img src={TheHausCo} alt="" /></div>
+                    <div className="slide"><img src={MaavisProjects} alt="" /></div>
+                    <div className="slide"><img src={Cyberkalki} alt="" /></div>
+                    <div className="slide"><img src={AleviaWellness} alt="" /></div>
+                    <div className="slide"><img src={NehaSavara} alt="" /></div>
+                    <div className="slide"><img src={BediGroup} alt="" /></div>
+                    <div className="slide"><img src={Verifiers} alt="" /></div>
+                    <div className="slide"><img src={BiryaniBar} alt="" /></div>
+                    {/* <!-- Duplicate slides for seamless loop --> */}
+                    <div className="slide"><img src={Uniekart} alt="" /></div>
+                    <div className="slide"><img src={Amorfume} alt="" /></div>
+                    <div className="slide"><img src={Bettermind} alt="" /></div>
+                    <div className="slide"><img src={TheHausCo} alt="" /></div>
+                    <div className="slide"><img src={MaavisProjects} alt="" /></div>
+                    <div className="slide"><img src={Cyberkalki} alt="" /></div>
+                    <div className="slide"><img src={AleviaWellness} alt="" /></div>
+                    <div className="slide"><img src={NehaSavara} alt="" /></div>
+                    <div className="slide"><img src={BediGroup} alt="" /></div>
+                    <div className="slide"><img src={Verifiers} alt="" /></div>
+                    <div className="slide"><img src={BiryaniBar} alt="" /></div>
                 </div>
             </div>
+
 
             {/* Services  */}
 
@@ -225,15 +215,15 @@ const Home = () => {
                                     <div className="card-para-cont">
                                         <h4 className="num-card">1</h4>
                                         <h4 className="card-headding">Website Development</h4>
-                                            <p>We use innovative solutions to create and/or improve <br/> customized
-                                                software.</p>
-                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <p>We use innovative solutions to create and/or improve <br /> customized
+                                            software.</p>
+                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
                                     </div>
 
 
 
                                     <div className="img-wrapper">
-                                        <img src={WebDev} alt=""/>
+                                        <img src={WebDev} alt="" />
                                     </div>
                                 </div>
 
@@ -247,16 +237,16 @@ const Home = () => {
 
                                     <div className="card-para-cont">
                                         <h4 className="num-card m-0">2</h4>
-                                        <h4 className="card-headding py-3">Graphic <br/> Design</h4>
-                                            <p>We use innovative solutions to create and/or improve <br/> customized
-                                                software.</p>
-                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <h4 className="card-headding py-3">Graphic <br /> Design</h4>
+                                        <p>We use innovative solutions to create and/or improve <br /> customized
+                                            software.</p>
+                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
                                     </div>
 
 
 
                                     <div className="img-wrapper">
-                                        <img src={GraphicDesign} alt=""/>
+                                        <img src={GraphicDesign} alt="" />
                                     </div>
                                 </div>
 
@@ -264,16 +254,16 @@ const Home = () => {
                         </div>
                         <div className="card">
                             <div className="card__body">
-                                <img src={cardBg} alt="" className="card_img"/>
+                                <img src={cardBg} alt="" className="card_img" />
                                 <div className="overlay-img"></div>
                                 <div className="card__content card-img-overlay">
 
                                     <div className="card-para-cont">
                                         <h4 className="num-card">3</h4>
                                         <h4 className="card-headding py-3">Marketing</h4>
-                                            <p>We use innovative solutions to create and/or improve <br /> customized
-                                                software.</p>
-                                            <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <p>We use innovative solutions to create and/or improve <br /> customized
+                                            software.</p>
+                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
                                     </div>
 
 
@@ -297,185 +287,185 @@ const Home = () => {
 
             {/* Why choose us */}
 
-                            
 
-                    <div className="card text-bg-dark">
-                        <img src="./assets/images/image-2.png" className="card-img" alt="..."/>
-                        <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                            <h5 className="card-title">Why Choose Tarlose?</h5>
-                            <p className="card-text">Experience excellence in digital craftsmanship with our team of skilled
-                                professionals dedicated to delivering exceptional results.</p>
+
+            <div className="card text-bg-dark">
+                <img src="./assets/images/image-2.png" className="card-img" alt="..." />
+                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                    <h5 className="card-title">Why Choose Tarlose?</h5>
+                    <p className="card-text">Experience excellence in digital craftsmanship with our team of skilled
+                        professionals dedicated to delivering exceptional results.</p>
+                </div>
+            </div>
+
+            <div className="container">
+                <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
+
+                    <div className="col p-0 m-0 exp-col">
+                        <div className="exp-card">
+                            <div className="d-flex align-items-center gap-4">
+                                <img src={Expertise} alt="" />
+                                <h6>Expertise</h6>
+                            </div>
+                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                understanding
+                                of
+                                the
+                                digital
+                                landscape. We stay updated with the latest industry trends and best practices to deliver
+                                cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                    <div className="col  p-0 m-0 exp-col">
+                        <div className="exp-card ">
+                            <div className="d-flex align-items-center gap-4">
+                                <img src={Client} alt="" />
+                                <h6>Client-Centric Approach</h6>
+                            </div>
+                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                understanding
+                                of
+                                the
+                                digital
+                                landscape. We stay updated with the latest industry trends and best practices to deliver
+                                cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                    <div className="col p-0 m-0 exp-col">
+                        <div className="exp-card">
+                            <div className="d-flex align-items-center gap-4">
+                                <img src={Results} alt="" />
+                                <h6>Results-Driven Solutions</h6>
+                            </div>
+                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                understanding
+                                of
+                                the
+                                digital
+                                landscape. We stay updated with the latest industry trends and best practices to deliver
+                                cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                    <div className="col p-0 m-0 exp-col">
+                        <div className="exp-card">
+                            <div className="d-flex align-items-center gap-4">
+                                <img src={Partnership} alt="" />
+                                <h6>Collaborative Partnership</h6>
+                            </div>
+                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
+                                understanding
+                                of
+                                the
+                                digital
+                                landscape. We stay updated with the latest industry trends and best practices to deliver
+                                cutting-edge solutions.</p>
                         </div>
                     </div>
 
-                    <div className="container">
-                        <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
-
-                            <div className="col p-0 m-0 exp-col">
-                                <div className="exp-card">
-                                    <div className="d-flex align-items-center gap-4">
-                                        <img src={Expertise} alt=""/>
-                                        <h6>Expertise</h6>
-                                    </div>
-                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                        understanding
-                                        of
-                                        the
-                                        digital
-                                        landscape. We stay updated with the latest industry trends and best practices to deliver
-                                        cutting-edge solutions.</p>
-                                </div>
-                            </div>
-                            <div className="col  p-0 m-0 exp-col">
-                                <div className="exp-card ">
-                                    <div className="d-flex align-items-center gap-4">
-                                    <img src={Client} alt=""/>
-                                        <h6>Client-Centric Approach</h6>
-                                    </div>
-                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                        understanding
-                                        of
-                                        the
-                                        digital
-                                        landscape. We stay updated with the latest industry trends and best practices to deliver
-                                        cutting-edge solutions.</p>
-                                </div>
-                            </div>
-                            <div className="col p-0 m-0 exp-col">
-                                <div className="exp-card">
-                                    <div className="d-flex align-items-center gap-4">
-                                       <img src={Results} alt=""/>
-                                        <h6>Results-Driven Solutions</h6>
-                                    </div>
-                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                        understanding
-                                        of
-                                        the
-                                        digital
-                                        landscape. We stay updated with the latest industry trends and best practices to deliver
-                                        cutting-edge solutions.</p>
-                                </div>
-                            </div>
-                            <div className="col p-0 m-0 exp-col">
-                                <div className="exp-card">
-                                    <div className="d-flex align-items-center gap-4">
-                                        <img src={Partnership} alt=""/>
-                                        <h6>Collaborative Partnership</h6>
-                                    </div>
-                                    <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                        understanding
-                                        of
-                                        the
-                                        digital
-                                        landscape. We stay updated with the latest industry trends and best practices to deliver
-                                        cutting-edge solutions.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                </div>
+            </div>
 
 
-                    <Work />
+            <Work />
 
 
 
 
 
 
-                                            
-                                    {/* <!-- About Us  --> */}
 
-                        <div className="card text-bg-dark">
-                            <img src="./assets/images/image-2.png" className="card-img" alt="..."/>
-                            <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">What our Clients say About us</h5>
-                                <p className="card-text">At Tarlose, we take pride in delivering exceptional digital products and
-                                    services
-                                    that drive success for our clients. Here's what some of our satisfied clients have to say about
-                                    their experience working with us</p>
-                            </div>
-                        </div>
-{/* 
+            {/* <!-- About Us  --> */}
+
+            <div className="card text-bg-dark">
+                <img src="./assets/images/image-2.png" className="card-img" alt="..." />
+                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                    <h5 className="card-title">What our Clients say About us</h5>
+                    <p className="card-text">At Tarlose, we take pride in delivering exceptional digital products and
+                        services
+                        that drive success for our clients. Here's what some of our satisfied clients have to say about
+                        their experience working with us</p>
+                </div>
+            </div>
+            {/* 
                         <!-- testimonials design  --> */}
 
 
-                        <div className="container">
-                            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 ">
+            <div className="container">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 ">
 
-                                <div className="col p-0">
+                    <div className="col p-0">
 
-                                    <div className="test-col">
-                                        <div className="text-white">
-                                            <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
-                                            <p>Their team's expertise in web development and design resulted in a visually stunning
-                                                and
-                                                user-friendly e-commerce platform. Our online sales have skyrocketed, and we
-                                                couldn't be
-                                                happier.
-                                            </p>
-                                        </div>
-                                        <div className="testi-cont d-flex  text-white ">
+                        <div className="test-col">
+                            <div className="text-white">
+                                <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
+                                <p>Their team's expertise in web development and design resulted in a visually stunning
+                                    and
+                                    user-friendly e-commerce platform. Our online sales have skyrocketed, and we
+                                    couldn't be
+                                    happier.
+                                </p>
+                            </div>
+                            <div className="testi-cont d-flex  text-white ">
 
-                                            <div className="test-name d-flex  rounded">
-                                                <img src="assets/svg/Profile.svg" alt="" />
+                                <div className="test-name d-flex  rounded">
+                                    <img src="assets/svg/Profile.svg" alt="" />
 
-                                                <div className="test-sub-cont">
-                                                    <h6>John Smith</h6>
-                                                    <p>CEO of Chic Boutique</p>
-                                                </div>
-                                                <button className="test-btn">Open Website</button>
-                                            </div>
-                                        </div>
-
-
+                                    <div className="test-sub-cont">
+                                        <h6>John Smith</h6>
+                                        <p>CEO of Chic Boutique</p>
                                     </div>
-                                </div>
-
-                                <div className="col p-0 ">
-
-                                    <div className="test-col">
-                                        <div className="text-white">
-                                            <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
-                                            <p>Their team's expertise in web development and design resulted in a visually stunning
-                                                and
-                                                user-friendly e-commerce platform. Our online sales have skyrocketed, and we
-                                                couldn't be
-                                                happier.
-                                            </p>
-                                        </div>
-                                        <div className="testi-cont d-flex text-white">
-
-                                            <div className="test-name d-flex rounded">
-                                                <img src="assets/svg/Profile.svg" alt="" />
-
-                                                <div className="test-sub-cont">
-                                                    <h6>John Smith</h6>
-                                                    <p>CEO of Chic Boutique</p>
-                                                </div>
-                                                <button className="test-btn">Open Website</button>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
+                                    <button className="test-btn">Open Website</button>
                                 </div>
                             </div>
+
+
                         </div>
+                    </div>
+
+                    <div className="col p-0 ">
+
+                        <div className="test-col">
+                            <div className="text-white">
+                                <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
+                                <p>Their team's expertise in web development and design resulted in a visually stunning
+                                    and
+                                    user-friendly e-commerce platform. Our online sales have skyrocketed, and we
+                                    couldn't be
+                                    happier.
+                                </p>
+                            </div>
+                            <div className="testi-cont d-flex text-white">
+
+                                <div className="test-name d-flex rounded">
+                                    <img src="assets/svg/Profile.svg" alt="" />
+
+                                    <div className="test-sub-cont">
+                                        <h6>John Smith</h6>
+                                        <p>CEO of Chic Boutique</p>
+                                    </div>
+                                    <button className="test-btn">Open Website</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-                        <ThreeRowSlider />
+            <ThreeRowSlider />
 
 
 
-                        {/* <!-- FAQ  --> */}
+            {/* <!-- FAQ  --> */}
 
-                        <FAQ />
+            <FAQ />
 
-      <Footer />
-    </>
-  );
+            <Footer />
+        </>
+    );
 };
 
 export default Home;
