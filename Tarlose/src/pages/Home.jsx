@@ -67,7 +67,7 @@ const Home = () => {
     }, []);
 
     useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
+        const headingAnimation = gsap.context(() => {
             gsap.from("#home h1", {
                 y: 100,
                 opacity: 0,
@@ -94,7 +94,7 @@ const Home = () => {
         });
 
         // Cleanup GSAP context on component unmount
-        return () => ctx.revert();
+        return () => headingAnimation.revert();
     }, []);
 
     return (
@@ -464,6 +464,7 @@ const Home = () => {
             <FAQ />
 
             <Footer />
+
         </>
     );
 };
