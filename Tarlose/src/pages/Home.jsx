@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, {  useRef, useEffect, useLayoutEffect  } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
@@ -66,31 +66,36 @@ const Home = () => {
     };
   }, []);
 
-//   useEffect(() => {
-//     gsap.from("#home h1", {
-//       y: 100,
-//       opacity: 0,
-//       delay: 0.5,
-//       duration: 0.9,
-//       stagger: 0.3
-//     });
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("#home h1", {
+        y: 100,
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.9,
+        stagger: 0.3
+      });
 
-//     gsap.from("#home .content-home", {
-//       y: 100,
-//       opacity: 0,
-//       delay: 1.5,
-//       duration: 0.9,
-//       stagger: 0.3
-//     });
+      gsap.from("#home .content-home", {
+        y: 100,
+        opacity: 0,
+        delay: 1.5,
+        duration: 0.9,
+        stagger: 0.3
+      });
 
-//     gsap.from("#btn-fade", {
-//       y: 100,
-//       opacity: 0,
-//       delay: 1.7,
-//       duration: 0.9,
-//       stagger: 0.3
-//     });
-//   }, []);
+      gsap.from("#btn-fade", {
+        y: 100,
+        opacity: 0,
+        delay: 1.7,
+        duration: 0.9,
+        stagger: 0.3
+      });
+    });
+
+    // Cleanup GSAP context on component unmount
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>
