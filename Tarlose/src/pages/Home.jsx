@@ -103,7 +103,7 @@ const Home = () => {
             <Navbar />
             <div className="container hero" id="home">
                 <video autoPlay loop muted>
-                    <source src={HeroVideo} type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
                 </video>
 
                 <audio id="track" ref={trackRef}>

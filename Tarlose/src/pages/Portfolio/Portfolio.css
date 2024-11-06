@@ -1,0 +1,80 @@
+body {
+    color: #fff !important;
+}
+
+.main-work-live-cont {
+    background-image: linear-gradient(#62a2a4, #13474a);
+}
+
+
+.headding_work_live {
+    justify-content: space-between;
+    height: calc(100vh - 200px);
+}
+
+
+.txt_cont-work_live {
+    width: 50%;
+}
+
+.img_work_live {
+    height: 100%;
+    position: relative;
+    left: 15vh;
+}
+
+/* .img_cont_work_live{
+    width: 50%;
+} */
+
+
+.cha_sol_cont {
+    margin: 7rem 0 ;
+}
+
+.chall-card {
+    background-image: linear-gradient(75deg, #879cc426, #0000), linear-gradient(#ffffff05, #ffffff05) ;
+    border: 1px solid #ffffff29;
+    border-radius: 1.25rem;
+    padding: 5rem 2.5rem;
+}
+
+.sol-card {
+    background-image: linear-gradient(75deg, #879cc426, #0000), linear-gradient(#ffffff05, #ffffff05);
+    border: 1px solid #ffffff29;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    padding: 5rem 2.5rem;
+
+}
+
+.work_icon_cont {
+    margin-bottom: 7rem;
+}
+
+.key_function {
+    font-size: 3rem;
+}
+
+.text-fun_key_cont {
+    margin: 0 10rem;
+    align-content: center;
+}
+
+.text-fun_key_cont h3 {
+    width: 70%;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.text-fun_key_cont p {
+    width: 80%;
+}
+
+.fun_key_img_cont img{
+    border-radius: 1.875rem 0 0 1.875rem  ; 
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: #fff;
+}
