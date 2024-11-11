@@ -196,10 +196,12 @@ const Home = () => {
             {/* Services  */}
 
             <div className="container" id="Service">
-                <h5 className="text-center text-white">Our service</h5>
-                <h3 className="text-center mb-5 text-white headding-ser-para text-capitalize">More than just code a
+                <h5 className="text-center text-white">Our services</h5>
+                <h3 className="text-center mb-5 text-white headding-ser-para text-capitalize">
+                   {/* More than just code a
                     comprehensive digital
-                    solution for your digital needs
+                    solution for your digital needs */}
+                    Bringing your vision to life
                 </h3>
 
                 <section className="cards-scroll">
@@ -366,7 +368,7 @@ const Home = () => {
             </div>
 
 
-            <Work />
+            {/* <Work /> */}
 
 
 
