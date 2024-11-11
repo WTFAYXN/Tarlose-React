@@ -6,29 +6,35 @@ import Cyberkalki from "../../assets/Work/Cyberkalki.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      ScrollTrigger.matchMedia({
-        "(min-width: 800px)": function () {
-          // Horizontal scroll animation
-          gsap.to(".races", {
-            x: "-220%", 
-            scrollTrigger: {
-              trigger: ".racesWrapper",
-              start: "top 10%",
-              end: "top -300%",
-              scrub: 2,
-              pin: true,
-            //   markers: true 
-            }
-          });
-        }
+    useLayoutEffect(() => {
+      let ctx = gsap.context(() => {
+        ScrollTrigger.matchMedia({
+          "(min-width: 800px)": function () {
+            const racesElement = document.querySelector(".races");
+            const racesWidth = racesElement.scrollWidth;
+  
+            // Horizontal scroll animation
+            gsap.to(".races", {
+              x: `-${racesWidth - window.innerWidth}px`,
+              scrollTrigger: {
+                trigger: ".racesWrapper",
+                start: "top 10%",
+                end: () => `+=${racesWidth * 0.8}px`, 
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                // markers: true,
+              },
+            });
+          }
+        });
       });
-    });
-
-    // Clean up ScrollTrigger instances on component unmount
-    return () => ctx.revert();
-  }, []);
+  
+      // Clean up ScrollTrigger instances on component unmount
+      return () => ctx.revert();
+    }, []);
+  
 
     return(
         <>
