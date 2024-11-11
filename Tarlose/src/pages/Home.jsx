@@ -368,7 +368,7 @@ const Home = () => {
             </div>
 
 
-            {/* <Work /> */}
+            <Work />
 
 
 
