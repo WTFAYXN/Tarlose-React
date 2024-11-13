@@ -33,6 +33,7 @@ import Results from "../assets/svgs/Results.svg";
 import Work from "../components/Work-slider/Work";
 import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
 import FAQ from "../components/Faqs/Faq";
+import Prompt from "../components/Prompt/Prompt";
 
 const Home = () => {
     const trackRef = useRef(null);
@@ -464,7 +465,7 @@ const Home = () => {
             {/* <!-- FAQ  --> */}
 
             <FAQ />
-
+            <Prompt />
             <Footer />
 
         </>

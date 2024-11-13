@@ -1,0 +1,34 @@
+/* h6{
+    font-family: Gilroy-Semibold;
+} */
+.help {
+    padding: 7rem 0;
+    background-color: #8d6a9f;
+}
+
+.learn{
+    width: 50%;
+    font-size: 30px !important;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem !important; ;
+}
+  .help-para {
+    max-width: 50%;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+  
+  .help-btn{
+    font-size: 18px !important;
+    background-color: #FF0000 !important;
+    color:white !important;
+    font-weight: 700 !important;
+  }
+  .help-btn:hover{
+    background-color: #fff !important;
+    color:#FF0000 !important;
+    font-weight: 700 !important;
+  }
+  
+  
