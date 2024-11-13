@@ -13,12 +13,19 @@
     text-decoration: none;
 }
 
-.works-card-2 {
+.work-card-Cyberkalki {
     padding: 1.815rem 2.815rem 2.815rem;
-    /* background-color: #559295; */
     background-image: linear-gradient(#9C0808, #202020);
-    /* background-color: #9C0808; */
+    border-radius: 20px;
+    width: 34.375rem;
+    min-height: 34rem;
+    transition: 500ms;
+    box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
+}
 
+.work-card-HealwithNeha {
+    padding: 1.815rem 2.815rem 2.815rem;
+    background-image: linear-gradient(#9C0808, #202020);
     border-radius: 20px;
     width: 34.375rem;
     min-height: 34rem;
@@ -29,6 +36,17 @@
     padding: 1.815rem 2.815rem 2.815rem;
     /* background-color: #559295; */
     background-image: linear-gradient(#8cd34a, #202020);
+
+    border-radius: 20px;
+    width: 34.375rem;
+    min-height: 34rem;
+    transition: 500ms;
+    box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
+}
+.works-card-Amorfume {
+    padding: 1.815rem 2.815rem 2.815rem;
+    /* background-color: #559295; */
+    background-image: linear-gradient(#a54ad3, #202020);
 
     border-radius: 20px;
     width: 34.375rem;
