@@ -13,6 +13,8 @@
     text-decoration: none;
 }
 
+/* Cyberkalki */
+
 .work-card-Cyberkalki {
     padding: 1.815rem 2.815rem 2.815rem;
     background-image: linear-gradient(#9C0808, #202020);
@@ -22,7 +24,16 @@
     transition: 500ms;
     box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
 }
+.work-card-Cyberkalki:hover #display-text {
+    opacity: 1;
+    transform: translateY(0px);
+    margin-bottom: 1rem;
 
+}
+
+/* ```````````` */
+
+/* Heal with Neha */
 .work-card-HealwithNeha {
     padding: 1.815rem 2.815rem 2.815rem;
     background-image: linear-gradient(#9C0808, #202020);
@@ -32,6 +43,15 @@
     transition: 500ms;
     box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
 }
+
+.work-card-HealwithNeha:hover #display-text {
+    opacity: 1;
+    transform: translateY(0px);
+    margin-bottom: 1rem;
+
+}
+
+/* ``````````````` */
 .works-card-1 {
     padding: 1.815rem 2.815rem 2.815rem;
     /* background-color: #559295; */
@@ -43,6 +63,8 @@
     transition: 500ms;
     box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
 }
+
+/* Amorfume  */
 .works-card-Amorfume {
     padding: 1.815rem 2.815rem 2.815rem;
     /* background-color: #559295; */
@@ -54,6 +76,15 @@
     transition: 500ms;
     box-shadow: 0px 0px 30px rgba(156, 8, 8, 0.30);
 }
+
+.works-card-Amorfume:hover #display-text {
+    opacity: 1;
+    transform: translateY(0px);
+    margin-bottom: 1rem;
+
+}
+
+/*   ``````````````````````` */
 
 .work-cont {
     align-content: center;
