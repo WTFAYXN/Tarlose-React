@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Careers.css";
 import "../../index.css";
+import Prompt from "../../components/Prompt/Prompt";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,6 +149,7 @@ const Careers = () => {
       
       <hr className="hr-divider" />
 
+      <Prompt />
 
       <Footer />
     </>

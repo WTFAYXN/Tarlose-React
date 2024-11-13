@@ -12,7 +12,7 @@ const FAQ = () => {
                 </div>
             </div>
 
-            <div className="container mt-5">
+            <div className="container mt-5 mb-5">
                 <div className="accordion" id="accordionExample">
                     <div className="accordion-item">
                         <h2 className="accordion-header">
