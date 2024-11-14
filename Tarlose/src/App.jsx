@@ -6,6 +6,7 @@ import Careers from './pages/Careers/Careers';
 import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import BlogLive from './pages/Blogs/BlogLive';
+import Terms from './pages/Company/Terms';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/career" element={<Careers />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/blogs" element={<BlogLive />} />
         </Routes>
     </Router>

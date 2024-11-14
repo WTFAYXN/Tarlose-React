@@ -52,7 +52,7 @@ const Footer = () => {
 
     <hr/>
 
-    <div className="social-icon d-flex">
+    {/* <div className="social-icon d-flex">
         <div className="social-icon-sub d-flex">
             <div className="mail ">
                 <img src="assets/svg/Subtract.svg" alt=""/>
@@ -75,6 +75,14 @@ const Footer = () => {
 
 
 
+    </div> */}
+    {/* <hr /> */}
+    <div class="d-sm-flex justify-content-between ">
+      <p>2024 © Tarlose. All Rights Reserved. </p>
+      <p>
+        <a href="#" class="text-light text-decoration-none pe-4">Terms of use</a>
+        <a href="#" class="text-light text-decoration-none"> Privacy policy</a>
+      </p>
     </div>
 </div>
         </>
