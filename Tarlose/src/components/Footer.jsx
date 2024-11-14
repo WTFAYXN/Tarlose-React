@@ -80,7 +80,7 @@ const Footer = () => {
     <div class="d-sm-flex justify-content-between ">
       <p>2024 © Tarlose. All Rights Reserved. </p>
       <p>
-        <a href="#" class="text-light text-decoration-none pe-4">Terms of use</a>
+        <a href="/terms" class="text-light text-decoration-none pe-4">Terms & condition</a>
         <a href="#" class="text-light text-decoration-none"> Privacy policy</a>
       </p>
     </div>

@@ -1,5 +1,6 @@
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
+import "./Terms.css"
 
 const Terms =() => {
     return (
@@ -7,7 +8,7 @@ const Terms =() => {
         <Navbar />
          <div class="container mt-5 Terms-container">
         <h1 class="text-center">Terms and Conditions</h1>
-        <p class="text-muted text-center">Effective Date: [Insert Date]</p>
+        <p class=" text-center">Effective Date: 1st July 2024.</p>
         
         <div class="mt-4">
             <h3>1. Acceptance of Terms</h3>
