@@ -62,8 +62,34 @@ nav a,
     color: #fff !important;
     font-size: 18px;
     font-family: Gilroy-Bold;
+}
 
+.btn-contact:hover {
+    /* background-color: #8d6a9f !important; */
+    color: #fff !important;
+    font-size: 18px;
+    font-family: Gilroy-Bold;
+    border:  2px solid #8d6a9f !important;
+}
 
+.btn-portfolio{
+    /* background-color: #8d6a9f !important; */
+    color: #fff !important;
+    font-size: 18px;
+    font-family: Gilroy-Bold;
+    border:  2px solid #8d6a9f !important;
+}
+
+.btn-portfolio:hover {
+    background-color: #8d6a9f !important;
+    color: #fff !important;
+    font-size: 18px;
+    font-family: Gilroy-Bold;
+    border:  2px solid #8d6a9f !important;
+}
+
+.btn-contact{
+    margin-right: 20px;
 }
 
 .marquee-title-cont {

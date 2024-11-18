@@ -81,7 +81,7 @@ const Footer = () => {
       <p>2024 © Tarlose. All Rights Reserved. </p>
       <p>
         <a href="/terms" class="text-light text-decoration-none pe-4">Terms & condition</a>
-        <a href="#" class="text-light text-decoration-none"> Privacy policy</a>
+        <a href="/privacy" class="text-light text-decoration-none"> Privacy policy</a>
       </p>
     </div>
 </div>

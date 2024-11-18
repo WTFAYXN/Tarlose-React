@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import "../index.css";
 import "./home.css";
+import { Helmet } from "react-helmet";
 import HeroVideo from "../assets/videos-audio/universe.mp4";
 import TarloseTheme from "../assets/videos-audio/tarlose-theme-sound.mp3";
 import gsap from "gsap";
@@ -100,8 +101,38 @@ const Home = () => {
 
     return (
         <>
+
+                <Helmet>
+                <title>Home - Tarlose</title>
+                <meta name="description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
+                <meta name="keywords" content="home, Tarlose, design, development, digital solutions" />
+                <link rel="canonical" href="https://www.tarlose.com/" />
+                <meta property="og:title" content="Home - Tarlose" />
+                <meta property="og:description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
+                <meta property="og:url" content="https://www.tarlose.com/" />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Home - Tarlose" />
+                <meta name="twitter:description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
+                <script type="application/ld+json">
+                    {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": "Home",
+                        "description": "Welcome to Tarlose. We design, develop, and dominate the digital landscape."
+                    }
+                    `}
+                </script>
+            </Helmet>
             <Cursor />
             <Navbar />
+
+                        {/* SEO   */}
+
+
+
+            {/* Page start     */}
             <div className="container hero" id="home">
                 <video autoPlay loop muted>
                     <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
@@ -220,7 +251,8 @@ const Home = () => {
                                         <h4 className="card-headding">Website Development</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
-                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>
 
 
@@ -243,7 +275,8 @@ const Home = () => {
                                         <h4 className="card-headding py-3">Graphic <br /> Design</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
-                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>
 
 
@@ -266,7 +299,8 @@ const Home = () => {
                                         <h4 className="card-headding py-3">Marketing</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
-                                        <button className="btn btn-contact px-3 py-2" type="button">Contact Us</button>
+                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>
 
 

@@ -8,7 +8,7 @@ const WorkSlider =[
         Name:"Cyberkalki",
         category:"Wordpress Website | 2024",
         image:Cyberkalki,
-        url:"./work_live.html",
+        url:"/",
         alt:"Cybersecurity Website",
     },
     {
@@ -17,7 +17,7 @@ const WorkSlider =[
         class: "work-card-HealwithNeha",
         category:"Wix Website | 2024",
         image:"../assets/Work/HealWithNeha.png",
-        url:"./work_live.html"
+        url:"./"
     },
     {
         id:3,
@@ -25,7 +25,7 @@ const WorkSlider =[
         class: "works-card-Amorfume",
         category:"MERN Website | 2024",
         image:"../assets/Work/BettermindLabs.png",
-        url:"./work_live.html"
+        url:"./"
     },
     {
         id:4,
@@ -33,7 +33,7 @@ const WorkSlider =[
         Name:"BettermindLabs",
         category:"Wix Website | 2024",
         image:"../assets/Work/BettermindLabs.png",
-        url:"./work_live.html"
+        url:"./"
     },
     {
         id:5,
@@ -41,7 +41,7 @@ const WorkSlider =[
         class: "works-card-1",
         category:"Wix Website | 2024",
         image:"../assets/Work/BettermindLabs.png",
-        url:"./work_live.html"
+        url:"./"
     },
     {
         id:6,
@@ -49,7 +49,7 @@ const WorkSlider =[
         class: "works-card-1",
         category:"Wix Website | 2024",
         image:"../assets/Work/BettermindLabs.png",
-        url:"./work_live.html"
+        url:"./"
     },
     
     

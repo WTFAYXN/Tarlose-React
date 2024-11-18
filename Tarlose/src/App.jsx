@@ -7,6 +7,7 @@ import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import BlogLive from './pages/Blogs/BlogLive';
 import Terms from './pages/Company/Terms';
+import PrivacyPolicy from './pages/Company/PrivacyPolicy';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/blogs" element={<BlogLive />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
     </Router>
       </div>

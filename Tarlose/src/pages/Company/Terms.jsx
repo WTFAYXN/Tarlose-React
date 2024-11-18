@@ -6,7 +6,31 @@ const Terms =() => {
     return (
         <>
         <Navbar />
-         <div class="container mt-5 Terms-container">
+        <Helmet>
+        <title>Terms and Conditions - Tarlose</title>
+        <meta name="description" content="This is the terms and conditions page of Tarlose" />
+        <meta name="keywords" content="terms and conditions, Tarlose" />
+        <link rel="canonical" href="https://www.tarlose.com/terms" />
+        <meta property="og:title" content="Terms and Conditions - Tarlose" />
+        <meta property="og:description" content="This is the terms and conditions page of Tarlose." />
+        <meta property="og:url" content="https://www.tarlose.com/terms" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms and Conditions - Tarlose" />
+        <meta name="twitter:description" content="This is the terms and conditions page of Tarlose." />
+        <script type="application/ld+json">
+            {`
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Terms and Conditions",
+                "description": "This is the terms and conditions page of Tarlose"
+            }
+            `}
+        </script>
+      </Helmet>
+      
+         <div class="container mt-5 mb-5 Terms-container">
         <h1 class="text-center">Terms and Conditions</h1>
         <p class=" text-center">Effective Date: 1st July 2024.</p>
         
@@ -86,18 +110,18 @@ const Terms =() => {
         <div class="mt-4">
             <h3>10. Governing Law</h3>
             <p>
-                These Terms and Conditions are governed by and construed in accordance with the laws of [Country/State], without regard to its conflict of law provisions.
+                These Terms and Conditions are governed by and construed in accordance with the laws of Mumbai,India; without regard to its conflict of law provisions.
             </p>
         </div>
 
         <div class="mt-4">
             <h3>11. Contact Us</h3>
-            <p>
+            <p> 
                 If you have any questions about these Terms and Conditions, please contact us at:
             </p>
             <ul>
-                <li><strong>Email:</strong> info@tarlose.com</li>
-                <li><strong>Address:</strong> [Tarlose’s Office Address]</li>
+                <li><strong>Email:</strong> admin@tarlose.com</li>
+                <li><strong>Address:</strong>Mumbai</li>
             </ul>
         </div>
         
