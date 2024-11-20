@@ -1,4 +1,6 @@
 import Cyberkalki from "../assets/Work/Cyberkalki.png";
+import NehaSavara from "../assets/Work/healwithneha.png";
+import Placeholder from "../assets/Work/placeholder.png";
 
 const WorkSlider =[
  
@@ -16,39 +18,39 @@ const WorkSlider =[
         Name:"HealWithNehaSavara",
         class: "work-card-HealwithNeha",
         category:"Wix Website | 2024",
-        image:"../assets/Work/HealWithNeha.png",
+        image:NehaSavara,
         url:"./"
     },
     {
         id:3,
         Name:"Amorfume",
         class: "works-card-Amorfume",
-        category:"MERN Website | 2024",
-        image:"../assets/Work/BettermindLabs.png",
+        category:"Ecommerce, MERN Website | 2024",
+        image:Placeholder,
         url:"./"
     },
     {
         id:4,
-        class: "works-card-1",
+        class: "works-card-Amorfume",
         Name:"BettermindLabs",
         category:"Wix Website | 2024",
-        image:"../assets/Work/BettermindLabs.png",
+        image:Placeholder,
         url:"./"
     },
     {
         id:5,
-        Name:"BettermindLabs",
-        class: "works-card-1",
+        Name:"PrestigeCarConnect",
+        class: "works-card-Amorfume",
         category:"Wix Website | 2024",
-        image:"../assets/Work/BettermindLabs.png",
+        image:Placeholder,
         url:"./"
     },
     {
         id:6,
-        Name:"BettermindLabs",
-        class: "works-card-1",
+        Name:"Chocolef",
+        class: "works-card-Amorfume",
         category:"Wix Website | 2024",
-        image:"../assets/Work/BettermindLabs.png",
+        image:Placeholder,
         url:"./"
     },
     

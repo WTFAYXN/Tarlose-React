@@ -12,20 +12,8 @@ import cardBg from "../assets/svgs/cardbg.svg";
 import WebDev from "../assets/svgs/WebsiteDevelopment.svg";
 import GraphicDesign from "../assets/svgs/Design.svg";
 import Marketing from "../assets/svgs/Marketing.svg";
-// Companies Logo
-import AleviaWellness from "../assets/trusted-companies/alevia-wellness.png";
-import Amorfume from "../assets/trusted-companies/Amorfume.png";
-import Bettermind from "../assets/trusted-companies/bettermindlabs.png";
-import BiryaniBar from "../assets/trusted-companies/biryani-bar.png";
-import Cyberkalki from "../assets/trusted-companies/cyberkalki.png";
-import MaavisProjects from "../assets/trusted-companies/Maavis-Projects.png";
-import TheHausCo from "../assets/trusted-companies/thehausco-studio.png";
-import BediGroup from "../assets/trusted-companies/the-bedi-group.png";
-import Uniekart from "../assets/trusted-companies/uniekart.png";
-import NehaSavara from "../assets/trusted-companies/healwithneha.png";
-import Verifiers from "../assets/trusted-companies/verifiers.png";
-import Platforms from "../components/Platforms/Platforms";
 
+import Platforms from "../components/Platforms/Platforms";
 
 import Expertise from "../assets/svgs/Expertise.svg";
 import Client from "../assets/svgs/Client-Centric.svg";
@@ -35,6 +23,7 @@ import Work from "../components/Work-slider/Work";
 import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
 import FAQ from "../components/Faqs/Faq";
 import Prompt from "../components/Prompt/Prompt";
+import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
 
 const Home = () => {
     const trackRef = useRef(null);
@@ -102,6 +91,7 @@ const Home = () => {
     return (
         <>
 
+        {/* Seo */}
                 <Helmet>
                 <title>Home - Tarlose</title>
                 <meta name="description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
@@ -196,34 +186,7 @@ const Home = () => {
 
             <!-- companies logo  --> */}
 
-            <div className="slider my-5">
-                <div className="slide-track">
-                    <div className="slide"><img src={Uniekart} alt="" /></div>
-                    <div className="slide"><img src={Amorfume} alt="" /></div>
-                    <div className="slide"><img src={Bettermind} alt="" /></div>
-                    <div className="slide"><img src={TheHausCo} alt="" /></div>
-                    <div className="slide"><img src={MaavisProjects} alt="" /></div>
-                    <div className="slide"><img src={Cyberkalki} alt="" /></div>
-                    <div className="slide"><img src={AleviaWellness} alt="" /></div>
-                    <div className="slide"><img src={NehaSavara} alt="" /></div>
-                    <div className="slide"><img src={BediGroup} alt="" /></div>
-                    <div className="slide"><img src={Verifiers} alt="" /></div>
-                    <div className="slide"><img src={BiryaniBar} alt="" /></div>
-                    {/* <!-- Duplicate slides for seamless loop --> */}
-                    <div className="slide"><img src={Uniekart} alt="" /></div>
-                    <div className="slide"><img src={Amorfume} alt="" /></div>
-                    <div className="slide"><img src={Bettermind} alt="" /></div>
-                    <div className="slide"><img src={TheHausCo} alt="" /></div>
-                    <div className="slide"><img src={MaavisProjects} alt="" /></div>
-                    <div className="slide"><img src={Cyberkalki} alt="" /></div>
-                    <div className="slide"><img src={AleviaWellness} alt="" /></div>
-                    <div className="slide"><img src={NehaSavara} alt="" /></div>
-                    <div className="slide"><img src={BediGroup} alt="" /></div>
-                    <div className="slide"><img src={Verifiers} alt="" /></div>
-                    <div className="slide"><img src={BiryaniBar} alt="" /></div>
-                </div>
-            </div>
-
+            <MarqueeLogo />
 
             {/* Services  */}
 
@@ -417,7 +380,7 @@ const Home = () => {
                 <img src="./assets/images/image-2.png" className="card-img" alt="..." />
                 <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                     <h5 className="card-title">What our Clients say About us</h5>
-                    <p className="card-text">At Tarlose, we take pride in delivering exceptional digital products and
+                    <p className="card-text-p">At Tarlose, we take pride in delivering exceptional digital products and
                         services
                         that drive success for our clients. Here's what some of our satisfied clients have to say about
                         their experience working with us</p>
@@ -492,7 +455,7 @@ const Home = () => {
 
 
 
-            <ThreeRowSlider />
+            {/* <ThreeRowSlider /> */}
 
 
 

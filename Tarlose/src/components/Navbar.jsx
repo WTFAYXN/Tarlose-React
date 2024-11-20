@@ -64,18 +64,19 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/#Service">Services</a>
                         </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="/Portfolio">Portfolio</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/about">About</a>
-                        </li> */}
+                      
+           
                         <li className="nav-item">
                             <a className="nav-link" href="/career">Careers</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/blogs">Blogs</a>
                         </li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Services</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </ul>
                     <button type="button" className="nav-btn px-4 py-2 rounded border-0">
                         <a href="tel:+91 8291617114">Book a Call</a>

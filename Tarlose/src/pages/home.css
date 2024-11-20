@@ -218,7 +218,10 @@ video {
 
 /* Services  */
 
-
+.card-text-p{
+    width: 80%;
+    text-align: center;
+}
 .card-title {
     font-size: 48px;
 }
