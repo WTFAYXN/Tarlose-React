@@ -15,22 +15,22 @@ const Footer = () => {
         <div className="footer-nav-cont">
             <ul className=" ps-0 mx-auto mb-2 mb-lg-0 d-flex text-white footer-ul">
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">Home</a>
+                    <a className="nav-link" aria-current="page" href="/">Home</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">Services</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">Work</a>
+                    <a className="nav-link" aria-current="page" href="#work">Work</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">About</a>
+                    <a className="nav-link" aria-current="page" href="https://www.linkedin.com/company/tarlose/">About</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link " aria-current="page" href="#">Careers</a>
+                    <a className="nav-link " aria-current="page" href="/career">Careers</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link " aria-current="page" href="#">Blogs</a>
+                    <a className="nav-link " aria-current="page" href="/blog">Blogs</a>
                 </li>
             </ul>
         </div>
