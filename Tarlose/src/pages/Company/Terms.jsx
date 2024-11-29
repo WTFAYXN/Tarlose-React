@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 import "./Terms.css"
+import { Helmet } from "react-helmet";
 
 const Terms =() => {
     return (
