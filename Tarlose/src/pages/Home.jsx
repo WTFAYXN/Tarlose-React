@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import "../index.css";
 import "./home.css";
+import "./responsive.css"
 import { Helmet } from "react-helmet";
 import HeroVideo from "../assets/videos-audio/universe.mp4";
 import TarloseTheme from "../assets/videos-audio/tarlose-theme-sound.mp3";
@@ -24,6 +25,7 @@ import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
 import FAQ from "../components/Faqs/Faq";
 import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
+
 
 const Home = () => {
     const trackRef = useRef(null);
