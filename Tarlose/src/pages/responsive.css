@@ -9,7 +9,7 @@
 
     .navbar-toggler-icon {
         color: #fff !important;
-        background-image: url(assets/svg/mobileham.svg) !important;
+        background-image: url(../assets/svgs/mobileham.svg) !important;
     }
 
     .hero h1 {
