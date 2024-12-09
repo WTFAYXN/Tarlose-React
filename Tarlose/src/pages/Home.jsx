@@ -126,9 +126,9 @@ const Home = () => {
 
             {/* Page start     */}
             <div className="container hero" id="home">
-                <video autoPlay loop muted>
+                {/* <video autoPlay loop muted>
                     <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
-                </video>
+                </video> */}
 
                 <audio id="track" ref={trackRef}>
                     <source src={TarloseTheme} type="audio/mpeg" />
