@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/Logos/Tarlose.svg";
+import logo from "../assets/Logos/Tarlose-Logo.svg";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(() => {
@@ -49,7 +49,7 @@ const Navbar = () => {
          <nav className="navbar navbar-expand-lg p-0">
             <div className="container">
                 <a className="navbar-brand p-0" href="/">
-                    <img src={logo} alt="Tarlose" />
+                    <img src={logo} alt="Tarlose" width={100}/>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

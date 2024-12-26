@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../assets/Logos/Tarlose.svg";
+// import logo from "../assets/Logos/Tarlose.svg"; // old logo
+import logo from "../assets/Logos/Tarlose-Logo.svg";
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
 
     <div className="footer-cont d-flex align-items-center flex-wrap">
         <div className="footer-img-cont">
-            <img src={logo} alt=""/>
+            <img src={logo} alt="" width={100}/>
         </div>
         <div className="footer-nav-cont">
             <ul className=" ps-0 mx-auto mb-2 mb-lg-0 d-flex text-white footer-ul">
