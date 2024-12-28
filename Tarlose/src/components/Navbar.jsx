@@ -48,7 +48,7 @@ const Navbar = () => {
         <>
          <nav className="navbar navbar-expand-lg p-0">
             <div className="container">
-                <a className="navbar-brand p-0" href="/">
+                <a className="navbar-brand p-0 mt-3" href="/">
                     <img src={logo} alt="Tarlose" width={100}/>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
