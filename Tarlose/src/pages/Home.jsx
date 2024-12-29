@@ -188,7 +188,7 @@ const Home = () => {
                                 Our Works
                             </button>
                         </a>
-                        <a href="tel: 91+8291617114">
+                        <a href="https://calendly.com/ayansayad2005/30min">
                             <button className="btn btn-contact px-3 py-2" type="button">
                                 Contact Us
                             </button>
@@ -231,8 +231,7 @@ const Home = () => {
                                     <div className="card-para-cont">
                                         <h4 className="num-card">1</h4>
                                         <h4 className="card-heading">Website Development</h4>
-                                        <p>We use innovative solutions to create and/or improve <br /> customized
-                                            software.</p>
+                                        <p>We craft modern, responsive websites with cutting-edge <br /> technologies and stunning designs.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>
@@ -255,8 +254,7 @@ const Home = () => {
                                     <div className="card-para-cont">
                                         <h4 className="num-card m-0">2</h4>
                                         <h4 className="card-heading py-3">Graphic <br /> Design</h4>
-                                        <p>We use innovative solutions to create and/or improve <br /> customized
-                                            software.</p>
+                                        <p>We create stunning visual designs, branding, and marketing <br /> materials that capture your unique identity.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>
@@ -279,8 +277,7 @@ const Home = () => {
                                     <div className="card-para-cont">
                                         <h4 className="num-card">3</h4>
                                         <h4 className="card-heading py-3">Marketing</h4>
-                                        <p>We use innovative solutions to create and/or improve <br /> customized
-                                            software.</p>
+                                        <p>We develop data-driven marketing strategies to boost your brand visibility <br /> and drive measurable business growth.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
                                     </div>

@@ -79,7 +79,7 @@ const Navbar = () => {
                         </ul>
                     </ul> */}
                     <button type="button" className="nav-btn px-4 py-2 rounded border-0">
-                        <a href="https://calendly.com/ayansayad2005">Book a Call</a>
+                        <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">Book a Call</a>
                     </button>
                 </div>
             </div>
