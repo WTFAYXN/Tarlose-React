@@ -25,6 +25,7 @@ import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
 import FAQ from "../components/Faqs/Faq";
 import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
+import Community from "../components/Community/Community";
 
 
 const Home = () => {
@@ -95,28 +96,44 @@ const Home = () => {
 
         {/* Seo */}
                 <Helmet>
-                <title>Home - Tarlose</title>
-                <meta name="description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
-                <meta name="keywords" content="home, Tarlose, design, development, digital solutions" />
-                <link rel="canonical" href="https://www.tarlose.com/" />
-                <meta property="og:title" content="Home - Tarlose" />
-                <meta property="og:description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
-                <meta property="og:url" content="https://www.tarlose.com/" />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Home - Tarlose" />
-                <meta name="twitter:description" content="Welcome to Tarlose. We design, develop, and dominate the digital landscape." />
-                <script type="application/ld+json">
-                    {`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "Home",
-                        "description": "Welcome to Tarlose. We design, develop, and dominate the digital landscape."
-                    }
-                    `}
-                </script>
-            </Helmet>
+                    <title>Tarlose - Digital Solutions for Modern Businesses</title>
+                    <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
+                    <meta name="keywords" content="digital solutions, web development, app development, UI/UX design, digital transformation, Tarlose, business technology" />
+                    <link rel="canonical" href="https://www.tarlose.com/" />
+                    
+                    {/* Open Graph Tags */}
+                    <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
+                    <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
+                    <meta property="og:url" content="https://www.tarlose.com/" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:image" content="https://www.tarlose.com/og-image.jpg" />
+                    <meta property="og:site_name" content="Tarlose" />
+                    
+                    {/* Twitter Card Tags */}
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:site" content="@tarlose" />
+                    <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
+                    <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
+                    <meta name="twitter:image" content="https://www.tarlose.com/twitter-card.jpg" />
+                    
+                    {/* Structured Data */}
+                    <script type="application/ld+json">
+                        {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "Tarlose",
+                            "url": "https://www.tarlose.com",
+                            "description": "Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise.",
+                            "sameAs": [
+                                "https://twitter.com/tarlose",
+                                "https://www.linkedin.com/company/tarlose",
+                                "https://www.youtube.com/@Tarlose"
+                            ]
+                        }
+                        `}
+                    </script>
+                </Helmet>
             <Cursor />
             <Navbar />
 
@@ -291,12 +308,20 @@ const Home = () => {
 
 
 
-            <div className="card text-bg-dark">
-                <img src="./assets/images/image-2.png" className="card-img" alt="..." />
-                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                    <h5 className="card-title">Why Choose Tarlose?</h5>
-                    <p className="card-text">Experience excellence in digital craftsmanship with our team of skilled
-                        professionals dedicated to delivering exceptional results.</p>
+            <div className="card text-bg-dark position-relative overflow-hidden">
+                <img 
+                    src="./assets/images/image-2.png" 
+                    className="card-img" 
+                    alt="Tarlose team collaboration" 
+                    loading="lazy"
+                />
+                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
+                    <h2 className="card-title display-4 mb-4 fw-bold">Why Choose Tarlose?</h2>
+                    <p className="card-text fs-5 mx-auto" style={{maxWidth: "800px"}}>
+                        Experience excellence in digital craftsmanship through our innovative solutions, 
+                        expert team, and proven track record of delivering transformative results that 
+                        help businesses thrive in the digital age.
+                    </p>
                 </div>
             </div>
 
@@ -381,8 +406,8 @@ const Home = () => {
             <div className="card text-bg-dark">
                 <img src="./assets/images/image-2.png" className="card-img" alt="..." />
                 <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                    <h5 className="card-title">What our Clients say About us</h5>
-                    <p className="card-text-p">At Tarlose, we take pride in delivering exceptional digital products and
+                     <h2 className="card-title display-4 mb-4 fw-bold">What our Clients say About us</h2>
+                   <p className="card-text fs-5 mx-auto text-center" style={{maxWidth: "800px"}}>At Tarlose, we take pride in delivering exceptional digital products and
                         services
                         that drive success for our clients. Here's what some of our satisfied clients have to say about
                         their experience working with us</p>
@@ -442,8 +467,9 @@ const Home = () => {
 
             {/* <!-- FAQ  --> */}
 
+            {/* <Prompt /> */}
+            <Community />
             <FAQ />
-            <Prompt />
             <Footer />
 
         </>
