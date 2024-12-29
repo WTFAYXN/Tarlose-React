@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container my-5">
     
 
-    <div className="footer-cont d-flex align-items-center flex-wrap">
+    {/* <div className="footer-cont d-flex align-items-center flex-wrap">
         <div className="footer-img-cont">
             <img src={logo} alt="" width={100}/>
         </div>
@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
 
         </div>
-    </div>
+    </div> */}
 
     <hr/>
 
