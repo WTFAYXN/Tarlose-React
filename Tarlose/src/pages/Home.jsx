@@ -194,7 +194,7 @@ const Home = () => {
 
             <div className="container" id="Service">
                 <h5 className="text-center text-white">Our services</h5>
-                <h3 className="text-center mb-5 text-white headding-ser-para text-capitalize">
+                <h3 className="text-center mb-5 text-white heading-ser-para text-capitalize">
                    {/* More than just code a
                     comprehensive digital
                     solution for your digital needs */}
@@ -213,7 +213,7 @@ const Home = () => {
 
                                     <div className="card-para-cont">
                                         <h4 className="num-card">1</h4>
-                                        <h4 className="card-headding">Website Development</h4>
+                                        <h4 className="card-heading">Website Development</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
@@ -237,7 +237,7 @@ const Home = () => {
 
                                     <div className="card-para-cont">
                                         <h4 className="num-card m-0">2</h4>
-                                        <h4 className="card-headding py-3">Graphic <br /> Design</h4>
+                                        <h4 className="card-heading py-3">Graphic <br /> Design</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
@@ -261,7 +261,7 @@ const Home = () => {
 
                                     <div className="card-para-cont">
                                         <h4 className="num-card">3</h4>
-                                        <h4 className="card-headding py-3">Marketing</h4>
+                                        <h4 className="card-heading py-3">Marketing</h4>
                                         <p>We use innovative solutions to create and/or improve <br /> customized
                                             software.</p>
                                         <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>

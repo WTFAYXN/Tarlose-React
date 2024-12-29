@@ -127,7 +127,7 @@
         padding: 1.25rem 1.5rem !important;
     }
 
-    .cards-headding {
+    .cards-heading {
         align-items: baseline !important;
     }
 
@@ -146,7 +146,7 @@
         pointer-events: none !important;
     }
 
-    .work-headding {
+    .work-heading {
         letter-spacing: -.52px !important;
         font-size: 2.625rem !important;
         line-height: 1 !important;
@@ -157,7 +157,7 @@
         overflow-x: auto !important;
     }
 
-    .headding-ser-para {
+    .heading-ser-para {
         letter-spacing: -.52px !important;
         font-size: 1.625rem !important;
         line-height: 1 !important;
@@ -173,13 +173,13 @@
         font-size: 2rem !important;
     }
 
-    .card-headding {
+    .card-heading {
         font-size: 1.5rem !important;
         line-height: 1.2 !important;
         padding: 0 !important;
     }
 
-    .card-headding br {
+    .card-heading br {
         display: none !important;
     }
 
@@ -282,7 +282,7 @@
         padding: 1.25rem 1.5rem !important;
     }
 
-    .cards-headding {
+    .cards-heading {
         align-items: baseline !important;
     }
 
@@ -301,7 +301,7 @@
         pointer-events: none !important;
     }
 
-    .work-headding {
+    .work-heading {
         letter-spacing: -.52px !important;
         font-size: 2.625rem !important;
         line-height: 1 !important;
@@ -312,7 +312,7 @@
         overflow-x: auto !important;
     }
 
-    .headding-ser-para {
+    .heading-ser-para {
         letter-spacing: -.52px !important;
         font-size: 1.625rem !important;
         line-height: 1 !important;
@@ -328,13 +328,13 @@
         font-size: 2rem !important;
     }
 
-    .card-headding {
+    .card-heading {
         font-size: 1.5rem !important;
         line-height: 1.2 !important;
         padding: 0 !important;
     }
 
-    .card-headding br {
+    .card-heading br {
         display: none !important;
     }
 

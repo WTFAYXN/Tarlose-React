@@ -245,7 +245,7 @@ video {
 
 }
 
-.headding-ser-para {
+.heading-ser-para {
     width: 90%;
     margin: 0 auto;
     text-indent: 6px;
@@ -395,11 +395,11 @@ video {
 }
 
 
-.card-headding {
+.card-heading {
     padding: 1rem 0 !important;
 }
 
-.card-headding,
+.card-heading,
 .num-card {
     text-indent: 6px;
     -webkit-text-fill-color: transparent;

@@ -13,7 +13,7 @@ const About = () =>{
          <h1 class="text-center text-white mb-5">About Us </h1>
 
 <div class="container">
-    <h3 class="headding-para">The perfect starting point for any</h3>
+    <h3 class="heading-para">The perfect starting point for any</h3>
 
     <div class="text-scroller-cont">
         <div class="sub-text-cont">

@@ -45,7 +45,7 @@ const Work = () => {
       <div className="racesWrapper text-white" id="Work">
         <div className="races">
           <div className="work-cont">
-            <h2 className="work-headding">
+            <h2 className="work-heading">
               We let <span>our work</span> speak for itself.
             </h2>
             <p className="work-para">
@@ -63,7 +63,7 @@ const Work = () => {
                 {WorkSlider.map((item) => (
                   <a href={item.url} className="card_link" key={item.id}>
                     <div className={item.class}>
-                      <div className="cards-headding d-flex justify-content-between">
+                      <div className="cards-heading d-flex justify-content-between">
                         <div className="title-work-card">
                           <h3>{item.Name}</h3>
                           <h6 id="display-text">{item.category}</h6>

@@ -122,18 +122,18 @@
 
 }
 
-.cards-headding {
+.cards-heading {
     align-items: center;
 }
 
-.work-headding {
+.work-heading {
     max-width: 26.25rem;
     letter-spacing: -1.16px;
     font-size: 3.625rem;
     line-height: .95;
 }
 
-.work-headding span {
+.work-heading span {
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(90deg, #b1bfd8, #8d6a9f);
     background-clip: text;
