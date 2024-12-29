@@ -14,7 +14,7 @@ body {
 
 
 .txt_cont-work_live {
-    width: 50%;
+    width: 64%;
 }
 
 .img_work_live {
@@ -77,4 +77,23 @@ body {
 .nav-btn a {
     text-decoration: none;
     color: #fff;
+}
+
+.start_now{
+    margin: 100px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start_nowMain{
+    width: 90%;
+}
+.startNow-h1{
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-size: 3rem !important;
+}
+
+.startNow-p{
+    font-size: 1.125rem;
 }

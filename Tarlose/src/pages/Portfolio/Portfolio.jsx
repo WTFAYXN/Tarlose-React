@@ -1,6 +1,12 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import technology from "../../assets/svgs/technology.svg";
+import service from "../../assets/svgs/service.svg";
+import industry from "../../assets/svgs/industry.svg";
+import timeframe from "../../assets/svgs/timeframe.svg";
+import some from "../../assets/some.png"
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -11,13 +17,11 @@ const Portfolio = () => {
                 <div className="container">
                     <div className="headding_work_live d-flex align-items-center">
                         <div className="txt_cont-work_live">
-                            <h1>Digital trifft Tradition: Unsere App für Golfturniere</h1>
-                            <p>Golf, ein Sport mit reicher Tradition, stützt sich oft auf konventionelle Methoden für das
-                                Eventmanagement. Für unseren ersten Charity-Golf-Cup an der malerischen Südküste Portugals
-                                hatten wir jedoch eine Mischung aus Tradition und digitaler Innovation im Sinn. Als
-                                Softwareunternehmen wollten wir unseren Teilnehmern ein unvergleichliches digitales Erlebnis
-                                während des mehrtägigen Events bieten.</p>
+                            <h1>Learning meets innovation: Your ultimate website for preparation.</h1>
+                            <p>"Experience the perfect blend of learning and innovation with our feature-packed website. Create personalized questionnaires, access premium study materials, and stay updated with real-time notifications. Effortlessly share resources with URL-based links and unlock essential tools to streamline your preparation journey. Your ultimate destination for smarter, more effective learning."</p>
                         </div>
+
+                        <img src="assets/svg/work_live_img.svg" class="img_work_live" alt="" />
                     </div>
                 </div>
             </div>
@@ -64,9 +68,11 @@ const Portfolio = () => {
             
             <div className="container work_icon_cont">
                 <div className="row align-content-center">
+
+
                     <div className="col">
                         <div className="" style={{ width: "18rem" }}>
-                            <img src="assets/svg/service.svg" className="w-25" alt="..." />
+                            <img src={service} className="w-25" alt="..." />
                             <div className="card-body">
                                 <h5 className="head_title pt-4">SERVICE</h5>
                                 <p className="card-text">
@@ -80,11 +86,28 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
+
+
                     <div className="col">
                         <div className="" style={{ width: "18rem" }}>
-                            <img src="assets/svg/service.svg" className="w-25" alt="..." />
+                            <img src={technology} className="w-25" alt="..." />
                             <div className="card-body">
                                 <h5 className="head_title pt-4">TECHNOLOGY</h5>
+                                <p className="card-text">
+                                    <p>React.js</p>
+                                    <p>Mongodb</p>
+                                    <p>Node.js</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="col">
+                        <div className="" style={{ width: "18rem" }}>
+                            <img src={industry} className="w-25" alt="..." />
+                            <div className="card-body">
+                                <h5 className="head_title pt-4">Industry</h5>
                                 <p className="card-text">
                                     <p>React.js</p>
                                     <p>React.js</p>
@@ -92,30 +115,20 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="col">
                         <div className="" style={{ width: "18rem" }}>
-                            <img src="assets/svg/service.svg" className="w-25" alt="..." />
+                            <img src={timeframe} className="w-25" alt="..." />
                             <div className="card-body">
-                                <h5 className="head_title pt-4">TECHNOLOGY</h5>
+                                <h5 className="head_title pt-4">Timeframe</h5>
                                 <p className="card-text">
-                                    <p>React.js</p>
-                                    <p>React.js</p>
+                                    <p>20 days</p>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="" style={{ width: "18rem" }}>
-                            <img src="assets/svg/service.svg" className="w-25" alt="..." />
-                            <div className="card-body">
-                                <h5 className="head_title pt-4">TECHNOLOGY</h5>
-                                <p className="card-text">
-                                    <p>React.js</p>
-                                    <p>React.js</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
 
@@ -130,12 +143,12 @@ const Portfolio = () => {
                             up-to-date information on sessions and speakers so that no valuable moment is wasted.</p>
                     </div>
                     <div className="fun_key_img_cont">
-                        <img className=".fun_key_img" src="assets/images/work_live.png" alt="" />
+                        <img className=".fun_key_img" src={some} alt="" />
                     </div>
                 </div>
                 <div className="col d-flex">
                     <div className="fun_key_img_cont">
-                        <img className=".fun_key_img" src="assets/images/work_live.png" alt="" />
+                         <img className=".fun_key_img" src={some} alt="" />
                     </div>
                     <div className="text-cont text-fun_key_cont">
                         <h3>schedule at a glance</h3>
@@ -152,12 +165,12 @@ const Portfolio = () => {
                             up-to-date information on sessions and speakers so that no valuable moment is wasted.</p>
                     </div>
                     <div className="fun_key_img_cont">
-                        <img className=".fun_key_img" src="assets/images/work_live.png" alt="" />
+                    <img className=".fun_key_img" src={some} alt="" />
                     </div>
                 </div>
                 <div className="col d-flex">
                     <div className="fun_key_img_cont">
-                        <img className=".fun_key_img" src="assets/images/work_live.png" alt="" />
+                    <img className=".fun_key_img" src={some} alt="" />
                     </div>
                     <div className="text-cont text-fun_key_cont">
                         <h3>schedule at a glance</h3>
@@ -168,14 +181,17 @@ const Portfolio = () => {
                 </div>
             </div>
 
-            <div className="container">
+            <div className="container mt-4">
                 <div className="star_now text-center">
+                    <div className="my-4 start_nowMain" >
+
                     <p>START NOW</p>
-                    <h4>Software development doesn't have to be complicated. At least not with us.</h4>
-                    <p className="w-50 m-auto pb-4">We work with ideas that inspire, excite and fascinate. Ideas that
+                    <h4 className="startNow-h1 w-70 m-auto">Software development doesn't have to be complicated. At least not with us.</h4>
+                    <p className="w-50 m-auto py-4 startNow-p">We work with ideas that inspire, excite and fascinate. Ideas that
                         challenge conventions and shape trends. With our impressive personal touch, we want to make
                         users fall in love with your brand.</p>
-                    <button type="button" className="nav-btn px-4 py-2 rounded border-0">
+                    </div>
+                    <button type="button" className="nav-btn px-4 py-2 rounded-pill border-0">
                         <a href="tel:+91 8291617114">Book a Call</a>
                     </button>
                 </div>
