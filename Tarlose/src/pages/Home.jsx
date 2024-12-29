@@ -72,7 +72,7 @@ const Home = () => {
 
             gsap.from("#home .content-home", {
                 y: 100,
-                opacity: 0,
+                opacity: 0.9,
                 delay: 1.5,
                 duration: 0.9,
                 stagger: 0.3
