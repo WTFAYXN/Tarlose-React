@@ -469,7 +469,7 @@ const Home = () => {
 
             {/* <Prompt /> */}
             <Community />
-            <FAQ />
+            {/* <FAQ /> */}
             <Footer />
 
         </>
