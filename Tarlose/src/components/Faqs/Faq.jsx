@@ -17,110 +17,104 @@ const FAQ = () => {
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                What is Tarlose?
+                                What services does Tarlose offer?
                             </button>
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                               Tarlose is a technology company founded by Ayan Sayad, Huzaifa Ansari, and Hamdan Shaikh. 
-                              The company offers a range of tech-based services, including website development, app development, tech consultation, graphic design, and digital marketing. 
-                              Tarlose has collaborated with clients globally, delivering tailored solutions to meet diverse technological needs.
+                                Tarlose offers comprehensive digital solutions including:
+                                <ul>
+                                    <li>Custom Website Development</li>
+                                    <li>Mobile App Development</li>
+                                    <li>UI/UX Design</li>
+                                    <li>Digital Marketing</li>
+                                    <li>Tech Consultation</li>
+                                    <li>Graphic Design</li>
+                                </ul>
+                                Our team of experts delivers tailored solutions to help businesses thrive in the digital landscape.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                How can Tarlose help my business?
+                                What makes Tarlose different from other tech companies?
                             </button>
                         </h2>
                         <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                                Tarlose offers a wide range of tech-based services that can help your business grow and thrive in the digital age.
-                              By partnering with Tarlose, you can leverage cutting-edge technology to enhance your business operations, 
-                              improve customer engagement, and stay competitive in your industry.
+                                Tarlose stands out through:
+                                <ul>
+                                    <li>Personalized approach to each project</li>
+                                    <li>Cutting-edge technology implementation</li>
+                                    <li>Dedicated project managers</li>
+                                    <li>Transparent communication</li>
+                                    <li>Post-project support and maintenance</li>
+                                </ul>
+                                We focus on delivering value-driven solutions that help our clients achieve their business objectives.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                What industries does Tarlose work with?
+                                What industries does Tarlose specialize in?
                             </button>
                         </h2>
                         <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-Tarlose works with a diverse range of industries, including real estate, food packaging, pharmaceuticals, franchising, e-commerce, 
-                              tech startups, and marketing. They provide customized solutions such as websites and apps for property management, tech tools for supply chain management, inventory tracking for pharma, and digital platforms for franchise businesses. Additionally, they offer tailored e-commerce solutions, tech consultation for startups, and creative services like branding and digital marketing. Tarlose adapts its services to meet the unique needs of each industry, helping businesses grow and optimize their operations.
+                                We serve diverse industries including:
+                                <ul>
+                                    <li>Real Estate - Property management platforms</li>
+                                    <li>E-commerce - Custom shopping solutions</li>
+                                    <li>Healthcare - Patient management systems</li>
+                                    <li>Education - Learning management systems</li>
+                                    <li>Finance - Secure payment integrations</li>
+                                    <li>Startups - MVP development</li>
+                                </ul>
+                                Each solution is customized to meet industry-specific requirements and challenges.
                             </div>
                         </div>
                     </div>
-
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                How long does it take to complete a project with Tarlose?
+                                What is your project development process?
                             </button>
                         </h2>
                         <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                              
-The timeline for completing a project with Tarlose depends on the scope and complexity of the work. 
-                              Smaller projects like basic website development or graphic design might take a few weeks, while larger projects such as custom app development or comprehensive digital marketing campaigns could take several months. Tarlose works closely with clients to establish clear timelines and ensure that each phase of the project is delivered on schedule, with regular updates to keep you informed throughout the process.
+                                Our development process follows these key stages:
+                                <ol>
+                                    <li>Discovery & Planning - Understanding requirements</li>
+                                    <li>Design & Prototyping - Creating visual solutions</li>
+                                    <li>Development - Building the solution</li>
+                                    <li>Testing & QA - Ensuring quality</li>
+                                    <li>Deployment - Going live</li>
+                                    <li>Maintenance - Ongoing support</li>
+                                </ol>
+                                Each stage includes client collaboration and feedback integration.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Do you offer ongoing support and maintenance after the project is completed?
+                                What support services do you offer after project completion?
                             </button>
                         </h2>
                         <div id="collapseFive" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                        
-
-Yes, Tarlose offers ongoing support and maintenance services after the project is completed. We provide assistance with updates, troubleshooting, and any necessary improvements to ensure your website, app, or other digital solutions continue to function smoothly. This helps keep your business running efficiently and ensures your tech solutions remain up-to-date and secure. Tarlose tailors its support plans to meet the specific needs of each client, offering flexibility in maintaining long-term partnerships.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Can you work with existing design or development frameworks?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div className="accordion-body">
-                       
-
-Yes, Tarlose can work with existing design or development frameworks. Whether you already have a design system in place or are using a particular development framework, Tarlose can seamlessly integrate with your existing setup. We have experience with a wide range of tools and technologies, ensuring that they can build upon or optimize your current frameworks to meet your project needs without starting from scratch.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                How involved will I be in the project development process?
-                            </button>
-                        </h2>
-                        <div id="collapseSeven" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div className="accordion-body">
-                       
-
-With Tarlose, your involvement in the project development process is a key priority. We encourage regular communication and collaboration throughout the project. From the initial planning and design phases to development and final delivery, you’ll have the opportunity to provide input, give feedback, and make decisions. Tarlose keeps you updated on progress through meetings, reports, or demos, ensuring that the project aligns with your vision and goals at every stage. Your level of involvement can also be adjusted to match your preferences.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                Can you help with website or app maintenance and updates?
-                            </button>
-                        </h2>
-                        <div id="collapseEight" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div className="accordion-body">
-Yes, Tarlose provides ongoing maintenance and update services for websites and apps. They ensure your digital solutions remain functional, secure, and up-to-date through regular updates, troubleshooting, and performance optimization, allowing you to focus on your business while they manage the technical details.
+                                Our post-project support includes:
+                                <ul>
+                                    <li>24/7 technical support</li>
+                                    <li>Regular maintenance and updates</li>
+                                    <li>Performance monitoring</li>
+                                    <li>Security patches</li>
+                                    <li>Feature enhancements</li>
+                                    <li>Training and documentation</li>
+                                </ul>
+                                We offer flexible support packages tailored to your needs.
                             </div>
                         </div>
                     </div>

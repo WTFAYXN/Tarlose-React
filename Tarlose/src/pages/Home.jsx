@@ -393,63 +393,42 @@ const Home = () => {
 
 
             <div className="container">
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 ">
-
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2">
                     <div className="col p-0">
-
                         <div className="test-col">
                             <div className="text-white">
-                                <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
-                                <p>Their team's expertise in web development and design resulted in a visually stunning
-                                    and
-                                    user-friendly e-commerce platform. Our online sales have skyrocketed, and we
-                                    couldn't be
-                                    happier.
-                                </p>
+                                <h5>Tarlose Revolutionized Our Digital Strategy</h5>
+                                <p>The team delivered an exceptional e-commerce platform that exceeded our expectations. The intuitive design and seamless functionality have significantly improved our customer engagement and conversion rates. Their attention to detail and technical expertise made all the difference.</p>
                             </div>
-                            <div className="testi-cont d-flex  text-white ">
-
-                                <div className="test-name d-flex  rounded">
-                                    <img src="assets/svg/Profile.svg" alt="" />
-
+                            <div className="testi-cont d-flex text-white">
+                                <div className="test-name d-flex rounded">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="Sarah Wilson" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
                                     <div className="test-sub-cont">
-                                        <h6>John Smith</h6>
-                                        <p>CEO of Chic Boutique</p>
+                                        <h6>Sarah Wilson</h6>
+                                        <p>Director of Digital Innovation</p>
                                     </div>
                                     <button className="test-btn">Open Website</button>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
 
-                    <div className="col p-0 ">
-
+                    <div className="col p-0">
                         <div className="test-col">
                             <div className="text-white">
-                                <h5>Tarlose has been Instrumental in Transforming our Online Presence. </h5>
-                                <p>Their team's expertise in web development and design resulted in a visually stunning
-                                    and
-                                    user-friendly e-commerce platform. Our online sales have skyrocketed, and we
-                                    couldn't be
-                                    happier.
-                                </p>
+                                <h5>Outstanding Web Development & Design Services</h5>
+                                <p>Working with Tarlose was a game-changer for our business. They transformed our outdated website into a modern, responsive platform that perfectly represents our brand. Their collaborative approach and innovative solutions helped us achieve remarkable results.</p>
                             </div>
                             <div className="testi-cont d-flex text-white">
-
                                 <div className="test-name d-flex rounded">
-                                    <img src="assets/svg/Profile.svg" alt="" />
-
+                                    <img src="https://i.pravatar.cc/150?img=67" alt="Michael Chen" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
                                     <div className="test-sub-cont">
-                                        <h6>John Smith</h6>
-                                        <p>CEO of Chic Boutique</p>
+                                        <h6>Michael Chen</h6>
+                                        <p>Founder & CEO, TechVision</p>
                                     </div>
                                     <button className="test-btn">Open Website</button>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

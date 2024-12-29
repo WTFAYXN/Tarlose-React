@@ -47,7 +47,7 @@ const Navbar = () => {
     return (
         <>
          <nav className="navbar navbar-expand-lg p-0">
-            <div className="container">
+            <div className="container d-flex justify-content-between align-items-center">
                 <a className="navbar-brand p-0 mt-3" href="/">
                     <img src={logo} alt="Tarlose" width={100}/>
                 </a>
@@ -56,8 +56,8 @@ const Navbar = () => {
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
+                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    {/* <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
                         <li className="nav-item">
                             <a className="nav-link active" href="/">Home</a>
                         </li>
@@ -77,9 +77,9 @@ const Navbar = () => {
                           <li><a class="dropdown-item" href="#">Another action</a></li>
                           <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </ul>
+                    </ul> */}
                     <button type="button" className="nav-btn px-4 py-2 rounded border-0">
-                        <a href="tel:+91 8291617114">Book a Call</a>
+                        <a href="https://calendly.com/ayansayad2005">Book a Call</a>
                     </button>
                 </div>
             </div>
