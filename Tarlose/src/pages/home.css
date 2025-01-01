@@ -109,11 +109,16 @@ nav a:hover,
     font-size: 18px;
     font-family: Gilroy-Bold, sans-serif;
     border: 2px solid #8d6a9f !important;
-    transition: background-color 0.3s ease;
+    background-color: transparent !important;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .btn-portfolio:hover {
-    background-color: transparent !important;
+    background-color: #8d6a9f !important;
+    transform: translateY(-2px);
+    opacity: 0.95;
 }
 
 .marquee-title-cont {

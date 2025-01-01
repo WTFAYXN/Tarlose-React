@@ -27,6 +27,8 @@ import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
 import Community from "../components/Community/Community";
 
+import bgheader from "../assets/svgs/background-header.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const trackRef = useRef(null);
@@ -183,7 +185,7 @@ const Home = () => {
 
                 <div className="d-flex justify-content-center">
                     <div id="btn-fade">
-                        <a href="#Work">
+                        <a href="https://drive.google.com/file/d/1Ie9c3bRjWqdMqyvLC4kFLTZ_WtJ7L6xb/view?usp=sharing">
                             <button className="btn btn-work px-3 py-2" type="button">
                                 Our Works
                             </button>
@@ -232,8 +234,12 @@ const Home = () => {
                                         <h4 className="num-card">1</h4>
                                         <h4 className="card-heading">Website Development</h4>
                                         <p>We craft modern, responsive websites with cutting-edge <br /> technologies and stunning designs.</p>
-                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        </Link>
+                                        <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing">
+                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        </Link>
                                     </div>
 
 
@@ -255,8 +261,12 @@ const Home = () => {
                                         <h4 className="num-card m-0">2</h4>
                                         <h4 className="card-heading py-3">Graphic <br /> Design</h4>
                                         <p>We create stunning visual designs, branding, and marketing <br /> materials that capture your unique identity.</p>
-                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        </Link>
+                                        <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing">
+                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        </Link>
                                     </div>
 
 
@@ -278,8 +288,12 @@ const Home = () => {
                                         <h4 className="num-card">3</h4>
                                         <h4 className="card-heading py-3">Marketing</h4>
                                         <p>We develop data-driven marketing strategies to boost your brand visibility <br /> and drive measurable business growth.</p>
-                                        <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
+                                        </Link>
+                                        <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing">
+                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
+                                        </Link>
                                     </div>
 
 
@@ -307,7 +321,7 @@ const Home = () => {
 
             <div className="card text-bg-dark position-relative overflow-hidden">
                 <img 
-                    src="./assets/images/image-2.png" 
+                    src={bgheader} 
                     className="card-img" 
                     alt="Tarlose team collaboration" 
                     loading="lazy"
@@ -331,13 +345,7 @@ const Home = () => {
                                 <img src={Expertise} alt="" />
                                 <h6>Expertise</h6>
                             </div>
-                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                understanding
-                                of
-                                the
-                                digital
-                                landscape. We stay updated with the latest industry trends and best practices to deliver
-                                cutting-edge solutions.</p>
+                            <p className="my-5">our team combines skill, experience, and the latest industry knowledge to deliver solutions that work flawlessly, every time.</p>
                         </div>
                     </div>
                     <div className="col  p-0 m-0 exp-col">
@@ -346,13 +354,7 @@ const Home = () => {
                                 <img src={Client} alt="" />
                                 <h6>Client-Centric Approach</h6>
                             </div>
-                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                understanding
-                                of
-                                the
-                                digital
-                                landscape. We stay updated with the latest industry trends and best practices to deliver
-                                cutting-edge solutions.</p>
+                            <p className="my-5">With a client-centric approach, our experts guarantee tailored solutions driven by precision, innovation, and a commitment to exceeding expectations.</p>
                         </div>
                     </div>
                     <div className="col p-0 m-0 exp-col">
@@ -361,13 +363,7 @@ const Home = () => {
                                 <img src={Results} alt="" />
                                 <h6>Results-Driven Solutions</h6>
                             </div>
-                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                understanding
-                                of
-                                the
-                                digital
-                                landscape. We stay updated with the latest industry trends and best practices to deliver
-                                cutting-edge solutions.</p>
+                            <p className="my-5">Our team delivers results-driven solutions, blending expertise and innovation to ensure measurable success every time.</p>
                         </div>
                     </div>
                     <div className="col p-0 m-0 exp-col">
@@ -376,13 +372,7 @@ const Home = () => {
                                 <img src={Partnership} alt="" />
                                 <h6>Collaborative Partnership</h6>
                             </div>
-                            <p className="my-5">Our team consists of highly skilled professionals who have a deep
-                                understanding
-                                of
-                                the
-                                digital
-                                landscape. We stay updated with the latest industry trends and best practices to deliver
-                                cutting-edge solutions.</p>
+                            <p className="my-5">We believe in collaborative partnerships, combining our expertise with your vision to deliver solutions that guarantee success and lasting impact.</p>
                         </div>
                     </div>
 
@@ -401,7 +391,7 @@ const Home = () => {
             {/* <!-- About Us  --> */}
 
             <div className="card text-bg-dark">
-                <img src="./assets/images/image-2.png" className="card-img" alt="..." />
+                <img src={bgheader} className="card-img" alt="..." />
                 <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                      <h2 className="card-title display-4 mb-4 fw-bold">What our Clients say About us</h2>
                    <p className="card-text fs-5 mx-auto text-center" style={{maxWidth: "800px"}}>At Tarlose, we take pride in delivering exceptional digital products and
