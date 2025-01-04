@@ -56,7 +56,7 @@ const Navbar = () => {
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div className="justify-content-end" id="navbarSupportedContent">
                     {/* <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
                         <li className="nav-item">
                             <a className="nav-link active" href="/">Home</a>

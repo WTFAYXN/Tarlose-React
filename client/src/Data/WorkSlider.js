@@ -1,6 +1,7 @@
 import Cyberkalki from "../assets/Work/Cyberkalki.png";
 import QualityAcademy from "../assets/Work/quality-academy.png";
 import NehaSavara from "../assets/Work/healwithneha.png";
+import BettermindLabs from "../assets/Work/BettermindLabs.png";
 import Placeholder from "../assets/Work/placeholder.png";
 
 const WorkSlider =[
@@ -24,10 +25,10 @@ const WorkSlider =[
     },
     {
         id:3,
-        Name:"HealWithNehaSavara",
-        class: "work-card-HealwithNeha",
+        class: "work-card-bettermindlabs",
+        Name:"BettermindLabs",
         category:"Wix Website | 2024",
-        image:NehaSavara,
+        image:BettermindLabs,
         url:"./"
     },
     {
@@ -40,10 +41,10 @@ const WorkSlider =[
     },
     {
         id:5,
-        class: "works-card-Amorfume",
-        Name:"BettermindLabs",
+        Name:"HealWithNehaSavara",
+        class: "work-card-HealwithNeha",
         category:"Wix Website | 2024",
-        image:Placeholder,
+        image:NehaSavara,
         url:"./"
     },
     {
@@ -54,14 +55,14 @@ const WorkSlider =[
         image:Placeholder,
         url:"./"
     },
-    {
-        id:7,
-        Name:"Chocolef",
-        class: "works-card-Amorfume",
-        category:"Wix Website | 2024",
-        image:Placeholder,
-        url:"./"
-    },
+    // {
+    //     id:7,
+    //     Name:"Chocolef",
+    //     class: "works-card-Amorfume",
+    //     category:"Wix Website | 2024",
+    //     image:Placeholder,
+    //     url:"./"
+    // },
     
     
 ];

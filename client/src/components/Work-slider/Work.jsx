@@ -70,7 +70,7 @@ const Work = () => {
                           <h3>{item.Name}</h3>
                           <h6 id="display-text">{item.category}</h6>
                         </div>
-                        <p className="m-0">Case study</p>
+                        {/* <p className="m-0">Case study</p> */}
                       </div>
                       <div className="work-img-cont">
                         <img
