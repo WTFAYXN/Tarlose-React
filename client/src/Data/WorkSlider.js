@@ -1,7 +1,7 @@
 import Cyberkalki from "../assets/Work/Cyberkalki.png";
 import QualityAcademy from "../assets/Work/quality-academy.png";
 import NehaSavara from "../assets/Work/healwithneha.png";
-import BettermindLabs from "../assets/Work/BettermindLabs.png";
+import BettermindLabs from "../assets/Work/Bettermindlabs.png";
 import Placeholder from "../assets/Work/placeholder.png";
 
 const WorkSlider =[
