@@ -9,23 +9,28 @@ const Terms =() => {
         <Navbar />
         <Helmet>
         <title>Terms and Conditions - Tarlose</title>
-        <meta name="description" content="This is the terms and conditions page of Tarlose" />
-        <meta name="keywords" content="terms and conditions, Tarlose" />
+        <meta name="description" content="Read Tarlose's terms and conditions to understand our policies, service agreements, intellectual property rights, and user responsibilities for website and service usage." />
+        <meta name="keywords" content="terms and conditions, Tarlose, service agreement, website terms, legal terms, user policy, intellectual property" />
         <link rel="canonical" href="https://www.tarlose.com/terms" />
         <meta property="og:title" content="Terms and Conditions - Tarlose" />
-        <meta property="og:description" content="This is the terms and conditions page of Tarlose." />
+        <meta property="og:description" content="Learn about Tarlose's terms of service, policies, and guidelines for using our website and services. Understand your rights and responsibilities as a user." />
         <meta property="og:url" content="https://www.tarlose.com/terms" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms and Conditions - Tarlose" />
-        <meta name="twitter:description" content="This is the terms and conditions page of Tarlose." />
         <script type="application/ld+json">
             {`
             {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
                 "name": "Terms and Conditions",
-                "description": "This is the terms and conditions page of Tarlose"
+                "description": "Comprehensive terms and conditions outlining Tarlose's service agreements, policies, intellectual property rights, and user responsibilities.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Tarlose"
+                },
+                "mainEntity": {
+                    "@type": "WebContent",
+                    "about": "Terms and conditions for using Tarlose's website and services"
+                }
             }
             `}
         </script>

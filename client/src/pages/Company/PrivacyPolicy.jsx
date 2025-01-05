@@ -9,23 +9,29 @@ const PrivacyPolicy =() => {
         <Navbar />
         <Helmet>
         <title>Privacy Policy - Tarlose</title>
-        <meta name="description" content="This is the privacy policy page of Tarlose" />
-        <meta name="keywords" content="privacy policy, Tarlose" />
+        <meta name="description" content="Learn about how Tarlose collects, uses, and protects your personal information. Read our comprehensive privacy policy to understand your data rights and our commitment to privacy." />
+        <meta name="keywords" content="privacy policy, data protection, personal information, data security, privacy rights, Tarlose privacy, data collection" />
         <link rel="canonical" href="https://www.tarlose.com/privacy" />
         <meta property="og:title" content="Privacy Policy - Tarlose" />
-        <meta property="og:description" content="This is the privacy policy page of Tarlose." />
-        <meta property="og:url" content="https://www.tarlose/privacy" />
+        <meta property="og:description" content="Learn about how Tarlose collects, uses, and protects your personal information. Read our comprehensive privacy policy to understand your data rights and our commitment to privacy." />
+        <meta property="og:url" content="https://www.tarlose.com/privacy" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy - Your Website Name" />
-        <meta name="twitter:description" content="This is the privacy policy page of Tarlose." />
+       
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Privacy Policy",
-              "description": "This is the privacy policy page of Tarlose"
+              "description": "Comprehensive privacy policy detailing how Tarlose collects, uses, and protects user data and personal information.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Tarlose"
+              },
+              "mainEntity": {
+                "@type": "WebContent",
+                "about": "Privacy and data protection policies at Tarlose"
+              }
             }
           `}
         </script>
