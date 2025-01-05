@@ -51,11 +51,11 @@ const Navbar = () => {
                 <a className="navbar-brand p-0 mt-3" href="/">
                     <img src={logo} alt="Tarlose" width={100}/>
                 </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                </button>
+                </button> */}
                 <div className="justify-content-end" id="navbarSupportedContent">
                     {/* <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
                         <li className="nav-item">
