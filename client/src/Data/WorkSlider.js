@@ -2,6 +2,8 @@ import Cyberkalki from "../assets/Work/Cyberkalki.png";
 import QualityAcademy from "../assets/Work/quality-academy.png";
 import NehaSavara from "../assets/Work/healwithneha.png";
 import BettermindLabs from "../assets/Work/Bettermindlabs.png";
+import Amorfume from "../assets/Work/Amorfume.png";
+import Prestige from "../assets/Work/Prestige.png";
 import Placeholder from "../assets/Work/placeholder.png";
 
 const WorkSlider =[
@@ -36,7 +38,7 @@ const WorkSlider =[
         Name:"Amorfume",
         class: "works-card-Amorfume",
         category:"Ecommerce, MERN Website | 2024",
-        image:Placeholder,
+        image:Amorfume,
         url:"./"
     },
     {
@@ -50,9 +52,9 @@ const WorkSlider =[
     {
         id:6,
         Name:"PrestigeCarConnect",
-        class: "works-card-Amorfume",
+        class: "work-card-Prestige",
         category:"Wix Website | 2024",
-        image:Placeholder,
+        image:Prestige,
         url:"./"
     },
     // {
