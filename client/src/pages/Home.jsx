@@ -190,7 +190,7 @@ const Home = () => {
                                 Our Works
                             </button>
                         </a>
-                        <a href="https://calendly.com/ayansayad2005/30min">
+                        <a href="https://wa.link/qyts69">
                             <button className="btn btn-contact px-3 py-2" type="button">
                                 Contact Us
                             </button>
@@ -234,7 +234,7 @@ const Home = () => {
                                         <h4 className="num-card">1</h4>
                                         <h4 className="card-heading">Website Development</h4>
                                         <p>We craft modern, responsive websites with cutting-edge <br /> technologies and stunning designs.</p>
-                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                        <Link to="https://wa.link/93y4cd">
                                             <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         </Link>
                                         <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing">
@@ -261,7 +261,7 @@ const Home = () => {
                                         <h4 className="num-card m-0">2</h4>
                                         <h4 className="card-heading py-3">Graphic <br /> Design</h4>
                                         <p>We create stunning visual designs, branding, and marketing <br /> materials that capture your unique identity.</p>
-                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                        <Link to="https://wa.link/0cclxm">
                                             <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         </Link>
                                         <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing">
@@ -288,7 +288,7 @@ const Home = () => {
                                         <h4 className="num-card">3</h4>
                                         <h4 className="card-heading py-3">Marketing</h4>
                                         <p>We develop data-driven marketing strategies to boost your brand visibility <br /> and drive measurable business growth.</p>
-                                        <Link to="https://calendly.com/ayansayad2005/30min">
+                                        <Link to="https://wa.link/9z3qeh">
                                             <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
                                         </Link>
                                         <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing">
