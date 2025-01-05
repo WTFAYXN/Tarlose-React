@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Work.css"; // Ensure you have the necessary CSS
 import WorkSlider from "../../Data/WorkSlider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import image from "../../assets/Work/Cyberkalki.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -52,9 +52,11 @@ const Work = () => {
               Our experts develop customized native apps and software solutions
               with innovative technologies for your success.
             </p>
+            <Link to="https://calendly.com/ayansayad2005/30min" target="_blank">
             <button className="btn btn-contact px-5 py-2" type="button">
               Contact Us
             </button>
+            </Link>
           </div>
 
           <div className="works-cards-cont my-5 d-grid g-5">
@@ -68,7 +70,7 @@ const Work = () => {
                           <h3>{item.Name}</h3>
                           <h6 id="display-text">{item.category}</h6>
                         </div>
-                        <p className="m-0">Case study</p>
+                        {/* <p className="m-0">Case study</p> */}
                       </div>
                       <div className="work-img-cont">
                         <img

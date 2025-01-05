@@ -20,7 +20,7 @@ const Community = () => {
                                     <p className="card-text mb-4">
                                         Connect with fellow freelancers, share opportunities, and grow your network in our vibrant community.
                                     </p>
-                                    <a href="#" className="join-btn">
+                                    <a href="https://chat.whatsapp.com/IJrPAD6r5fcDJn9y9Prm8S" className="join-btn">
                                         Join Now 
                                         <svg className="ms-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
@@ -37,11 +37,11 @@ const Community = () => {
                                             <path d="M32 12H28V8C28 5.8 26.2 4 24 4H16C13.8 4 12 5.8 12 8V12H8C5.8 12 4 13.8 4 16V32C4 34.2 5.8 36 8 36H32C34.2 36 36 34.2 36 32V16C36 13.8 34.2 12 32 12ZM16 8H24V12H16V8Z" fill="#fff"/>
                                         </svg>
                                     </div>
-                                    <h3 className="card-title mb-4">Entrepreneurs Hub</h3>
+                                    <h3 className="card-title mb-4">Developers Hub</h3>
                                     <p className="card-text mb-4">
                                         Join a community of innovative entrepreneurs, share insights, and collaborate on exciting ventures.
                                     </p>
-                                    <a href="#" className="join-btn">
+                                    <a href="https://chat.whatsapp.com/KKqS1T1n9lb1TGTgFJyIZE" className="join-btn">
                                         Join Now 
                                         <svg className="ms-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
