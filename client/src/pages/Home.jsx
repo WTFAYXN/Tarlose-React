@@ -27,6 +27,9 @@ import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
 import Community from "../components/Community/Community";
 
+import tushar from "../assets/testimonials/tushar-amorfume.jpg";
+import om from "../assets/testimonials/Om-QualityAcademy.jpg";
+
 import bgheader from "../assets/svgs/background-header.svg";
 import { Link } from "react-router-dom";
 
@@ -409,15 +412,15 @@ const Home = () => {
                     <div className="col p-0">
                         <div className="test-col">
                             <div className="text-white">
-                                <h5>Tarlose Revolutionized Our Digital Strategy</h5>
-                                <p>The team delivered an exceptional e-commerce platform that exceeded our expectations. The intuitive design and seamless functionality have significantly improved our customer engagement and conversion rates. Their attention to detail and technical expertise made all the difference.</p>
+                                <h5> Tarlose Delivered a High-Performance Website & Marketplace</h5>
+                                <p>The team did an amazing job delivering a complete website portal, and marketplace smooth database migrations, and a crucial luxury car portal quickly. Their full-stack development was spot on, and the developers are super skilled. </p>
                             </div>
                             <div className="testi-cont d-flex text-white">
                                 <div className="test-name d-flex rounded">
-                                    <img src="https://i.pravatar.cc/150?img=12" alt="Sarah Wilson" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
+                                    <img src={tushar} alt="Tushar Shankaran" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
                                     <div className="test-sub-cont">
-                                        <h6>Sarah Wilson</h6>
-                                        <p>Director of Digital Innovation</p>
+                                        <h6>Tushar Shankaran</h6>
+                                        <p>CEO, Amorfume</p>
                                     </div>
                                     <button className="test-btn">Open Website</button>
                                 </div>
@@ -429,16 +432,18 @@ const Home = () => {
                         <div className="test-col">
                             <div className="text-white">
                                 <h5>Tarlose Revolutionized Our Digital Strategy</h5>
-                                <p>The team delivered an exceptional e-commerce platform that exceeded our expectations. The intuitive design and seamless functionality have significantly improved our customer engagement and conversion rates. Their attention to detail and technical expertise made all the difference.</p>
+                                <p>They delivered what they promised and more, over the past 2 months it's been a journey, their input really made a difference they weren't afraid to guide us through the project. They're young, talented, and they have that drive that makes them the best in what they do. Loved their work.</p>
                             </div>
                             <div className="testi-cont d-flex text-white">
                                 <div className="test-name d-flex rounded">
-                                    <img src="https://i.pravatar.cc/150?img=12" alt="Sarah Wilson" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
+                                    <img src={om} alt="/" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
                                     <div className="test-sub-cont">
-                                        <h6>Sarah Wilson</h6>
-                                        <p>Director of Digital Innovation</p>
+                                        <h6>Om Sharma</h6>
+                                        <p>Quality Academy</p>
                                     </div>
-                                    <button className="test-btn">Open Website</button>
+                                    <a href="https://www.qualityacademy.info" target="_blank" rel="noopener noreferrer">
+                                         <button className="test-btn">Open Website</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
