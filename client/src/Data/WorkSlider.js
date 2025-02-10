@@ -5,18 +5,19 @@ import BettermindLabs from "../assets/Work/Bettermindlabs.png";
 import Amorfume from "../assets/Work/Amorfume.png";
 import Prestige from "../assets/Work/Prestige.png";
 import Placeholder from "../assets/Work/placeholder.png";
-
+import Zyper from "../assets/Work/zyper.ai.png";
 const WorkSlider =[
  
     {
         id:1,
-        class: "work-card-qualityAcademy",
-        Name:"Quality Academy",
-        category:"MERN Website | 2024",
-        image:QualityAcademy,
+        class: "work-card-zyper",
+        Name:"Zyper.ai",
+        category:"Wordpress Website | 2025",
+        image:Zyper,
         url:"/",
-        alt:"Cybersecurity Website",
-    },{
+        alt:"Digital Marketing Website",
+    },
+    {
         id:2,
         class: "work-card-Cyberkalki",
         Name:"Cyberkalki",
@@ -43,11 +44,12 @@ const WorkSlider =[
     },
     {
         id:5,
-        Name:"HealWithNehaSavara",
-        class: "work-card-HealwithNeha",
-        category:"Wix Website | 2024",
-        image:NehaSavara,
-        url:"./"
+        class: "work-card-qualityAcademy",
+        Name:"Quality Academy",
+        category:"MERN Website | 2024",
+        image:QualityAcademy,
+        url:"/",
+        alt:"Cybersecurity Website",
     },
     {
         id:6,

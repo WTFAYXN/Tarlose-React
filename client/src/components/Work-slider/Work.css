@@ -23,6 +23,16 @@
     box-shadow:0 0 30px rgb(215 115 115 / 30%);
 }
 
+.work-card-zyper{
+    padding: 1.815rem 2.815rem 2.815rem;
+    background-image: linear-gradient(#6b2da3, #4f42a3);
+    border-radius: 20px;
+    width: 34.375rem;
+    min-height: 34rem;
+    transition: all 0.5s ease;
+    box-shadow:0 0 30px rgb(215 115 115 / 30%);
+}
+
 .work-card-qualityAcademy{
     padding: 1.815rem 2.815rem 2.815rem;
     background-image: linear-gradient(#ff9e55, #7db7c1);
@@ -55,7 +65,7 @@
     box-shadow: 0 0 30px rgba(156, 8, 8, 0.3);
 }
 
-.work-card-Cyberkalki:hover #display-text, .work-card-qualityAcademy:hover #display-text, .work-card-bettermindlabs:hover #display-text, .work-card-Prestige:hover #display-text {
+.work-card-Cyberkalki:hover #display-text, .work-card-qualityAcademy:hover #display-text, .work-card-bettermindlabs:hover #display-text, .work-card-Prestige:hover #display-text, .work-card-zyper:hover #display-text{
     opacity: 1;
     transform: translateY(0);
     margin-bottom: 1rem;
