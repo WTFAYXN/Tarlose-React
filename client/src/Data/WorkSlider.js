@@ -28,14 +28,6 @@ const WorkSlider =[
     },
     {
         id:3,
-        class: "work-card-bettermindlabs",
-        Name:"BettermindLabs",
-        category:"Wix Website | 2024",
-        image:BettermindLabs,
-        url:"./"
-    },
-    {
-        id:4,
         Name:"Amorfume",
         class: "works-card-Amorfume",
         category:"Ecommerce, MERN Website | 2024",
@@ -43,7 +35,7 @@ const WorkSlider =[
         url:"./"
     },
     {
-        id:5,
+        id:4,
         class: "work-card-qualityAcademy",
         Name:"Quality Academy",
         category:"MERN Website | 2024",
@@ -52,7 +44,7 @@ const WorkSlider =[
         alt:"Cybersecurity Website",
     },
     {
-        id:6,
+        id:5,
         Name:"PrestigeCarConnect",
         class: "work-card-Prestige",
         category:"Wix Website | 2024",

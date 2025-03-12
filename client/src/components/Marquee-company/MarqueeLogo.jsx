@@ -19,7 +19,6 @@ const MarqueeLogo = () => {
                 <div className="slide-track">
                     <div className="slide"><img src={Uniekart} alt="" /></div>
                     <div className="slide"><img src={Amorfume} alt="" /></div>
-                    <div className="slide"><img src={Bettermind} alt="" /></div>
                     <div className="slide"><img src={TheHausCo} alt="" /></div>
                     <div className="slide"><img src={MaavisProjects} alt="" /></div>
                     <div className="slide"><img src={Cyberkalki} alt="" /></div>
@@ -31,7 +30,6 @@ const MarqueeLogo = () => {
                     {/* <!-- Duplicate slides for seamless loop --> */}
                     <div className="slide"><img src={Uniekart} alt="" /></div>
                     <div className="slide"><img src={Amorfume} alt="" /></div>
-                    <div className="slide"><img src={Bettermind} alt="" /></div>
                     <div className="slide"><img src={TheHausCo} alt="" /></div>
                     <div className="slide"><img src={MaavisProjects} alt="" /></div>
                     <div className="slide"><img src={Cyberkalki} alt="" /></div>
