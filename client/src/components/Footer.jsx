@@ -79,7 +79,11 @@ const Footer = () => {
     </div> */}
     {/* <hr /> */}
     <div class="d-sm-flex justify-content-between ">
-      <p>2024 © Tarlose. All Rights Reserved. </p>
+    <div class="d-sm-flex gap-4">
+      <a class="text-light text-decoration-none" href="mailto:admin@tarlose.com"><p>admin@tarlose.com</p></a>
+      <a class="text-light text-decoration-none" href="tel:8291617114"><p>+91 8291617114</p></a>
+    </div>
+      <p>2025 © Tarlose. All Rights Reserved. </p>
       <p>
         <a href="/terms" class="text-light text-decoration-none pe-4">Terms & condition</a>
         <a href="/privacy" class="text-light text-decoration-none"> Privacy policy</a>

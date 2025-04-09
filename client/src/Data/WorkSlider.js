@@ -6,19 +6,40 @@ import Amorfume from "../assets/Work/Amorfume.png";
 import Prestige from "../assets/Work/Prestige.png";
 import Placeholder from "../assets/Work/placeholder.png";
 import Zyper from "../assets/Work/zyper.ai.png";
+import javTrading from "../assets/Work/JavSteelTrading.png";
+import fintechCap from "../assets/Work/fintech.png";
+
 const WorkSlider =[
  
     {
         id:1,
+        class: "work-card-javTrading",
+        Name:"Jav Trading Company",
+        category:"Wix Website | 2025",
+        image:javTrading,
+        url:"https://javtradingcompany.com",
+        alt:"Steel Manufacturer Website",
+    },
+    {
+        id:2,
+        class: "work-card-fintechcap",
+        Name:"Fintech Cap Australia",
+        category:"Wordpress Website | 2025",
+        image:fintechCap,
+        url:"https://fintechcap.com.au",
+        alt:"Investor Funding Website",
+    },
+    {
+        id:3,
         class: "work-card-zyper",
         Name:"Zyper.ai",
         category:"Wordpress Website | 2025",
         image:Zyper,
-        url:"/",
+        url:"https://zyper.ai",
         alt:"Digital Marketing Website",
     },
     {
-        id:2,
+        id:4,
         class: "work-card-Cyberkalki",
         Name:"Cyberkalki",
         category:"Wordpress Website | 2024",
@@ -27,7 +48,7 @@ const WorkSlider =[
         alt:"Cybersecurity Website",
     },
     {
-        id:3,
+        id:5,
         Name:"Amorfume",
         class: "works-card-Amorfume",
         category:"Ecommerce, MERN Website | 2024",
@@ -35,16 +56,16 @@ const WorkSlider =[
         url:"./"
     },
     {
-        id:4,
+        id:6,
         class: "work-card-qualityAcademy",
         Name:"Quality Academy",
         category:"MERN Website | 2024",
         image:QualityAcademy,
-        url:"/",
-        alt:"Cybersecurity Website",
+        url:"https://qualityacademy.info",
+        alt:"Edtech Website",
     },
     {
-        id:5,
+        id:7,
         Name:"PrestigeCarConnect",
         class: "work-card-Prestige",
         category:"Wix Website | 2024",
