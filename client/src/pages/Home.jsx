@@ -111,7 +111,7 @@ const Home = () => {
                     <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
                     <meta property="og:url" content="https://www.tarlose.com/" />
                     <meta property="og:type" content="website" />
-                    <meta property="og:image" content="https://www.tarlose.com/og-image.jpg" />
+                    <meta property="og:image" content="https://www.tarlose.com/favicon.ico" />
                     <meta property="og:site_name" content="Tarlose" />
                     
                     {/* Twitter Card Tags */}
@@ -119,7 +119,7 @@ const Home = () => {
                     <meta name="twitter:site" content="@tarlose" />
                     <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
                     <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-                    <meta name="twitter:image" content="https://www.tarlose.com/twitter-card.jpg" />
+                    <meta name="twitter:image" content="https://www.tarlose.com/favicon.ico" />
                     
                     {/* Structured Data */}
                     <script type="application/ld+json">
@@ -420,9 +420,12 @@ const Home = () => {
                                     <img src={tushar} alt="Tushar Shankaran" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
                                     <div className="test-sub-cont">
                                         <h6>Tushar Shankaran</h6>
-                                        <p>CEO, Amorfume</p>
+                                        <p>CEO, Necesri</p>
                                     </div>
+                                    <a href="https://necesri.com" target="_blank" rel="noopener noreferrer">
+                                    
                                     <button className="test-btn">Open Website</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
