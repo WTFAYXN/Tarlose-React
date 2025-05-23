@@ -1,9 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const cors = require('cors');
+const path = require('path');
 const { SitemapStream } = require('sitemap');
 const { streamToPromise } = require('./node_modules/sitemap/dist/index');
 const connectDB = require('./src/db'); // Import the connectDB function
+const blogRoutes = require('./src/routes/blog');
+const url = process.env.FRONTEND_URL;
 
 // Load environment variables from .env file
 dotenv.config();
@@ -12,9 +16,21 @@ connectDB();
 const app = express();
 const port = process.env.PORT || 5000;
 
+// CORS configuration
+const corsOptions = {
+    origin: [`${url}`, 'http://127.0.0.1:5173'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+};
+
 // Middleware
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static files from uploads directory
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Array of URLs to be included in the sitemap
 const urls = [
@@ -50,6 +66,14 @@ app.get('/sitemap.xml', async (req, res) => {
 // Routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
+});
+
+app.use('/api/blogs', blogRoutes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ message: 'Something went wrong!' });
 });
 
 // Start the server
