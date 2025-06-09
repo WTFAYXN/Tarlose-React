@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import BlogLive from './pages/Blogs/BlogLive';
 import Terms from './pages/Company/Terms';
 import PrivacyPolicy from './pages/Company/PrivacyPolicy';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       <div className="App">
     <Router>
         <Routes>
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+           <Route path="*" element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/career" element={<Careers />} />
           <Route path="/about" element={<About />} />

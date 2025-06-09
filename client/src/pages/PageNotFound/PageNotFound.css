@@ -1,0 +1,19 @@
+.text-container-pagenotfound{
+
+
+    margin:200px 0 0 200px;
+}
+
+.bg-container-pagenotfound{
+    background-image: url(/src/pages/PageNotFound/cat.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height: 500px;
+    background-position: center right;
+}
+
+@media (max-width: 480px) {
+.text-container-pagenotfound{
+        margin: 100px 0 0 20px;
+}
+}
