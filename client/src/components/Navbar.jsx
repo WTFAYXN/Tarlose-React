@@ -57,7 +57,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button> */}
                 <div className="justify-content-end" id="navbarSupportedContent">
-                    {/* <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
+                     <ul className="navbar-nav nav-pills mx-auto mb-2 mb-lg-0" id="navList">
                         <li className="nav-item">
                             <a className="nav-link active" href="/">Home</a>
                         </li>
@@ -77,11 +77,12 @@ const Navbar = () => {
                           <li><a class="dropdown-item" href="#">Another action</a></li>
                           <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </ul> */}
-                    <button type="button" className="nav-btn px-4 py-2 rounded border-0">
+                    </ul> 
+                    
+                </div>
+                <button type="button" className="nav-btn px-4 py-2 rounded border-0">
                         <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">Book a Call</a>
                     </button>
-                </div>
             </div>
         </nav>
         </>
