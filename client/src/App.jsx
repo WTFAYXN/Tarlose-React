@@ -8,13 +8,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import BlogLive from './pages/Blogs/BlogLive';
 import Terms from './pages/Company/Terms';
 import PrivacyPolicy from './pages/Company/PrivacyPolicy';
-<<<<<<< HEAD
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-=======
-import Admin from './pages/admin';
-import Login from './pages/Login';
-import Blog from './pages/Blogs/Blog';
->>>>>>> 62295529f57bb020953e7a08826b4d1e43ffdd56
 
 function App() {
 
