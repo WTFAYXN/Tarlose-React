@@ -7,123 +7,154 @@ import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import { Helmet } from "react-helmet";
 import bgheader from "../../assets/svgs/background-header.svg";
-import { FaHeart, FaRegHeart, FaShare, FaFacebook, FaTwitter, FaLinkedin, FaComment, FaSearch, FaFilter } from 'react-icons/fa';
+import {
+  FaHeart,
+  FaRegHeart,
+  FaShare,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaComment,
+  FaSearch,
+  FaFilter,
+} from "react-icons/fa";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
 const BlogLive = () => {
-    const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const [categories, setCategories] = useState([]);
-    const [showShareOptions, setShowShareOptions] = useState(null);
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [showShareOptions, setShowShareOptions] = useState(null);
 
-    useEffect(() => {
-        fetchBlogs();
-    }, []);
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
-    const fetchBlogs = async () => {
-        try {
-            const response = await axios.get(`${API_URL}/api/blogs`, {
-                withCredentials: true,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            // Ensure blogs is always an array
-            const blogsArray = Array.isArray(response.data) 
-                ? response.data 
-                : (Array.isArray(response.data.blogs) ? response.data.blogs : []);
-            setBlogs(blogsArray);
-            // Extract unique categories
-            const uniqueCategories = [...new Set(blogsArray.flatMap(blog => blog.categories))];
-            setCategories(uniqueCategories);
-            setLoading(false);
-        } catch (error) {
-            setError("Failed to load blogs");
-            setLoading(false);
+  const fetchBlogs = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/api/blogs`, {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // Ensure blogs is always an array
+      const blogsArray = Array.isArray(response.data)
+        ? response.data
+        : Array.isArray(response.data.blogs)
+        ? response.data.blogs
+        : [];
+      setBlogs(blogsArray);
+      // Extract unique categories
+      const uniqueCategories = [
+        ...new Set(blogsArray.flatMap((blog) => blog.categories)),
+      ];
+      setCategories(uniqueCategories);
+      setLoading(false);
+    } catch (error) {
+      setError("Failed to load blogs");
+      setLoading(false);
+    }
+  };
+
+  const handleLike = async (blogId) => {
+    try {
+      const response = await axios.put(
+        `${API_URL}/api/blogs/${blogId}/like`,
+        {},
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-    };
+      );
+      setBlogs(
+        blogs.map((blog) => (blog._id === blogId ? response.data : blog))
+      );
+    } catch (error) {
+      console.error("Failed to like blog:", error);
+    }
+  };
 
-    const handleLike = async (blogId) => {
-        try {
-            const response = await axios.put(`${API_URL}/api/blogs/${blogId}/like`, {}, {
-                withCredentials: true,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            setBlogs(blogs.map(blog => 
-                blog._id === blogId ? response.data : blog
-            ));
-        } catch (error) {
-            console.error("Failed to like blog:", error);
-        }
-    };
+  const handleShare = (platform, blog) => {
+    const url = `${window.location.origin}/blog/${blog.slug}`;
+    const title = blog.title;
+    let shareUrl = "";
 
-    const handleShare = (platform, blog) => {
-        const url = `${window.location.origin}/blog/${blog.slug}`;
-        const title = blog.title;
-        let shareUrl = '';
-
-        switch (platform) {
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-                break;
-            case 'twitter':
-                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
-                break;
-            case 'linkedin':
-                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-                break;
-            default:
-                return;
-        }
-
-        window.open(shareUrl, '_blank', 'width=600,height=400');
-        setShowShareOptions(null);
-    };
-
-    const filteredBlogs = blogs.filter(blog => {
-        const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            blog.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            blog.excerpt?.toLowerCase().includes(searchTerm.toLowerCase());
-        
-        const matchesCategory = !selectedCategory || blog.categories.includes(selectedCategory);
-        
-        return matchesSearch && matchesCategory;
-    });
-
-    if (loading) {
-        return (
-            <>
-                <Navbar />
-                <div className="modern-loading-container">
-                    <div className="modern-spinner">
-                        <div className="spinner-ring"></div>
-                        <div className="spinner-ring"></div>
-                        <div className="spinner-ring"></div>
-                    </div>
-                    <p className="loading-text">Loading amazing content...</p>
-                </div>
-                <Footer />
-            </>
-        );
+    switch (platform) {
+      case "facebook":
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          url
+        )}`;
+        break;
+      case "twitter":
+        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+          url
+        )}&text=${encodeURIComponent(title)}`;
+        break;
+      case "linkedin":
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+          url
+        )}`;
+        break;
+      default:
+        return;
     }
 
-    return (
-        <>
-            <Helmet>
-                <title>Blog - Tarlose</title>
-                <meta name="description" content="Explore our latest blog posts about technology, design, and digital solutions." />
-            </Helmet>
-            <Cursor />
-        <Navbar />
+    window.open(shareUrl, "_blank", "width=600,height=400");
+    setShowShareOptions(null);
+  };
 
-            {/* Modern Hero Section */}
-            <div className="modern-blog-hero">
+  const filteredBlogs = blogs.filter((blog) => {
+    const matchesSearch =
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      blog.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      blog.excerpt?.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      !selectedCategory || blog.categories.includes(selectedCategory);
+
+    return matchesSearch && matchesCategory;
+  });
+
+
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="modern-loading-container">
+          <div className="modern-spinner">
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+          </div>
+          <p className="loading-text">Loading amazing content...</p>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>Blog - Tarlose</title>
+        <meta
+          name="description"
+          content="Explore our latest blog posts about technology, design, and digital solutions."
+        />
+      </Helmet>
+      <Cursor />
+      <Navbar />
+
+      {/* Modern Hero Section */}
+
+      {/* <div className="modern-blog-hero">
                 <div className="hero-background">
                     <div className="hero-gradient"></div>
                     <div className="hero-pattern"></div>
@@ -152,13 +183,44 @@ const BlogLive = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="modern-blog-container">
-                <div className="container">
-                    <div className="row g-5">
-                        {/* Modern Sidebar */}
-                        <div className="col-lg-4 col-xl-3">
+      <div className="modern-blog-container">
+        <div className="container">
+         <div className="blog-tabs">
+      <button className="menu-toggle">
+        Menu
+      </button>
+      <nav className='nav-menu'>
+        <ul>
+          <li>
+            <a href="#">What's New</a>
+          </li>
+          <li>
+            <a href="#">Customer Service</a>
+          </li>
+          <li>
+            <a href="#">Growth & Culture</a>
+          </li>
+          <li>
+            <a href="#">Inside Help Scout</a>
+          </li>
+          <li>
+            <a href="#">The Supportive</a>
+          </li>
+          <li>
+            <a href="#">Support Toolkit</a>
+          </li><div className="search-icon" style={{ marginRight: "auto" }}>
+        <FaSearch />
+      </div>
+        </ul>
+      </nav>
+      
+    </div>
+
+          {/* <div className="row g-5"> */}
+          {/* Modern Sidebar */}
+          {/* <div className="col-lg-4 col-xl-3">
                             <div className="modern-sidebar">
                                 <div className="sidebar-section">
                                     <div className="section-header">
@@ -206,10 +268,10 @@ const BlogLive = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        {/* Modern Blog Grid */}
-                        <div className="col-lg-8 col-xl-9">
+          {/* Modern Blog Grid */}
+          {/* <div className="col-lg-8 col-xl-9">
                             {error ? (
                                 <div className="modern-error-container">
                                     <div className="error-icon">⚠️</div>
@@ -339,16 +401,15 @@ const BlogLive = () => {
                                     </div>
                                 </>
                             )}
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div> */}
+          {/* </div> */}
+        </div>
+      </div>
 
-        <Footer />
-            
-            
-        </>
-    );
+      <Footer />
+    </>
+  );
 };
 
 export default BlogLive;
+
