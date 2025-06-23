@@ -9,6 +9,9 @@ import BlogLive from './pages/Blogs/BlogLive';
 import Terms from './pages/Company/Terms';
 import PrivacyPolicy from './pages/Company/PrivacyPolicy';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import Login from './pages/Login';
+import Admin from './pages/admin';
+import Blog from './pages/Blogs/Blog';
 
 function App() {
 
