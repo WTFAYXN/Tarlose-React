@@ -32,9 +32,13 @@ const BlogLive = () => {
                     'Content-Type': 'application/json'
                 }
             });
-            setBlogs(response.data);
+            // Ensure blogs is always an array
+            const blogsArray = Array.isArray(response.data) 
+                ? response.data 
+                : (Array.isArray(response.data.blogs) ? response.data.blogs : []);
+            setBlogs(blogsArray);
             // Extract unique categories
-            const uniqueCategories = [...new Set(response.data.flatMap(blog => blog.categories))];
+            const uniqueCategories = [...new Set(blogsArray.flatMap(blog => blog.categories))];
             setCategories(uniqueCategories);
             setLoading(false);
         } catch (error) {
