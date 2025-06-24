@@ -122,7 +122,6 @@ const BlogLive = () => {
     return matchesSearch && matchesCategory;
   });
 
-
   if (loading) {
     return (
       <>
@@ -187,36 +186,37 @@ const BlogLive = () => {
 
       <div className="modern-blog-container">
         <div className="container">
-         <div className="blog-tabs">
-      <button className="menu-toggle">
-        Menu
-      </button>
-      <nav className='nav-menu'>
-        <ul>
-          <li>
-            <a href="#">What's New</a>
-          </li>
-          <li>
-            <a href="#">Customer Service</a>
-          </li>
-          <li>
-            <a href="#">Growth & Culture</a>
-          </li>
-          <li>
-            <a href="#">Inside Help Scout</a>
-          </li>
-          <li>
-            <a href="#">The Supportive</a>
-          </li>
-          <li>
-            <a href="#">Support Toolkit</a>
-          </li><div className="search-icon" style={{ marginRight: "auto" }}>
-        <FaSearch />
-      </div>
-        </ul>
-      </nav>
-      
-    </div>
+          <div className="blog-tabs-container">
+            <div className="blog-tabs">
+              <nav className="nav-menu">
+                <ul>
+                  <li>
+                    <a href="#">What's New</a>
+                  </li>
+                  <li>
+                    <a href="#">Customer Service</a>
+                  </li>
+                  <li>
+                    <a href="#">Growth & Culture</a>
+                  </li>
+                  <li>
+                    <a href="#">Inside Help Scout</a>
+                  </li>
+                  <li>
+                    <a href="#">The Supportive</a>
+                  </li>
+                  <li>
+                    <a href="#">Support Toolkit</a>
+                  </li>
+                </ul>
+              </nav>
+              <div className="modern-search-container">
+                <div className="search-icon">
+                  <FaSearch />
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* <div className="row g-5"> */}
           {/* Modern Sidebar */}
@@ -412,4 +412,3 @@ const BlogLive = () => {
 };
 
 export default BlogLive;
-

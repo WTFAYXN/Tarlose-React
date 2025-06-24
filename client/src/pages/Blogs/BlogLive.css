@@ -219,6 +219,7 @@
 
     .modern-search-container {
         position: relative;
+        right: 30px;
     }
 
     .modern-search-input {
@@ -617,20 +618,26 @@
 
 /* Blog Tab */
 
+.blog-tabs-container {
+    display: flex;
+    background-color: rgba(144, 113, 160, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .blog-tabs {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 10px 20px;
 }
 
-.menu-toggle {
-  display: none;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav-menu ul {
@@ -647,42 +654,16 @@
 .nav-menu a {
   text-decoration: none;
   color: #333;
+  font-size: 16px;
 }
 
 .search-icon {
   font-size: 18px;
   cursor: pointer;
-  margin-left: auto;
+  color: #9071A0;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
 
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #f9f9f9;
-    width: 100%;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-
-  .nav-menu.open {
-    display: block;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-  }
-
-  .nav-menu li {
-    margin-bottom: 10px;
-  }
-}
 
     /* Responsive Styles */
     @media (max-width: 991px) {
