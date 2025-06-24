@@ -1,0 +1,40 @@
+/* Reset default margins and ensure consistent box sizing */
+
+:root {
+    --base-unit: clamp(1rem, calc(0.208vw + 0.792rem), 1.125rem);
+  --spacing--M: calc(var(--base-unit) * 3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.parant-grid {
+    display: grid;
+}
+
+.grid-style {
+    display: grid;
+    grid-template-columns: repeat(6, calc((100% - var(--spacing--M) * 5) / 6));
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  /* grid-auto-rows: 150px; */
+  /* max-width: 1200px; */
+  
+}
+
+.grid-style.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-item {
+            grid-row: 1 / 3;
+  /* border-radius: 1rem; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+}

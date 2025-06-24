@@ -6,6 +6,9 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import { Helmet } from "react-helmet";
+
+import WhatsNew from "../../components/Blog-tabs/WhatsNew";
+
 import bgheader from "../../assets/svgs/background-header.svg";
 import {
   FaHeart,
@@ -29,6 +32,8 @@ const BlogLive = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [categories, setCategories] = useState([]);
   const [showShareOptions, setShowShareOptions] = useState(null);
+
+  const [activeTab, setActiveTab] = useState("whats-new");
 
   useEffect(() => {
     fetchBlogs();
@@ -191,22 +196,93 @@ const BlogLive = () => {
               <nav className="nav-menu">
                 <ul>
                   <li>
-                    <a href="#">What's New</a>
+                    <a
+                      href="#"
+                      className={activeTab === "whats-new" ? "active" : ""}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab("whats-new");
+                      }}
+                      style={{
+                        color: activeTab === "whats-new" ? "#007bff" : "#333",
+                        fontWeight:
+                          activeTab === "whats-new" ? "bold" : "normal",
+                      }}
+                    >
+                      What's New
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Customer Service</a>
+                    <a
+                      href="#"
+                      className={
+                        activeTab === "website-development" ? "active" : ""
+                      }
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab("website-development");
+                      }}
+                      style={{
+                        color:
+                          activeTab === "website-development" ? "#007bff" : "#333",
+                        fontWeight:
+                          activeTab === "website-development" ? "bold" : "normal",
+                      }}
+                    >
+                      Website Development
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Growth & Culture</a>
+                    <a
+                      href="#"
+                      className={activeTab === "graphic-design" ? "active" : ""}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab("graphic-design");
+                      }}
+                      style={{
+                        color:
+                          activeTab === "graphic-design" ? "#007bff" : "#333",
+                        fontWeight:
+                          activeTab === "graphic-design" ? "bold" : "normal",
+                      }}
+                    >
+                      Graphic Design
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Inside Help Scout</a>
+                    <a
+                      href="#"
+                      className={activeTab === "digital-marketing" ? "active" : ""}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab("digital-marketing");
+                      }}
+                      style={{
+                        color:
+                          activeTab === "digital-marketing" ? "#007bff" : "#333",
+                        fontWeight:
+                          activeTab === "digital-marketing" ? "bold" : "normal",
+                      }}
+                    >
+                      Digital Marketing
+                    </a>
                   </li>
                   <li>
-                    <a href="#">The Supportive</a>
-                  </li>
-                  <li>
-                    <a href="#">Support Toolkit</a>
+                    <a
+                      href="#"
+                      className={activeTab === "tech-tools" ? "active" : ""}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab("tech-tools");
+                      }}
+                      style={{
+                        color: activeTab === "tech-tools" ? "#007bff" : "#333",
+                        fontWeight: activeTab === "tech-tools" ? "bold" : "normal",
+                      }}
+                    >
+                      Tech Tools
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -218,191 +294,14 @@ const BlogLive = () => {
             </div>
           </div>
 
-          {/* <div className="row g-5"> */}
-          {/* Modern Sidebar */}
-          {/* <div className="col-lg-4 col-xl-3">
-                            <div className="modern-sidebar">
-                                <div className="sidebar-section">
-                                    <div className="section-header">
-                                        <FaSearch className="section-icon" />
-                                        <h3 className="section-title">Search</h3>
-                                    </div>
-                                    <div className="modern-search-container">
-                                        <input
-                                            type="text"
-                                            className="modern-search-input"
-                                            placeholder="Search articles..."
-                                            value={searchTerm}
-                                            onChange={(e) => setSearchTerm(e.target.value)}
-                                        />
-                                        <FaSearch className="search-icon" />
-                                    </div>
-                                </div>
-
-                                <div className="sidebar-section">
-                                    <div className="section-header">
-                                        <FaFilter className="section-icon" />
-                                        <h3 className="section-title">Categories</h3>
-                                    </div>
-                                    <div className="category-filters">
-                                        <button
-                                            className={`category-btn ${!selectedCategory ? 'active' : ''}`}
-                                            onClick={() => setSelectedCategory("")}
-                                        >
-                                            <span className="category-text">All Categories</span>
-                                            <span className="category-count">{blogs.length}</span>
-                                        </button>
-                                        {categories.map((category, index) => {
-                                            const count = blogs.filter(blog => blog.categories.includes(category)).length;
-                                            return (
-                                                <button
-                                                    key={index}
-                                                    className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
-                                                    onClick={() => setSelectedCategory(category)}
-                                                >
-                                                    <span className="category-text">{category}</span>
-                                                    <span className="category-count">{count}</span>
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
-
-          {/* Modern Blog Grid */}
-          {/* <div className="col-lg-8 col-xl-9">
-                            {error ? (
-                                <div className="modern-error-container">
-                                    <div className="error-icon">⚠️</div>
-                                    <h3 className="error-title">Oops! Something went wrong</h3>
-                                    <p className="error-message">{error}</p>
-                                </div>
-                            ) : filteredBlogs.length === 0 ? (
-                                <div className="modern-empty-state">
-                                    <div className="empty-icon">🔍</div>
-                                    <h3 className="empty-title">No articles found</h3>
-                                    <p className="empty-message">Try adjusting your search or exploring different categories</p>
-                                </div>
-                            ) : (
-                                <>
-                                    <div className="results-header">
-                                        <h2 className="results-title">
-                                            {selectedCategory ? `${selectedCategory} Articles` : 'All Articles'}
-                                        </h2>
-                                        <span className="results-count">{filteredBlogs.length} articles</span>
-                                    </div>
-                                    
-                                    <div className="modern-blog-grid">
-                                        {filteredBlogs.map((blog, index) => (
-                                            <article key={blog._id} className={`modern-blog-card ${index === 0 ? 'featured' : ''}`}>
-                                                <div className="card-image-container">
-                                                    <img
-                                                        src={blog.featuredImage?.url || bgheader}
-                                                        className="card-image"
-                                                        alt={blog.featuredImage?.altText || blog.title}
-                                                        loading="lazy"
-                                                    />
-                                                    <div className="image-overlay">
-                                                        <Link to={`/blog/${blog.slug}`} className="read-more-btn">
-                                                            <span>Read Article</span>
-                                                            <svg className="btn-arrow" viewBox="0 0 24 24" fill="none">
-                                                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                            </svg>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div className="card-content">
-                                                    <div className="card-categories">
-                                                        {blog.categories?.slice(0, 2).map((category, idx) => (
-                                                            <span key={idx} className="category-tag">
-                                                                {category}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                    
-                                                    <h3 className="card-title">
-                                                        <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
-                                                    </h3>
-                                                    
-                                                    <p className="card-excerpt">
-                                                        {blog.excerpt?.substring(0, 120)}...
-                                                    </p>
-                                                    
-                                                    <div className="card-meta">
-                                                        <time className="publish-date">
-                                                            {new Date(blog.publishedAt).toLocaleDateString('en-US', {
-                                                                month: 'short',
-                                                                day: 'numeric',
-                                                                year: 'numeric'
-                                                            })}
-                                                        </time>
-                                                        
-                                                        <div className="card-actions">
-                                                            <button 
-                                                                className={`action-btn like-btn ${blog.isLiked ? 'liked' : ''}`}
-                                                                onClick={() => handleLike(blog._id)}
-                                                                title="Like this article"
-                                                            >
-                                                                {blog.isLiked ? <FaHeart /> : <FaRegHeart />}
-                                                                <span>{blog.likes}</span>
-                                                            </button>
-                                                            
-                                                            <Link 
-                                                                to={`/blog/${blog.slug}#comments`}
-                                                                className="action-btn comment-btn"
-                                                                title="View comments"
-                                                            >
-                                                                <FaComment />
-                                                                <span>{blog.comments?.length || 0}</span>
-                                                            </Link>
-                                                            
-                                                            <div className="share-container">
-                                                                <button 
-                                                                    className="action-btn share-btn"
-                                                                    onClick={() => setShowShareOptions(showShareOptions === blog._id ? null : blog._id)}
-                                                                    title="Share this article"
-                                                                >
-                                                                    <FaShare />
-                                                                </button>
-                                                                
-                                                                {showShareOptions === blog._id && (
-                                                                    <div className="modern-share-menu">
-                                                                        <button 
-                                                                            onClick={() => handleShare('facebook', blog)} 
-                                                                            className="share-option facebook"
-                                                                        >
-                                                                            <FaFacebook />
-                                                                            <span>Facebook</span>
-                                                                        </button>
-                                                                        <button 
-                                                                            onClick={() => handleShare('twitter', blog)} 
-                                                                            className="share-option twitter"
-                                                                        >
-                                                                            <FaTwitter />
-                                                                            <span>Twitter</span>
-                                                                        </button>
-                                                                        <button 
-                                                                            onClick={() => handleShare('linkedin', blog)} 
-                                                                            className="share-option linkedin"
-                                                                        >
-                                                                            <FaLinkedin />
-                                                                            <span>LinkedIn</span>
-                                                                        </button>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        ))}
-                                    </div>
-                                </>
-                            )}
-                        </div> */}
-          {/* </div> */}
+          {/* Tab Content */}
+          <div style={{ marginTop: "2rem" }}>
+            {activeTab === "whats-new" && <WhatsNew />}
+            {activeTab === "website-development" && <div>Website Development Content</div>}
+            {activeTab === "graphic-design" && <div>Graphic Design Content</div>}
+            {activeTab === "digital-marketing" && <div>Digital Marketing Content</div>}
+            {activeTab === "tech-tools" && <div>Tech Tools Content</div>}
+          </div>
         </div>
       </div>
 
