@@ -43,28 +43,56 @@ function WhatsNew() {
           </a>
         </div>
       </div>
-      <div className="parant-grid">
-<div className="grid-style large">
-        {posts.map((post) => (
-          <div
-            key={post.id}
-            className="grid-item rounded-lg shadow-md overflow-hidden"
-          >
+
+      <div className="recent-posts">
+        <a href={posts[0].link} className="large-post block hover:bg-gray-50 transition">
+          <div className="post-image mb-4">
             <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-48 object-cover"
+              src={posts[0].image}
+              alt=""
+              className="rounded img-fluid"
             />
-            <div className="p-4">
-              <span className="text-sm text-gray-500">{post.category}</span>
-              <h3 className="text-lg font-semibold mt-2">{post.title}</h3>
-              <p className="text-gray-600 mt-2">{post.description}</p>
-            </div>
           </div>
-        ))}
+          <div className="post-content">
+            <p className="post-category">{posts[0].category}</p>
+            <h2 className="post-title mb-3">{posts[0].title}</h2>
+            <p className="post-description">
+              {posts[0].description}
+            </p>
+          </div>
+        </a>
+
+        <div className="small-posts">
+          <a href={posts[1].link} className="small-post-one block hover:bg-gray-50 transition">
+            <div className="small-post-image mb-3">
+              <img
+                src={posts[1].image}
+                alt=""
+                className="rounded img-fluid"
+              />
+            </div>
+            <div className="small-post-content">
+              <p className="small-post-category">{posts[1].category}</p>
+              <h2 className="small-post-title">{posts[1].title}</h2>
+            </div>
+          </a>
+          <a href={posts[2].link} className="small-post-two mt-5 block hover:bg-gray-50 transition">
+            <div className="small-post-image mb-3">
+              <img
+                src={posts[2].image}
+                alt=""
+                className="rounded img-fluid"
+              />
+            </div>
+            <div className="small-post-content">
+              <p className="small-post-category">{posts[2].category}</p>
+              <h2 className="small-post-title">
+                {posts[2].title}
+              </h2>
+            </div>
+          </a>
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }
