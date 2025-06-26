@@ -22,6 +22,7 @@ import {
   FaFilter,
 } from "react-icons/fa";
 import WebDev from "../../components/Blog-tabs/WebDev";
+import GraphicDesign from "../../components/Blog-tabs/GraphicDesign";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -305,7 +306,7 @@ const BlogLive = () => {
           <div style={{ marginTop: "2rem" }}>
             {activeTab === "whats-new" && <WhatsNew />}
             {activeTab === "website-development" && <WebDev />}
-            {activeTab === "graphic-design" && <div>Graphic Design Content</div>}
+            {activeTab === "graphic-design" && <GraphicDesign />}
             {activeTab === "digital-marketing" && <div>Digital Marketing Content</div>}
             {activeTab === "tech-tools" && <div>Tech Tools Content</div>}
           </div>
