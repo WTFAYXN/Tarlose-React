@@ -21,6 +21,7 @@ import {
   FaSearch,
   FaFilter,
 } from "react-icons/fa";
+import WebDev from "../../components/Blog-tabs/WebDev";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -297,7 +298,7 @@ const BlogLive = () => {
           {/* Tab Content */}
           <div style={{ marginTop: "2rem" }}>
             {activeTab === "whats-new" && <WhatsNew />}
-            {activeTab === "website-development" && <div>Website Development Content</div>}
+            {activeTab === "website-development" && <WebDev />}
             {activeTab === "graphic-design" && <div>Graphic Design Content</div>}
             {activeTab === "digital-marketing" && <div>Digital Marketing Content</div>}
             {activeTab === "tech-tools" && <div>Tech Tools Content</div>}
