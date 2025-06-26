@@ -26,6 +26,9 @@ import WebDev from "../../components/Blog-tabs/WebDev";
 const API_URL = import.meta.env.VITE_API_URL;
 
 const BlogLive = () => {
+  // Load the last active tab from localStorage, default to "whats-new" if not set
+  const [activeTab, setActiveTab] = useState(() => localStorage.getItem("blogActiveTab") || "whats-new");
+
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -34,11 +37,14 @@ const BlogLive = () => {
   const [categories, setCategories] = useState([]);
   const [showShareOptions, setShowShareOptions] = useState(null);
 
-  const [activeTab, setActiveTab] = useState("whats-new");
-
   useEffect(() => {
     fetchBlogs();
   }, []);
+
+  // Save activeTab to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("blogActiveTab", activeTab);
+  }, [activeTab]);
 
   const fetchBlogs = async () => {
     try {
