@@ -23,6 +23,8 @@ import {
 } from "react-icons/fa";
 import WebDev from "../../components/Blog-tabs/WebDev";
 import GraphicDesign from "../../components/Blog-tabs/GraphicDesign";
+import DigitalMarketing from "../../components/Blog-tabs/DigitalMarketing";
+import TechTools from "../../components/Blog-tabs/TechTools";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -308,8 +310,8 @@ const BlogLive = () => {
             {activeTab === "whats-new" && <WhatsNew />}
             {activeTab === "website-development" && <WebDev />}
             {activeTab === "graphic-design" && <GraphicDesign />}
-            {activeTab === "digital-marketing" && <div>Digital Marketing Content</div>}
-            {activeTab === "tech-tools" && <div>Tech Tools Content</div>}
+            {activeTab === "digital-marketing" && <DigitalMarketing />}
+            {activeTab === "tech-tools" && <TechTools />}
           </div>
         </div>
       </div>
