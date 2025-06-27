@@ -1,29 +1,43 @@
 :root {
   --font-size--XS: clamp(0.75rem, calc(0.156vw + 0.594rem), 0.84375rem);
   --font-size--XL: clamp(1.25rem, calc(0.26vw + 0.99rem), 1.40625rem);
-  --color--text-light: #cbacdc;
+  --base-unit: clamp(1rem, calc(0.208vw + 0.792rem), 1.125rem);
+  --spacing--XS: calc(var(--base-unit) * 1);
+  --font-weight--medium: 500;
+  --font-family--Gilroy: 'Gilroy', sans-serif;
+  --font-family--Gilroy-Bold: 'Gilroy-Bold', sans-serif;
+  --line-height--tight: 1.2;
+  --mono-XS--margin-bottom: calc(var(--font-size--XS) * 0.625);
+
+
+
+
+
+  --color--text-light: #cbacdc; 
 }
 
-.card-title {
+.card-title-blog {
   color: var(--color--text-light) !important;
   font-size: var(--font-size--XS);
+  margin-bottom: var(--mono-XS--margin-bottom);
 }
 
 .card-text {
   color: #fff;
   font-size: var(--font-size--XL);
+  font-weight: var(--font-weight--medium);
+  line-height: var(--line-height--tight);
+  font-family:  var(--font-family--Gilroy);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.15) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(177, 147, 203, 0.148) !important;
-  transition: box-shadow 0.3s !important;
-  padding: 20px !important;
+  background-color: transparent !important;
+  border: none !important;
 }
-.glass-card:hover {
-  box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.25) !important;
+.card-body {
+  padding: 0 !important;
+}
+
+.card-img-top {
+  margin-bottom: var(--spacing--XS) !important;
 }

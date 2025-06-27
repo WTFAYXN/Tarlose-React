@@ -45,7 +45,9 @@ function WhatsNew() {
         </div>
       </div>
 
-      <div className="recent-posts">
+      <hr className="hr-blog" />
+
+      <div className="recent-posts mt-4">
         <a href={posts[0].link} className="large-post block hover:bg-gray-50 transition">
           <div className="post-image mb-4">
             <img

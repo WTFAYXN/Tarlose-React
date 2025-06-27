@@ -83,7 +83,7 @@ function CardList({ cards, onCardClick }) {
                     >
                         <img src={card.image} className="card-img-top" alt={`Card ${card.id}`} />
                         <div className="card-body">
-                            <h5 className="card-title">{card.title}</h5>
+                            <h5 className="card-title card-title-blog">{card.title}</h5>
                             <p className="card-text text-capitalize">{card.text}</p>
                         </div>
                     </div>

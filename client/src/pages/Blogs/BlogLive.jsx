@@ -198,9 +198,8 @@ const BlogLive = () => {
             </div> */}
 
       <div className="modern-blog-container">
-        <div className="container">
-          <div className="blog-tabs-container">
-            <div className="blog-tabs">
+        <div className="blog-tabs-container">
+            <div className="blog-tabs container">
               <nav className="nav-menu">
                 <ul>
                   <li>
@@ -301,6 +300,8 @@ const BlogLive = () => {
               </div>
             </div>
           </div>
+        <div className="container">
+          
 
           {/* Tab Content */}
           <div style={{ marginTop: "2rem" }}>
