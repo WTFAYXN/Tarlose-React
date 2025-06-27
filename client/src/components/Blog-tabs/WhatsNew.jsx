@@ -35,9 +35,10 @@ function WhatsNew() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-gray-800">Most Recent Posts </h2>
-        <div className="text-end">
+      <div className="header-title mb-4">
+          <h2 className="text-xl font-bold text-gray-800">Most Recent Posts </h2>
+        
+        <div>
           <a href="#" className="text-blue-600 hover:underline ">
             view all Posts
           </a>
