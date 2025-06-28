@@ -12,6 +12,7 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Login from './pages/Login';
 import Admin from './pages/admin';
 import Blog from './pages/Blogs/Blog';
+import BlogDetailPage from './components/Blog-tabs/BlogDetailPage';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/blog/:slug" element={<Blog />} />
+          <Route path="/BlogDetailPage/:id" element={<BlogDetailPage />} />
         </Routes>
     </Router>
       </div>
