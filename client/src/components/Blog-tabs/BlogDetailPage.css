@@ -106,7 +106,6 @@
   position: sticky;
   top: calc(var(--SiteNav--height) + var(--spacing--S));
   align-self: flex-start;
-  margin-left: 2rem; /* changed from margin-right */
   width: var(--spacing--M);
   z-index: 2;
 }
@@ -119,9 +118,9 @@ ul li {
         margin: 0 0 14px;
     }
 
-.blog-detail-social a {
+.blog-detail-social button {
   align-items: center;
-  background: #322C35;
+  background: #322C35 !important;
   color: aliceblue;
   border-radius: 50%;
   display: flex;
@@ -129,7 +128,7 @@ ul li {
   justify-content: center;
   width: var(--spacing--M);
 }
-.blog-detail-social a:hover {
-  background: #886699;
+.blog-detail-social button:hover {
+  background: #886699 !important;
 
 }
