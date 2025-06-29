@@ -72,7 +72,7 @@ const BlogDetailPage = () => {
                   <a href="#">Author Name</a>
                 </span>
                 <span className="divider">•</span>
-                <span className="">December 17, 2024</span>
+                <span className="date">December 17, 2024</span>
               </div>
             </div>
 

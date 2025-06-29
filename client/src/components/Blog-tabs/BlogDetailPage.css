@@ -50,6 +50,21 @@
   margin: 0px auto 0.5em;
 }
 
+.authors {
+  padding-left: 5px;
+}
+.date {
+  color: #e2e3e3ab !important;
+}
+.authors a {
+  text-decoration: none;
+  color: inherit;
+  padding-left: 5px;
+}
+.authors a:hover {
+  color: #886699;
+}
+
 .PostAuthorsstyles {
   display: flex;
   align-items: center;
@@ -114,13 +129,13 @@ ul li {
   list-style: none;
 }
 
-    .SocialShare li {
-        margin: 0 0 14px;
-    }
+.SocialShare li {
+  margin: 0 0 14px;
+}
 
 .blog-detail-social button {
   align-items: center;
-  background: #322C35 !important;
+  background: #322c35 !important;
   color: aliceblue;
   border-radius: 50%;
   display: flex;
@@ -130,5 +145,4 @@ ul li {
 }
 .blog-detail-social button:hover {
   background: #886699 !important;
-
 }
