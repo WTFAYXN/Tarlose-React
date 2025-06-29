@@ -47,3 +47,9 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.postImage {
+  max-width: 80%;
+  margin: auto;
+
+}
