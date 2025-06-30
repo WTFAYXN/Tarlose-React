@@ -13,7 +13,6 @@ const ContactUs = () => {
           manage, and grow your investments.
         </p>
 
-        {/* ✅ Correct Bootstrap Grid Layout */}
         <div className="row justify-content-center g-4 text-start contact-section">
           {/* Left Card */}
           <div className="col-lg-6">
@@ -55,7 +54,7 @@ const ContactUs = () => {
                 <div className="row mb-3">
                   <div className="col">
                     <label className="form-label text-white">
-                      First Name *
+                      First Name <span>*</span>
                     </label>
                     <input
                       type="text"
@@ -64,7 +63,7 @@ const ContactUs = () => {
                     />
                   </div>
                   <div className="col">
-                    <label className="form-label text-white">Last Name *</label>
+                    <label className="form-label text-white">Last Name <span>*</span></label>
                     <input
                       type="text"
                       className="form-control bg-dark text-white border-0"
@@ -74,7 +73,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label text-white">Email *</label>
+                  <label className="form-label text-white">Email <span>*</span></label>
                   <input
                     type="email"
                     className="form-control bg-dark text-white border-0"
@@ -83,7 +82,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label text-white">Subject *</label>
+                  <label className="form-label text-white">Subject <span>*</span></label>
                   <input
                     type="text"
                     className="form-control bg-dark text-white border-0"

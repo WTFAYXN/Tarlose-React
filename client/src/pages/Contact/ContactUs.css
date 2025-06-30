@@ -32,11 +32,15 @@
 .contact-card {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  background: transparent;
+  background: rgba(54, 54, 54, 0.053);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  padding: 40px 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 2px 4px 16px #f8f8f80f;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 61px 40px;
   height: 100%;
   color: #ccc;
 }
@@ -47,6 +51,22 @@
   color: #fff;
   backdrop-filter: blur(10px);
   border-radius: 10px;
+}
+
+.form-label span {
+    color: red;
+}
+
+input,textarea {
+    padding:12px 18px 12px 18px !important;
+    border-radius: 10px !important;
+    
+
+}
+
+::placeholder {
+  color: gray !important;
+  opacity: 1 !important; 
 }
 
 .form-control:focus {
