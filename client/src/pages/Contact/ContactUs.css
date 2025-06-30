@@ -1,0 +1,54 @@
+:root {
+  --base-unit: clamp(1rem, calc(0.208vw + 0.792rem), 1.125rem);
+  --spacing--M: calc(var(--base-unit) * 3);
+  --spacing--S: calc(var(--base-unit) * 2);
+  --font-weight--medium: 500;
+  --font-family--Gilroy: 'Gilroy', sans-serif;
+  --font-family--Gilroy-Bold: 'Gilroy-Bold', sans-serif;
+  --line-height--tight: 1.2;
+}
+
+.modern-blog-container {
+  margin-top: calc(var(--spacing--M) + var(--spacing--S)) !important;
+  text-align: center;
+}
+.modern-blog-container h2 {
+  font-family: var(--font-family--Gilroy) !important;
+  font-size: 70px;
+}
+.modern-blog-container .sub-head{
+  font-family: var(--font-family--Gilroy) !important;
+    font-size: 20px;
+    letter-spacing: 0.2dvh;
+    max-width: 55%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.contact-section {
+  background-color: #111114;
+  border-radius: 20px;
+}
+
+.info-card {
+  background-color: #1b1b1e;
+  color: #ccc;
+  border-radius: 20px;
+}
+
+.form-card {
+  background-color: #1b1b1e;
+  color: #ccc;
+  border-radius: 20px;
+}
+
+.gradient-button {
+  background: linear-gradient(90deg, #da22ff 0%, #9733ee 100%);
+  border: none;
+  color: white;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(90deg, #b822e6 0%, #7a2ccc 100%);
+}
+

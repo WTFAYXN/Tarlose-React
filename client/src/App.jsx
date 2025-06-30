@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Admin from './pages/admin';
 import Blog from './pages/Blogs/Blog';
 import BlogDetailPage from './components/Blog-tabs/BlogDetailPage';
+import ContactUs from './pages/Contact/ContactUs';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/BlogDetailPage/:id" element={<BlogDetailPage />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
     </Router>
       </div>
