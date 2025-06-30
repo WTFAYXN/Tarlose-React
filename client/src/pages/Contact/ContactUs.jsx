@@ -4,7 +4,7 @@ import "./ContactUs.css";
 import { FlipWords } from "../../components/ui/flip-words";
 
 const ContactUs = () => {
-    const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["better", "cute", "beautiful", "modern"];
   return (
     <>
       <Navbar />
@@ -15,7 +15,7 @@ const ContactUs = () => {
           manage, and grow your investments.
         </p>
 
-        <div className="row justify-content-center g-4 text-start contact-section">
+        <div className="row justify-content-center g-4 text-start contact-section ">
           {/* Left Card */}
           <div className="col-lg-6">
             <div className="contact-card info-card">
@@ -65,7 +65,9 @@ const ContactUs = () => {
                     />
                   </div>
                   <div className="col">
-                    <label className="form-label text-white">Last Name <span>*</span></label>
+                    <label className="form-label text-white">
+                      Last Name <span>*</span>
+                    </label>
                     <input
                       type="text"
                       className="form-control bg-dark text-white border-0"
@@ -75,7 +77,9 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label text-white">Email <span>*</span></label>
+                  <label className="form-label text-white">
+                    Email <span>*</span>
+                  </label>
                   <input
                     type="email"
                     className="form-control bg-dark text-white border-0"
@@ -84,7 +88,9 @@ const ContactUs = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label text-white">Subject <span>*</span></label>
+                  <label className="form-label text-white">
+                    Subject <span>*</span>
+                  </label>
                   <input
                     type="text"
                     className="form-control bg-dark text-white border-0"
@@ -113,17 +119,21 @@ const ContactUs = () => {
         </div>
 
         {/* message section from CEO */}
-        <div className="message-section">
-            <div className="message-image">
-                <img src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png" alt="" />
-            </div>
+        <div className="message-section ">
+          <div className="message-image mb-5">
+            <img
+              src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
+              alt=""
+            />
+          </div>
 
-
-<div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Build
-        <FlipWords words={words} /> <br />
-        websites with Aceternity UI
-      </div>
+          <div className="flip-word mb-2 text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+            A Message from Our
+            <FlipWords words={words} /> <br />
+          </div>
+          <p className="text-secondary sub-message">
+          A"At InnovaAI, our goal is to push the boundaries of AI technology to create solutions that simplify and enhance everyday tasks. We are passionate about innovation and dedicated to delivering exceptional value to our customers. Thank you for being part of our journey."
+        </p>
         </div>
       </div>
     </>

@@ -27,6 +27,7 @@
 .contact-section {
   max-width: 80%;
   margin: auto !important;
+  padding-bottom: 160px;
 }
 
 .contact-card {
@@ -36,7 +37,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 2px 4px 16px #f8f8f80f;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,19 +55,18 @@
 }
 
 .form-label span {
-    color: red;
+  color: red;
 }
 
-input,textarea {
-    padding:12px 18px 12px 18px !important;
-    border-radius: 10px !important;
-    
-
+input,
+textarea {
+  padding: 12px 18px 12px 18px !important;
+  border-radius: 10px !important;
 }
 
 ::placeholder {
   color: gray !important;
-  opacity: 1 !important; 
+  opacity: 1 !important;
 }
 
 .form-control:focus {
@@ -86,3 +86,17 @@ input,textarea {
   background: linear-gradient(90deg, #b822e6 0%, #7a2ccc 100%);
   transform: scale(1.03);
 }
+
+.flip-word {
+  font-size: 40px;
+}
+
+.sub-message {
+    font-family: var(--font-family--Gilroy) !important;
+  font-size: 20px;
+  letter-spacing: 0.2dvh;
+  max-width: 65%;
+  margin: auto;
+  line-height: 1.5;
+}
+
