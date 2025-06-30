@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import "./ContactUs.css";
+import { FlipWords } from "../../components/ui/flip-words";
 
 const ContactUs = () => {
+    const words = ["better", "cute", "beautiful", "modern"];
   return (
     <>
       <Navbar />
@@ -116,6 +118,12 @@ const ContactUs = () => {
                 <img src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png" alt="" />
             </div>
 
+
+<div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+        Build
+        <FlipWords words={words} /> <br />
+        websites with Aceternity UI
+      </div>
         </div>
       </div>
     </>
