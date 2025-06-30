@@ -109,6 +109,14 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+
+        {/* message section from CEO */}
+        <div className="message-section">
+            <div className="message-image">
+                <img src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png" alt="" />
+            </div>
+
+        </div>
       </div>
     </>
   );
