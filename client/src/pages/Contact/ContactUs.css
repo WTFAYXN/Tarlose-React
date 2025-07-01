@@ -76,14 +76,14 @@ textarea {
 }
 
 .gradient-button {
-  background: linear-gradient(90deg, #da22ff 0%, #9733ee 100%);
+  background: linear-gradient(90deg, #8D6A9F 0%, #8D6A9F 100%);
   border: none;
   color: white;
   transition: 0.3s ease;
 }
 
 .gradient-button:hover {
-  background: linear-gradient(90deg, #b822e6 0%, #7a2ccc 100%);
+  background: linear-gradient(90deg, #8D6A9F 0%, #8D6A9F 100%);
   transform: scale(1.03);
 }
 

@@ -157,7 +157,7 @@ const BlogLive = () => {
   return (
     <>
       <Helmet>
-        <title>Blog - Tarlose</title>
+        <title>The Tarlose Blog</title>
         <meta
           name="description"
           content="Explore our latest blog posts about technology, design, and digital solutions."
