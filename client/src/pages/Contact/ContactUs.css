@@ -8,15 +8,15 @@
   --line-height--tight: 1.2;
 }
 
-.modern-blog-container {
+.modern-contact-container {
   margin-top: calc(var(--spacing--M) + var(--spacing--S)) !important;
   text-align: center;
 }
-.modern-blog-container h2 {
+.modern-contact-container .contact-heading {
   font-family: var(--font-family--Gilroy) !important;
   font-size: 70px;
 }
-.modern-blog-container .sub-head {
+.modern-contact-container .sub-head {
   font-family: var(--font-family--Gilroy) !important;
   font-size: 20px;
   letter-spacing: 0.2dvh;
