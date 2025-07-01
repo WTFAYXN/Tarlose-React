@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import "./ContactUs.css";
-import tarloseIcon from "./tarloseIcon.png"; 
+import tarloseIcon from "./tarloseIcon.png";
 
 const ContactUs = () => {
   return (
@@ -10,7 +10,8 @@ const ContactUs = () => {
       <div className="container modern-contact-container my-5">
         <h2 className="mb-4 text-white contact-heading">Contact Us</h2>
         <p className="text-secondary sub-head mb-5">
-           Digital solutions that take your brand from idea to impact faster, cleaner, and smarter.
+          Digital solutions that take your brand from idea to impact faster,
+          cleaner, and smarter.
         </p>
 
         <div className="row justify-content-center g-5 text-start contact-section ">
@@ -18,15 +19,19 @@ const ContactUs = () => {
           <div className="col-lg-6">
             <div className="contact-card info-card">
               <div className="icon-box mb-3">
-                <img
-                  src={tarloseIcon}
-                  alt="Tarlose Logo"
-                  width="80"
-                />
+                <img src={tarloseIcon} alt="Tarlose Logo" width="80" />
               </div>
               <h5 className="text-white ">Our Mission</h5>
               <p className="text-secondary ">
-                At Tarlose, we’re on a mission to strip away the agency smoke and mirrors and replace it with straight talk, bulletproof results, and zero guesswork. We partner with you like an in‑house team rolling up our sleeves to design, build, and market with absolute transparency, clear communication, and deliverables you can bank on. Whether you’re launching your first MVP or scaling a funded startup, we treat your goals as our own: no jargon, no ego, just honest expertise that moves the needle.
+                At Tarlose, we’re on a mission to strip away the agency smoke
+                and mirrors and replace it with straight talk, bulletproof
+                results, and zero guesswork. We partner with you like an
+                in‑house team rolling up our sleeves to design, build, and
+                market with absolute transparency, clear communication, and
+                deliverables you can bank on. Whether you’re launching your
+                first MVP or scaling a funded startup, we treat your goals as
+                our own: no jargon, no ego, just honest expertise that moves the
+                needle.
               </p>
 
               <h5 className="mt-4 text-white ">Get in Touch:</h5>
@@ -38,7 +43,6 @@ const ContactUs = () => {
               </p>
               <p className="text-secondary">
                 <strong>Address:</strong> Mumbai, India.
-              
               </p>
             </div>
           </div>
@@ -112,111 +116,147 @@ const ContactUs = () => {
           </div>
         </div>
 
-       {/* Message from CEO Section */}
-<div className="message-section text-center">
-  <div className="message-image mb-4">
-    <img
-      src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
-      alt="InnovaAI Logo"
-      style={{ width: "60px", height: "60px" }}
-    />
-  </div>
+        {/* Message from CEO Section */}
+        <div className="message-section text-center">
+          <div className="message-image mb-4">
+            <img
+              src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
+              alt="InnovaAI Logo"
+              style={{ width: "60px", height: "60px" }}
+            />
+          </div>
 
-  
-  {/* Bootstrap Carousel */}
-  <div id="ceoCarousel" className="carousel slide" data-bs-ride="carousel">
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <h3 className="text-white mb-4">A Message from Our CEO</h3>
+          {/* Bootstrap Carousel */}
+          <div
+            id="ceoCarousel"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <h3 className="text-white mb-4">A Message from Our CEO</h3>
 
-        <p className="text-secondary fs-5 px-3 px-md-5">
-          “At InnovaAI, our goal is to push the boundaries of AI technology to
-          create solutions that simplify and enhance everyday tasks. We are
-          passionate about innovation and dedicated to delivering exceptional
-          value to our customers. Thank you for being part of our journey.”
-        </p>
-        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
-          <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            alt="CEO"
-            className="rounded-circle"
-            width="60"
-            height="60"
-          />
-          <div className="text-start">
-            <h6 className="mb-0 text-white">Jane Doe</h6>
-            <small className="text-secondary">CEO, InnovaAI</small>
+                <p className="text-secondary fs-5 px-3 px-md-5">
+                  “At InnovaAI, our goal is to push the boundaries of AI
+                  technology to create solutions that simplify and enhance
+                  everyday tasks. We are passionate about innovation and
+                  dedicated to delivering exceptional value to our customers.
+                  Thank you for being part of our journey.”
+                </p>
+                <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="CEO"
+                    className="rounded-circle"
+                    width="20"
+                    height="20"
+                  />
+                  <div className="text-start">
+                    <h6 className="mb-0 text-white">Jane Doe</h6>
+                    <small className="text-secondary">CEO, InnovaAI</small>
+                  </div>
+                </div>
+              </div>
+
+              <div className="carousel-item">
+                <h3 className="text-white mb-4">A Message from Our CTO</h3>
+
+                <p className="text-secondary fs-5 px-3 px-md-5">
+                  “We believe in creating digital ecosystems that drive results.
+                  Our mission is to support startups and enterprises in crafting
+                  tech-driven strategies with measurable success.”
+                </p>
+                <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="CTO"
+                    className="rounded-circle"
+                    width="20"
+                    height="20"
+                  />
+                  <div className="text-start">
+                    <h6 className="mb-0 text-white">Sarah Lee</h6>
+                    <small className="text-secondary">CTO, Tarlose</small>
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <h3 className="text-white mb-4">A Message from Our CEO</h3>
+
+                <p className="text-secondary fs-5 px-3 px-md-5">
+                  “We believe in creating digital ecosystems that drive results.
+                  Our mission is to support startups and enterprises in crafting
+                  tech-driven strategies with measurable success.”
+                </p>
+                <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="CTO"
+                    className="rounded-circle"
+                    width="20"
+                    height="20"
+                  />
+                  <div className="text-start">
+                    <h6 className="mb-0 text-white">Sarah Lee</h6>
+                    <small className="text-secondary">CTO, Tarlose</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Controls */}
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#ceoCarousel"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#ceoCarousel"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon"></span>
+            </button>
           </div>
         </div>
-      </div>
 
-      <div className="carousel-item">
-        <h3 className="text-white mb-4">A Message from Our CTO</h3>
-        
-        <p className="text-secondary fs-5 px-3 px-md-5">
-          “We believe in creating digital ecosystems that drive results. Our
-          mission is to support startups and enterprises in crafting tech-driven
-          strategies with measurable success.”
-        </p>
-        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
-          <img
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            alt="CTO"
-            className="rounded-circle"
-            width="60"
-            height="60"
-          />
-          <div className="text-start">
-            <h6 className="mb-0 text-white">Sarah Lee</h6>
-            <small className="text-secondary">CTO, Tarlose</small>
+        {/* Join the Future section */}
+
+        <div className="container">
+          <div className="join-the-future">
+            <div className="main-future-container card">
+              <div className="right-future-container card">
+                <img
+                  src="https://framerusercontent.com/images/1P6DbM92H2ez136RCeWNstHg0vA.png?scale-down-to=1024"
+                  alt=""
+                  className="card-img"
+                />
+                <div className="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+              <div className="left-future-container">
+                <img
+                  src="https://framerusercontent.com/images/MecLliNBqre50VslV9Cc8fZOqkY.png?scale-down-to=512"
+                  alt=""
+                  className="img-fluid"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="carousel-item">
-        <h3 className="text-white mb-4">A Message from Our CEO</h3>
-
-        <p className="text-secondary fs-5 px-3 px-md-5">
-          “We believe in creating digital ecosystems that drive results. Our
-          mission is to support startups and enterprises in crafting tech-driven
-          strategies with measurable success.”
-        </p>
-        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
-          <img
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            alt="CTO"
-            className="rounded-circle"
-            width="60"
-            height="60"
-          />
-          <div className="text-start">
-            <h6 className="mb-0 text-white">Sarah Lee</h6>
-            <small className="text-secondary">CTO, Tarlose</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Controls */}
-    <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target="#ceoCarousel"
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon"></span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target="#ceoCarousel"
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon"></span>
-    </button>
-  </div>
-</div>
-
-        
       </div>
     </>
   );
