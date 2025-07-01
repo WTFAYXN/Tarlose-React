@@ -11,14 +11,16 @@
 .modern-contact-container {
   margin-top: calc(var(--spacing--M) + var(--spacing--S)) !important;
   text-align: center;
+  font-family: var(--font-family--Gilroy) !important;
 }
 .modern-contact-container .contact-heading {
   font-family: var(--font-family--Gilroy) !important;
-  font-size: 70px;
+  font-size: 64px;
 }
 .modern-contact-container .sub-head {
   font-family: var(--font-family--Gilroy) !important;
-  font-size: 20px;
+  font-size: 18px;
+  color: rgb(170, 170, 170) !important;
   letter-spacing: 0.2dvh;
   max-width: 55%;
   margin: auto;
@@ -44,6 +46,10 @@
   padding: 61px 40px;
   height: 100%;
   color: #ccc;
+}
+
+.contact-card .text-secondary {
+  color: rgb(170, 170, 170) !important;
 }
 
 .form-control {
@@ -76,26 +82,23 @@ textarea {
 }
 
 .gradient-button {
-  background: linear-gradient(90deg, #8D6A9F 0%, #8D6A9F 100%);
+  background: linear-gradient(90deg, #8d6a9f 0%, #8d6a9f 100%);
   border: none;
   color: white;
   transition: 0.3s ease;
 }
 
 .gradient-button:hover {
-  background: linear-gradient(90deg, #8D6A9F 0%, #8D6A9F 100%);
+  background: linear-gradient(90deg, #8d6a9f 0%, #8d6a9f 100%);
   transform: scale(1.03);
 }
 
-.flip-word {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  font-size: 40px;
+.message-section {
+    padding-bottom: 80px;
 }
 
 .sub-message {
-    font-family: var(--font-family--Gilroy) !important;
+  font-family: var(--font-family--Gilroy) !important;
   font-size: 20px;
   letter-spacing: 0.2dvh;
   max-width: 65%;
@@ -103,3 +106,16 @@ textarea {
   line-height: 1.5;
 }
 
+.carousel-inner p {
+  max-width: 700px;
+  margin: auto;
+}
+
+.carousel-item {
+  background: transparent !important;
+}
+.carousel-item p {
+  color: rgb(170, 170, 170) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}

@@ -1,11 +1,9 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import "./ContactUs.css";
-import { FlipWords } from "../../components/ui/flip-words";
 import tarloseIcon from "./tarloseIcon.png"; 
 
 const ContactUs = () => {
-  const words = ["better", "cute", "beautiful", "modern"];
   return (
     <>
       <Navbar />
@@ -15,7 +13,7 @@ const ContactUs = () => {
            Digital solutions that take your brand from idea to impact faster, cleaner, and smarter.
         </p>
 
-        <div className="row justify-content-center g-4 text-start contact-section ">
+        <div className="row justify-content-center g-5 text-start contact-section ">
           {/* Left Card */}
           <div className="col-lg-6">
             <div className="contact-card info-card">
@@ -114,23 +112,111 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* message section from CEO */}
-        <div className="message-section ">
-          <div className="message-image mb-5">
-            <img
-              src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
-              alt=""
-            />
-          </div>
+       {/* Message from CEO Section */}
+<div className="message-section text-center">
+  <div className="message-image mb-4">
+    <img
+      src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
+      alt="InnovaAI Logo"
+      style={{ width: "60px", height: "60px" }}
+    />
+  </div>
 
-          <div className="flip-word mb-2 text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-            A Message from Our
-            <FlipWords words={words} /> <br />
-          </div>
-          <p className="text-secondary sub-message">
-          A"At InnovaAI, our goal is to push the boundaries of AI technology to create solutions that simplify and enhance everyday tasks. We are passionate about innovation and dedicated to delivering exceptional value to our customers. Thank you for being part of our journey."
+  
+  {/* Bootstrap Carousel */}
+  <div id="ceoCarousel" className="carousel slide" data-bs-ride="carousel">
+    <div className="carousel-inner">
+      <div className="carousel-item active">
+        <h3 className="text-white mb-4">A Message from Our CEO</h3>
+
+        <p className="text-secondary fs-5 px-3 px-md-5">
+          “At InnovaAI, our goal is to push the boundaries of AI technology to
+          create solutions that simplify and enhance everyday tasks. We are
+          passionate about innovation and dedicated to delivering exceptional
+          value to our customers. Thank you for being part of our journey.”
         </p>
+        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="CEO"
+            className="rounded-circle"
+            width="60"
+            height="60"
+          />
+          <div className="text-start">
+            <h6 className="mb-0 text-white">Jane Doe</h6>
+            <small className="text-secondary">CEO, InnovaAI</small>
+          </div>
         </div>
+      </div>
+
+      <div className="carousel-item">
+        <h3 className="text-white mb-4">A Message from Our CTO</h3>
+        
+        <p className="text-secondary fs-5 px-3 px-md-5">
+          “We believe in creating digital ecosystems that drive results. Our
+          mission is to support startups and enterprises in crafting tech-driven
+          strategies with measurable success.”
+        </p>
+        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="CTO"
+            className="rounded-circle"
+            width="60"
+            height="60"
+          />
+          <div className="text-start">
+            <h6 className="mb-0 text-white">Sarah Lee</h6>
+            <small className="text-secondary">CTO, Tarlose</small>
+          </div>
+        </div>
+      </div>
+      <div className="carousel-item">
+        <h3 className="text-white mb-4">A Message from Our CEO</h3>
+
+        <p className="text-secondary fs-5 px-3 px-md-5">
+          “We believe in creating digital ecosystems that drive results. Our
+          mission is to support startups and enterprises in crafting tech-driven
+          strategies with measurable success.”
+        </p>
+        <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="CTO"
+            className="rounded-circle"
+            width="60"
+            height="60"
+          />
+          <div className="text-start">
+            <h6 className="mb-0 text-white">Sarah Lee</h6>
+            <small className="text-secondary">CTO, Tarlose</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Controls */}
+    <button
+      className="carousel-control-prev"
+      type="button"
+      data-bs-target="#ceoCarousel"
+      data-bs-slide="prev"
+    >
+      <span className="carousel-control-prev-icon"></span>
+    </button>
+    <button
+      className="carousel-control-next"
+      type="button"
+      data-bs-target="#ceoCarousel"
+      data-bs-slide="next"
+    >
+      <span className="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+        
       </div>
     </>
   );
