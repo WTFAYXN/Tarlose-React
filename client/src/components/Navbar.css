@@ -1,19 +1,29 @@
 nav a,
 .content-home {
-    color: #ffffff !important;
-    text-decoration: none;
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
 .active {
-    background-color: #262626 !important;
+  background-color: #262626 !important;
 }
 
 .btn-contact,
 .nav-btn {
-    background-color: #8d6a9f !important;
-    color: #fff !important;
-    font-size: 18px;
-    font-family: Gilroy-Bold;
+  background-color: #8d6a9f !important;
+  color: #fff !important;
+  font-size: 18px;
+  font-family: Gilroy-Bold;
+}
+.navbar {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
 
-
+.offcanvas {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
 }
