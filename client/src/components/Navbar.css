@@ -1,9 +1,13 @@
 .navbar {
-  background-color: #111;
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 50%;
+  background-color:transparent !important;
+    backdrop-filter: blur(50px);
+  /* padding: 1rem 2rem; */
+  position: fixed !important;
+  width: 50% !important;
+  margin-top: 30px;
   left: 50%;
+  border-radius: 32px;
+  border: 2px solid #8d6a9f;
   transform: translateX(-50%);
   top: 0;
   z-index: 1000;
@@ -18,15 +22,16 @@
 }
 
 .dropdown-wrapper {
-  background-color: #222;
+  background-color: black;
   color: white;
   padding: 1rem;
   position: fixed;
-  top: 70px;
-  left: 50%;
+  top: 40px;
+  left: 49%;
+  border-radius: 0 0 32px 32px;
   transform: translateX(-50%);
-  width: 50%;
-  z-index: 9999;
+  width: 60%;
+  z-index: 999;
 }
 
 ul {
@@ -40,13 +45,16 @@ ul li a {
   text-decoration: none;
   padding: 0.5rem 0;
   display: block;
+  font-size: 16px;
 }
 
-.nav-btn a {
-  background-color: #8d6a9f;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
+
+
+.nav-btn {
+    font-size: 16px !important;
+
+}
+
+.active  {
+    background-color: transparent !important;
 }

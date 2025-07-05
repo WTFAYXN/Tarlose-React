@@ -1,76 +1,87 @@
-import React, { useRef, useState } from "react";
-import { gsap } from "gsap";
-import "./Navbar.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import logo from "../assets/Logos/Tarlose-Logo.svg";
+
+import React from "react";
+import "./Navbar.css"; 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleMenu = () => {
-    if (isOpen) {
-      // Close animation
-      gsap.to(dropdownRef.current, {
-        height: 0,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.inOut",
-      });
-    } else {
-      // Open animation (auto height using GSAP trick)
-      gsap.set(dropdownRef.current, { height: "auto" });
-      const height = dropdownRef.current.offsetHeight;
-      gsap.fromTo(
-        dropdownRef.current,
-        { height: 0, opacity: 0 },
-        { height, opacity: 1, duration: 0.5, ease: "power2.inOut" }
-      );
-    }
-
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <>
-      <nav className="navbar">
-        <div className="container">
-          <a href="/" className="navbar-brand">
+      <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a className="navbar-brand p-0" href="/">
+            {/* <img src={logo} alt="Tarlose" width={100} /> */}
             <h2>Tarlose</h2>
           </a>
-          <button className="menu-button" onClick={toggleMenu}>
-            {isOpen ? "✖" : "="}
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/">
+                Home
+              </a>
+            </li>
+          
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Careers">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Contact">Contact</a>
+            </li>
+          </ul>
+          <button type="button" className="nav-btn px-4 py-2 rounded border-0">
+            <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
+              Book a Call
+            </a>
           </button>
         </div>
-      </nav>
-
-      <div
-        className="dropdown-wrapper"
-        ref={dropdownRef}
-        style={{ overflow: "hidden", height: 0, opacity: 0 }}
-      >
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/#Service">Services</a>
-          </li>
-          <li>
-            <a href="/career">Careers</a>
-          </li>
-          <li>
-            <a href="/blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-        <button type="button" className="nav-btn px-4 py-2 rounded border-0">
-          <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
-            Book a Call
-          </a>
-        </button>
       </div>
-    </>
+    </nav>
+    
   );
 };
 
