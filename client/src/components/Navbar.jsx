@@ -42,16 +42,32 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="dropdown-wrapper" ref={dropdownRef} style={{ overflow: "hidden", height: 0, opacity: 0 }}>
+      <div
+        className="dropdown-wrapper"
+        ref={dropdownRef}
+        style={{ overflow: "hidden", height: 0, opacity: 0 }}
+      >
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/#Service">Services</a></li>
-          <li><a href="/career">Careers</a></li>
-          <li><a href="/blogs">Blogs</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/#Service">Services</a>
+          </li>
+          <li>
+            <a href="/career">Careers</a>
+          </li>
+          <li>
+            <a href="/blogs">Blogs</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
-        <button className="nav-btn">
-          <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">Book a Call</a>
+        <button type="button" className="nav-btn px-4 py-2 rounded border-0">
+          <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
+            Book a Call
+          </a>
         </button>
       </div>
     </>
