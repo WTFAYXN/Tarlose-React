@@ -104,14 +104,14 @@ const Home = () => {
                     <title>Tarlose - Digital Solutions for Modern Businesses</title>
                     <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
                     <meta name="keywords" content="digital solutions, web development, app development, UI/UX design, digital transformation, Tarlose, business technology" />
-                    <link rel="canonical" href="https://www.tarlose.com/" />
+                    <link rel="canonical" href="https://www.tarlose.com" />
                     
                     {/* Open Graph Tags */}
                     <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
                     <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-                    <meta property="og:url" content="https://www.tarlose.com/" />
+                    <meta property="og:url" content="https://www.tarlose.com" />
                     <meta property="og:type" content="website" />
-                    <meta property="og:image" content="https://www.tarlose.com/favicon.ico" />
+                    <meta property="og:image" content="https://tarlose.com/assets/Logos/twitterImg.png" />
                     <meta property="og:site_name" content="Tarlose" />
                     
                     {/* Twitter Card Tags */}
@@ -119,7 +119,7 @@ const Home = () => {
                     <meta name="twitter:site" content="@tarlose" />
                     <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
                     <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-                    <meta name="twitter:image" content="https://www.tarlose.com/favicon.ico" />
+                    <meta name="twitter:image" content="https://tarlose.com/assets/Logos/twitterImg.png" />
                     
                     {/* Structured Data */}
                     <script type="application/ld+json">
