@@ -1,29 +1,52 @@
-nav a,
-.content-home {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.active {
-  background-color: #262626 !important;
-}
-
-.btn-contact,
-.nav-btn {
-  background-color: #8d6a9f !important;
-  color: #fff !important;
-  font-size: 18px;
-  font-family: Gilroy-Bold;
-}
 .navbar {
+  background-color: #111;
+  padding: 1rem 2rem;
+  position: fixed;
   width: 50%;
-  margin: auto;
-  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 1000;
 }
 
-.offcanvas {
-  height: 50%;
+.menu-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-wrapper {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50%;
-  margin: auto;
-  margin-top: 20px;
+  z-index: 9999;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.nav-btn a {
+  background-color: #8d6a9f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
 }
