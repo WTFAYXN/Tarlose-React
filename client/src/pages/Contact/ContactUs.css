@@ -126,19 +126,37 @@ textarea {
 
 /* join-the-future */
 
-.join-the-future {
-  padding: 80px 0 80px 0;
+.future-hero {
+  position: relative;
+  min-height: 300px;
+  background-image: url("https://framerusercontent.com/images/1P6DbM92H2ez136RCeWNstHg0vA.png?scale-down-to=1024");
+  background-position: -80%;
+  background-repeat: no-repeat;
+  background-color: rgba(115, 115, 115, 0.07);
+  border-radius: 32px;
+  box-shadow: rgba(186, 186, 186, 0.06) 2px 4px 16px 0px inset;
+  will-change: transform;
+  opacity: 1;
+  transform: none;
+  padding: 60px 58px;
 }
 
-.main-future-container {
-  background: transparent !important;
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row !important;
-
+.future-heading {
+  font-family: var(--font-family--Gilroy);
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  line-height: 58px !important;
+  width: 50%;
 }
 
-.right-future-container {
-  background: transparent !important;
+.hero-content {
+  padding:0 !important
+}
+.hero-content p {
+  font-family: var(--font-family--Gilroy);
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 27px !important;
+  color: #f8f8f8b1 !important;
+  padding-bottom: 40px;
 }

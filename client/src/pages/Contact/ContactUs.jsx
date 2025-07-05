@@ -224,36 +224,35 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Join the Future section */}
+        {/* Join the Future Section */}
+        <div className="container my-5">
+          <div className="future-hero  d-flex align-items-center justify-content-between flex-column flex-md-row text-white ">
+            {/* Text & Button Section */}
+            <div className="hero-content text-center text-md-start">
+              <h2 className="future-heading mb-3">
+                Join the Future of Music Production Today
+              </h2>
+              <p className="text-secondary m-0">
+                Start Your Journey with and Revolutionize Your Creative Process
+              </p>
+              <button
+                type="button"
+                className="nav-btn px-4 py-2 rounded border-0"
+              >
+                <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
+                  Book a Call
+                </a>
+              </button>
+            </div>
 
-        <div className="container">
-          <div className="join-the-future">
-            <div className="main-future-container card">
-              <div className="right-future-container card">
-                <img
-                  src="https://framerusercontent.com/images/1P6DbM92H2ez136RCeWNstHg0vA.png?scale-down-to=1024"
-                  alt=""
-                  className="card-img"
-                />
-                <div className="card-img-overlay">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p class="card-text">
-                    <small>Last updated 3 mins ago</small>
-                  </p>
-                </div>
-              </div>
-              <div className="left-future-container">
-                <img
-                  src="https://framerusercontent.com/images/MecLliNBqre50VslV9Cc8fZOqkY.png?scale-down-to=512"
-                  alt=""
-                  className="img-fluid"
-                />
-              </div>
+            {/* Right-side Image */}
+            <div className="hero-image d-none d-md-block">
+              <img
+                src="https://framerusercontent.com/images/MecLliNBqre50VslV9Cc8fZOqkY.png?scale-down-to=512"
+                alt="AI Demo"
+                className="img-fluid"
+                style={{ maxWidth: "300px" }}
+              />
             </div>
           </div>
         </div>
