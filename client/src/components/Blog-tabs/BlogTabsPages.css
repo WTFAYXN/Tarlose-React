@@ -41,3 +41,7 @@
 .card-img-top {
   margin-bottom: var(--spacing--XS) !important;
 }
+
+.blog-tabs-container {
+  margin-top: 6rem;
+}

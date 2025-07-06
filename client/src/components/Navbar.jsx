@@ -64,10 +64,10 @@ const Navbar = () => {
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Careers">Careers</a>
+              <a class="nav-link" href="/career">Careers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Blog">Blog</a>
+              <a class="nav-link" href="/blogs">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Contact">Contact</a>

@@ -19,8 +19,8 @@ const BlogTabsNav = () => {
   };
 
   return (
-   <div className="modern-blog-container">
-        <div className="blog-tabs-container">
+   <div className="modern-blog-container" style={{ marginTop: "100px" }}>
+        <div className="blog-tabs-container ">
             <div className="blog-tabs container">
               <nav className="nav-menu">
                 <ul>
