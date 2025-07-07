@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="container-fluid">
+      <div className="container-fluid p-0">
         <a className="navbar-brand p-0" href="/">
           {/* <img src={logo} alt="Tarlose" width={100} /> */}
           <h2 className="m-0">Tarlose</h2>
