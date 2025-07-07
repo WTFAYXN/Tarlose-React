@@ -1,20 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import logo from "../assets/Logos/Tarlose-Logo.svg";
-
-import React from "react";
-import "./Navbar.css"; 
+import React, { useState } from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  };
+
   return (
-      <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container-fluid">
         <a className="navbar-brand p-0" href="/">
-            {/* <img src={logo} alt="Tarlose" width={100} /> */}
-            <h2 className="m-0">Tarlose</h2>
-          </a>
+          {/* <img src={logo} alt="Tarlose" width={100} /> */}
+          <h2 className="m-0">Tarlose</h2>
+        </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -22,58 +30,61 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 Home
               </a>
             </li>
-          
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Service
+
+            <li className="nav-item dropdown" onClick={toggleDropdown}>
+              <span className="nav-link dropdown-toggle" role="button">
+                Services
+              </span>
+              {dropdownOpen && (
+                <ul className="dropdown-menu show">
+                  <li>
+                    <a className="dropdown-item" href="https://getbootstrap.com/docs/5.2/components/navbar/">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/career">
+                Careers
               </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/career">Careers</a>
+            <li className="nav-item">
+              <a className="nav-link" href="/blogs">
+                Blog
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blogs">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Contact">Contact</a>
+            <li className="nav-item">
+              <a className="nav-link" href="/Contact">
+                Contact
+              </a>
             </li>
           </ul>
-          <button type="button" className="nav-btn ">
+          <button type="button" className="nav-btn">
             <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
               Book a Call
             </a>
@@ -81,7 +92,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    
   );
 };
 
