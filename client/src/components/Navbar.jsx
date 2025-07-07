@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../assets/Logos/Tarlose-Logo.svg";
+import logo from "../assets/Logos/tarloseNavLogo.svg";
 import React, { useState } from "react";
 import "./Navbar.css";
 
@@ -18,8 +18,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid p-0">
         <a className="navbar-brand p-0" href="/">
-          {/* <img src={logo} alt="Tarlose" width={100} /> */}
-          <h2 className="m-0">Tarlose</h2>
+          <img src={logo} alt="Tarlose" width={150} />
         </a>
         <button
           className="navbar-toggler"
@@ -47,9 +46,12 @@ const Navbar = () => {
               {dropdownOpen && (
                 <ul className="dropdown-menu show">
                   <li>
-                    <a className="dropdown-item" href="https://getbootstrap.com/docs/5.2/components/navbar/">
-                      Action
+                    <a className="dropdown-item" href="#">
+                      Website Development
                     </a>
+                    <div className="web-dev-services">
+
+                    </div>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
@@ -65,6 +67,8 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
+
+                
               )}
             </li>
 

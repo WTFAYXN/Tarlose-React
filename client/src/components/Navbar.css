@@ -90,3 +90,12 @@ ul li a {
 .active {
   background-color: transparent !important;
 }
+.nav-column-mobile {
+    padding: 10px;
+}
+h6 {
+  color: #fff;
+}
+
+
+
