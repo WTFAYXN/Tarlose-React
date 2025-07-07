@@ -11,7 +11,7 @@ const Navbar = () => {
       <div class="container-fluid">
         <a className="navbar-brand p-0" href="/">
             {/* <img src={logo} alt="Tarlose" width={100} /> */}
-            <h2>Tarlose</h2>
+            <h2 className="m-0">Tarlose</h2>
           </a>
         <button
           class="navbar-toggler"
@@ -73,7 +73,7 @@ const Navbar = () => {
               <a class="nav-link" href="/Contact">Contact</a>
             </li>
           </ul>
-          <button type="button" className="nav-btn px-4 py-2 rounded border-0">
+          <button type="button" className="nav-btn ">
             <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
               Book a Call
             </a>

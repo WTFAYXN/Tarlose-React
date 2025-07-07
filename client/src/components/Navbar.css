@@ -1,16 +1,20 @@
 .navbar {
-  background-color:transparent !important;
-    backdrop-filter: blur(50px);
-  /* padding: 1rem 2rem; */
+  background-color: transparent !important;
+  backdrop-filter: blur(50px);
   position: fixed !important;
   width: 50% !important;
   margin-top: 30px;
+  padding: 3px 40px;
   left: 50%;
   border-radius: 32px;
   border: 2px solid #8d6a9f;
   transform: translateX(-50%);
   top: 0;
   z-index: 1000;
+}
+
+.nav-item {
+  padding: 6px 12px;
 }
 
 .menu-button {
@@ -48,13 +52,13 @@ ul li a {
   font-size: 16px;
 }
 
-
-
 .nav-btn {
-    font-size: 16px !important;
-
+  font-size: 16px !important;
+  border-radius: 120px;
+  padding: 8px 20px;
+  width: max-content;
 }
 
-.active  {
-    background-color: transparent !important;
+.active {
+  background-color: transparent !important;
 }

@@ -8,7 +8,7 @@ const ContactUs = () => {
     <>
       <Navbar />
       <div className="container modern-contact-container my-5">
-        <h2 className="mb-4 text-white contact-heading">Contact Us</h2>
+        <h2 className="my-4 pt-5 text-white contact-heading ">Contact Us</h2>
         <p className="text-secondary sub-head mb-5">
           Digital solutions that take your brand from idea to impact faster,
           cleaner, and smarter.
