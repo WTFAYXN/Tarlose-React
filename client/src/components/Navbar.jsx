@@ -49,7 +49,8 @@ const Navbar = () => {
                     <a className="dropdown-item" href="#">
                       Website Development
                     </a>
-                    <div className="web-dev-services">
+                    <div className="mega-menu d-grid">
+                      
 
                     </div>
                   </li>
