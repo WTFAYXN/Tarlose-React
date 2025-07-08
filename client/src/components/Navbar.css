@@ -165,8 +165,14 @@ h6 {
   .dropdown-menu.show {
     width: 25rem;
     transform: translateX(-50%);
+    height: 600px;
+    overflow: auto;
   }
   .list-unstyled {
     grid-template-columns: 1fr;
+  }
+  .navbar {
+    width: 90% !important;
+    padding: 10px 20px;
   }
 }
