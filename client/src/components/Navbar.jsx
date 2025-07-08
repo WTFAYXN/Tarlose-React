@@ -14,6 +14,99 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
+  const megaMenuItems = [
+  {
+    topic: "Website Development",
+    // description: "Create powerful online stores.",
+    // icon: "🛒",
+    subItems: [
+      {
+        title: "Ecommerce Development",
+        description: "Create powerful online stores.",
+        icon: "🛒",
+        link: "#",
+      },
+      {
+        title: "LMS",
+        description: "Learning Management Systems for education.",
+        icon: "📚",
+        link: "#",
+      },
+      {
+        title: "Coded",
+        description: "Fully coded custom development.",
+        icon: "💻",
+        link: "#",
+      },
+      {
+        title: "No-code",
+        description: "No-code website development solutions.",
+        icon: "⚙️",
+        link: "#",
+      },
+    ],
+  },
+  {
+    topic: "Graphic Design",
+    subItems: [
+      {
+        title: "Social Posts",
+        description: "Designs for social media platforms.",
+        icon: "📱",
+        link: "#",
+      },
+      {
+        title: "Posters, Brochure",
+        description: "Print-ready designs for marketing materials.",
+        icon: "📰",
+        link: "#",
+      },
+      {
+        title: "Illustration",
+        description: "Custom illustration designs.",
+        icon: "🖌️",
+        link: "#",
+      },
+      {
+        title: "Pitch Decks",
+        description: "Professional pitch deck designs.",
+        icon: "📊",
+        link: "#",
+      },
+    ],
+  },
+  {
+    topic: "Digital Marketing",
+    subItems: [
+      {
+        title: "Search Engine Optimization",
+        description: "Improve search rankings with SEO.",
+        icon: "🔍",
+        link: "#",
+      },
+      {
+        title: "Social Media Management",
+        description: "Manage your social media channels.",
+        icon: "📱",
+        link: "#",
+      },
+      {
+        title: "Search Engine Marketing",
+        description: "Run ads to boost search visibility.",
+        icon: "💰",
+        link: "#",
+      },
+      {
+        title: "Social Media Marketing",
+        description: "Drive engagement through social media ads.",
+        icon: "📢",
+        link: "#",
+      },
+    ],
+  },
+];
+
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid p-0">
@@ -39,45 +132,46 @@ const Navbar = () => {
               </a>
             </li>
 
-            <li className="nav-item dropdown" onClick={toggleDropdown}>
-              <span className="nav-link dropdown-toggle" role="button">
+            {/* Mega Menu */}
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Services
-              </span>
-              {dropdownOpen && (
-                <ul className="dropdown-menu show">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Website Development
-                    </a>
-                    <div className="mega-menu d-flex">
-                      <div className="nav-column-mobile">
-                        <img
-                          src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
-                          alt=""
-                        />
-                      </div>
-                      <div className="mega-content">
-                        <p>Search</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?</p>
-
+              </a>
+              <div className="dropdown-menu mega-menu-wrapper" aria-labelledby="navbarDropdown">
+                <div className="d-flex flex-column">
+                  {megaMenuItems.map((category, idx) => (
+                    <div key={idx} className="dropdown-item">
+                      <div className="d-flex align-items-start gap-2">
+                        <div className="fs-4">{category.icon}</div>
+                        <div>
+                          <h6 className="mb-1">{category.topic}</h6>
+                          <p className="mb-2 small">{category.description}</p>
+                          <ul className="list-unstyled">
+                            {category.subItems.map((item, subIdx) => (
+                              <li key={subIdx} className="mb-2">
+                                <a href={item.link} className="d-flex align-items-start text-white text-decoration-none">
+                                  <span className="me-2">{item.icon}</span>
+                                  <div>
+                                    <strong>{item.title}</strong>
+                                    <p className="small mb-0">{item.description}</p>
+                                  </div>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              )}
+                  ))}
+                </div>
+              </div>
             </li>
 
             <li className="nav-item">
