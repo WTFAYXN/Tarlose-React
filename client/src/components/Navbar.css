@@ -162,4 +162,11 @@ h6 {
   .mega-menu-content {
     grid-template-columns: 1fr;
   }
+  .dropdown-menu.show {
+    width: 25rem;
+    transform: translateX(-50%);
+  }
+  .list-unstyled {
+    grid-template-columns: 1fr;
+  }
 }

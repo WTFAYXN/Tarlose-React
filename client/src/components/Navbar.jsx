@@ -145,7 +145,7 @@ const Navbar = () => {
                 Services
               </a>
               <div className="dropdown-menu mega-menu-wrapper" aria-labelledby="navbarDropdown">
-                <div className="d-flex flex-column">
+                <div className="d-flex flex-column ">
                   {megaMenuItems.map((category, idx) => (
                     <div key={idx} className="dropdown-item">
                       <div className="d-flex align-items-start gap-2">
