@@ -5,7 +5,7 @@ const TechTools = () => {
   return (
     <>
       <h2 className="my-5">Tech Tools</h2>
-      <BlogTabsPages />
+      <BlogTabsPages category="Tech Tools" />
     </>
   );
 };

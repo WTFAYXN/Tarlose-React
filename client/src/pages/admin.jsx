@@ -34,10 +34,11 @@ const Admin = () => {
     const [success, setSuccess] = useState("");
 
     const predefinedCategories = [
-        "Technology",
-        "Web development",
-        "App development",
-        "Marketing"
+        "Website Development",
+        "App Development",
+        "Digital Marketing",
+        "Graphic Design",
+        "Tech Tools"
     ];
 
     useEffect(() => {
