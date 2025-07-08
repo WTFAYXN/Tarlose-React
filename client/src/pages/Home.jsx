@@ -148,9 +148,26 @@ const Home = () => {
 
             {/* Page start     */}
             <div className="container hero" id="home">
-                <video autoPlay loop muted>
+                {/* <video autoPlay loop muted>
                     <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
-                </video>
+                </video> */}
+
+                 <div className="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div className="gradients-container">
+    <div className="g1"></div>
+    <div className="g2"></div>
+    <div className="g3"></div>
+  </div>
+  </div>
 
                 <audio id="track" ref={trackRef}>
                     <source src={TarloseTheme} type="audio/mpeg" />
