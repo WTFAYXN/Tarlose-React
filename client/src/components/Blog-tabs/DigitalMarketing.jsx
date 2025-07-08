@@ -5,7 +5,7 @@ const DigitalMarketing = () => {
   return (
     <>
       <h2 className="my-5">Digital Marketing</h2>
-      <BlogTabsPages />
+      <BlogTabsPages category="Digital Marketing" />
     </>              
   );
 };
