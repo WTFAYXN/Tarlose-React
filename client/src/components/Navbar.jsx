@@ -49,9 +49,18 @@ const Navbar = () => {
                     <a className="dropdown-item" href="#">
                       Website Development
                     </a>
-                    <div className="mega-menu d-grid">
-                      
+                    <div className="mega-menu d-flex">
+                      <div className="nav-column-mobile">
+                        <img
+                          src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
+                          alt=""
+                        />
+                      </div>
+                      <div className="mega-content">
+                        <p>Search</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?</p>
 
+                      </div>
                     </div>
                   </li>
                   <li>
@@ -68,8 +77,6 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-
-                
               )}
             </li>
 
