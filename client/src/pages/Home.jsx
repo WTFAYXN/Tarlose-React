@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import "../index.css";
 import "./home.css";
-import "./responsive.css"
+import "./responsive.css";
 import { Helmet } from "react-helmet";
 import HeroVideo from "../assets/videos-audio/universe.mp4";
 import TarloseTheme from "../assets/videos-audio/tarlose-theme-sound.mp3";
@@ -34,96 +34,119 @@ import bgheader from "../assets/svgs/background-header.svg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const trackRef = useRef(null);
-    const controlBtnRef = useRef(null);
+  const trackRef = useRef(null);
+  const controlBtnRef = useRef(null);
 
-    useEffect(() => {
-        const track = trackRef.current;
-        const controlBtn = controlBtnRef.current;
+  useEffect(() => {
+    const track = trackRef.current;
+    const controlBtn = controlBtnRef.current;
 
-        const playPause = () => {
-            if (track.paused) {
-                track.play();
-                controlBtn.className = "pause";
-            } else {
-                track.pause();
-                controlBtn.className = "play";
-            }
-        };
+    const playPause = () => {
+      if (track.paused) {
+        track.play();
+        controlBtn.className = "pause";
+      } else {
+        track.pause();
+        controlBtn.className = "play";
+      }
+    };
 
-        const handleTrackEnded = () => {
-            controlBtn.className = "play";
-        };
+    const handleTrackEnded = () => {
+      controlBtn.className = "play";
+    };
 
-        controlBtn.addEventListener("click", playPause);
-        track.addEventListener("ended", handleTrackEnded);
+    controlBtn.addEventListener("click", playPause);
+    track.addEventListener("ended", handleTrackEnded);
 
-        // Cleanup event listeners on component unmount
-        return () => {
-            controlBtn.removeEventListener("click", playPause);
-            track.removeEventListener("ended", handleTrackEnded);
-        };
-    }, []);
+    // Cleanup event listeners on component unmount
+    return () => {
+      controlBtn.removeEventListener("click", playPause);
+      track.removeEventListener("ended", handleTrackEnded);
+    };
+  }, []);
 
-    useLayoutEffect(() => {
-        const headingAnimation = gsap.context(() => {
-            gsap.from("#home h1", {
-                y: 100,
-                opacity: 0,
-                delay: 0.5,
-                duration: 0.9,
-                stagger: 0.3
-            });
+  useLayoutEffect(() => {
+    const headingAnimation = gsap.context(() => {
+      gsap.from("#home h1", {
+        y: 100,
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.9,
+        stagger: 0.3,
+      });
 
-            gsap.from("#home .content-home", {
-                y: 100,
-                opacity: 0.9,
-                delay: 1.5,
-                duration: 0.9,
-                stagger: 0.3
-            });
+      gsap.from("#home .content-home", {
+        y: 100,
+        opacity: 0.9,
+        delay: 1.5,
+        duration: 0.9,
+        stagger: 0.3,
+      });
 
-            gsap.from("#btn-fade", {
-                y: 100,
-                opacity: 0,
-                delay: 1.7,
-                duration: 0.9,
-                stagger: 0.3
-            });
-        });
+      gsap.from("#btn-fade", {
+        y: 100,
+        opacity: 0,
+        delay: 1.7,
+        duration: 0.9,
+        stagger: 0.3,
+      });
+    });
 
-        // Cleanup GSAP context on component unmount
-        return () => headingAnimation.revert();
-    }, []);
+    // Cleanup GSAP context on component unmount
+    return () => headingAnimation.revert();
+  }, []);
 
-    return (
-        <>
+  return (
+    <>
+      {/* Seo */}
+      <Helmet>
+        <title>Tarlose - Digital Solutions for Modern Businesses</title>
+        <meta
+          name="description"
+          content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise."
+        />
+        <meta
+          name="keywords"
+          content="digital solutions, web development, app development, UI/UX design, digital transformation, Tarlose, business technology"
+        />
+        <link rel="canonical" href="https://www.tarlose.com" />
 
-        {/* Seo */}
-                <Helmet>
-                    <title>Tarlose - Digital Solutions for Modern Businesses</title>
-                    <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
-                    <meta name="keywords" content="digital solutions, web development, app development, UI/UX design, digital transformation, Tarlose, business technology" />
-                    <link rel="canonical" href="https://www.tarlose.com" />
-                    
-                    {/* Open Graph Tags */}
-                    <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
-                    <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-                    <meta property="og:url" content="https://www.tarlose.com" />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:image" content="https://tarlose.com/assets/Logos/twitterImg.png" />
-                    <meta property="og:site_name" content="Tarlose" />
-                    
-                    {/* Twitter Card Tags */}
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:site" content="@tarlose" />
-                    <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
-                    <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-                    <meta name="twitter:image" content="https://tarlose.com/assets/Logos/twitterImg.png" />
-                    
-                    {/* Structured Data */}
-                    <script type="application/ld+json">
-                        {`
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Tarlose - Digital Solutions for Modern Businesses"
+        />
+        <meta
+          property="og:description"
+          content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises."
+        />
+        <meta property="og:url" content="https://www.tarlose.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://tarlose.com/assets/Logos/twitterImg.png"
+        />
+        <meta property="og:site_name" content="Tarlose" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tarlose" />
+        <meta
+          name="twitter:title"
+          content="Tarlose - Digital Solutions for Modern Businesses"
+        />
+        <meta
+          name="twitter:description"
+          content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tarlose.com/assets/Logos/twitterImg.png"
+        />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
                         {
                             "@context": "https://schema.org",
                             "@type": "Organization",
@@ -137,355 +160,430 @@ const Home = () => {
                             ]
                         }
                         `}
-                    </script>
-                </Helmet>
-            <Cursor />
-            <Navbar />
+        </script>
+      </Helmet>
+      <Cursor />
+      <Navbar />
 
-                        {/* SEO   */}
+      {/* SEO   */}
 
-
-
-            {/* Page start     */}
-            <div className="container hero" id="home">
-                {/* <video autoPlay loop muted>
+      {/* Page start     */}
+      <div className="container hero" id="home">
+        {/* <video autoPlay loop muted>
                     <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
                 </video> */}
 
-                 <div className="gradient-bg">
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </defs>
-    </svg>
-    <div className="gradients-container">
-    <div className="g1"></div>
-    <div className="g2"></div>
-    <div className="g3"></div>
-  </div>
-  </div>
+        <div className="gradient-bg">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo"
+                />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          <div className="gradients-container">
+            <div className="g1"></div>
+            <div className="g2"></div>
+            <div className="g3"></div>
+          </div>
+        </div>
 
-                <audio id="track" ref={trackRef}>
-                    <source src={TarloseTheme} type="audio/mpeg" />
-                </audio>
+        <audio id="track" ref={trackRef}>
+          <source src={TarloseTheme} type="audio/mpeg" />
+        </audio>
 
-                <div id="player-container">
-                    <div id="play-pause" className="play" ref={controlBtnRef}>
-                        Play
-                    </div>
-                </div>
+        <div id="player-container">
+          <div id="play-pause" className="play" ref={controlBtnRef}>
+            Play
+          </div>
+        </div>
 
-                <h1 className="text-white text-center main-heading-text">
-                    Design. Develop. Dominate.
-                </h1>
-                <div className="content-home d-flex justify-content-center align-items-center my-5 ">
-                    <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
-                        <p>for</p>
-                        <p>
-                            <span>Startups</span>
-                        </p>
-                        <p>,</p>
-                        <p>
-                            <span>Agencies</span>
-                        </p>
-                        <p>,</p>
-                        <p>
-                            <span>SMBs</span>
-                        </p>
-                        <p>and</p>
-                        <p>
-                            <span>Social Good</span>
-                        </p>
-                    </div>
-                </div>
+        <h1 className="text-white text-center main-heading-text">
+          Design. Develop. Dominate.
+        </h1>
+        <div className="content-home d-flex justify-content-center align-items-center my-5 ">
+          <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
+            <p>for</p>
+            <p>
+              <span>Startups</span>
+            </p>
+            <p>,</p>
+            <p>
+              <span>Agencies</span>
+            </p>
+            <p>,</p>
+            <p>
+              <span>SMBs</span>
+            </p>
+            <p>and</p>
+            <p>
+              <span>Social Good</span>
+            </p>
+          </div>
+        </div>
 
-                <div className="d-flex justify-content-center">
-                    <div id="btn-fade">
-                        <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
-                            <button className="btn btn-work px-3 py-2" type="button">
-                                Our Works
-                            </button>
-                        </a>
-                        <a href="https://wa.link/qyts69">
-                            <button className="btn btn-contact px-3 py-2" type="button">
-                                Contact Us
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div className="d-flex justify-content-center">
+          <div id="btn-fade">
+            <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
+              <button className="shining-button px-3 py-2 me-3" type="button">
+                Our Works
+              </button>
+            </a>
+            <a href="https://wa.link/qyts69">
+              <button className="shining-button px-3 py-2" type="button">
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
 
-            <div className=" container marquee-title-cont">
-                <p className="m-0 marquee-title rounded-5 ">Trusted By 50+ Companies</p>
-            </div>
-            {/* 
+      <div className=" container marquee-title-cont">
+        <p className="m-0 marquee-title rounded-5 ">Trusted By 50+ Companies</p>
+      </div>
+      {/* 
             <!-- scroller section  -->
 
             <!-- companies logo  --> */}
 
-            <MarqueeLogo />
+      <MarqueeLogo />
 
-            {/* Services  */}
+      {/* Services  */}
 
-            <div className="container" id="Service">
-                <h5 className="text-center text-white">Our services</h5>
-                <h3 className="text-center mb-5 text-white heading-ser-para text-capitalize">
-                   {/* More than just code a
+      <div className="container" id="Service">
+        <h5 className="text-center text-white">Our services</h5>
+        <h3 className="text-center mb-5 text-white heading-ser-para text-capitalize">
+          {/* More than just code a
                     comprehensive digital
                     solution for your digital needs */}
-                    Bringing your vision to life
-                </h3>
+          Bringing your vision to life
+        </h3>
 
-                <section className="cards-scroll">
-                    <div className="card-row">
-
-
-                        <div className="card">
-                            <div className="card__body">
-                                <img src={cardBg} alt="" className="card_img" />
-                                <div className="overlay-img"></div>
-                                <div className="card__content card-img-overlay">
-
-                                    <div className="card-para-cont">
-                                        <h4 className="num-card">1</h4>
-                                        <h4 className="card-heading">Website Development</h4>
-                                        <p>We craft modern, responsive websites with cutting-edge <br /> technologies and stunning designs.</p>
-                                        <Link to="https://wa.link/93y4cd">
-                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        </Link>
-                                        <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing">
-                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
-                                        </Link>
-                                    </div>
-
-
-
-                                    <div className="img-wrapper">
-                                        <img src={WebDev} alt="" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__body">
-                                <img src={cardBg} alt="" className="card_img" />
-                                <div className="overlay-img"></div>
-                                <div className="card__content card-img-overlay">
-
-                                    <div className="card-para-cont">
-                                        <h4 className="num-card m-0">2</h4>
-                                        <h4 className="card-heading py-3">Graphic <br /> Design</h4>
-                                        <p>We create stunning visual designs, branding, and marketing <br /> materials that capture your unique identity.</p>
-                                        <Link to="https://wa.link/0cclxm">
-                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        </Link>
-                                        <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing">
-                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
-                                        </Link>
-                                    </div>
-
-
-
-                                    <div className="img-wrapper">
-                                        <img src={GraphicDesign} alt="" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__body">
-                                <img src={cardBg} alt="" className="card_img" />
-                                <div className="overlay-img"></div>
-                                <div className="card__content card-img-overlay">
-
-                                    <div className="card-para-cont">
-                                        <h4 className="num-card">3</h4>
-                                        <h4 className="card-heading py-3">Marketing</h4>
-                                        <p>We develop data-driven marketing strategies to boost your brand visibility <br /> and drive measurable business growth.</p>
-                                        <Link to="https://wa.link/9z3qeh">
-                                            <button className="btn btn-contact px-3 py-2 " type="button">Contact Us</button>
-                                        </Link>
-                                        <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing">
-                                            <button className="btn btn-portfolio px-3 py-2" type="button">View Portfolio</button>
-                                        </Link>
-                                    </div>
-
-
-
-                                    <div className="img-wrapper">
-                                        <img src={Marketing} alt="" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </section>
-            </div>
-
-            <Platforms />
-
-
-            {/* Why choose us */}
-
-
-
-            <div className="card text-bg-dark position-relative overflow-hidden">
-                <img 
-                    src={bgheader} 
-                    className="card-img" 
-                    alt="Tarlose team collaboration" 
-                    loading="lazy"
-                />
-                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
-                    <h2 className="card-title display-4 mb-4 fw-bold">Why Choose Tarlose?</h2>
-                    <p className="card-text fs-5 mx-auto" style={{maxWidth: "800px"}}>
-                        Experience excellence in digital craftsmanship through our innovative solutions, 
-                        expert team, and proven track record of delivering transformative results that 
-                        help businesses thrive in the digital age.
+        <section className="cards-scroll">
+          <div className="card-row">
+            <div className="card">
+              <div className="card__body">
+                <img src={cardBg} alt="" className="card_img" />
+                <div className="overlay-img"></div>
+                <div className="card__content card-img-overlay">
+                  <div className="card-para-cont">
+                    <h4 className="num-card">1</h4>
+                    <h4 className="card-heading">Website Development</h4>
+                    <p>
+                      We craft modern, responsive websites with cutting-edge{" "}
+                      <br /> technologies and stunning designs.
                     </p>
+                    <Link to="https://wa.link/93y4cd">
+                      <button
+                        className="btn btn-contact px-3 py-2 "
+                        type="button"
+                      >
+                        Contact Us
+                      </button>
+                    </Link>
+                    <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing">
+                      <button
+                        className="btn btn-portfolio px-3 py-2"
+                        type="button"
+                      >
+                        View Portfolio
+                      </button>
+                    </Link>
+                  </div>
+
+                  <div className="img-wrapper">
+                    <img src={WebDev} alt="" />
+                  </div>
                 </div>
+              </div>
             </div>
+            <div className="card">
+              <div className="card__body">
+                <img src={cardBg} alt="" className="card_img" />
+                <div className="overlay-img"></div>
+                <div className="card__content card-img-overlay">
+                  <div className="card-para-cont">
+                    <h4 className="num-card m-0">2</h4>
+                    <h4 className="card-heading py-3">
+                      Graphic <br /> Design
+                    </h4>
+                    <p>
+                      We create stunning visual designs, branding, and marketing{" "}
+                      <br /> materials that capture your unique identity.
+                    </p>
+                    <Link to="https://wa.link/0cclxm">
+                      <button
+                        className="btn btn-contact px-3 py-2 "
+                        type="button"
+                      >
+                        Contact Us
+                      </button>
+                    </Link>
+                    <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing">
+                      <button
+                        className="btn btn-portfolio px-3 py-2"
+                        type="button"
+                      >
+                        View Portfolio
+                      </button>
+                    </Link>
+                  </div>
 
-            <div className="container">
-                <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
-
-                    <div className="col p-0 m-0 exp-col">
-                        <div className="exp-card">
-                            <div className="d-flex align-items-center gap-4">
-                                <img src={Expertise} alt="" />
-                                <h6>Expertise</h6>
-                            </div>
-                            <p className="my-5">our team combines skill, experience, and the latest industry knowledge to deliver solutions that work flawlessly, every time.</p>
-                        </div>
-                    </div>
-                    <div className="col  p-0 m-0 exp-col">
-                        <div className="exp-card ">
-                            <div className="d-flex align-items-center gap-4">
-                                <img src={Client} alt="" />
-                                <h6>Client-Centric Approach</h6>
-                            </div>
-                            <p className="my-5">With a client-centric approach, our experts guarantee tailored solutions driven by precision, innovation, and a commitment to exceeding expectations.</p>
-                        </div>
-                    </div>
-                    <div className="col p-0 m-0 exp-col">
-                        <div className="exp-card">
-                            <div className="d-flex align-items-center gap-4">
-                                <img src={Results} alt="" />
-                                <h6>Results-Driven Solutions</h6>
-                            </div>
-                            <p className="my-5">Our team delivers results-driven solutions, blending expertise and innovation to ensure measurable success every time.</p>
-                        </div>
-                    </div>
-                    <div className="col p-0 m-0 exp-col">
-                        <div className="exp-card">
-                            <div className="d-flex align-items-center gap-4">
-                                <img src={Partnership} alt="" />
-                                <h6>Collaborative Partnership</h6>
-                            </div>
-                            <p className="my-5">We believe in collaborative partnerships, combining our expertise with your vision to deliver solutions that guarantee success and lasting impact.</p>
-                        </div>
-                    </div>
-
+                  <div className="img-wrapper">
+                    <img src={GraphicDesign} alt="" />
+                  </div>
                 </div>
+              </div>
             </div>
+            <div className="card">
+              <div className="card__body">
+                <img src={cardBg} alt="" className="card_img" />
+                <div className="overlay-img"></div>
+                <div className="card__content card-img-overlay">
+                  <div className="card-para-cont">
+                    <h4 className="num-card">3</h4>
+                    <h4 className="card-heading py-3">Marketing</h4>
+                    <p>
+                      We develop data-driven marketing strategies to boost your
+                      brand visibility <br /> and drive measurable business
+                      growth.
+                    </p>
+                    <Link to="https://wa.link/9z3qeh">
+                      <button
+                        className="btn btn-contact px-3 py-2 "
+                        type="button"
+                      >
+                        Contact Us
+                      </button>
+                    </Link>
+                    <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing">
+                      <button
+                        className="btn btn-portfolio px-3 py-2"
+                        type="button"
+                      >
+                        View Portfolio
+                      </button>
+                    </Link>
+                  </div>
 
-
-            <Work />
-
-
-
-
-
-
-
-            {/* <!-- About Us  --> */}
-
-            <div className="card text-bg-dark">
-                <img src={bgheader} className="card-img" alt="..." />
-                <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                     <h2 className="card-title display-4 mb-4 fw-bold">What our Clients say About us</h2>
-                   <p className="card-text fs-5 mx-auto text-center" style={{maxWidth: "800px"}}>At Tarlose, we take pride in delivering exceptional digital products and
-                        services
-                        that drive success for our clients. Here's what some of our satisfied clients have to say about
-                        their experience working with us</p>
+                  <div className="img-wrapper">
+                    <img src={Marketing} alt="" />
+                  </div>
                 </div>
+              </div>
             </div>
-            {/* 
+          </div>
+        </section>
+      </div>
+
+      <Platforms />
+
+      {/* Why choose us */}
+
+      <div className="card text-bg-dark position-relative overflow-hidden">
+        <img
+          src={bgheader}
+          className="card-img"
+          alt="Tarlose team collaboration"
+          loading="lazy"
+        />
+        <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
+          <h2 className="card-title display-4 mb-4 fw-bold">
+            Why Choose Tarlose?
+          </h2>
+          <p className="card-text fs-5 mx-auto" style={{ maxWidth: "800px" }}>
+            Experience excellence in digital craftsmanship through our
+            innovative solutions, expert team, and proven track record of
+            delivering transformative results that help businesses thrive in the
+            digital age.
+          </p>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
+          <div className="col p-0 m-0 exp-col">
+            <div className="exp-card">
+              <div className="d-flex align-items-center gap-4">
+                <img src={Expertise} alt="" />
+                <h6>Expertise</h6>
+              </div>
+              <p className="my-5">
+                our team combines skill, experience, and the latest industry
+                knowledge to deliver solutions that work flawlessly, every time.
+              </p>
+            </div>
+          </div>
+          <div className="col  p-0 m-0 exp-col">
+            <div className="exp-card ">
+              <div className="d-flex align-items-center gap-4">
+                <img src={Client} alt="" />
+                <h6>Client-Centric Approach</h6>
+              </div>
+              <p className="my-5">
+                With a client-centric approach, our experts guarantee tailored
+                solutions driven by precision, innovation, and a commitment to
+                exceeding expectations.
+              </p>
+            </div>
+          </div>
+          <div className="col p-0 m-0 exp-col">
+            <div className="exp-card">
+              <div className="d-flex align-items-center gap-4">
+                <img src={Results} alt="" />
+                <h6>Results-Driven Solutions</h6>
+              </div>
+              <p className="my-5">
+                Our team delivers results-driven solutions, blending expertise
+                and innovation to ensure measurable success every time.
+              </p>
+            </div>
+          </div>
+          <div className="col p-0 m-0 exp-col">
+            <div className="exp-card">
+              <div className="d-flex align-items-center gap-4">
+                <img src={Partnership} alt="" />
+                <h6>Collaborative Partnership</h6>
+              </div>
+              <p className="my-5">
+                We believe in collaborative partnerships, combining our
+                expertise with your vision to deliver solutions that guarantee
+                success and lasting impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Work />
+
+      {/* <!-- About Us  --> */}
+
+      <div className="card text-bg-dark">
+        <img src={bgheader} className="card-img" alt="..." />
+        <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+          <h2 className="card-title display-4 mb-4 fw-bold">
+            What our Clients say About us
+          </h2>
+          <p
+            className="card-text fs-5 mx-auto text-center"
+            style={{ maxWidth: "800px" }}
+          >
+            At Tarlose, we take pride in delivering exceptional digital products
+            and services that drive success for our clients. Here's what some of
+            our satisfied clients have to say about their experience working
+            with us
+          </p>
+        </div>
+      </div>
+      {/* 
                         <!-- testimonials design  --> */}
 
-
-            <div className="container">
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2">
-                    <div className="col p-0">
-                        <div className="test-col">
-                            <div className="text-white">
-                                <h5> Tarlose Delivered a High-Performance Website & Marketplace</h5>
-                                <p>The team did an amazing job delivering a complete website portal, and marketplace smooth database migrations, and a crucial luxury car portal quickly. Their full-stack development was spot on, and the developers are super skilled. </p>
-                            </div>
-                            <div className="testi-cont d-flex text-white">
-                                <div className="test-name d-flex rounded">
-                                    <img src={tushar} alt="Tushar Shankaran" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
-                                    <div className="test-sub-cont">
-                                        <h6>Tushar Shankaran</h6>
-                                        <p>CEO, Necesri</p>
-                                    </div>
-                                    <a href="https://necesri.com" target="_blank" rel="noopener noreferrer">
-                                    
-                                    <button className="test-btn">Open Website</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col p-0">
-                        <div className="test-col">
-                            <div className="text-white">
-                                <h5>Tarlose Revolutionized Our Digital Strategy</h5>
-                                <p>They delivered what they promised and more, over the past 2 months it's been a journey, their input really made a difference they weren't afraid to guide us through the project. They're young, talented, and they have that drive that makes them the best in what they do. Loved their work.</p>
-                            </div>
-                            <div className="testi-cont d-flex text-white">
-                                <div className="test-name d-flex rounded">
-                                    <img src={om} alt="/" style={{width: "60px", height: "60px", borderRadius: "50%"}} />
-                                    <div className="test-sub-cont">
-                                        <h6>Om Sharma</h6>
-                                        <p>Quality Academy</p>
-                                    </div>
-                                    <a href="https://www.qualityacademy.info" target="_blank" rel="noopener noreferrer">
-                                         <button className="test-btn">Open Website</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div className="container">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2">
+          <div className="col p-0">
+            <div className="test-col">
+              <div className="text-white">
+                <h5>
+                  {" "}
+                  Tarlose Delivered a High-Performance Website & Marketplace
+                </h5>
+                <p>
+                  The team did an amazing job delivering a complete website
+                  portal, and marketplace smooth database migrations, and a
+                  crucial luxury car portal quickly. Their full-stack
+                  development was spot on, and the developers are super skilled.{" "}
+                </p>
+              </div>
+              <div className="testi-cont d-flex text-white">
+                <div className="test-name d-flex rounded">
+                  <img
+                    src={tushar}
+                    alt="Tushar Shankaran"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                  <div className="test-sub-cont">
+                    <h6>Tushar Shankaran</h6>
+                    <p>CEO, Necesri</p>
+                  </div>
+                  <a
+                    href="https://necesri.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="test-btn">Open Website</button>
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
 
+          <div className="col p-0">
+            <div className="test-col">
+              <div className="text-white">
+                <h5>Tarlose Revolutionized Our Digital Strategy</h5>
+                <p>
+                  They delivered what they promised and more, over the past 2
+                  months it's been a journey, their input really made a
+                  difference they weren't afraid to guide us through the
+                  project. They're young, talented, and they have that drive
+                  that makes them the best in what they do. Loved their work.
+                </p>
+              </div>
+              <div className="testi-cont d-flex text-white">
+                <div className="test-name d-flex rounded">
+                  <img
+                    src={om}
+                    alt="/"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                  <div className="test-sub-cont">
+                    <h6>Om Sharma</h6>
+                    <p>Quality Academy</p>
+                  </div>
+                  <a
+                    href="https://www.qualityacademy.info"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="test-btn">Open Website</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      {/* <ThreeRowSlider /> */}
 
-            {/* <ThreeRowSlider /> */}
+      {/* <!-- FAQ  --> */}
 
-
-
-            {/* <!-- FAQ  --> */}
-
-            {/* <Prompt /> */}
-            <Community />
-            {/* <FAQ /> */}
-            <Footer />
-
-        </>
-    );
+      {/* <Prompt /> */}
+      <Community />
+      {/* <FAQ /> */}
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
