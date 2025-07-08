@@ -190,6 +190,14 @@
 }
 
 .main-heading-text {
+  position: relative;
+  backdrop-filter: blur(68px);
+  background-color: rgba(10, 10, 10, 0.4);
+  border-radius: 26px;
+  padding:10px 16px ;
+  opacity: 1;
+}
+/* .main-heading-text {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(
     to right,
@@ -212,7 +220,7 @@
   100% {
     background-position: 100% 50%;
   }
-}
+} */
 
 h1,
 h4 {

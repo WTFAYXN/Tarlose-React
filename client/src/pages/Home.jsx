@@ -65,36 +65,36 @@ const Home = () => {
     };
   }, []);
 
-  useLayoutEffect(() => {
-    const headingAnimation = gsap.context(() => {
-      gsap.from("#home h1", {
-        y: 100,
-        opacity: 0,
-        delay: 0.5,
-        duration: 0.9,
-        stagger: 0.3,
-      });
+  //   useLayoutEffect(() => {
+  //     const headingAnimation = gsap.context(() => {
+  //       gsap.from("#home h1", {
+  //         y: 100,
+  //         opacity: 0,
+  //         delay: 0.5,
+  //         duration: 0.9,
+  //         stagger: 0.3,
+  //       });
 
-      gsap.from("#home .content-home", {
-        y: 100,
-        opacity: 0.9,
-        delay: 1.5,
-        duration: 0.9,
-        stagger: 0.3,
-      });
+  //       gsap.from("#home .content-home", {
+  //         y: 100,
+  //         opacity: 0.9,
+  //         delay: 1.5,
+  //         duration: 0.9,
+  //         stagger: 0.3,
+  //       });
 
-      gsap.from("#btn-fade", {
-        y: 100,
-        opacity: 0,
-        delay: 1.7,
-        duration: 0.9,
-        stagger: 0.3,
-      });
-    });
+  //       gsap.from("#btn-fade", {
+  //         y: 100,
+  //         opacity: 0,
+  //         delay: 1.7,
+  //         duration: 0.9,
+  //         stagger: 0.3,
+  //       });
+  //     });
 
-    // Cleanup GSAP context on component unmount
-    return () => headingAnimation.revert();
-  }, []);
+  //     // Cleanup GSAP context on component unmount
+  //     return () => headingAnimation.revert();
+  //   }, []);
 
   return (
     <>
@@ -209,9 +209,15 @@ const Home = () => {
           </div>
         </div>
 
-        <h1 className="text-white text-center main-heading-text">
+        <div className="main-heading d-flex flex-row justify-content-center align-items-center">
+            <div className="bullet">•</div>
+
+          <h6 className="main-heading-text">Design. Develop. Dominate.</h6>
+        </div>
+
+        {/* <h1 className="text-white text-center main-heading-text">
           Design. Develop. Dominate.
-        </h1>
+        </h1> */}
         <div className="content-home d-flex justify-content-center align-items-center my-5 ">
           <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
             <p>for</p>
