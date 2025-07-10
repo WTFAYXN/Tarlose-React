@@ -210,9 +210,9 @@ const Home = () => {
         </div>
 
         <div className="main-heading d-flex flex-row justify-content-center align-items-center">
-            <div className="bullet">•</div>
-
-          <h6 className="main-heading-text">Design. Develop. Dominate.</h6>
+          <h6 className="main-heading-text">
+            <span className="bullet">•</span>Design. Develop. Dominate.
+          </h6>
         </div>
 
         {/* <h1 className="text-white text-center main-heading-text">

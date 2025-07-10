@@ -191,12 +191,33 @@
 
 .main-heading-text {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   backdrop-filter: blur(68px);
   background-color: rgba(10, 10, 10, 0.4);
   border-radius: 26px;
   padding:10px 16px ;
   opacity: 1;
 }
+.main-heading-text .bullet {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  animation: blink-bullet 1.2s ease-in-out infinite;
+}
+
+@keyframes blink-bullet {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0px 0px 15px #fff;
+  }
+  50% {
+    color: gray;
+    text-shadow: none;
+    }
+}
+
 /* .main-heading-text {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(
