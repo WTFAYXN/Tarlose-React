@@ -209,16 +209,45 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="main-heading d-flex flex-row justify-content-center align-items-center">
-          <h6 className="main-heading-text">
+        <div className="hero-main-container">
+<div className="main-heading d-flex flex-row justify-content-center align-items-center">
+          <h6 className="main-heading-text m-0">
             <span className="bullet">•</span>Design. Develop. Dominate.
           </h6>
         </div>
 
+        <div className="hero-container">
+          <h2>Branding that you  need Indeed</h2>
+          <p>Elevate your brand with custom identity and package design. Showcase your story through bold visuals and strategic design solutions.
+
+
+
+</p>
+
+        </div>
+
+        <div className="d-flex justify-content-center">
+          <div id="btn-fade">
+            <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
+              <button className="shining-button px-3 py-2 me-3" type="button">
+                Our Works
+              </button>
+            </a>
+            <a href="https://wa.link/qyts69">
+              <button className="shining-button px-3 py-2" type="button">
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+        </div>
+
+        
+
         {/* <h1 className="text-white text-center main-heading-text">
           Design. Develop. Dominate.
         </h1> */}
-        <div className="content-home d-flex justify-content-center align-items-center my-5 ">
+        {/* <div className="content-home d-flex justify-content-center align-items-center my-5 ">
           <div className="sub-home-cont d-flex align-items-center rounded flex-wrap">
             <p>for</p>
             <p>
@@ -237,22 +266,11 @@ const Home = () => {
               <span>Social Good</span>
             </p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="d-flex justify-content-center">
-          <div id="btn-fade">
-            <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
-              <button className="shining-button px-3 py-2 me-3" type="button">
-                Our Works
-              </button>
-            </a>
-            <a href="https://wa.link/qyts69">
-              <button className="shining-button px-3 py-2" type="button">
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
+        
+
+        
       </div>
 
       <div className=" container marquee-title-cont">

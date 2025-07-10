@@ -184,6 +184,14 @@
   filter: blur(15px);
 }
 
+.hero-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  top: 40px;
+}
+
 .hero {
   height: calc(100vh - 100px);
   align-content: center;
@@ -197,7 +205,7 @@
   backdrop-filter: blur(68px);
   background-color: rgba(10, 10, 10, 0.4);
   border-radius: 26px;
-  padding:10px 16px ;
+  padding: 10px 16px;
   opacity: 1;
 }
 .main-heading-text .bullet {
@@ -208,14 +216,37 @@
 }
 
 @keyframes blink-bullet {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     text-shadow: 0px 0px 15px #fff;
   }
   50% {
     color: gray;
     text-shadow: none;
-    }
+  }
+}
+
+.hero-container {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.hero-container h2 {
+  font-size: 92px;
+  line-height: 92px;
+  font-weight: 400;
+  font-family: Gilroy, sans-serif;
+  margin-bottom: 24px;
+}
+.hero-container p {
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  font-family: Gilroy, sans-serif;
+  width: 60%;
+  margin: auto;
 }
 
 /* .main-heading-text {
