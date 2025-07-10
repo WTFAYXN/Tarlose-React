@@ -58,13 +58,16 @@ const DesignProcess = () => {
           <button className="btn shining-button">See Projects</button>
         </div>
 
+        <hr className='design-hr my-4' />
+
         <div className="process-steps">
           {processSteps.map((step) => (
             <div key={step.id} className="process-step">
               <div className="step-header">
                 <span className="step-icon">{step.icon}</span>
-                <h4>{step.title}</h4>
-              </div>
+                <h5>{step.title}</h5>
+                
+              </div><hr className="step-line m-0" />
               <p className="step-description">{step.description}</p>
               <span className="step-number">{step.id}</span>
             </div>
