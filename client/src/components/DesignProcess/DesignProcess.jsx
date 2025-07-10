@@ -41,16 +41,21 @@ const DesignProcess = () => {
       </div>
 
       <div className="right-design-container">
-        <div className="tag">
-          <span>•</span> Design Process
+        <div className="tag-container">
+            <div className='tag'>
+                <span>•</span> Design Process
+            </div>
+          
         </div>
         <h2 className="process-heading">Process</h2>
         <p className="process-description">
           Crafting bold visuals that inspire and elevate brands with thought process.
         </p>
         <div className="button-group">
-          <button className="btn primary-btn">Book a Free Call</button>
-          <button className="btn secondary-btn">See Projects</button>
+          <button className="btn shining-button"><a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
+              Book a Free Call
+            </a></button>
+          <button className="btn shining-button">See Projects</button>
         </div>
 
         <div className="process-steps">
