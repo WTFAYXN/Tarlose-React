@@ -67,3 +67,9 @@
 .card-main-heading {
      gap: 30px;
 }
+.card-main-heading h2 {
+    font-size: 25px;
+    font-family: gilroy, sans-serif;
+    font-weight: 600;
+    line-height: 35px;
+}
