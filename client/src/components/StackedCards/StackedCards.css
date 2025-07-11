@@ -23,3 +23,9 @@
   font-weight: 500;
   font-family: gilroy, sans-serif;
 }
+
+/* stacked cards  */
+
+.stack-card {
+    background-color:#000;
+}
