@@ -33,6 +33,7 @@ import om from "../assets/testimonials/Om-QualityAcademy.jpg";
 import bgheader from "../assets/svgs/background-header.svg";
 import { Link } from "react-router-dom";
 import DesignProcess from "../components/DesignProcess/DesignProcess";
+import StackedCards from "../components/StackedCards/StackedCards";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -415,6 +416,8 @@ const Home = () => {
       <Platforms />
 
       <DesignProcess />
+
+      <StackedCards />
 
       {/* Why choose us */}
 
