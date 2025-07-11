@@ -12,22 +12,22 @@ const StackedCards = () => {
       rightDesc:
         "Lack of experience may result in design inconsistencies and overlooked details",
     },
-    {
-      leftTitle: "Future-Ready Designs",
-      leftDesc:
-        "Crafting modern, scalable designs that grow with your business and stay ahead of trends.",
-      rightTitle: "Outdated Concepts",
-      rightDesc:
-        "Stale designs that don’t reflect current trends or your evolving brand narrative.",
-    },
-    {
-      leftTitle: "Client-Centric Collaboration",
-      leftDesc:
-        "Your vision leads the way — I work closely with you to bring ideas to life with precision and creativity.",
-      rightTitle: "Detached Communication",
-      rightDesc:
-        "Lack of collaboration and poor feedback loops can result in misaligned outcomes.",
-    },
+    // {
+    //   leftTitle: "Future-Ready Designs",
+    //   leftDesc:
+    //     "Crafting modern, scalable designs that grow with your business and stay ahead of trends.",
+    //   rightTitle: "Outdated Concepts",
+    //   rightDesc:
+    //     "Stale designs that don’t reflect current trends or your evolving brand narrative.",
+    // },
+    // {
+    //   leftTitle: "Client-Centric Collaboration",
+    //   leftDesc:
+    //     "Your vision leads the way — I work closely with you to bring ideas to life with precision and creativity.",
+    //   rightTitle: "Detached Communication",
+    //   rightDesc:
+    //     "Lack of collaboration and poor feedback loops can result in misaligned outcomes.",
+    // },
   ];
 
   return (
@@ -58,18 +58,19 @@ const StackedCards = () => {
                 style={{ "--index": index + 1 }}
               >
                 <div className="card-body">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-white">
+                  <div className="d-flex parent-card w-full text-white">
                     {/* Left Column */}
-                    <div className="flex flex-col gap-3 bg-[#181818] p-6 rounded-xl">
-                      <div className="flex items-center gap-2 text-lg font-semibold">
+                    <div className="card-main-content bg-[#181818] p-6 rounded-xl">
+                      <div className="card-main-heading text-lg font-semibold">
                         <CheckCircle className="text-green-400" size={20} />
                         {card.leftTitle}
                       </div>
                       <p className="text-gray-300 text-sm">{card.leftDesc}</p>
                     </div>
+                    <div className="vertical-devider"></div>
                     {/* Right Column */}
-                    <div className="flex flex-col gap-3 bg-[#181818] p-6 rounded-xl">
-                      <div className="flex items-center gap-2 text-lg font-semibold">
+                    <div className="card-main-content bg-[#181818] p-6 rounded-xl">
+                      <div className=" card-main-heading text-lg font-semibold">
                         <XCircle className="text-red-400" size={20} />
                         {card.rightTitle}
                       </div>

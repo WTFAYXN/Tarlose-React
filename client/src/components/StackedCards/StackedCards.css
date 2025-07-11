@@ -26,6 +26,44 @@
 
 /* stacked cards  */
 
+.vertical-devider {
+  background-color: #fff;
+  align-self: stretch;
+  flex: none;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1px;
+  opacity: 0.1;
+}
+
+.parent-card {
+    gap: 50px;
+}
+
 .stack-card {
-    background-color:#000;
+  background-color: #000;
+      border-radius: 20px;
+              align-content: flex-start;
+    align-items: flex-start;
+    display: flex
+;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 40px;
+    position: relative;
+}
+
+.card-main-content,.card-main-heading {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.card-main-heading {
+     gap: 30px;
 }
