@@ -170,6 +170,10 @@
     align-items: center;
   }
 
+    .left-design-container {
+          min-width: auto;
+    }
+
   .left-design-container,
   .right-design-container {
     width: 100%;
