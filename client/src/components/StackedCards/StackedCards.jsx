@@ -12,22 +12,22 @@ const StackedCards = () => {
       rightDesc:
         "Lack of experience may result in design inconsistencies and overlooked details",
     },
-    // {
-    //   leftTitle: "Future-Ready Designs",
-    //   leftDesc:
-    //     "Crafting modern, scalable designs that grow with your business and stay ahead of trends.",
-    //   rightTitle: "Outdated Concepts",
-    //   rightDesc:
-    //     "Stale designs that don’t reflect current trends or your evolving brand narrative.",
-    // },
-    // {
-    //   leftTitle: "Client-Centric Collaboration",
-    //   leftDesc:
-    //     "Your vision leads the way — I work closely with you to bring ideas to life with precision and creativity.",
-    //   rightTitle: "Detached Communication",
-    //   rightDesc:
-    //     "Lack of collaboration and poor feedback loops can result in misaligned outcomes.",
-    // },
+    {
+      leftTitle: "Future-Ready Designs",
+      leftDesc:
+        "Crafting modern, scalable designs that grow with your business and stay ahead of trends.",
+      rightTitle: "Outdated Concepts",
+      rightDesc:
+        "Stale designs that don’t reflect current trends or your evolving brand narrative.",
+    },
+    {
+      leftTitle: "Client-Centric Collaboration",
+      leftDesc:
+        "Your vision leads the way — I work closely with you to bring ideas to life with precision and creativity.",
+      rightTitle: "Detached Communication",
+      rightDesc:
+        "Lack of collaboration and poor feedback loops can result in misaligned outcomes.",
+    },
   ];
 
   return (

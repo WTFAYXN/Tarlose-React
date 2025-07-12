@@ -6,6 +6,8 @@
   text-align: center;
   gap: 24px;
   padding-bottom: 44px;
+  position: sticky;
+  top: 15vh;
 }
 
 .stacked-content-container h2 {
@@ -54,13 +56,24 @@
   justify-content: center;
   overflow: visible;
   padding: 40px;
-  position: relative;
+  position: sticky;
+	top: 40vh;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .card-main-content,
 .card-main-heading {
   display: flex;
   flex-direction: column;
+}
+
+.card-main-content {
+  width: 50%;
 }
 
 .card-main-heading {
@@ -80,3 +93,4 @@
   font-weight: 400;
   line-height: 27px;
 }
+
