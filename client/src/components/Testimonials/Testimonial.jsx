@@ -88,6 +88,78 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
+              <div className="Testimonial-card">
+                <div className="Testimonial-card-heading-container">
+                  <div className="Testimonial-img-container">
+                    <img src="https://framerusercontent.com/images/54tqpXnovhmg1DaaTUMYucwnE.png?scale-down-to=1024" alt="" className="Testimonial-img" />
+                  </div>
+                  <div className="Testimonial-card-heading">
+                    <h3>Ikta Sollork</h3>
+                    <p>PARAL CEO</p>
+                  </div>
+                </div>
+
+                <hr className="Testimonial-card-divider" />
+
+                <div className="Testimonial-card-content">
+                  <div className="Testimonial-rating">
+                    <p className="m-0">5.0</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="var(--token-c858731e-e94e-456c-870f-c18178498e78, rgb(255, 215, 0))"
+                      width="18px"
+                      height="18px"
+                    >
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                  </div>
+
+                  <div className="Testimonial-review">
+                    <p>
+                      The designs exceeded our expectations! Every element felt
+                      purposeful, creating a seamless and visually stunning
+                      brand identity
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="Testimonial-card">
+                <div className="Testimonial-card-heading-container">
+                  <div className="Testimonial-img-container">
+                    <img src="https://framerusercontent.com/images/8vljaI1ESGZN8BSOxNQ8nHJdCw.png" alt="" className="Testimonial-img" />
+                  </div>
+                  <div className="Testimonial-card-heading">
+                    <h3>Liloch</h3>
+                    <p>AIO Founder</p>
+                  </div>
+                </div>
+
+                <hr className="Testimonial-card-divider" />
+
+                <div className="Testimonial-card-content">
+                  <div className="Testimonial-rating">
+                    <p className="m-0">5.0</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="var(--token-c858731e-e94e-456c-870f-c18178498e78, rgb(255, 215, 0))"
+                      width="18px"
+                      height="18px"
+                    >
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                    </svg>
+                  </div>
+
+                  <div className="Testimonial-review">
+                    <p>
+                      The designs exceeded our expectations! Every element felt
+                      purposeful, creating a seamless and visually stunning
+                      brand identity
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
