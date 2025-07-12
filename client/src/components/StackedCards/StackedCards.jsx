@@ -62,19 +62,19 @@ const StackedCards = () => {
                     {/* Left Column */}
                     <div className="card-main-content bg-[#181818] p-6 rounded-xl">
                       <div className="card-main-heading text-lg font-semibold">
-                        <CheckCircle className="text-green-400" size={20} />
+                        <CheckCircle className="text-green-400" size={25} />
                         <h2>{card.leftTitle}</h2>
                       </div>
-                      <p className="text-gray-300 text-sm">{card.leftDesc}</p>
+                      <p className=" text-sm">{card.leftDesc}</p>
                     </div>
                     <div className="vertical-devider"></div>
                     {/* Right Column */}
                     <div className="card-main-content bg-[#181818] p-6 rounded-xl">
                       <div className=" card-main-heading text-lg font-semibold">
-                        <XCircle className="text-red-400" size={20} />
+                        <XCircle className="text-red-400" size={25} />
                         <h2>{card.rightTitle}</h2>
                       </div>
-                      <p className="text-gray-300 text-sm">{card.rightDesc}</p>
+                      <p className=" text-sm">{card.rightDesc}</p>
                     </div>
                   </div>
                 </div>
