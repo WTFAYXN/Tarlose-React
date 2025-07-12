@@ -87,6 +87,7 @@
 .Testimonial-img {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -101,6 +102,22 @@
   gap: 16px;
   justify-content: flex-start;
   align-items: center;
+  
+}
+.Testimonial-card-heading h3{
+  font-size: 25px;
+  font-weight: 400;
+  font-family: gilroy, sans-serif;
+}
+.Testimonial-card-heading p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: gilroy, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.Testimonial-review {
+  color: rgba(255, 255, 255, 0.831);
 }
 
 .Testimonial-card-divider {
