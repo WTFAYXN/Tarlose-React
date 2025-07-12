@@ -6,7 +6,7 @@ const Testimonial = () => {
     {
       name: "Will Smith",
       company: "Harper Education",
-      rating: 5.0,
+      rating: 5,
       review: "The designs exceeded our expectations! Every element felt purposeful, creating a seamless and visually stunning brand identity",
       image: "https://framerusercontent.com/images/eFraHAe16muHsBuOQT8J7PtnM.png",
     },
@@ -20,7 +20,7 @@ const Testimonial = () => {
     {
       name: "Liloch",
       company: "AIO Founder",
-      rating: 5.0,
+      rating: 4,
       review: "The designs exceeded our expectations! Every element felt purposeful, creating a seamless and visually stunning brand identity",
       image: "https://framerusercontent.com/images/8vljaI1ESGZN8BSOxNQ8nHJdCw.png",
     },
@@ -102,15 +102,29 @@ const Testimonial = () => {
                   <div className="Testimonial-card-content">
                     <div className="Testimonial-rating">
                       <p className="m-0">{testimonial.rating}</p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="var(--token-c858731e-e94e-456c-870f-c18178498e78, rgb(255, 215, 0))"
-                        width="18px"
-                        height="18px"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                      </svg>
+                      {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
+                        <svg
+                          key={i}
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="var(--token-c858731e-e94e-456c-870f-c18178498e78, rgb(255, 215, 0))"
+                          width="18px"
+                          height="18px"
+                        >
+                          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                        </svg>
+                      ))}
+                      {testimonial.rating % 1 !== 0 && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="var(--token-c858731e-e94e-456c-870f-c18178498e78, rgb(255, 215, 0))"
+                          width="18px"
+                          height="18px"
+                        >
+                          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                        </svg>
+                      )}
                     </div>
 
                     <div className="Testimonial-review">
