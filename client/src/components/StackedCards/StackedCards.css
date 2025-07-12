@@ -94,3 +94,31 @@
   line-height: 27px;
 }
 
+@media (max-width: 768px) {
+.stacked-heading-container {
+  position: relative;
+  top: 0;
+
+}
+.stack-card {
+  position: relative;
+  top: 0;
+}
+.parent-card {
+    gap: 20px;
+    flex-direction: column;
+}
+.card-main-content {
+    width: auto;
+}
+.vertical-devider {
+    background-color: #fff;
+    align-self: stretch;
+    flex: none;
+    height: 2px;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    opacity: 0.1;
+}
+}
