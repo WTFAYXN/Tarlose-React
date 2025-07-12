@@ -34,6 +34,7 @@ import bgheader from "../assets/svgs/background-header.svg";
 import { Link } from "react-router-dom";
 import DesignProcess from "../components/DesignProcess/DesignProcess";
 import StackedCards from "../components/StackedCards/StackedCards";
+import Testimonial from "../components/Testimonials/Testimonial";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -418,6 +419,8 @@ const Home = () => {
       <DesignProcess />
 
       <StackedCards />
+
+      <Testimonial />
 
       {/* Why choose us */}
 
