@@ -122,6 +122,7 @@
   overflow: hidden;
   padding: 44px 32px 32px;
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.500);
 }
 
 .step-line {
