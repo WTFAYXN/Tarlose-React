@@ -111,6 +111,11 @@
   filter: blur(15px);
 }
 
+.parent-hero-main-container {
+  height: 100dvh;
+  align-content: center;
+}
+
 .hero-main-container {
   display: flex;
   flex-direction: column;
@@ -120,8 +125,9 @@
 }
 
 .hero {
-  height: calc(100vh - 100px);
-  align-content: center;
+  /* height: calc(100vh - 100px); */
+  /* align-content: center; */
+  height: 100dvh;
 }
 
 .main-heading-text {

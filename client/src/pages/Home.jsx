@@ -35,6 +35,7 @@ import { Link } from "react-router-dom";
 import DesignProcess from "../components/DesignProcess/DesignProcess";
 import StackedCards from "../components/StackedCards/StackedCards";
 import Testimonial from "../components/Testimonials/Testimonial";
+import Silk from "../components/Silk";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -171,12 +172,12 @@ const Home = () => {
       {/* SEO   */}
 
       {/* Page start     */}
-      <div className="container hero" id="home">
+      <div className=" hero" id="home">
         {/* <video autoPlay loop muted>
                     <source src="https://res.cloudinary.com/dkqdf4oif/video/upload/v1730887637/fsodpf0v1bay95vefvel.mp4" type="video/mp4" />
                 </video> */}
 
-       
+        <Silk />
 
         <audio id="track" ref={trackRef}>
           <source src={TarloseTheme} type="audio/mpeg" />
@@ -188,40 +189,42 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hero-main-container">
-<div className="main-heading d-flex flex-row justify-content-center align-items-center">
-          <h6 className="main-heading-text m-0">
-            <span className="bullet">•</span>Design. Develop. Dominate.
-          </h6>
-        </div>
+        <div className="parent-hero-main-container container">
+          <div className="hero-main-container">
+            <div className="main-heading d-flex flex-row justify-content-center align-items-center">
+              <h6 className="main-heading-text m-0">
+                <span className="bullet">•</span>Design. Develop. Dominate.
+              </h6>
+            </div>
 
-        <div className="hero-container">
-          <h2>Branding that you  need Indeed</h2>
-          <p>Elevate your brand with custom identity and package design. Showcase your story through bold visuals and strategic design solutions.
+            <div className="hero-container">
+              <h2>Branding that you need Indeed</h2>
+              <p>
+                Elevate your brand with custom identity and package design.
+                Showcase your story through bold visuals and strategic design
+                solutions.
+              </p>
+            </div>
 
-
-
-</p>
-
-        </div>
-
-        <div className="d-flex justify-content-center">
-          <div id="btn-fade">
-            <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
-              <button className="shining-button px-3 py-2 me-3" type="button">
-                Our Works
-              </button>
-            </a>
-            <a href="https://wa.link/qyts69">
-              <button className="shining-button px-3 py-2" type="button">
-                Contact Us
-              </button>
-            </a>
+            <div className="d-flex justify-content-center">
+              <div id="btn-fade">
+                <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
+                  <button
+                    className="shining-button px-3 py-2 me-3"
+                    type="button"
+                  >
+                    Our Works
+                  </button>
+                </a>
+                <a href="https://wa.link/qyts69">
+                  <button className="shining-button px-3 py-2" type="button">
+                    Contact Us
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-
-        
 
         {/* <h1 className="text-white text-center main-heading-text">
           Design. Develop. Dominate.
@@ -246,10 +249,6 @@ const Home = () => {
             </p>
           </div>
         </div> */}
-
-        
-
-        
       </div>
 
       <div className=" container marquee-title-cont">
