@@ -36,6 +36,7 @@ import DesignProcess from "../components/DesignProcess/DesignProcess";
 import StackedCards from "../components/StackedCards/StackedCards";
 import Testimonial from "../components/Testimonials/Testimonial";
 import Silk from "../components/Silk";
+import Portfolio from "./Portfolio/Portfolio";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -396,6 +397,8 @@ const Home = () => {
       <StackedCards />
 
       <Testimonial />
+
+      <Portfolio />
 
       {/* Why choose us */}
 
