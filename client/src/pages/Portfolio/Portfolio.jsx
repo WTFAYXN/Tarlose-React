@@ -17,6 +17,8 @@ const processSteps = [
     title: "The Challenge:",
     description:
       "Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity.",
+    link: "https://framerusercontent.com/images/zzhg1ikeUdssIf2BI21yIuNaPM.png",
+
   },
   {
     id: 3,
@@ -24,6 +26,8 @@ const processSteps = [
     title: "The Result",
     description:
       "As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2-3 days. With a keen eye for detail and a passion for quality, I bring your vision to life—on time and beyond expectations.",
+    link: "https://framerusercontent.com/images/TlQdm3FPd3GqXclSlI98h7fC6KY.png",
+
   },
 ];
 
@@ -69,7 +73,7 @@ const Portfolio = () => {
 
       <section className="goal container">
         <div className="goal-process-steps">
-          {processSteps.map((step) => (
+          {processSteps.map((step, idx) => (
             <div key={step.id} className="goal-process-step">
               <div className="step-header">
                 <span className="step-icon">{step.icon}</span>
@@ -81,7 +85,9 @@ const Portfolio = () => {
                 <img src={step.link} alt="" />
               </div>
 
-              <hr className="step-line m-0" />
+              {idx !== processSteps.length - 1 && (
+                <hr className="step-line goal-step-line" />
+              )}
               <span className="step-number">{step.id}</span>
             </div>
           ))}

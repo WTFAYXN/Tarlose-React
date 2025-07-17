@@ -77,6 +77,10 @@
 
 /* goal process  */
 
+.goal {
+    padding: 80px 0;
+}
+
 .goal-process-steps {
     
     background-color: rgb(13, 13, 13);
@@ -89,7 +93,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 24px;
+  gap: 30px;
   height: min-content;
   justify-content: center;
   overflow: hidden;
@@ -103,8 +107,12 @@
     width: 100%;
 }
 
-
 .goal-process-img img{
     width: 100%;
     height: 100%;
+    border-radius: 15px;
+}
+
+.goal-step-line {
+    margin-top: 30px;
 }
