@@ -7,6 +7,11 @@
   width: 50%;
 }
 
+.Testimonial-left-content-container {
+  position: sticky;
+  top: 10rem;
+}
+
 .Testimonial-heading-container {
   display: flex;
   flex-direction: column;
