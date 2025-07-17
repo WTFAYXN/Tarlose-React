@@ -73,3 +73,38 @@
 
 
 }
+
+
+/* goal process  */
+
+.goal-process-steps {
+    
+    background-color: rgb(13, 13, 13);
+  border-radius: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 16px 24px 20px 8px; */
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 24px;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: 44px 32px 32px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.500);
+}
+
+.goal-process-step {
+    position: relative;
+    width: 100%;
+}
+
+
+.goal-process-img img{
+    width: 100%;
+    height: 100%;
+}
