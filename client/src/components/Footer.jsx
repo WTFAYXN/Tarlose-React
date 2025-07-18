@@ -18,6 +18,7 @@ const Footer = () => {
             Start for free
           </a>
         </button>
+
       </div>
     </>
   );
