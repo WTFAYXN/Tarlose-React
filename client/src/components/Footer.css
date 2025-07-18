@@ -8,12 +8,18 @@
   border-radius: 0 0 40px 40px ;
 }
 
+.footer-parent-container {
+    padding: 120px 0;
+    background-color: #222;
+    border-radius: 40px 40px 0 0 ;
+}
+
 
 .footer-main-container {
     background-color: #000000; 
     color: #ffffff; 
-    padding: 40px;
-    border-radius: 10px;
+    padding: 60px;
+    border-radius: 40px;
     font-family: Arial, sans-serif;
   }
   

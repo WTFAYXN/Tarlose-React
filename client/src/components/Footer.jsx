@@ -76,6 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <h1>Tarlose</h1>
       </div>
     </>
   );
