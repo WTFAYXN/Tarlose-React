@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <h1>Tarlose</h1>
+        <h1 className="footer-style-text">Tarlose</h1>
       </div>
     </>
   );
