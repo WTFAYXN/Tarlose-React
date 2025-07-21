@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 
 import "./Services.css";
+import TemplateSection from "./components/TemplateSection/TemplateSection";
 const Services = () => {
   return (
     <>
@@ -59,6 +60,8 @@ const Services = () => {
           </div>
         </div>
       </header>
+
+      <TemplateSection />
 
       <Footer />
     </>
