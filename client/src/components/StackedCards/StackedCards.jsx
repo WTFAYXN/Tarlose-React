@@ -42,7 +42,7 @@ const StackedCards = () => {
 
           <div className="stacked-content-container">
             <h2 className="m-0">
-              Why Me as <span>Design Partner</span>
+              Why Me as <span className="eco-sub">Design Partner</span>
             </h2>
             <p className="m-0">Why partner with Me for Design Excellence</p>
           </div>

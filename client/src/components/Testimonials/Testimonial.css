@@ -19,13 +19,9 @@
 }
 
 .Testimonial-content-container h2 {
-  font-size: 54px;
+  font-size: 58px;
   font-weight: 400;
-  font-family: gilroy, sans-serif;
   padding-bottom: 16px;
-}
-.Testimonial-content-container span {
-  color: rgba(255, 255, 255, 0.6);
 }
 .Testimonial-content-container p {
   color: rgba(255, 255, 255, 0.6);

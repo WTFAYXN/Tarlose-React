@@ -47,7 +47,7 @@ const DesignProcess = () => {
             </div>
           
         </div>
-        <h2 className="process-heading">Process</h2>
+        <h2 className="process-heading eco-sub">Process</h2>
         <p className="process-description">
           Crafting bold visuals that inspire and elevate brands with thought process.
         </p>

@@ -37,7 +37,7 @@ const Portfolio = () => {
       <section className="portfolio-section container">
         <div className="portfolio-container">
           <div className="portfolio-left-container">
-            <h2 className="m-0">Fade</h2>
+            <h2 className="m-0 eco-sub">Fade</h2>
             <p className="m-0">
               Fade is a premium portfolio template designed to showcase work
               with elegance and precision, perfect for designers, developers,
