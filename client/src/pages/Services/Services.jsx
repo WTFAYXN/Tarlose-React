@@ -1,8 +1,40 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import Cursor from '../../components/Cursor'
 
+import "./Services.css";
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+    <Cursor />
+    <Navbar />
+
+    <header className='services-hero container'>
+        <div className="hero-content text-center py-5">
+          <div className="badge text-white d-inline-block mb-3"><span className="text-decoration-line-through off-style">$200 OFF</span>On All Notion Templates</div>
+          <h1 className="service-heading mb-3">Transform Productivity with Premium <span className='eco-sub'>Notion Templates</span> </h1>
+          <p className="lead mb-4 p-0">Level up your workflow and simplify your life with beautifully designed Notion templates built for results.</p>
+          <div>
+            <a href="#templates" className="btn btn-dark btn-lg me-3 shining-button">Explore Templates</a>
+            <a href="#bundle" className="btn btn-outline-dark btn-lg shining-button">Get the Entire Bundle</a>
+          </div>
+          <p className="mt-4 text-muted">Join 50K+ others who signed up</p>
+        </div>
+      </header>
+
+
+
+
+
+
+
+
+
+
+
+    <Footer />
+    </>
   )
 }
 

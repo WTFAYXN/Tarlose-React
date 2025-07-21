@@ -1,0 +1,34 @@
+.services-hero {
+    height: 100vh;
+    align-content: center;
+}
+
+.hero-content {
+    max-width: 50%;
+    margin: auto;
+
+}
+
+.hero-content h1 {
+    font-size: 48px !important;
+
+}
+
+.hero-content .lead {
+    font-size: 18px !important;
+    width: 80%;
+    margin: auto;
+}
+
+.badge {
+    border: 1px dashed !important;
+    padding: 13px 6px !important;
+    font-size: 13px !important;
+}
+
+.off-style {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
