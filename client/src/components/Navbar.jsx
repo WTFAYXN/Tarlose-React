@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/Logos/tarloseNavLogo.svg";
 import React, { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 // svgs icons for mega tab items 
 import ecom from "../assets/svgs/ecom.svg";
@@ -30,25 +31,25 @@ const Navbar = () => {
         title: "Ecommerce Development",
         description: "Create powerful online stores.",
         svg:ecom,
-        link: "#",
+        link: "/services",
       },
       {
         title: "LMS",
         description: "Learning Management Systems for education.",
         svg: lms,
-        link: "#",
+        link: "/services",
       },
       {
         title: "Coded",
         description: "Fully coded custom development.",
         svg: coded,
-        link: "#",
+        link: "/services",
       },
       {
         title: "No-code",
         description: "No-code website development solutions.",
         svg: nocode,
-        link: "#",
+        link: "/services",
       },
     ],
   },
@@ -59,25 +60,25 @@ const Navbar = () => {
         title: "Social Posts",
         description: "Designs for social media platforms.",
         svg: "📱",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Posters, Brochure",
         description: "Print-ready designs for marketing materials.",
         svg: "📰",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Illustration",
         description: "Custom illustration designs.",
         svg: "🖌️",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Pitch Decks",
         description: "Professional pitch deck designs.",
         svg: "📊",
-        link: "#",
+        link: "/services",
       },
     ],
   },
@@ -88,25 +89,25 @@ const Navbar = () => {
         title: "Search Engine Optimization",
         description: "Improve search rankings with SEO.",
         svg: "🔍",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Social Media Management",
         description: "Manage your social media channels.",
         svg: "📱",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Search Engine Marketing",
         description: "Run ads to boost search visibility.",
         svg: "💰",
-        link: "#",
+        link: "/services",
       },
       {
         title: "Social Media Marketing",
         description: "Drive engagement through social media ads.",
         svg: "📢",
-        link: "#",
+        link: "/services",
       },
     ],
   },
@@ -162,7 +163,7 @@ const Navbar = () => {
                           <ul className="list-unstyled">
                             {category.subItems.map((item, subIdx) => (
                               <li key={subIdx} className="mb-2">
-                                <a href={item.link} className="d-flex align-items-start text-white text-decoration-none">
+                                <Link to={item.link} className="d-flex align-items-start text-white text-decoration-none">
                                   {item.svg && (
                                     <img src={item.svg} alt={item.title + " icon"} style={{ width: 30, height: 30, marginRight: 10 }} />
                                   )}
@@ -170,7 +171,7 @@ const Navbar = () => {
                                     <strong>{item.title}</strong>
                                     <p className="small mb-0">{item.description}</p>
                                   </div>
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

@@ -14,6 +14,7 @@ import Admin from './pages/admin';
 import Blog from './pages/Blogs/Blog';
 import BlogDetailPage from './components/Blog-tabs/BlogDetailPage';
 import ContactUs from './pages/Contact/ContactUs';
+import Services from "./pages/Services/Services";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/BlogDetailPage/:id" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
     </Router>
       </div>
