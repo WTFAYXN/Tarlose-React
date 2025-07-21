@@ -3,6 +3,12 @@ import logo from "../assets/Logos/tarloseNavLogo.svg";
 import React, { useState } from "react";
 import "./Navbar.css";
 
+// svgs icons for mega tab items 
+import ecom from "../assets/svgs/ecom.svg";
+import coded from "../assets/svgs/coded.svg";
+import lms from "../assets/svgs/lms.svg";
+import nocode from "../assets/svgs/no-code.svg";
+
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -23,25 +29,25 @@ const Navbar = () => {
       {
         title: "Ecommerce Development",
         description: "Create powerful online stores.",
-        icon: "🛒",
+        svg:ecom,
         link: "#",
       },
       {
         title: "LMS",
         description: "Learning Management Systems for education.",
-        icon: "📚",
+        svg: lms,
         link: "#",
       },
       {
         title: "Coded",
         description: "Fully coded custom development.",
-        icon: "💻",
+        svg: coded,
         link: "#",
       },
       {
         title: "No-code",
         description: "No-code website development solutions.",
-        icon: "⚙️",
+        svg: nocode,
         link: "#",
       },
     ],
@@ -52,25 +58,25 @@ const Navbar = () => {
       {
         title: "Social Posts",
         description: "Designs for social media platforms.",
-        icon: "📱",
+        svg: "📱",
         link: "#",
       },
       {
         title: "Posters, Brochure",
         description: "Print-ready designs for marketing materials.",
-        icon: "📰",
+        svg: "📰",
         link: "#",
       },
       {
         title: "Illustration",
         description: "Custom illustration designs.",
-        icon: "🖌️",
+        svg: "🖌️",
         link: "#",
       },
       {
         title: "Pitch Decks",
         description: "Professional pitch deck designs.",
-        icon: "📊",
+        svg: "📊",
         link: "#",
       },
     ],
@@ -81,25 +87,25 @@ const Navbar = () => {
       {
         title: "Search Engine Optimization",
         description: "Improve search rankings with SEO.",
-        icon: "🔍",
+        svg: "🔍",
         link: "#",
       },
       {
         title: "Social Media Management",
         description: "Manage your social media channels.",
-        icon: "📱",
+        svg: "📱",
         link: "#",
       },
       {
         title: "Search Engine Marketing",
         description: "Run ads to boost search visibility.",
-        icon: "💰",
+        svg: "💰",
         link: "#",
       },
       {
         title: "Social Media Marketing",
         description: "Drive engagement through social media ads.",
-        icon: "📢",
+        svg: "📢",
         link: "#",
       },
     ],
@@ -157,7 +163,9 @@ const Navbar = () => {
                             {category.subItems.map((item, subIdx) => (
                               <li key={subIdx} className="mb-2">
                                 <a href={item.link} className="d-flex align-items-start text-white text-decoration-none">
-                                  <span className="me-2">{item.icon}</span>
+                                  {item.svg && (
+                                    <img src={item.svg} alt={item.title + " icon"} style={{ width: 30, height: 30, marginRight: 10 }} />
+                                  )}
                                   <div>
                                     <strong>{item.title}</strong>
                                     <p className="small mb-0">{item.description}</p>
