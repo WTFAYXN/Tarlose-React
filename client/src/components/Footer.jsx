@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 // import logo from "../assets/Logos/Tarlose.svg"; // old logo
 import logo from "../assets/Logos/tarloseNavLogo.svg";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Footer = () => {
   return (
@@ -31,10 +32,10 @@ const Footer = () => {
                 understand, and act on.
               </p>
               <div className="social-icons">
-                <span>×</span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/tarlose/" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
+                <a href="mailto:admin@tarlose.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-envelope"></i></a>
               </div>
             </div>
             <div className="footer-section-right">
