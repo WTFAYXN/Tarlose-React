@@ -1,34 +1,72 @@
 .services-hero {
-    height: 100vh;
-    align-content: center;
+  height: 100vh;
+  align-content: center;
 }
 
 .hero-content {
-    max-width: 50%;
-    margin: auto;
-
+  max-width: 50%;
+  margin: auto;
 }
 
 .hero-content h1 {
-    font-size: 48px !important;
-
+  font-size: 48px !important;
 }
 
 .hero-content .lead {
-    font-size: 18px !important;
-    width: 80%;
-    margin: auto;
+  font-size: 18px !important;
+  width: 80%;
+  margin: auto;
 }
 
 .badge {
-    border: 1px dashed !important;
-    padding: 13px 6px !important;
-    font-size: 13px !important;
+  border: 1px dashed !important;
+  padding: 13px 6px !important;
+  font-size: 13px !important;
 }
 
 .off-style {
-    background-color: red;
-    padding: 5px 10px;
-    border-radius: 6px;
-    margin-right: 10px;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-right: 10px;
 }
+
+.signed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 40px;
+  }
+  
+  .signed-img-container {
+    position: relative;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .signed-img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    position: absolute;
+  }
+  
+  .signed-img-container img:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  
+  .signed-img-container img:nth-child(2) {
+    /* top: 15px; */
+    left: 15px;
+    z-index: 2;
+  }
+  
+  .signed-img-container img:nth-child(3) {
+    /* top: 30px; */
+    left: 30px;
+    z-index: 1;
+  }
