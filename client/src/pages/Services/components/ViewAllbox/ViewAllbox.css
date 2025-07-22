@@ -1,0 +1,30 @@
+.viewAllbox-container {
+  border: 1px dashed #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.viewallbox-left-container {
+  display: flex;
+  gap: 20px;
+}
+
+.viewbox-img {
+  width: 69px;
+  height: 69px;
+}
+.viewbox-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.viewbox-content {
+    width: 70%;
+
+}
+
+.view-btn{
+    width: 100% !important;
+}

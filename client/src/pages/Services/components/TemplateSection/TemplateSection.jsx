@@ -1,5 +1,6 @@
 import React from "react";
 import "./TemplateSection.css";
+import ViewAllbox from "../ViewAllbox/ViewAllbox";
 
 const TemplateSection = () => {
   // Dynamic data for templates
@@ -67,7 +68,10 @@ const TemplateSection = () => {
             ))}
           </div>
         </div>
+         <ViewAllbox />
       </div>
+
+     
     </>
   );
 };
