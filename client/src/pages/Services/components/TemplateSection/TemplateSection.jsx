@@ -4,9 +4,9 @@ import "./TemplateSection.css";
 const TemplateSection = () => {
   return (
     <>
-      <div className="Template-parent-container container">
-        <div className="Template-header d-flex flex-column text-center">
-          <h2>Top-Performing Templates for Every Need</h2>
+      <div className="services-parent-container container">
+        <div className="services-header d-flex flex-column text-center">
+          <h2>Top-Performing Templates for <span className="eco-sub">Every Need</span> </h2>
           <p className="">
             Each template is crafted to help you achieve clarity, focus, and
             efficiency in your daily tasks and long-term goals.
