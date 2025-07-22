@@ -6,16 +6,21 @@
 }
 
 .services-header p {
-    width: 45%;
-    margin: auto;
-    font-size: 18px;
-    font-weight: 400 !important;
-    line-height: 27px !important;
-    color: #f8f8f8b1 !important;
+  width: 45%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 400 !important;
+  line-height: 27px !important;
+  color: #f8f8f8b1 !important;
+}
+
+.Template-cards {
+  display: flex;
+  gap: 20px;
 }
 
 .Template-card {
-  width: 30%;
+  width: fit-content;
   background-color: rgb(13, 13, 13);
   border-radius: 15px;
   opacity: 1;
@@ -88,4 +93,12 @@
   border-radius: 7px;
   padding: 5px 20px;
   color: rgb(102, 102, 102);
+}
+
+
+@media (max-width: 480px) {
+    .Template-cards {
+        flex-direction: column;
+      }
+
 }
