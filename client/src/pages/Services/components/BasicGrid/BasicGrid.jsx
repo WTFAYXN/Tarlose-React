@@ -26,7 +26,7 @@ export default function BasicGrid() {
         </p>
       </div>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={12}>
+        <Grid size={12}>
           <Item>
             <div className="large-basic-grid-container">
               <div className="left-basic-grid">
@@ -92,7 +92,7 @@ export default function BasicGrid() {
             </div>
           </Item>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={6}>
           <Item><div className="left-basic-grid">
                 <div className="svg-img">
                   <svg
@@ -130,7 +130,7 @@ export default function BasicGrid() {
                 </div>
               </div></Item>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={6}>
           <Item><div className="left-basic-grid">
                 <div className="svg-img">
                   <svg
