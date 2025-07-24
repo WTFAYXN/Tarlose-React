@@ -1,0 +1,50 @@
+.basic-grid-container {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.large-basic-grid-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-basic-grid {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  justify-content: space-between;
+}
+
+.left-basic-grid-content p {
+  width: 70%;
+}
+
+.svg-img {
+  height: 50px;
+  width: 50px;
+}
+
+.svg-container {
+  height: 150px;
+  width: 150px;
+}
+
+.css-16carsw-MuiPaper-root {
+  background-color: rgb(13, 13, 13) !important;
+  border-radius: 12px !important;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: -moz-min-content;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px !important;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff !important;
+}

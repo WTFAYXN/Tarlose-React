@@ -5,6 +5,7 @@ import Cursor from "../../components/Cursor";
 
 import "./Services.css";
 import TemplateSection from "./components/TemplateSection/TemplateSection";
+import BasicGrid from "./components/BasicGrid/BasicGrid";
 const Services = () => {
   return (
     <>
@@ -62,6 +63,8 @@ const Services = () => {
       </header>
 
       <TemplateSection />
+
+      <BasicGrid />
 
       <Footer />
     </>
