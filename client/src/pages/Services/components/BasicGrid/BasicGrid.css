@@ -48,3 +48,17 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff !important;
 }
+
+@media (max-width: 480px) {
+  .left-basic-grid {
+    height: 25vh;
+  }
+
+  .large-basic-grid-container {
+    display: block;
+  }
+
+  .right-basic-grid {
+    display: none;
+  }
+}

@@ -136,7 +136,7 @@ export default function BasicGrid() {
         {gridData
           .filter((item) => !item.isLarge)
           .map((item) => (
-            <Grid size={6} key={item.id}>
+            <Grid size={{ xs: 12, md: 6 }} key={item.id}>
               <Item>
                 <GridItemContent
                   title={item.title}
