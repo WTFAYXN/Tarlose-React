@@ -18,15 +18,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function BasicGrid() {
   return (
-    <Box sx={{ flexGrow: 1 }} className="container  basic-grid-container">
-         <div className="services-header d-flex flex-column text-center">
-          <h2>Everything You Need,  <span className="eco-sub">All in One Place</span></h2>
-          <p>
-          Explore versatile templates crafted for any purpose.
-          </p>
-        </div>
+    <Box sx={{ flexGrow: 1 }} className="container basic-grid-container">
+      <div className="services-header d-flex flex-column text-center">
+        <h2>Everything You Need,  <span className="eco-sub">All in One Place</span></h2>
+        <p>
+        Explore versatile templates crafted for any purpose.
+        </p>
+      </div>
       <Grid container spacing={2}>
-        <Grid size={12}>
+        <Grid item xs={12} md={12}>
           <Item>
             <div className="large-basic-grid-container">
               <div className="left-basic-grid">
@@ -92,7 +92,7 @@ export default function BasicGrid() {
             </div>
           </Item>
         </Grid>
-        <Grid size={6}>
+        <Grid item xs={12} md={6}>
           <Item><div className="left-basic-grid">
                 <div className="svg-img">
                   <svg
@@ -130,7 +130,7 @@ export default function BasicGrid() {
                 </div>
               </div></Item>
         </Grid>
-        <Grid size={6}>
+        <Grid item xs={12} md={6}>
           <Item><div className="left-basic-grid">
                 <div className="svg-img">
                   <svg
