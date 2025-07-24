@@ -7,6 +7,7 @@ import "./Services.css";
 import TemplateSection from "./components/TemplateSection/TemplateSection";
 import BasicGrid from "./components/BasicGrid/BasicGrid";
 import FullWidthGrid from "./components/FullWidthGrid/FullWidthGrid";
+import PricingComponent from "./components/Pricing/PricingComponent";
 const Services = () => {
   return (
     <>
@@ -68,6 +69,8 @@ const Services = () => {
       <BasicGrid />
 
       <FullWidthGrid />
+
+      <PricingComponent />
 
       <Footer />
     </>
