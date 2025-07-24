@@ -5,7 +5,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import "./BasicGrid.css";
 
-// Styled component for the grid items
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
   ...theme.typography.body2,
@@ -48,8 +47,7 @@ const gridData = [
   },
 ];
 
-// Component to render individual grid item content
-const GridItemContent = ({ title, description, svgPath }) => (
+const GridItemContent = ({ title, description, svgPath, isLarge }) => (
   <div className="left-basic-grid">
     <div className="svg-img">
       <svg
@@ -74,9 +72,11 @@ const GridItemContent = ({ title, description, svgPath }) => (
     <div className="left-basic-grid-content">
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href="#" className="btn btn-outline-dark btn-lg shining-button">
-        Get Started
-      </a>
+      {isLarge && (
+        <a href="#" className="btn btn-outline-dark btn-lg shining-button">
+          Get Started
+        </a>
+      )}
     </div>
   </div>
 );
@@ -103,6 +103,7 @@ export default function BasicGrid() {
                       title={item.title}
                       description={item.description}
                       svgPath={item.svgPath}
+                      isLarge={item.isLarge}
                     />
                   </div>
                   <div className="right-basic-grid">
@@ -142,6 +143,7 @@ export default function BasicGrid() {
                   title={item.title}
                   description={item.description}
                   svgPath={item.svgPath}
+                  isLarge={item.isLarge}
                 />
               </Item>
             </Grid>

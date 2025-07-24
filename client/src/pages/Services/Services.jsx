@@ -6,6 +6,7 @@ import Cursor from "../../components/Cursor";
 import "./Services.css";
 import TemplateSection from "./components/TemplateSection/TemplateSection";
 import BasicGrid from "./components/BasicGrid/BasicGrid";
+import FullWidthGrid from "./components/FullWidthGrid/FullWidthGrid";
 const Services = () => {
   return (
     <>
@@ -65,6 +66,8 @@ const Services = () => {
       <TemplateSection />
 
       <BasicGrid />
+
+      <FullWidthGrid />
 
       <Footer />
     </>
