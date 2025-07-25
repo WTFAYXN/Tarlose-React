@@ -143,13 +143,20 @@
 
 .add-on-icon {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
+  position: relative;
+  bottom: 16px;
+}
+.add-on-icon i {
+  color:#b98bcf !important ;
 }
 
 .add-on-content {
   border: 1px dashed rgb(186, 186, 186);
   border-radius: 12px;
   padding: 20px;
+  position: relative;
+  bottom: 30px;
 }
 .add-on-content h5 {
   font-size: 26px;
@@ -163,5 +170,10 @@
 @media (max-width: 480px) {
   .pricing-cards {
     flex-direction: column;
+  }
+
+  .add-on-container {
+    flex-direction: column;
+
   }
 }

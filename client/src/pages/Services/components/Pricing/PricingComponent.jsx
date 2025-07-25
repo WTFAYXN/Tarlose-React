@@ -26,6 +26,23 @@ const TickMark = () => (
 
 const PricingComponent = () => {
   const [activePlan, setActivePlan] = useState("monthly");
+  const [addOns, setAddOns] = useState([
+    {
+      title: "Custom Templates",
+      price: "$499",
+      description: "Tailored templates designed specifically to fit your unique workflow.",
+    },
+    {
+      title: "Priority Support",
+      price: "$89",
+      description: "Get instant answers and dedicated help whenever you need it.",
+    },
+    {
+      title: "Template Guides",
+      price: "$19",
+      description: "Step-by-step guides to maximize your efficiency with Notion templates.",
+    },
+  ]);
 
   const handlePlanClick = (plan) => {
     setActivePlan(plan);
@@ -218,54 +235,20 @@ const PricingComponent = () => {
             <h2 className="m-0">Add-ons</h2>
           </div>
           <div className="add-on-container">
-            <div className="add-on">
-              <div className="add-on-pricing">
-                <h5>$499</h5>
+            {addOns.map((addOn, index) => (
+              <div className="add-on" key={index}>
+                <div className="add-on-pricing">
+                  <h5>{addOn.price}</h5>
+                </div>
+                <div className="add-on-icon">
+                <i class="bi bi-plus-circle-fill"></i>
+                </div>
+                <div className="add-on-content">
+                  <h5>{addOn.title}</h5>
+                  <p>{addOn.description}</p>
+                </div>
               </div>
-              <div className="add-on-icon">
-                <i class="bi bi-plus-circle-dotted"></i>
-              </div>
-
-              <div className="add-on-content">
-                <h5>Custom Templates</h5>
-                <p>
-                  Tailored templates designed specifically to fit your unique
-                  workflow.
-                </p>
-              </div>
-            </div>
-            <div className="add-on">
-              <div className="add-on-pricing">
-                <h5>$499</h5>
-              </div>
-              <div className="add-on-icon">
-                <i class="bi bi-plus-circle-dotted"></i>
-              </div>
-
-              <div className="add-on-content">
-                <h5>Custom Templates</h5>
-                <p>
-                  Tailored templates designed specifically to fit your unique
-                  workflow.
-                </p>
-              </div>
-            </div>
-            <div className="add-on">
-              <div className="add-on-pricing">
-                <h5>$499</h5>
-              </div>
-              <div className="add-on-icon">
-                <i class="bi bi-plus-circle-dotted"></i>
-              </div>
-
-              <div className="add-on-content">
-                <h5>Custom Templates</h5>
-                <p>
-                  Tailored templates designed specifically to fit your unique
-                  workflow.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
