@@ -1,9 +1,9 @@
 .pricing-cards {
     display: flex;
     gap: 20px;
-}
-
-.pricing-card {
+  }
+  
+  .pricing-card {
     width: 100%;
     background-color: rgb(13, 13, 13) !important;
     border-radius: 15px;
@@ -21,8 +21,12 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
+  .pro-border {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
   .plan-badge {
-    background-color:#8d6a9f;
+    background-color: #8d6a9f;
     border-radius: 10px;
     padding: 5px 10px;
     font-size: 22px;
@@ -39,7 +43,7 @@
     margin-right: 8px;
   }
   
-  .pricing{
+  .pricing {
     font-size: 2.5rem;
     font-weight: bold;
     color: #fff;
@@ -76,7 +80,32 @@
     height: 20px;
     margin-right: 10px;
   }
-
+  
   .pricing-btn {
     width: 100% !important;
+  }
+  
+  .pricing-btn-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .plan-toggle {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .plan-toggle.active {
+    background-color: #8d6a9f !important;
+    color: white;
+  }
+  
+  .plan-toggle:not(.active) {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
   }
