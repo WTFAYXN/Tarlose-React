@@ -36,15 +36,15 @@ const PricingComponent = () => {
       name: "Pro",
       price: "€45",
       paymentType: "One-time payment",
-      targetAudience: "Individuals & small teams",
-      features: ["5 Essential Templates", "Easy integration with Notion", "Basic setup guide", "Lifetime access"],
+      targetAudience: "Professionals & creators",
+      features: ["All templates included", "Lifetime updates", "Priority feature requests", "Extended setup documentation"],
     },
     {
       name: "Creator+",
       price: "€60",
       paymentType: "One-time payment",
       targetAudience: "Individuals & small teams",
-      features: ["5 Essential Templates", "Easy integration with Notion", "Basic setup guide", "Lifetime access"],
+      features: ["Everything in Pro", "Commercial use license", "Notion automation templates", "Monthly bonus templates"],
     },
   ];
 
@@ -103,7 +103,7 @@ const PricingComponent = () => {
                   ))}
                 </ul>
                 <a href="#" className="btn btn-dark btn-lg me-3 shining-button pricing-btn">
-                  Explore Templates
+                  {`Get ${plan.name}`}
                 </a>
               </div>
             ))}
