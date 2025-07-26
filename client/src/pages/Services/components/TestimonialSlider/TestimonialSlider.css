@@ -3,6 +3,7 @@
   overflow: hidden;
   display: flex;
   gap: 20px;
+  max-height: 50dvh;
 }
 
 .vertical-slider-up {
@@ -20,7 +21,7 @@
 }
 
 .vertical-slide {
-  min-height: 150px;
+  /* min-height: 150px; */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -55,9 +56,9 @@
 }
 @keyframes verticalsliderDown {
   0% {
-    transform: translateY(0);
+    transform: translateY(-50%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(10%);
   }
 }
