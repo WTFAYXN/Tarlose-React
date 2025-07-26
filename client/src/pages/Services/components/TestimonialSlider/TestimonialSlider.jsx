@@ -3,6 +3,18 @@ import "./TestimonialSlider.css";
 
 const TestimonialSlider = () => {
   return (
+
+    <>
+<div className="vertical-slider-parent-container">
+ <div className="services-header d-flex flex-column text-center">
+    <h2>
+    See What Our  <span className="eco-sub">Happy Users Say</span>
+    </h2>
+    <p>
+    Over 50,000+ users have improved their productivity with our templates.
+    </p>
+  </div>
+
     <div className="vertical-slider-container container">
       <div className="vertical-slider-up">
         <div className="vertical-slide">
@@ -815,6 +827,12 @@ const TestimonialSlider = () => {
         </div>
       </div>
     </div>
+</div>
+
+    
+    </>
+
+   
   );
 };
 
