@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   animation: verticalscroll 20s linear infinite;
+  gap: 20px;
 }
 
 .vertical-slide {
