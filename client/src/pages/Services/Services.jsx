@@ -9,6 +9,7 @@ import BasicGrid from "./components/BasicGrid/BasicGrid";
 import FullWidthGrid from "./components/FullWidthGrid/FullWidthGrid";
 import PricingComponent from "./components/Pricing/PricingComponent";
 import TestimonialSlider from "./components/TestimonialSlider/TestimonialSlider";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
 const Services = () => {
   return (
     <>
@@ -74,6 +75,8 @@ const Services = () => {
       <PricingComponent />
 
       <TestimonialSlider />
+
+      <HowItWorks />
 
       <Footer />
     </>

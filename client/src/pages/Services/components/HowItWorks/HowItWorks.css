@@ -1,0 +1,36 @@
+.how-it-works-title {
+    font-size: 32px;
+}
+
+
+
+.dot-line-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+
+.step-dot {
+    background-color: #8d6a9f;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.work-step-line-container {
+    width: 100%;
+}
+
+.work-step-line {
+    border: 2px dashed;
+}
+
+.step-content h3 {
+    font-size: 24px !important;
+}
+
+.steps-container {
+    display: flex;
+}
