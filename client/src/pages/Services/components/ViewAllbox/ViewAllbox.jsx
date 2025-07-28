@@ -17,7 +17,7 @@ const ViewAllbox = ({ title = "More Notion Templates", description = "Completely
           </div>
         </div>
 
-        <div>
+        <div className="view-btn-container">
           <a
             href={buttonLink}
             className="btn btn-dark btn-lg me-3 shining-button view-btn"

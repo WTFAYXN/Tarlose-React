@@ -27,3 +27,24 @@
   .view-btn {
     width: 100% !important;
   }
+
+  @media (max-width:480px) {
+    .viewAllbox-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .viewbox-content {
+      width: 100%;
+  }
+
+    .viewallbox-left-container {
+      flex-direction: column;
+    
+
+    }
+    .view-btn-container {
+      width: 100%;
+    }
+  }
