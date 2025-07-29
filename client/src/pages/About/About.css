@@ -1,0 +1,19 @@
+.about-hero {
+    height: 100dvh;
+    align-content: center;
+    text-align: center;
+}
+.about-hero p {
+    font-size: 30px;
+    
+}
+.about-hero h1 {
+    width: 60%;
+    margin: auto;
+    
+}
+
+.about-experience-container a {
+    text-decoration: none;
+    color: #fff;
+}
