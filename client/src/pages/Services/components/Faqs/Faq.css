@@ -1,0 +1,82 @@
+/* FAQ section */
+.accordion {
+  --bs-accordion-color: none !important;
+  --bs-accordion-bg: none !important;
+  --bs-accordion-border-color: none !important;
+  color: #fff !important;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-button {
+  color: #fff !important;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+  background-color: rgb(13, 13, 13) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.accordion-body {
+  background-color: rgb(13, 13, 13) !important;
+  border-radius: 12px !important;
+
+
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Custom plus/minus icons with improved SVG */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='12' y1='6' x2='12' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='12' x2='18' y2='12'%3E%3C/line%3E%3C/svg%3E") !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='6' y1='12' x2='18' y2='12'%3E%3C/line%3E%3C/svg%3E") !important;
+  transform: rotate(0deg);
+}
+
+/* Accordion content */
+.accordion-collapse {
+  transition: all 0.35s ease-in-out;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+.faq-parent-container {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.faq-right-container {
+  width: 50%;
+}
+
+.faq-heading-container h2 {
+  width: 60%;
+}
+.faq-heading-container p {
+  width: 80%;
+}
+
+.faq-svg {
+  text-align: center;
+}
+.faq-svg img {
+  height: 40vh;
+}

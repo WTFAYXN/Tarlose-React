@@ -10,7 +10,7 @@ import FullWidthGrid from "./components/FullWidthGrid/FullWidthGrid";
 import PricingComponent from "./components/Pricing/PricingComponent";
 import TestimonialSlider from "./components/TestimonialSlider/TestimonialSlider";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
-import FAQ from "../../components/Faqs/Faq";
+import FAQ from "./components/Faqs/Faq";
 const Services = () => {
   return (
     <>
@@ -79,7 +79,8 @@ const Services = () => {
 
       <HowItWorks />
 
-      {/* <FAQ /> */}
+      <FAQ />
+
 
       <Footer />
     </>

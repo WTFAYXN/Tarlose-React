@@ -22,7 +22,7 @@ import Partnership from "../assets/svgs/Partnership.svg";
 import Results from "../assets/svgs/Results.svg";
 import Work from "../components/Work-slider/Work";
 import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
-import FAQ from "../components/Faqs/Faq";
+import FAQ from "./Services/components/Faqs/Faq";
 import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
 import Community from "../components/Community/Community";
