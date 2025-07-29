@@ -184,8 +184,8 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/career">
-                Careers
+              <a className="nav-link" href="/about">
+                About
               </a>
             </li>
             <li className="nav-item">
