@@ -34,6 +34,31 @@ const About = () => {
 
       </div>
 
+      {/* about founders */}
+
+      <div className="about-founders container">
+        <div className="about-title text-center">
+          <p>A little about the</p>
+          <h2 className="text-uppercase eco-sub">FOUNDERS</h2>
+
+        </div>
+
+        <div className="founder-container">
+          <div className="founder-img">
+            <img src="https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75" alt="Ayan" />
+
+          </div>
+          <div className="founder-details">
+            <h2 className="founder-name">Ayan Khan</h2>
+            <p className="founder-position">Co-founder</p>
+            <p className="founder-discription">Lynn has over 15 years of experience in Online Marketing,  Advertising and Creative Production. Prior to co-founding SilkTricky, she worked as a Producer at AKQA, an Interactive Marketing Manager for Red Bull and a Web Manager for American Apparel. As Executive Producer for SilkTricky, she is responsible for ensuring daily that we are on top of our game and clients needs are met.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
       <Footer />
     </>
   );

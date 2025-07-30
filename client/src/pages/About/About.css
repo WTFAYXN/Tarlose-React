@@ -39,3 +39,51 @@
 .about-tarlose h5 {
     width: 40%;
 } 
+
+/* about founders  */
+
+.about-founders {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-title p {
+    font-size: 40px;
+}
+.about-title h2 {
+    font-size: 150px;
+}
+
+.founder-container {
+    display: flex;
+    gap: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.founder-img {
+    width: 40%;
+}
+.founder-img img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 12px;
+}
+
+.founder-details {
+    width: 80%;
+
+}
+
+.founder-name {
+    font-size: 70px;
+}
+
+.founder-position {
+    font-size: 30px;
+}
+
+.founder-discription {
+    font-size: 22px;
+}
