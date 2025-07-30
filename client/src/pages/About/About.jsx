@@ -2,61 +2,120 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
-
 import "./about.css";
+
+const aboutData = {
+  hero: {
+    tagline: "We get it done.",
+    title: "CONCEPTS DESIGNED TO MAKE AN IMPACT",
+    titleHighlight: "DESIGNED",
+  },
+  company: {
+    title: "ABOUT Tarlose",
+    experience: {
+      heading: "not old, just experienced.",
+      description: [
+        "We've been around since 2009, and we've seen the industry change and grow.",
+        "We have collaborated on an impressive list of high-profile interactive projects through partnerships with some of the top advertising agencies and brands in the world. Our work has ranged from entertainment and consumer goods, to manufacturing, technology, and more.",
+      ],
+      cta: {
+        text: "Book a Call",
+        url: "https://calendly.com/ayansayad2005/30min?month=2024-12",
+      },
+    },
+  },
+  founders: {
+    title: "A little about the",
+    highlight: "FOUNDERS",
+    list: [
+      {
+        name: "Ayan Khan",
+        position: "Co-founder",
+        description:
+          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+        image:
+          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
+        alt: "Ayan",
+      },
+      {
+        name: "Ayan Khan",
+        position: "Co-founder",
+        description:
+          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+        image:
+          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
+        alt: "Ayan",
+      },
+      {
+        name: "Ayan Khan",
+        position: "Co-founder",
+        description:
+          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+        image:
+          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
+        alt: "Ayan",
+      },
+    ],
+  },
+};
 
 const About = () => {
   return (
     <>
       <Navbar />
-
       <Cursor />
 
+      {/* Hero Section */}
       <div className="about-hero container">
-        <p>We get it done.</p>
-        <h1>CONCEPTS <span className="eco-sub">DESIGNED</span>  TO MAKE AN IMPACT</h1>
+        <p>{aboutData.hero.tagline}</p>
+        <h1>
+          {aboutData.hero.title.split(aboutData.hero.titleHighlight)[0]}
+          <span className="eco-sub">{aboutData.hero.titleHighlight}</span>
+          {aboutData.hero.title.split(aboutData.hero.titleHighlight)[1]}
+        </h1>
       </div>
 
+      {/* Company Section */}
       <div className="about-tarlose container">
-        <h5 className="text-uppercase">ABOUT Tarlose </h5>
-
+        <h5 className="text-uppercase">{aboutData.company.title}</h5>
         <div className="about-experience-container">
-            <h2 className="text-uppercase">not old, just experienced.</h2>
-            <p>We've been around since 2009, and we've seen the industry change and grow.</p>
-            <p>We have collaborated on an impressive list of high-profile interactive projects through partnerships with some of the top advertising agencies and brands in the world. Our work has ranged from entertainment and consumer goods, to manufacturing, technology, and more.</p>
-            <button type="button" className="nav-btn">
-            <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
-              Book a Call
+          <h2 className="text-uppercase">{aboutData.company.experience.heading}</h2>
+          {aboutData.company.experience.description.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+          <button type="button" className="nav-btn">
+            <a href={aboutData.company.experience.cta.url}>
+              {aboutData.company.experience.cta.text}
             </a>
           </button>
-
         </div>
-
       </div>
 
-      {/* about founders */}
-
+      {/* Founders Section */}
       <div className="about-founders container">
         <div className="about-title text-center">
-          <p>A little about the</p>
-          <h2 className="text-uppercase eco-sub">FOUNDERS</h2>
-
+          <p>{aboutData.founders.title}</p>
+          <h2 className="text-uppercase eco-sub">{aboutData.founders.highlight}</h2>
         </div>
 
-        <div className="founder-container">
-          <div className="founder-img">
-            <img src="https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75" alt="Ayan" />
-
+        {aboutData.founders.list.map((founder, index) => (
+          <div
+            className="founder-container"
+            key={index}
+            style={{
+              flexDirection: index % 2 === 1 ? "row-reverse" : "row",
+            }}
+          >
+            <div className="founder-img">
+              <img src={founder.image} alt={founder.alt} />
+            </div>
+            <div className="founder-details">
+              <h2 className="founder-name">{founder.name}</h2>
+              <p className="founder-position">{founder.position}</p>
+              <p className="founder-discription">{founder.description}</p>
+            </div>
           </div>
-          <div className="founder-details">
-            <h2 className="founder-name">Ayan Khan</h2>
-            <p className="founder-position">Co-founder</p>
-            <p className="founder-discription">Lynn has over 15 years of experience in Online Marketing,  Advertising and Creative Production. Prior to co-founding SilkTricky, she worked as a Producer at AKQA, an Interactive Marketing Manager for Red Bull and a Web Manager for American Apparel. As Executive Producer for SilkTricky, she is responsible for ensuring daily that we are on top of our game and clients needs are met.</p>
-
-          </div>
-
-        </div>
-
+        ))}
       </div>
 
       <Footer />
