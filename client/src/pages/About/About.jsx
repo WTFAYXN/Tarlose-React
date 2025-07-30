@@ -18,10 +18,10 @@ const About = () => {
       </div>
 
       <div className="about-tarlose container">
-        <h5>ABOUT Tarlose</h5>
+        <h5 className="text-uppercase">ABOUT Tarlose </h5>
 
         <div className="about-experience-container">
-            <h2>not old, just experienced.</h2>
+            <h2 className="text-uppercase">not old, just experienced.</h2>
             <p>We've been around since 2009, and we've seen the industry change and grow.</p>
             <p>We have collaborated on an impressive list of high-profile interactive projects through partnerships with some of the top advertising agencies and brands in the world. Our work has ranged from entertainment and consumer goods, to manufacturing, technology, and more.</p>
             <button type="button" className="nav-btn">
