@@ -80,3 +80,15 @@
 .faq-svg img {
   height: 40vh;
 }
+
+@media (max-width: 480px) {
+
+  .faq-parent-container {
+    flex-direction: column;
+  }
+  .faq-right-container {
+    width: auto;
+    margin-top: 30px;
+}
+
+}

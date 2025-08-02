@@ -96,13 +96,17 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-bottom">
-              <p>Build by Flowversity. Made in Webflow</p>
               <div className="footer-links">
                 <a href="#">Privacy Policy</a> |{" "}
                 <a href="#">Terms of Service</a>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="footer-large-img">
+          <img src={logo} alt="" />
+
         </div>
       </div>
     </>
