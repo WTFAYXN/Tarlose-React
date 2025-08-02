@@ -1,128 +1,37 @@
 .footer-container {
-  display: flex;
-  padding: 80px 0;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: #fff;
+  height: 100vh;
+  padding-top: 7rem;
+}
+
+
+.footer-img {
+  width: 20rem;
+}
+.footer-img img {
+  height: 100%;
+  width: 100%;
 }
 
 .left-footer {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 20px;
 }
 
-.footer-img {
-  width: 70vh;
+.footer-mail,
+.footer-contact {
+  transition: color 0.3s ease-in-out;
 }
 
-.footer-img img {
-  width: 100%;
-  height: auto;
+.footer-mail {
+  font-size: 2.2rem;
 }
 
-.footer-contact a {
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
-  display: block;
+.footer-contact {
+  font-size: 1.4rem;
 }
 
-.footer-contact-mail {
-  font-size: 32px;
-}
-
-.footer-contact-num {
-  font-size: 18px;
-}
-
-.right-footer {
-  display: flex;
-  gap: 40px;
-  width: 50%;
-}
-
-.connected-container {
-  max-width: 300px;
-}
-
-.connected-container h2 {
-  font-size: 46px;
-  margin-bottom: 10px;
-}
-
-.connected-container p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 10px 0;
-}
-
-.email-input {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  gap: 5px;
-}
-
-.connected-mail {
-    padding: 8px;
-    border-radius: 4px 0 0 4px;
-    flex-grow: 1;
-    background: transparent;
-    border-bottom: 1px solid #8d6a9f;
-}
-
-
-.submit-arrow {
-  background-color: #8d6a9f;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.links-container {
-  display: grid;
-  grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px;
-  column-gap: 10px;
-  row-gap: 15px;
-}
-
-.links-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.links-container li {
-  margin-bottom: 10px;
-}
-
-.footer-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-link:hover {
-  color: #8d6a9f;
-}
-
-.social-links {
-  display: grid;
-  grid-template-columns: 50px 50px;
-  column-gap: 50px;
-}
-
-.social-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.social-link:hover {
-  color: #8d6a9f;
+.footer-mail:hover,
+.footer-contact:hover {
+  color: #8d6a9f !important;
 }
