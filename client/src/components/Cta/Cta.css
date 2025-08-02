@@ -1,6 +1,9 @@
 .section-cta {
   height: 70vh;
   align-content: center;
+  background-color: rgb(13, 13, 13);
+  margin: 20px 20px 0 20px;
+  border-radius: .75rem;
 }
 
 .cta-container {
@@ -12,7 +15,12 @@
   text-align: center;
   color: #fff;
   padding: 20px;
-  background-color: rgb(13, 13, 13);
+
+  background-image: url('../../assets/svgs/dot-bg.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 }
 .cta-container a {
   text-decoration: none;
@@ -33,4 +41,28 @@
   position: relative;
   top: -20px;
   left: -30px;
+}
+
+@media (max-width: 480px) {
+
+    .section-cta {
+        height: 50vh;
+        align-content: center;
+        background-color: rgb(13, 13, 13);
+        margin: 15px 15px 0 15px;
+        border-radius: .75rem;
+      }
+    .cta-container h2 {
+        font-size: 48px;
+        line-height: 46px;
+        width: 100%;
+      }
+
+      .cta-span {
+        font-size: 30px;
+        position: relative;
+        left: -10px;
+      
+      }
+
 }
