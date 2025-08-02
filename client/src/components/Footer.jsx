@@ -104,10 +104,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-large-img">
-          <img src={logo} alt="" />
-
-        </div>
       </div>
     </>
   );
