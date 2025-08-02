@@ -1,52 +1,74 @@
 .footer-container {
-  height: 100vh;
   padding-top: 7rem;
+  font-family: Gilroy, sans-serif;
 }
 
-
-.footer-img {
-  width: 20rem;
-}
-.footer-img img {
-  height: 100%;
-  width: 100%;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
 .left-footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 40%;
 }
 
-.footer-mail,
-.footer-contact {
-  transition: color 0.3s ease-in-out;
+.footer-logo {
+  width: 100px; /* Adjusted to match image proportions */
+}
+.footer-logo img {
+  height: auto;
+  width: 100%;
 }
 
-.footer-mail {
-  font-size: 2.2rem;
+.footer-input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.footer-contact {
-  font-size: 1.4rem;
+.footer-subscribe {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 0;
 }
 
-.footer-mail:hover,
-.footer-contact:hover {
-  color: #8d6a9f !important;
+.footer-consent {
+  font-size: 12px;
+  color: #666;
+}
+.footer-consent a {
+  color: #ff0000;
+  text-decoration: none;
 }
 
-
-/* right footer style  */
+.footer-rights {
+  font-size: 12px;
+  color: #666;
+}
 
 .right-footer {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .column {
@@ -56,6 +78,8 @@
 .column h5 {
   margin-bottom: 10px;
   font-weight: bold;
+  color: #fff;
+  font-size: 16px;
 }
 
 .column ul {
@@ -63,6 +87,22 @@
   padding: 0;
 }
 
-.column li {
+.column li a {
   margin-bottom: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 12px;
 }

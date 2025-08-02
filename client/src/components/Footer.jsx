@@ -8,60 +8,101 @@ const Footer = () => {
       <div className="footer-container container">
         <div className="footer-content">
           <div className="left-footer">
-            <div className="footer-img">
+            <div className="footer-logo">
               <img src={logo} alt="logo" />
             </div>
             <div>
               <p>
                 Join our newsletter to stay up to date on features and releases.
               </p>
-
-              <a
-                className="text-light text-decoration-none footer-mail"
-                href="mailto:admin@tarlose.com"
-              >
-                <p>admin@tarlose.com</p>
-              </a>
-              <a className="text-light text-decoration-none footer-contact" href="tel:8291617114">
-                <p>+91 8291617114</p>
-              </a>
-              <p>2025 © Tarlose. All Rights Reserved. </p>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="footer-input"
+              />
+              <button className="footer-subscribe">
+                Subscribe <span>→</span>
+              </button>
+              <p className="footer-consent">
+                By subscribing you agree with our <a href="#">Privacy Policy</a>{" "}
+                and provide consent to receive updates from our company.
+              </p>
+              <p className="footer-rights">
+                © Aesthetica. All rights reserved.
+              </p>
             </div>
           </div>
           <div className="right-footer">
-  <div className="footer-grid">
-    <div className="column">
-      <h5>Website</h5>
-      <ul>
-        <li>Home</li>
-        <li>Studio</li>
-        <li>Work</li>
-        <li>Insights</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-    {/* <div className="column">
-      <h5>Admin</h5>
-      <ul>
-        <li>Style Guide</li>
-        <li>Licenses</li>
-        <li>Changelog</li>
-        <li>Instructions</li>
-        <li>Animations</li>
-      </ul>
-    </div> */}
-    <div className="column">
-      <h5>Follow Us</h5>
-      <ul>
-        <li>X / Twitter</li>
-        <li>Instagram</li>
-        <li>Facebook</li>
-        <li>LinkedIn</li>
-        <li>YouTube</li>
-      </ul>
-    </div>
-  </div>
-</div>
+            <div className="footer-grid">
+              <div className="column">
+                <h5>Website</h5>
+                <ul>
+                  <li>
+                    <a href="/home">Home</a>
+                  </li>
+                  <li>
+                    <a href="/studio">Studio</a>
+                  </li>
+                  <li>
+                    <a href="/work">Work</a>
+                  </li>
+                  <li>
+                    <a href="/insights">Insights</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="column">
+                <h5>Admin</h5>
+                <ul>
+                  <li>
+                    <a href="/style-guide">Style Guide</a>
+                  </li>
+                  <li>
+                    <a href="/licenses">Licenses</a>
+                  </li>
+                  <li>
+                    <a href="/changelog">Changelog</a>
+                  </li>
+                  <li>
+                    <a href="/instructions">Instructions</a>
+                  </li>
+                  <li>
+                    <a href="/animations">Animations</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="column">
+                <h5>Follow Us</h5>
+                <ul>
+                  <li>
+                    <a href="https://twitter.com">X / Twitter</a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="https://facebook.com">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com">LinkedIn</a>
+                  </li>
+                  <li>
+                    <a href="https://youtube.com">YouTube</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              <p>Build by Flowversity. Made in Webflow</p>
+              <div className="footer-links">
+                <a href="#">Privacy Policy</a> |{" "}
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
