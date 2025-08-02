@@ -37,6 +37,7 @@ import StackedCards from "../components/StackedCards/StackedCards";
 import Testimonial from "../components/Testimonials/Testimonial";
 import Silk from "../components/Silk";
 import Portfolio from "./Portfolio/Portfolio";
+import Cta from "../components/Cta/Cta";
 
 const Home = () => {
   const trackRef = useRef(null);
@@ -591,6 +592,10 @@ const Home = () => {
 
       {/* <Prompt /> */}
       <Community />
+
+      {/* Cta */}
+      <Cta />
+
       {/* <FAQ /> */}
       <Footer />
     </>

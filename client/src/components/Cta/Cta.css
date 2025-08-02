@@ -1,0 +1,36 @@
+.section-cta {
+  height: 70vh;
+  align-content: center;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  background-color: rgb(13, 13, 13);
+}
+.cta-container a {
+  text-decoration: none;
+  color: #fff;
+}
+.cta-container button {
+  padding: 15px 50px;
+}
+.cta-container h2 {
+  font-size: 96px;
+  width: 70%;
+  line-height: 91px;
+  margin-bottom: 3rem;
+}
+
+.cta-span {
+  font-size: 70px;
+  position: relative;
+  top: -20px;
+  left: -30px;
+}
