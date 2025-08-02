@@ -35,3 +35,34 @@
 .footer-contact:hover {
   color: #8d6a9f !important;
 }
+
+
+/* right footer style  */
+
+.right-footer {
+  padding: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 20px;
+}
+
+.column {
+  text-align: left;
+}
+
+.column h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column li {
+  margin-bottom: 5px;
+}

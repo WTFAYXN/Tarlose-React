@@ -29,8 +29,39 @@ const Footer = () => {
             </div>
           </div>
           <div className="right-footer">
-            
-          </div>
+  <div className="footer-grid">
+    <div className="column">
+      <h5>Website</h5>
+      <ul>
+        <li>Home</li>
+        <li>Studio</li>
+        <li>Work</li>
+        <li>Insights</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    {/* <div className="column">
+      <h5>Admin</h5>
+      <ul>
+        <li>Style Guide</li>
+        <li>Licenses</li>
+        <li>Changelog</li>
+        <li>Instructions</li>
+        <li>Animations</li>
+      </ul>
+    </div> */}
+    <div className="column">
+      <h5>Follow Us</h5>
+      <ul>
+        <li>X / Twitter</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>LinkedIn</li>
+        <li>YouTube</li>
+      </ul>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </>
