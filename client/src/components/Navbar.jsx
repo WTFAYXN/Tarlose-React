@@ -1,14 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/Logos/tarloseNavLogo.svg";
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 // svgs icons for mega tab items 
 import ecom from "../assets/svgs/ecom.svg";
-import coded from "../assets/svgs/coded.svg";
+import coded from "../assets/svgs/code.svg";
 import lms from "../assets/svgs/lms.svg";
 import nocode from "../assets/svgs/no-code.svg";
+import posts from "../assets/svgs/social-posts.svg";
+import poster from "../assets/svgs/poster.svg";
+import illustration from "../assets/svgs/illustration.svg";
+import decks from "../assets/svgs/pitch-deck.svg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -59,25 +63,25 @@ const Navbar = () => {
       {
         title: "Social Posts",
         description: "Designs for social media platforms.",
-        svg: "📱",
+        svg: posts,
         link: "/services",
       },
       {
         title: "Posters, Brochure",
         description: "Print-ready designs for marketing materials.",
-        svg: "📰",
+        svg: poster,
         link: "/services",
       },
       {
         title: "Illustration",
         description: "Custom illustration designs.",
-        svg: "🖌️",
+        svg: illustration,
         link: "/services",
       },
       {
         title: "Pitch Decks",
         description: "Professional pitch deck designs.",
-        svg: "📊",
+        svg: decks,
         link: "/services",
       },
     ],

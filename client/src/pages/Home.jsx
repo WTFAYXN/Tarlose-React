@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect } from "react";
+import  { useRef, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
@@ -193,15 +193,15 @@ const Home = () => {
         <div className="parent-hero-main-container container">
           <div className="hero-main-container">
             <div className="main-heading d-flex flex-row justify-content-center align-items-center">
-              <h6 className="main-heading-text m-0">
+              <p className="main-heading-text m-0">
                 <span className="bullet">•</span>Design. Develop. Dominate.
-              </h6>
+              </p>
             </div>
 
             <div className="hero-container">
-              <h2>Branding that you need Indeed</h2>
+              <h2> Team that you need Indeed</h2>
               <p>
-                Elevate your brand with custom identity and package design.
+                Elevate your business with custom identity and package design.
                 Showcase your story through bold visuals and strategic design
                 solutions.
               </p>
@@ -402,7 +402,7 @@ const Home = () => {
 
       {/* Why choose us */}
 
-      <div className="card text-bg-dark position-relative overflow-hidden">
+      {/* <div className="card text-bg-dark position-relative overflow-hidden">
         <img
           src={bgheader}
           className="card-img"
@@ -420,9 +420,9 @@ const Home = () => {
             digital age.
           </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="row row-cols-1 row-cols-md-2 g-4 text-white">
           <div className="col p-0 m-0 exp-col">
             <div className="exp-card">
@@ -475,13 +475,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <Work />
+      <Work id="work" />
 
       {/* <!-- About Us  --> */}
 
-      <div className="card text-bg-dark">
+      {/* <div className="card text-bg-dark">
         <img src={bgheader} className="card-img" alt="..." />
         <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
           <h2 className="card-title display-4 mb-4 fw-bold">
@@ -497,11 +497,11 @@ const Home = () => {
             with us
           </p>
         </div>
-      </div>
+      </div> */}
       {/* 
                         <!-- testimonials design  --> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2">
           <div className="col p-0">
             <div className="test-col">
@@ -583,7 +583,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <ThreeRowSlider /> */}
 

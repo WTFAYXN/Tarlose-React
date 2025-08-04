@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './DesignProcess.css';
 
 const processSteps = [
@@ -43,7 +43,7 @@ const DesignProcess = () => {
       <div className="right-design-container">
         <div className="tag-container">
             <div className='tag'>
-                <span>•</span> Design Process
+                <span>•</span> Our Process
             </div>
           
         </div>
@@ -55,7 +55,7 @@ const DesignProcess = () => {
           <button className="btn shining-button"><a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
               Book a Free Call
             </a></button>
-          <button className="btn shining-button">See Projects</button>
+          <button className="btn shining-button"><a href="/#work">See Projects</a></button>
         </div>
 
         <hr className='design-hr my-4' />
