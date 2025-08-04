@@ -199,7 +199,7 @@ const Home = () => {
             </div>
 
             <div className="hero-container">
-              <h2> Team that you need Indeed</h2>
+              <h1> Team that you <br></br>need Indeed</h1>
               <p>
                 Elevate your business with custom identity and package design.
                 Showcase your story through bold visuals and strategic design
