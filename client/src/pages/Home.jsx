@@ -6,9 +6,9 @@ import "../index.css";
 import "./home.css";
 import "./responsive.css";
 import { Helmet } from "react-helmet";
-import HeroVideo from "../assets/videos-audio/universe.mp4";
+// import HeroVideo from "../assets/videos-audio/universe.mp4";
 import TarloseTheme from "../assets/videos-audio/tarlose-theme-sound.mp3";
-import gsap from "gsap";
+// import gsap from "gsap";
 import cardBg from "../assets/svgs/cardbg.svg";
 import WebDev from "../assets/svgs/WebsiteDevelopment.svg";
 import GraphicDesign from "../assets/svgs/Design.svg";
@@ -21,9 +21,9 @@ import Client from "../assets/svgs/Client-Centric.svg";
 import Partnership from "../assets/svgs/Partnership.svg";
 import Results from "../assets/svgs/Results.svg";
 import Work from "../components/Work-slider/Work";
-import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
-import FAQ from "./Services/components/Faqs/Faq";
-import Prompt from "../components/Prompt/Prompt";
+// import ThreeRowSlider from "../components/ImageSlider/ ThreeRowSlider";
+// import FAQ from "./Services/components/Faqs/Faq";
+// import Prompt from "../components/Prompt/Prompt";
 import MarqueeLogo from "../components/Marquee-company/MarqueeLogo";
 import Community from "../components/Community/Community";
 
@@ -36,7 +36,6 @@ import DesignProcess from "../components/DesignProcess/DesignProcess";
 import StackedCards from "../components/StackedCards/StackedCards";
 import Testimonial from "../components/Testimonials/Testimonial";
 import Silk from "../components/Silk";
-import Portfolio from "./Portfolio/Portfolio";
 import Cta from "../components/Cta/Cta";
 
 const Home = () => {
@@ -399,7 +398,7 @@ const Home = () => {
 
       <Testimonial />
 
-      <Portfolio />
+      {/* <Portfolio /> */}
 
       {/* Why choose us */}
 

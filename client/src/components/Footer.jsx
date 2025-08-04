@@ -28,7 +28,7 @@ const Footer = () => {
                 and provide consent to receive updates from our company.
               </p>
               <p className="footer-rights">
-                © Aesthetica. All rights reserved.
+                © Tarlose. All rights reserved.
               </p>
             </div>
           </div>
@@ -41,57 +41,48 @@ const Footer = () => {
                     <a href="/home">Home</a>
                   </li>
                   <li>
-                    <a href="/studio">Studio</a>
+                    <a href="/about">About</a>
                   </li>
                   <li>
-                    <a href="/work">Work</a>
-                  </li>
-                  <li>
-                    <a href="/insights">Insights</a>
+                    <a href="/blog">Blogs</a>
                   </li>
                   <li>
                     <a href="/contact">Contact</a>
                   </li>
+              
                 </ul>
               </div>
               <div className="column">
-                <h5>Admin</h5>
+                <h5>Services</h5>
                 <ul>
                   <li>
-                    <a href="/style-guide">Style Guide</a>
+                    <a href="/style-guide">Ecommerce</a>
                   </li>
                   <li>
-                    <a href="/licenses">Licenses</a>
+                    <a href="/licenses">LMS</a>
                   </li>
                   <li>
-                    <a href="/changelog">Changelog</a>
+                    <a href="/changelog">SEO</a>
                   </li>
                   <li>
-                    <a href="/instructions">Instructions</a>
-                  </li>
-                  <li>
-                    <a href="/animations">Animations</a>
+                    <a href="/instructions">SMM</a>
                   </li>
                 </ul>
               </div>
               <div className="column">
                 <h5>Follow Us</h5>
                 <ul>
+                 
                   <li>
-                    <a href="https://twitter.com">X / Twitter</a>
+                    <a href="https://instagram.com.tarlose.official">Instagram</a>
                   </li>
                   <li>
-                    <a href="https://instagram.com">Instagram</a>
+                    <a href="https://www.facebook.com/people/Tarlose/61563414116294/?sk=about">Facebook</a>
                   </li>
                   <li>
-                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://linkedin.com/company/Tarlose">LinkedIn</a>
                   </li>
-                  <li>
-                    <a href="https://linkedin.com">LinkedIn</a>
-                  </li>
-                  <li>
-                    <a href="https://youtube.com">YouTube</a>
-                  </li>
+                 
                 </ul>
               </div>
             </div>

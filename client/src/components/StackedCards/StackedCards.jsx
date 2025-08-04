@@ -36,15 +36,15 @@ const StackedCards = () => {
         <div className="stacked-heading-container">
           <div className="tag-container">
             <div className="tag">
-              <span>•</span> Why choose me
+              <span>•</span> Why choose Us
             </div>
           </div>
 
           <div className="stacked-content-container">
             <h2 className="m-0">
-              Why Me as <span className="eco-sub">Design Partner</span>
+              Why Tarlose as <span className="eco-sub">Your Partner</span>
             </h2>
-            <p className="m-0">Why partner with Me for Design Excellence</p>
+            {/* <p className="m-0">Why partner with Me for Design Excellence</p> */}
           </div>
         </div>
 

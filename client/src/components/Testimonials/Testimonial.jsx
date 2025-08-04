@@ -62,7 +62,7 @@ const Testimonial = () => {
                 </div>
                 <div className="Testimonial-content-container">
                   <h2 className="m-0">
-                    Clients <span className="eco-sub">Love Me</span>
+                    Clients <span className="eco-sub">LOVE US</span>
                   </h2>
                   <p className="m-0">
                     Trusted by 100+ Happy clients, adding $250M+ in revenue.{" "}

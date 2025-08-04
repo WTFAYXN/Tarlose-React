@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Cta from "../../components/Cta/Cta";
 import "./ContactUs.css";
 import tarloseIcon from "./tarloseIcon.png";
 
@@ -152,8 +154,8 @@ const ContactUs = () => {
                     height="20"
                   />
                   <div className="text-start">
-                    <h6 className="mb-0 text-white">Jane Doe</h6>
-                    <small className="text-secondary">CEO, InnovaAI</small>
+                    <h6 className="mb-0 text-white">Ayan Sayad</h6>
+                    <small className="text-secondary">CEO, Tarlose</small>
                   </div>
                 </div>
               </div>
@@ -175,13 +177,13 @@ const ContactUs = () => {
                     height="20"
                   />
                   <div className="text-start">
-                    <h6 className="mb-0 text-white">Sarah Lee</h6>
-                    <small className="text-secondary">CTO, Tarlose</small>
+                    <h6 className="mb-0 text-white">Huzaifa Ansari</h6>
+                    <small className="text-secondary">CTO & COO, Tarlose</small>
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
-                <h3 className="text-white mb-4">A Message from Our CEO</h3>
+                <h3 className="text-white mb-4">A Message from Our CMO</h3>
 
                 <p className="text-secondary fs-5 px-3 px-md-5">
                   “We believe in creating digital ecosystems that drive results.
@@ -197,8 +199,8 @@ const ContactUs = () => {
                     height="20"
                   />
                   <div className="text-start">
-                    <h6 className="mb-0 text-white">Sarah Lee</h6>
-                    <small className="text-secondary">CTO, Tarlose</small>
+                    <h6 className="mb-0 text-white">Hamdan Shaikh</h6>
+                    <small className="text-secondary">CMO, Tarlose</small>
                   </div>
                 </div>
               </div>
@@ -225,9 +227,9 @@ const ContactUs = () => {
         </div>
 
         {/* Join the Future Section */}
-        <div className="container my-5">
+        {/* <div className="container my-5">
           <div className="future-hero  d-flex align-items-center justify-content-between flex-column flex-md-row text-white ">
-            {/* Text & Button Section */}
+         
             <div className="hero-content text-center text-md-start">
               <h2 className="future-heading mb-3">
                 Join the Future of Music Production Today
@@ -245,7 +247,7 @@ const ContactUs = () => {
               </button>
             </div>
 
-            {/* Right-side Image */}
+           
             <div className="hero-image d-none d-md-block">
               <img
                 src="https://framerusercontent.com/images/MecLliNBqre50VslV9Cc8fZOqkY.png?scale-down-to=512"
@@ -255,7 +257,11 @@ const ContactUs = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
+
+        <Cta />
+        
+        <Footer />
       </div>
     </>
   );

@@ -7,7 +7,7 @@ const Cta = () => {
       <div className="section-cta">
         <div className="cta-container container">
           <h2>
-            Start your project with Alture <span className="cta-span">®</span>
+            Start your project with Tarlose <span className="cta-span">®</span>
           </h2>
           <button type="button" className="nav-btn">
             <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
