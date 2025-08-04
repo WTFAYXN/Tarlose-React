@@ -30,32 +30,40 @@ const DesignProcess = () => {
     <div className="Design-process-container container d-flex">
       <div className="left-design-container">
         <div className='design-img-container'>
-            <img
-          src="https://framerusercontent.com/images/djbcRHCD89IflJ1okJAa1J65cuM.png"
-          alt="Design Process"
-          className="design-img"
-        />
+          <img
+            src="https://framerusercontent.com/images/djbcRHCD89IflJ1okJAa1J65cuM.png"
+            alt="Design Process"
+            className="design-img"
+          />
 
         </div>
-        
+
       </div>
 
       <div className="right-design-container">
         <div className="tag-container">
-            <div className='tag'>
-                <span>•</span> Our Process
-            </div>
-          
+          <div className='tag'>
+            <span>•</span> Our Process
+          </div>
+
         </div>
         <h2 className="process-heading eco-sub">Process</h2>
         <p className="process-description">
           Crafting bold visuals that inspire and elevate brands with thought process.
         </p>
         <div className="button-group">
-          <button className="btn shining-button"><a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
-              Book a Free Call
-            </a></button>
-          <button className="btn shining-button"><a href="/#work">See Projects</a></button>
+          <button className="btn shining-button"><a href="https://calendly.com/ayansayad2005/30min?month=2024-12" target="_blank">
+            Book a Free Call
+          </a></button>
+          <button
+            className="btn shining-button"
+            onClick={() => {
+              console.log("Button clicked");
+              document.getElementById("work-section").scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            See Projects
+          </button>
         </div>
 
         <hr className='design-hr my-4' />
@@ -66,7 +74,7 @@ const DesignProcess = () => {
               <div className="step-header">
                 <span className="step-icon">{step.icon}</span>
                 <h5>{step.title}</h5>
-                
+
               </div><hr className="step-line m-0" />
               <p className="step-description">{step.description}</p>
               <span className="step-number">{step.id}</span>

@@ -82,11 +82,19 @@ const Testimonial = () => {
                 <hr className="Testimonial-divider" />
                 <div className="button-group Testimonial-btn">
                   <button className="btn shining-button">
-                    <a href="https://calendly.com/ayansayad2005/30min?month=2024-12">
+                    <a href="https://calendly.com/ayansayad2005/30min?month=2024-12" target="_blank">
                       Book a Free Call
                     </a>
                   </button>
-                  <button className="btn shining-button">See Projects</button>
+                  <button
+                    className="btn shining-button"
+                    onClick={() => {
+                      console.log("Button clicked");
+                      document.getElementById("work-section").scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    See Projects
+                  </button>
                 </div>
               </div>
             </div>

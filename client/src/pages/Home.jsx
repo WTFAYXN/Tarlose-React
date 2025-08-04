@@ -1,4 +1,4 @@
-import  { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
@@ -209,14 +209,17 @@ const Home = () => {
 
             <div className="d-flex justify-content-center">
               <div id="btn-fade">
-                <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing">
+                {/* <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing"> */}
                   <button
                     className="shining-button px-3 py-2 me-3"
                     type="button"
+                    onClick={() => {
+                      document.getElementById("work-section").scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     Our Works
                   </button>
-                </a>
+                {/* </a> */}
                 <a href="https://wa.link/qyts69">
                   <button className="shining-button px-3 py-2" type="button">
                     Contact Us
@@ -295,7 +298,7 @@ const Home = () => {
                         Contact Us
                       </button>
                     </Link>
-                    <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing">
+                    <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing" target="_blank">
                       <button
                         className="btn btn-portfolio px-3 py-2"
                         type="button"
@@ -333,7 +336,7 @@ const Home = () => {
                         Contact Us
                       </button>
                     </Link>
-                    <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing">
+                    <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing" target="_blank">
                       <button
                         className="btn btn-portfolio px-3 py-2"
                         type="button"
@@ -370,7 +373,7 @@ const Home = () => {
                         Contact Us
                       </button>
                     </Link>
-                    <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing">
+                    <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing" target="_blank">
                       <button
                         className="btn btn-portfolio px-3 py-2"
                         type="button"
@@ -477,7 +480,7 @@ const Home = () => {
         </div>
       </div> */}
 
-      <Work id="work" />
+      <Work />
 
       {/* <!-- About Us  --> */}
 
