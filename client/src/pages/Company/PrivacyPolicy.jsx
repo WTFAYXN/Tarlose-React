@@ -37,7 +37,7 @@ const PrivacyPolicy =() => {
         </script>
       </Helmet>
 
-        <div className="container mt-5 Terms-container">
+        <div className="container  Terms-container">
         <h1 className="text-center">Privacy Policy</h1>
         <p className=" text-center">Effective Date: 1st July 2024.</p>
 

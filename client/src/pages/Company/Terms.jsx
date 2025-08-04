@@ -36,7 +36,7 @@ const Terms =() => {
         </script>
       </Helmet>
       
-         <div class="container mt-5 mb-5 Terms-container">
+         <div class="container mb-5 Terms-container">
         <h1 class="text-center">Terms and Conditions</h1>
         <p class=" text-center">Effective Date: 1st July 2024.</p>
         
