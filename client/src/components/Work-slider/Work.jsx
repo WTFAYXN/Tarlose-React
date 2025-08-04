@@ -42,7 +42,7 @@ const Work = () => {
 
   return (
     <>
-      <div className="racesWrapper text-white" id="Work">
+      <div className="racesWrapper text-white" id="work-section">
         <div className="races">
           <div className="work-cont">
             <h2 className="work-heading">

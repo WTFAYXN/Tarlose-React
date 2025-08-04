@@ -28,9 +28,9 @@ function App() {
           {/* <Route path="/career" element={<Careers />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/terms-of-service" element={<Terms />} />
           <Route path="/blogs" element={<BlogLive />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/blog/:slug" element={<Blog />} />
