@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import "./about.css";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const aboutData = {
   hero: {
@@ -64,24 +61,6 @@ const aboutData = {
 };
 
 const About = () => {
-  useEffect(() => {
-    gsap.to(".about-parent", {
-      scrollTrigger: {
-        trigger: ".about-founders",
-        start: "top 60%",
-        end: "bottom 40%",
-        toggleActions: "play reverse play reverse",
-      },
-      backgroundColor: "#ffffff",
-      color: "#000000",
-      duration: 0.8,
-      ease: "power2.out",
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   return (
     <>
