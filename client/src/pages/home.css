@@ -80,6 +80,11 @@
   transition: background 0.3s ease, border 0.3s ease;
 }
 
+.trans-btn {
+  background:transparent !important;
+
+}
+
 .shining-button::before,
 .shining-button::after {
   content: "";

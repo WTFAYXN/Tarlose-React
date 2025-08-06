@@ -42,7 +42,7 @@ const Services = () => {
             </a>
             <a
               href="#bundle"
-              className="btn btn-outline-dark btn-lg shining-button"
+              className="btn btn-outline-dark btn-lg shining-button trans-btn"
             >
               Get the Entire Bundle
             </a>

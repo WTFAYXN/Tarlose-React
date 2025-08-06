@@ -87,7 +87,7 @@ const Testimonial = () => {
                     </a>
                   </button>
                   <button
-                    className="btn shining-button"
+                    className="btn shining-button trans-btn"
                     onClick={() => {
                       console.log("Button clicked");
                       document.getElementById("work-section").scrollIntoView({ behavior: "smooth" });

@@ -221,7 +221,7 @@ const Home = () => {
                   </button>
                 {/* </a> */}
                 <a href="https://wa.link/qyts69">
-                  <button className="shining-button px-3 py-2" type="button">
+                  <button className="shining-button trans-btn px-3 py-2" type="button">
                     Contact Us
                   </button>
                 </a>
