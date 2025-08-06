@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/Logos/tarloseNavLogo.svg";
-import  { useState } from "react";
+import  { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // svgs icons for mega tab items 
 import ecom from "../assets/svgs/ecom.svg";
@@ -16,6 +16,7 @@ import decks from "../assets/svgs/pitch-deck.svg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -117,6 +118,18 @@ const Navbar = () => {
   },
 ];
 
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('nav-link');
+      } else {
+        link.classList.remove('nav-link');
+      }
+    });
+  }, [location]);
 
   return (
     <nav className="navbar navbar-expand-lg">
