@@ -171,11 +171,10 @@
   margin: auto;
   text-align: center;
 }
-.hero-container h2 {
-  font-size: 92px;
-  line-height: 92px;
-  font-weight: 400;
-  font-family: Gilroy, sans-serif;
+.hero-container h1 {
+  font-size: 92px !important;
+  font-weight: 700;
+  line-height: 1;
   margin-bottom: 24px;
 }
 .hero-container p {
