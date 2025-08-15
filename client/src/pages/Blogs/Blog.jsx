@@ -7,6 +7,7 @@ import Cursor from "../../components/Cursor";
 import BlogTabsNav from "../../components/Blog-tabs/BlogTabsNav";
 import "../../components/Blog-tabs/BlogDetailPage.css";
 import logo from "../../assets/Logos/favicon.svg"
+import { Helmet } from "react-helmet";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
