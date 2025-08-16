@@ -8,6 +8,24 @@
   --line-height--tight: 1.2;
 }
 
+/* ContactUs.css */
+.parent-bg-contact {
+  width: 100%; /* Full width */
+  background-color: #0a0a0a; /* Dark background to match your theme */
+  position: relative; /* Establish positioning context for cosmic-aurora */
+}
+
+.cosmic-aurora {
+  position: absolute; /* Absolute positioning to cover the parent */
+  inset: 0; /* Equivalent to top: 0, right: 0, bottom: 0, left: 0 */
+  z-index: 0; /* Stay behind content */
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(56, 189, 248, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse at 60% 20%, rgba(236, 72, 153, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(34, 197, 94, 0.2) 0%, transparent 65%);
+}
+
 .modern-contact-container {
   margin-top: calc(var(--spacing--M) + var(--spacing--S)) !important;
   text-align: center;
@@ -53,11 +71,16 @@
 }
 
 .form-control {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
   color: #fff;
   backdrop-filter: blur(10px);
   border-radius: 10px;
+}
+.form-control:focus {
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+
+ 
 }
 
 .form-label span {
