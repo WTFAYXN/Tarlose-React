@@ -21,30 +21,29 @@ const Services = () => {
         <div className="hero-content text-center py-5">
           <div className="badge text-white d-inline-block mb-3">
             <span className="text-decoration-line-through off-style">
-              $200 OFF
+              10% OFF
             </span>
-            On All Notion Templates
+            On All BUSINESS PLANS
           </div>
           <h1 className="service-heading mb-3">
-            Transform Productivity with Premium{" "}
-            <span className="eco-sub">Notion Templates</span>{" "}
+            Launch Your Online Store {" "}
+            <span className="eco-sub">With Confidence</span>{" "}
           </h1>
           <p className="lead mb-4 p-0">
-            Level up your workflow and simplify your life with beautifully
-            designed Notion templates built for results.
+            Build and grow eCommerce websites that deliver seamless shopping experiences and drive real customer conversions
           </p>
           <div>
             <a
               href="#templates"
               className="btn btn-dark btn-lg me-3 shining-button"
             >
-              Explore Templates
+             Check Value Proposition
             </a>
             <a
               href="#bundle"
               className="btn btn-outline-dark btn-lg shining-button trans-btn"
             >
-              Get the Entire Bundle
+              Pick a Plan
             </a>
           </div>
           <div className="signed-container">

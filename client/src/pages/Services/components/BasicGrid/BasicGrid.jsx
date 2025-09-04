@@ -20,27 +20,27 @@ const Item = styled(Paper)(({ theme }) => ({
 const gridData = [
   {
     id: 1,
-    title: "Versatile",
+    title: "Mobile-Ready Designs",
     description:
-      "Pre-built templates designed to suit a variety of needs, from personal organization to team collaboration.",
+      "Your store adapts to every screen, providing a smooth shopping experience on phones, tablets, and desktops.",
     isLarge: true,
     svgPath:
       "M200,36H56A20,20,0,0,0,36,56V200a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V56A20,20,0,0,0,200,36Zm-4,80H140V60h56ZM116,60v56H60V60ZM60,140h56v56H60Zm80,56V140h56v56Z",
   },
   {
     id: 2,
-    title: "Beginner-Friendly",
+    title: "Trusted Payment Integrations",
     description:
-      "Tools and templates to enhance team productivity and seamless collaboration.",
+      "Offer secure, flexible payment options like PayPal, Stripe, credit cards, and regional gateways—building trust and boosting conversions.",
     isLarge: false,
     svgPath:
       "M200,36H56A20,20,0,0,0,36,56V200a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V56A20,20,0,0,0,200,36Zm-4,80H140V60h56ZM116,60v56H60V60ZM60,140h56v56H60Zm80,56V140h56v56Z",
   },
   {
     id: 3,
-    title: "Fully Customizable",
+    title: "Real-Time Inventory Management",
     description:
-      "Easily adapt templates to fit your unique workflow and preferences.",
+      "Stay in control with intuitive tools to track, update, and manage products with ease.",
     isLarge: false,
     svgPath:
       "M200,36H56A20,20,0,0,0,36,56V200a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V56A20,20,0,0,0,200,36Zm-4,80H140V60h56ZM116,60v56H60V60ZM60,140h56v56H60Zm80,56V140h56v56Z",
@@ -86,9 +86,9 @@ export default function BasicGrid() {
     <Box sx={{ flexGrow: 1 }} className="container basic-grid-container">
       <div className="services-header d-flex flex-column text-center">
         <h2>
-          Everything You Need, <span className="eco-sub">All in One Place</span>
+          Core Features & <span className="eco-sub">Benefits</span>
         </h2>
-        <p>Explore versatile templates crafted for any purpose.</p>
+        <p>Discover the tools and technology powering successful online stores:</p>
       </div>
       <Grid container spacing={2}>
         {/* Large grid item */}

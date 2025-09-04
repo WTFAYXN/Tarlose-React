@@ -30,17 +30,17 @@ const PricingComponent = () => {
     {
       title: "Custom Templates",
       price: "$499",
-      description: "Tailored templates designed specifically to fit your unique workflow.",
+      description: "All plans require the client to provide their own design and branding materials.",
     },
     {
       title: "Priority Support",
       price: "$89",
-      description: "Get instant answers and dedicated help whenever you need it.",
+      description: "Hosting and domain charges are not included unless specified.",
     },
     {
       title: "Template Guides",
       price: "$19",
-      description: "Step-by-step guides to maximize your efficiency with Notion templates.",
+      description: "Custom design services available as add-ons upon request.",
     },
   ]);
 
@@ -60,38 +60,47 @@ const PricingComponent = () => {
   const plans = [
     {
       name: "Starter",
-      price: "€20",
+      price: "₹17,000",
       paymentType: "One-time payment",
-      targetAudience: "Individuals & small teams",
+      targetAudience: "For new entrepreneurs and small businesses launching their first online store",
       features: [
-        "5 Essential Templates",
-        "Easy integration with Notion",
-        "Basic setup guide",
-        "Lifetime access",
+        "Fully functional ecommerce platform setup",
+        "Basic SEO setup (on-page essentials)",
+        "Client supplies design and branding assets",
+        "Integration with up to 2 payment gateways",
+        "Product upload assistance (up to 15 products)",
+        "Hosting, Platform and domain charges handled by client",
+        "Email support for 1 month"
       ],
     },
     {
-      name: "Pro",
-      price: "€45",
+      name: "Growing Businesses",
+      price: "₹36,000",
       paymentType: "One-time payment",
-      targetAudience: "Professionals & creators",
+      targetAudience: "Ideal for expanding businesses seeking a complete online presence.",
       features: [
-        "All templates included",
-        "Lifetime updates",
-        "Priority feature requests",
-        "Extended setup documentation",
+        "Complete ecommerce platform setup",
+        "Advanced SEO setup (on-page + basic off-page tips)",
+        "Integration with up to 4 payment gateways",
+        "Product upload assistance (up to 50 products)",
+        "Priority email & chat support for 3 months",
+        "Hosting, Platform and domain charges handled by client"
       ],
     },
     {
-      name: "Creator+",
-      price: "€60",
-      paymentType: "One-time payment",
+      name: "Established Brands",
+      price: "₹1,20,000+",
+      paymentType: "For established brands needing scalability and advanced features.",
       targetAudience: "Individuals & small teams",
       features: [
-        "Everything in Pro",
-        "Commercial use license",
-        "Notion automation templates",
-        "Monthly bonus templates",
+        "End-to-end ecommerce platform setup",
+        "Full SEO optimization (on-page + strategy guidance)",
+        "Advanced analytics dashboard",
+        "Multi-store and multi-language support",
+        "Product upload assistance (up to 150 products)",
+        "Tech support for 6 months (dedicated channel)",
+        "Hosting and domain charges handled by us",
+        "Custom integrations (client to provide design assets and requirements)",
       ],
     },
   ];
@@ -103,10 +112,10 @@ const PricingComponent = () => {
           <h2>
             Simple Pricing for <span className="eco-sub">All Your Needs</span>
           </h2>
-          <p>
+          {/* <p>
             Get access to powerful Notion templates and tools to organize your
             life and work effortlessly.
-          </p>
+          </p> */}
         </div>
 
         <div className="pricing-container">
@@ -232,19 +241,19 @@ const PricingComponent = () => {
 
         <div className="add-on-parent-container">
           <div className="add-on-heading-conatiner">
-            <h2 className="m-0">Add-ons</h2>
+            <h2 className="m-0 mb-4">Terms</h2>
           </div>
           <div className="add-on-container">
             {addOns.map((addOn, index) => (
               <div className="add-on" key={index}>
-                <div className="add-on-pricing">
+                {/* <div className="add-on-pricing">
                   <h5>{addOn.price}</h5>
-                </div>
+                </div> */}
                 <div className="add-on-icon">
                 <i class="bi bi-plus-circle-fill"></i>
                 </div>
                 <div className="add-on-content">
-                  <h5>{addOn.title}</h5>
+                  {/* <h5>{addOn.title}</h5> */}
                   <p>{addOn.description}</p>
                 </div>
               </div>

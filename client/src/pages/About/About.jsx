@@ -8,16 +8,16 @@ import "./about.css";
 const aboutData = {
   hero: {
     tagline: "We get it done.",
-    title: "CONCEPTS DESIGNED TO MAKE AN IMPACT",
-    titleHighlight: "DESIGNED",
+    title: "Driven by Purpose. Built for Impact.",
+    titleHighlight: "Purpose", 
   },
   company: {
     title: "ABOUT Tarlose",
     experience: {
-      heading: "not old, just experienced.",
+      heading: "Young, Driven, and Unstoppable.",
       description: [
-        "We've been around since 2009, and we've seen the industry change and grow.",
-        "We have collaborated on an impressive list of high-profile interactive projects through partnerships with some of the top advertising agencies and brands in the world. Our work has ranged from entertainment and consumer goods, to manufacturing, technology, and more.",
+        "Tarlose was founded in 2024 by Ayan, Huzaifa and Hamdan.",
+        "Our vision is simple: to digitalize businesses and empower startups with expert tech solutions, becoming the hands-on support and strategic partner today’s founders need—no in-house CTO required.",
       ],
       cta: {
         text: "Book a Call",
@@ -26,32 +26,32 @@ const aboutData = {
     },
   },
   founders: {
-    title: "A little about the",
-    highlight: "FOUNDERS",
+    title: "The Minds Behind Tarlose",
+    // highlight: "Tarlose",
     list: [
       {
-        name: "Ayan Khan",
+        name: "Ayan Sayad",
         position: "Co-founder",
         description:
-          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+          "Ayan is a developer, designer, and entrepreneur with a passion for building digital experiences that work. With hands-on expertise in website design, development, and strategy, he leads Tarlose with a client-first approach focused on transparency and results.",
         image:
           "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
         alt: "Ayan",
       },
       {
-        name: "Ayan Khan",
+        name: "Huzaifa Ansari",
         position: "Co-founder",
         description:
-          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+          "Huzaifa ensures everything at Tarlose runs like clockwork. From streamlining operations to overseeing project execution, he brings structure and efficiency to the team, making sure client goals are met with precision and reliability.",
         image:
           "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
         alt: "Ayan",
       },
       {
-        name: "Ayan Khan",
+        name: "Hamdan Shaikh",
         position: "Co-founder",
         description:
-          "Lynn has over 15 years of experience in Online Marketing, Advertising and Creative Production...",
+          "Hamdan is the face of Tarlose at networking events and industry meetups, building relationships and bringing in new clients. With a talent for connecting with people and understanding business needs, he drives growth by turning conversations into long-term partnerships.",
         image:
           "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
         alt: "Ayan",

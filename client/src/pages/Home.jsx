@@ -199,11 +199,9 @@ const Home = () => {
             </div>
 
             <div className="hero-container">
-              <h1> Team that you <br></br>need Indeed</h1>
+              <h1> Your Digital Growth <br></br>Starts Right Here</h1>
               <p>
-                Elevate your business with custom identity and package design.
-                Showcase your story through bold visuals and strategic design
-                solutions.
+                Unlock growth with a team that fuses creativity and technology. We build standout brands, high-performing websites, and marketing strategies that set you apart in today’s competitive market.
               </p>
             </div>
 
@@ -217,12 +215,12 @@ const Home = () => {
                       document.getElementById("work-section").scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    Our Works
+                    Explore Our Works
                   </button>
                 {/* </a> */}
                 <a href="https://wa.link/qyts69">
                   <button className="shining-button trans-btn px-3 py-2" type="button">
-                    Contact Us
+                    Schedule A Call
                   </button>
                 </a>
               </div>
@@ -295,7 +293,7 @@ const Home = () => {
                         className="btn btn-contact px-3 py-2 "
                         type="button"
                       >
-                        Contact Us
+                        Schedule A Call
                       </button>
                     </Link>
                     <Link to="https://drive.google.com/file/d/1bq5tIDQ3JDOzeVTzt4V0bh7t3L2m67oz/view?usp=sharing" target="_blank">
@@ -333,7 +331,7 @@ const Home = () => {
                         className="btn btn-contact px-3 py-2 "
                         type="button"
                       >
-                        Contact Us
+                        Schedule A Call
                       </button>
                     </Link>
                     <Link to="https://drive.google.com/file/d/1fOPGtYa2782bg3z0HDg8DHZjn0xL5lSi/view?usp=sharing" target="_blank">
@@ -370,7 +368,7 @@ const Home = () => {
                         className="btn btn-contact px-3 py-2 "
                         type="button"
                       >
-                        Contact Us
+                        Schedule A Call
                       </button>
                     </Link>
                     <Link to="https://drive.google.com/file/d/1kXAKKGTHVVMPII97uGoviSdxtBHmK_nB/view?usp=sharing" target="_blank">

@@ -4,24 +4,22 @@ import './DesignProcess.css';
 const processSteps = [
   {
     id: 1,
-    icon: '💡',
-    title: 'Define Your Vision',
-    description:
-      'Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly.',
+    // icon: '💡',
+    title: 'Discover & Define',
+    description: "We start every project by listening to your goals, analyzing your challenges, and mapping out a clear strategy. Whether it's building a website, crafting visuals, or planning your marketing, our team guides you through a focused discovery session to align on expectations, brand, and deliverables.",
   },
   {
     id: 2,
-    icon: '📄',
-    title: 'Submit Your Request',
-    description:
-      'Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity.',
+    // icon: '📄',
+    title: 'Design & Build',
+    description: "With a solid plan in place, we move into design and development. You get transparent updates as our designers, developers, and marketers craft solutions—from prototypes and wireframes to final builds and campaigns. Every step ensures your brand shines and your digital assets work seamlessly.",
   },
   {
     id: 3,
-    icon: '🚀',
-    title: 'Project Delivered',
+    // icon: '🚀',
+    title: 'Launch & Optimize',
     description:
-      'As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2-3 days. With a keen eye for detail and a passion for quality, I bring your vision to life—on time and beyond expectations.',
+      "Once everything's tested and approved, we launch your website, design assets, or campaigns into the market. Our work isn’t done—ongoing analysis and support help you adapt, grow, and maximize results. We're here to refine, scale, and ensure lasting impact.",
   },
 ];
 
@@ -47,13 +45,13 @@ const DesignProcess = () => {
           </div>
 
         </div>
-        <h2 className="process-heading eco-sub">Process</h2>
+        <h2 className="process-heading eco-sub">How We Deliver Results</h2>
         <p className="process-description">
-          Crafting bold visuals that inspire and elevate brands with thought process.
+          Our proven process keeps your project efficient, creative, and on track. From deep discovery to seamless execution, we focus on clarity and collaboration—bringing your ideas to life across web development, graphic design, and digital marketing.
         </p>
         <div className="button-group">
           <button className="btn shining-button"><a href="https://calendly.com/ayansayad2005/30min?month=2024-12" target="_blank">
-            Book a Free Call
+            Schedule A Call
           </a></button>
           <button
             className="btn shining-button trans-btn "

@@ -33,7 +33,7 @@ const FAQ = () => {
                   aria-expanded="false"
                   aria-controls="collapseOne"
                 >
-                  What services does Tarlose offer?
+                  How long does it take to build an eCommerce website?
                 </button>
               </h2>
               <div
@@ -42,17 +42,7 @@ const FAQ = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Tarlose offers comprehensive digital solutions including:
-                  <ul>
-                    <li>Custom Website Development</li>
-                    <li>Mobile App Development</li>
-                    <li>UI/UX Design</li>
-                    <li>Digital Marketing</li>
-                    <li>Tech Consultation</li>
-                    <li>Graphic Design</li>
-                  </ul>
-                  Our team of experts delivers tailored solutions to help
-                  businesses thrive in the digital landscape.
+                  Most stores are ready to launch in 2-6 weeks, depending on complexity and inventory size.
                 </div>
               </div>
             </div>
@@ -66,7 +56,7 @@ const FAQ = () => {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  What makes Tarlose different from other tech companies?
+                  Which platforms do you support?
                 </button>
               </h2>
               <div
@@ -75,16 +65,7 @@ const FAQ = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Tarlose stands out through:
-                  <ul>
-                    <li>Personalized approach to each project</li>
-                    <li>Cutting-edge technology implementation</li>
-                    <li>Dedicated project managers</li>
-                    <li>Transparent communication</li>
-                    <li>Post-project support and maintenance</li>
-                  </ul>
-                  We focus on delivering value-driven solutions that help our
-                  clients achieve their business objectives.
+                  We work with Shopify, WooCommerce, Magento, and custom solutions—always recommending what fits your needs.
                 </div>
               </div>
             </div>
@@ -98,7 +79,7 @@ const FAQ = () => {
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  What industries does Tarlose specialize in?
+                  Can I migrate my existing store?
                 </button>
               </h2>
               <div
@@ -107,17 +88,7 @@ const FAQ = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  We serve diverse industries including:
-                  <ul>
-                    <li>Real Estate - Property management platforms</li>
-                    <li>E-commerce - Custom shopping solutions</li>
-                    <li>Healthcare - Patient management systems</li>
-                    <li>Education - Learning management systems</li>
-                    <li>Finance - Secure payment integrations</li>
-                    <li>Startups - MVP development</li>
-                  </ul>
-                  Each solution is customized to meet industry-specific
-                  requirements and challenges.
+                  Absolutely. We handle migrations with zero downtime and full data preservation.
                 </div>
               </div>
             </div>

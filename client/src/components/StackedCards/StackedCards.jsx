@@ -5,28 +5,36 @@ import { CheckCircle, XCircle } from "lucide-react"; // Icons for Check & Cross
 const StackedCards = () => {
   const cards = [
     {
-      leftTitle: "Skilled Professional",
+      leftTitle: "Strategic Partnership",
       leftDesc:
-        "Gain access to top-tier talent with years of experience, ensuring flawless execution",
-      rightTitle: "Amateur Designer",
+        "We become your long-term partners, understanding your goals and optimizing for success at every step.",
+      rightTitle: "Transactional Service",
       rightDesc:
-        "Lack of experience may result in design inconsistencies and overlooked details",
+        "Many agencies and freelancers deliver one-off projects, with limited investment in your ongoing growth.",
     },
     {
-      leftTitle: "Future-Ready Designs",
+      leftTitle: "Transparent Processes",
       leftDesc:
-        "Crafting modern, scalable designs that grow with your business and stay ahead of trends.",
-      rightTitle: "Outdated Concepts",
+        "Our workflow is crystal clear—regular updates, defined stages, and no unexpected costs.",
+      rightTitle: "Hidden Complexity",
       rightDesc:
-        "Stale designs that don’t reflect current trends or your evolving brand narrative.",
+        "Some Agencies and freelancers often lack structured communication, causing delays and confusion.",
     },
     {
-      leftTitle: "Client-Centric Collaboration",
+      leftTitle: "Full-Spectrum Expertise",
       leftDesc:
-        "Your vision leads the way — I work closely with you to bring ideas to life with precision and creativity.",
-      rightTitle: "Detached Communication",
+        "Our team covers design, development, and marketing, giving you unified results with seamless execution.",
+      rightTitle: "Limited Skillsets",
       rightDesc:
-        "Lack of collaboration and poor feedback loops can result in misaligned outcomes.",
+        "Freelancers usually specialize in one area, requiring you to juggle multiple hires for a single project.",
+    },
+    {
+      leftTitle: "Proactive Support",
+      leftDesc:
+        "We monitor, maintain, and proactively solve issues before they impact your business.",
+      rightTitle: "Reactive Problem-Solving",
+      rightDesc:
+        "Support from others is often afterthought, slow to respond, or ends when the project is delivered.",
     },
   ];
 

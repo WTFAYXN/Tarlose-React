@@ -22,8 +22,8 @@ const HowItWorks = () => {
             </div>
 
             <div className="step-content">
-              <h3>Explore Notionary</h3>
-              <p>Visit our website anytime from your phone or desktop.</p>
+              <h3>Book a Free Consultation</h3>
+              <p>Share your goals and business needs with our expert team.</p>
             </div>
           </div>
         </div>
@@ -37,8 +37,8 @@ const HowItWorks = () => {
             </div>
 
             <div className="step-content">
-              <h3>Explore Notionary</h3>
-              <p>Visit our website anytime from your phone or desktop.</p>
+              <h3>Get Your Custom Store Built</h3>
+              <p>Review designs, approve features, and watch your store come to life.</p>
             </div>
           </div>
         </div>
@@ -52,8 +52,8 @@ const HowItWorks = () => {
             </div>
 
             <div className="step-content">
-              <h3>Explore Notionary</h3>
-              <p>Visit our website anytime from your phone or desktop.</p>
+              <h3>Launch & Growy</h3>
+              <p>Go live with confidence—start selling instantly and get ongoing support to grow.</p>
             </div>
           </div>
         </div>
