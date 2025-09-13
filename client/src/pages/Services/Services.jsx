@@ -113,11 +113,12 @@ const Services = () => {
         </div>
       </header>
 
-      <TemplateSection />
+      <TemplateSection id="value-prop" content={pageData.valueProposition}/>
 
-      <BasicGrid />
+      <BasicGrid services={pageData.additionalServices}/>
+      
 
-      <FullWidthGrid />
+      <FullWidthGrid features={pageData.coreFeatures}/>
 
       <PricingComponent id="pricing" pricing={pageData.pricing}/>
 
