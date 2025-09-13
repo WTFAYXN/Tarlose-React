@@ -8,6 +8,7 @@ const { streamToPromise } = require('./node_modules/sitemap/dist/index');
 const connectDB = require('./src/db'); // Import the connectDB function
 const blogRoutes = require('./src/routes/blog');
 const contactRoutes = require('./src/routes/contact');
+const serviceRoutes = require('./src/routes/service');
 const url = process.env.FRONTEND_URL;
 
 // Load environment variables from .env file
@@ -71,6 +72,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/blogs', blogRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/service', serviceRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

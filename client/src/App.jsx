@@ -36,7 +36,7 @@ function App() {
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/BlogDetailPage/:id" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceSlug" element={<Services />} />
         </Routes>
     </Router>
       </div>

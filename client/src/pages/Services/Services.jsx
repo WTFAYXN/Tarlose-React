@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./Services.css";
 import TemplateSection from "./components/TemplateSection/TemplateSection";
 import BasicGrid from "./components/BasicGrid/BasicGrid";
@@ -12,6 +13,53 @@ import TestimonialSlider from "./components/TestimonialSlider/TestimonialSlider"
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import FAQ from "./components/Faqs/Faq";
 const Services = () => {
+ const { serviceSlug } = useParams(); // 2. Get the slug from the URL
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
+  useEffect(() => {
+    const fetchServiceData = async () => {
+      setLoading(true); // Set loading to true on each new fetch
+      try {
+        // 3. Use the slug to make the API call dynamic
+        console.log("Fetching service data for slug:", serviceSlug);
+        const response = await fetch(`${API_URL}/api/service/${serviceSlug}`);
+        const data = await response.json();
+        console.log("Fetched service data:", data);
+        setPageData(data);
+      } catch (error) {
+        console.error(`Failed to fetch data for ${serviceSlug}:`, error);
+        setPageData(null); // Clear old data on error
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServiceData();
+  }, [serviceSlug]); // 4. Add serviceSlug to the dependency array!
+
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="modern-loading-container">
+          <div className="modern-spinner">
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+          </div>
+          <p className="loading-text">Loading amazing content...</p>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+  
+  if (!pageData) {
+      return <p>Error: Could not load content for this service.</p>;
+  }
   return (
     <>
       <Cursor />
@@ -26,12 +74,11 @@ const Services = () => {
             On All BUSINESS PLANS
           </div>
           <h1 className="service-heading mb-3">
-            Launch Your Online Store {" "}
-            <span className="eco-sub">With Confidence</span>{" "}
-          </h1>
-          <p className="lead mb-4 p-0">
-            Build and grow eCommerce websites that deliver seamless shopping experiences and drive real customer conversions
-          </p>
+          {pageData.header.headline}
+        </h1>
+        <p className="lead mb-4 p-0">
+          {pageData.header.intro}
+        </p>
           <div>
             <a
               href="#templates"
@@ -72,13 +119,13 @@ const Services = () => {
 
       <FullWidthGrid />
 
-      <PricingComponent />
+      <PricingComponent id="pricing" pricing={pageData.pricing}/>
 
       <TestimonialSlider />
 
-      <HowItWorks />
+      <HowItWorks data={pageData.howItWorks}/>
 
-      <FAQ />
+      <FAQ faqs={pageData.faqs} />
 
 
       <Footer />
