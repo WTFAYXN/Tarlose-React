@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import CookieConsentBanner from './components/CookieConsentBanner/CookieConsentBanner';
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/services/:serviceSlug" element={<Services />} />
         </Routes>
     </Router>
+      <CookieConsentBanner />
       </div>
   );
 }
