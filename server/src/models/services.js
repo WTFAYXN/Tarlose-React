@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const { Schema } = mongoose;
 
 // Sub-schema for repeatable key-value pairs like value propositions
@@ -89,5 +88,4 @@ const ServiceSchema = new Schema({
 });
 
 const Service = mongoose.model('Service', ServiceSchema);
-
 export default Service;

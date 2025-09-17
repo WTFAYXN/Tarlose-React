@@ -1,14 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const path = require('path');
-const { SitemapStream } = require('sitemap');
-const { streamToPromise } = require('./node_modules/sitemap/dist/index');
-const connectDB = require('./src/db'); // Import the connectDB function
-const blogRoutes = require('./src/routes/blog');
-const contactRoutes = require('./src/routes/contact');
-const serviceRoutes = require('./src/routes/service');
+import express from 'express';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import path from 'path';
+import { SitemapStream } from 'sitemap';
+import { fileURLToPath } from 'url';
+import { streamToPromise } from '../server/node_modules/sitemap/dist/index.js';
+import connectDB from './src/db.js';
+import blogRoutes from './src/routes/blog.js';
+import contactRoutes from './src/routes/contact.js';
+import serviceRoutes from './src/routes/service.js';
 const url = process.env.FRONTEND_URL;
 
 // Load environment variables from .env file
@@ -32,6 +33,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from uploads directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Array of URLs to be included in the sitemap

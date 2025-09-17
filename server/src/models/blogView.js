@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const blogViewSchema = new mongoose.Schema({
     blog: {
@@ -21,4 +21,5 @@ const blogViewSchema = new mongoose.Schema({
 // Create a compound index to ensure one view per user per blog
 blogViewSchema.index({ blog: 1, user: 1 }, { unique: true });
 
-module.exports = mongoose.model('BlogView', blogViewSchema); 
+const BlogView = mongoose.model('BlogView', blogViewSchema);
+export default BlogView;

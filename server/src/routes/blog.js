@@ -1,11 +1,15 @@
-const express = require('express');
 const router = express.Router();
-const Blog = require('../models/blog');
-const BlogView = require('../models/blogView');
-const multer = require('multer');
-const path = require('path');
+import express from 'express';
+import multer from 'multer';
+import path from 'path';
+import Blog from '../models/blog.js';
+import BlogView from '../models/blogView.js';
+import { fileURLToPath } from 'url';
 
 const API_URL = process.env.API_URL || 'http://localhost:5000';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configure multer for image upload
 const storage = multer.diskStorage({
@@ -22,12 +26,10 @@ const upload = multer({ storage: storage });
 
 // Helper function to get user identifier
 const getUserIdentifier = (req) => {
-    // Try to get IP from X-Forwarded-For header (for proxy support)
     const forwardedFor = req.headers['x-forwarded-for'];
     if (forwardedFor) {
         return forwardedFor.split(',')[0].trim();
     }
-    // Fallback to direct IP
     return req.ip || req.connection.remoteAddress;
 };
 
@@ -219,4 +221,4 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-module.exports = router; 
+export default router;
