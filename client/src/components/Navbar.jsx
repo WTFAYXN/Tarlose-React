@@ -8,6 +8,10 @@ import { Link, useLocation } from "react-router-dom";
 import ecom from "../assets/svgs/ecom.svg";
 import coded from "../assets/svgs/code.svg";
 import lms from "../assets/svgs/lms.svg";
+import seo from "../assets/svgs/SEO.svg";
+import smm from "../assets/svgs/SMM.svg";
+import sem from "../assets/svgs/SEM.svg";
+import socialMarketing from "../assets/svgs/Social-marketing.svg";
 import nocode from "../assets/svgs/no-code.svg";
 import posts from "../assets/svgs/social-posts.svg";
 import poster from "../assets/svgs/poster.svg";
@@ -93,25 +97,25 @@ const Navbar = () => {
       {
         title: "Search Engine Optimization",
         description: "Improve search rankings with SEO.",
-        svg: "🔍",
+        svg: seo,
         link: "/services/search-engine-optimization",
       },
       {
         title: "Social Media Management",
         description: "Manage your social media channels.",
-        svg: "📱",
+        svg: smm,
         link: "/services/social-media-management",
       },
       {
         title: "Search Engine Marketing",
         description: "Run ads to boost search visibility.",
-        svg: "💰",
+        svg: sem,
         link: "/services/search-engine-marketing",
       },
       {
         title: "Social Media Marketing",
         description: "Drive engagement through social media ads.",
-        svg: "📢",
+        svg: socialMarketing,
         link: "/services/social-media-marketing",
       },
     ],
