@@ -17,22 +17,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const gridData = [
-  {
-    size: { xs: 12, md: 7 },
-    svgPath: "M128,24C70.1,24,24,70.1,24,128s46.1,104,104,104s104-46.1,104-104S185.9,24,128,24z M160,144H96v-32h64V144z M160,96H96V64h64V96z",
-  },
-  {
-    size: { xs: 12, md: 5 },
-    svgPath: "M184,88c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S197.3,88,184,88z M72,88c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S85.3,88,72,88z M128,160c-26.5,0-48-21.5-48-48s21.5-48,48-48s48,21.5,48,48S154.5,160,128,160z",
-  },
-  {
-    size: { xs: 12, md: 5 },
-    svgPath: "M200,64H56c-4.4,0-8,3.6-8,8v112c0,4.4,3.6,8,8,8h144c4.4,0,8-3.6,8-8V72C208,67.6,204.4,64,200,64z M192,168H64V80h128V168z M88,96H72v16h16V96z M112,96H96v16h16V96z M136,96H120v16h16V96z",
-  },
-  {
-    size: { xs: 12, md: 7 },
-    svgPath: "M200,64H56c-4.4,0-8,3.6-8,8v112c0,4.4,3.6,8,8,8h144c4.4,0,8-3.6,8-8V72C208,67.6,204.4,64,200,64z M184,168H72V80h112V168z M96,96H80v16h16V96z M120,96H104v16h16V96z",
-  },
+  { size: { xs: 12, md: 8 }, svgPath: "M128,24C70.1,24,24,70.1,24,128s46.1,104,104,104s104-46.1,104-104S185.9,24,128,24z M160,144H96v-32h64V144z M160,96H96V64h64V96z" },
+  { size: { xs: 12, md: 4 }, svgPath: "M184,88c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S197.3,88,184,88z M72,88c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S85.3,88,72,88z M128,160c-26.5,0-48-21.5-48-48s21.5-48,48-48s48,21.5,48,48S154.5,160,128,160z" },
+  { size: { xs: 12, md: 4 }, svgPath: "M200,64H56c-4.4,0-8,3.6-8,8v112c0,4.4,3.6,8,8,8h144c4.4,0,8-3.6,8-8V72C208,67.6,204.4,64,200,64z M192,168H64V80h128V168z M88,96H72v16h16V96z M112,96H96v16h16V96z M136,96H120v16h16V96z" },
+  { size: { xs: 12, md: 8 }, svgPath: "M200,64H56c-4.4,0-8,3.6-8,8v112c0,4.4,3.6,8,8,8h144c4.4,0,8-3.6,8-8V72C208,67.6,204.4,64,200,64z M184,168H72V80h112V168z M96,96H80v16h16V96z M120,96H104v16h16V96z" },
 ];
 
 const GridItemContent = ({ title, description, svgPath }) => (
@@ -78,7 +66,7 @@ export default function FullWidthGrid({ features }) {
           features.features.map((item, idx) => {
             const grid = gridData[idx % gridData.length];
             return (
-              <Grid item xs={grid.size.xs} md={grid.size.md} key={idx}>
+              <Grid size={grid.size} key={idx}>
                 <Item>
                   <GridItemContent
                     title={item.title}
@@ -90,7 +78,6 @@ export default function FullWidthGrid({ features }) {
             );
           })}
       </Grid>
-
       <ViewAllbox />
     </Box>
   );

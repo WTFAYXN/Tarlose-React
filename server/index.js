@@ -13,7 +13,7 @@ import serviceRoutes from './src/routes/service.js';
 const url = process.env.FRONTEND_URL;
 
 // Load environment variables from .env file
-dotenv.config();
+dotenv.config({ path: '../.env' });
 connectDB();
 
 const app = express();
