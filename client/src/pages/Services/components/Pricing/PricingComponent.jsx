@@ -24,11 +24,18 @@ const TickMark = () => (
   </svg>
 );
 
-
 const PricingComponent = ({ pricing }) => {
-  // pricing: { code: [...], noCode: [...], terms: [...] }
-  const [activeType, setActiveType] = useState("noCode");
-  if (!pricing || (!pricing.code && !pricing.noCode)) {
+  if (!pricing) {
+    return null;
+  }
+
+  // Get all available pricing types (excluding 'terms')
+  const availableTypes = Object.keys(pricing).filter(key => key !== 'terms' && Array.isArray(pricing[key]) && pricing[key].length > 0);
+  
+  // Set initial active type to the first available type
+  const [activeType, setActiveType] = useState(availableTypes[0] || null);
+
+  if (availableTypes.length === 0) {
     return null;
   }
 
@@ -37,6 +44,11 @@ const PricingComponent = ({ pricing }) => {
 
   const handleTypeClick = (type) => {
     setActiveType(type);
+  };
+
+  // Function to format the display name for buttons
+  const formatTypeName = (type) => {
+    return type.charAt(0).toUpperCase() + type.slice(1).replace(/([A-Z])/g, ' $1');
   };
 
   return (
@@ -49,20 +61,21 @@ const PricingComponent = ({ pricing }) => {
         </div>
 
         <div className="pricing-container">
-          <div className="pricing-btn-container">
-            <button
-              className={`plan-toggle ${activeType === "noCode" ? "active" : ""}`}
-              onClick={() => handleTypeClick("noCode")}
-            >
-              No-Code
-            </button>
-            <button
-              className={`plan-toggle ${activeType === "code" ? "active" : ""}`}
-              onClick={() => handleTypeClick("code")}
-            >
-              Code
-            </button>
-          </div>
+          {/* Only show toggle buttons if there are multiple pricing types */}
+          {availableTypes.length > 1 && (
+            <div className="pricing-btn-container">
+              {availableTypes.map((type) => (
+                <button
+                  key={type}
+                  className={`plan-toggle ${activeType === type ? "active" : ""}`}
+                  onClick={() => handleTypeClick(type)}
+                >
+                  {formatTypeName(type)}
+                </button>
+              ))}
+            </div>
+          )}
+          
           <div className="pricing-cards">
             {plans.length === 0 ? (
               <div className="text-center w-100">No plans available.</div>
