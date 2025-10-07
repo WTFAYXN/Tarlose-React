@@ -72,16 +72,16 @@ const Navbar = () => {
         link: "/services/social-posts",
       },
       {
-        title: "Posters, Brochure",
+        title: "Posters & Brochures",
         description: "Print-ready designs for marketing materials.",
         svg: poster,
-        link: "/services/posters-brochure",
+        link: "/services/posters-brochures",
       },
       {
-        title: "Illustration",
+        title: "Illustrations",
         description: "Custom illustration designs.",
         svg: illustration,
-        link: "/services/illustration",
+        link: "/services/illustrations",
       },
       {
         title: "Pitch Decks",
