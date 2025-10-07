@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-container container">
+        <hr></hr>
         <div className="footer-content">
           <div className="left-footer">
             <div className="footer-logo">
@@ -56,16 +57,16 @@ const Footer = () => {
                 <h5>Services</h5>
                 <ul>
                   <li>
-                    <a href="/style-guide">Ecommerce</a>
+                    <a href="/services/ecommerce-development">Ecommerce</a>
                   </li>
                   <li>
-                    <a href="/licenses">LMS</a>
+                    <a href="/services/lms-development">LMS</a>
                   </li>
                   <li>
-                    <a href="/changelog">SEO</a>
+                    <a href="/services/search-engine-optimization">SEO</a>
                   </li>
                   <li>
-                    <a href="/instructions">SMM</a>
+                    <a href="/services/social-media-marketing">SMM</a>
                   </li>
                 </ul>
               </div>
