@@ -24,10 +24,10 @@ const Services = () => {
       setLoading(true); // Set loading to true on each new fetch
       try {
         // 3. Use the slug to make the API call dynamic
-        console.log("Fetching service data for slug:", serviceSlug);
+        // console.log("Fetching service data for slug:", serviceSlug);
         const response = await fetch(`${API_URL}/api/service/${serviceSlug}`);
         const data = await response.json();
-        console.log("Fetched service data:", data);
+        // console.log("Fetched service data:", data);
         setPageData(data);
       } catch (error) {
         console.error(`Failed to fetch data for ${serviceSlug}:`, error);
@@ -81,13 +81,13 @@ const Services = () => {
         </p>
           <div>
             <a
-              href="#templates"
+              href="#value-prop"
               className="btn btn-dark btn-lg me-3 shining-button"
             >
              Check Value Proposition
             </a>
             <a
-              href="#bundle"
+              href="#pricing"
               className="btn btn-outline-dark btn-lg shining-button trans-btn"
             >
               Pick a Plan
@@ -113,11 +113,15 @@ const Services = () => {
         </div>
       </header>
 
-      <TemplateSection id="value-prop" content={pageData.valueProposition}/>
+      <div id="value-prop">
+        <TemplateSection content={pageData.valueProposition}/>
+      </div>
 
       <FullWidthGrid features={pageData.coreFeatures}/>
 
-      <PricingComponent id="pricing" pricing={pageData.pricing}/>
+      <div id="pricing">
+        <PricingComponent pricing={pageData.pricing}/>
+      </div>
 
       <HowItWorks data={pageData.howItWorks}/>
 
