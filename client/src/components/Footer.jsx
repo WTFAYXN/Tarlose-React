@@ -39,13 +39,13 @@ const Footer = () => {
                 <h5>Website</h5>
                 <ul>
                   <li>
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="/about">About</a>
                   </li>
                   <li>
-                    <a href="/blog">Blogs</a>
+                    <a href="/blogs">Blogs</a>
                   </li>
                   <li>
                     <a href="/contact">Contact</a>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <ul>
                  
                   <li>
-                    <a href="https://instagram.com.tarlose.official">Instagram</a>
+                    <a href="https://www.instagram.com/tarloseofficial/">Instagram</a>
                   </li>
                   <li>
                     <a href="https://www.facebook.com/people/Tarlose/61563414116294/?sk=about">Facebook</a>

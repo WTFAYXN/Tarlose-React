@@ -7,8 +7,8 @@ const router = express.Router();
 router.get('/:serviceSlug', async (req, res) => {
 	try {
 		const { serviceSlug } = req.params;
-        console.log(serviceSlug)
-		console.log("Fetching service for serviceSlug:", serviceSlug);
+        // console.log(serviceSlug)
+		// console.log("Fetching service for serviceSlug:", serviceSlug);
 		// Find by serviceSlug field
 		const service = await Service.findOne({ serviceSlug });
 		if (!service) {
