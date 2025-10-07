@@ -36,9 +36,9 @@ function WhatsNew() {
       <div className="header-title mb-4">
           <h2 className="text-xl font-bold text-gray-800">Most Recent Posts </h2>
         <div>
-          <Link to="/blogs" className="text-blue-600 hover:underline ">
+          {/* <Link to="/blogs" className="text-blue-600 hover:underline ">
             view all Posts
-          </Link>
+          </Link> */}
         </div>
       </div>
       <hr className="hr-blog" />

@@ -115,16 +115,15 @@ const Services = () => {
 
       <TemplateSection id="value-prop" content={pageData.valueProposition}/>
 
-      <BasicGrid services={pageData.additionalServices}/>
-      
-
       <FullWidthGrid features={pageData.coreFeatures}/>
 
       <PricingComponent id="pricing" pricing={pageData.pricing}/>
 
-      <TestimonialSlider />
-
       <HowItWorks data={pageData.howItWorks}/>
+
+      <BasicGrid services={pageData.additionalServices}/>
+
+      <TestimonialSlider />
 
       <FAQ faqs={pageData.faqs} />
 
