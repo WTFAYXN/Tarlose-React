@@ -39,7 +39,7 @@ const Testimonial = () => {
       description: "Happy clients",
     },
     {
-      value: "20+",
+      value: "50+",
       description: "Website Developed",
     },
     {
@@ -122,7 +122,7 @@ const Testimonial = () => {
 
                   <div className="Testimonial-card-content">
                     <div className="Testimonial-rating">
-                      <p className="m-0">{testimonial.rating}</p>
+                      {/* <p className="m-0">{testimonial.rating}</p> */}
                       {[...Array(Math.floor(testimonial.rating))].map(
                         (_, i) => (
                           <svg
