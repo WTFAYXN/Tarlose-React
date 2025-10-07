@@ -1,6 +1,6 @@
 // import React from 'react';
 import './DesignProcess.css';
-
+import Process from '../../assets/homeProcess.jpg';
 const processSteps = [
   {
     id: 1,
@@ -29,7 +29,7 @@ const DesignProcess = () => {
       <div className="left-design-container">
         <div className='design-img-container'>
           <img
-            src="https://framerusercontent.com/images/djbcRHCD89IflJ1okJAa1J65cuM.png"
+            src={Process}
             alt="Design Process"
             className="design-img"
           />

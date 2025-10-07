@@ -8,7 +8,7 @@ import tarloseIcon from "./tarloseIcon.png";
 import axios from "axios";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
-import hamdan from "../../assets/founder/huzaifa.png"
+import hamdan from "../../assets/founder/hamdan.png"
 
 const ContactUs = () => {
   const [firstName, setFirstName] = useState("");

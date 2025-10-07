@@ -5,13 +5,14 @@ import Cursor from "../../components/Cursor";
 import "./about.css";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
-import hamdan from "../../assets/founder/huzaifa.png"
+import hamdan from "../../assets/founder/hamdan.png"
 
+import tarloseLogo from "../../assets/Logos/favicon.ico.png"
 const aboutData = {
   hero: {
-    tagline: "We get it done.",
-    title: "Driven by Purpose. Built for Impact.",
-    titleHighlight: "Purpose", 
+    tagline: "We make digital work for you.",
+    title: "Built on Clarity. Powered by creativity.",
+    titleHighlight: "Clarity.", 
   },
   company: {
     title: "ABOUT Tarlose",
@@ -59,7 +60,7 @@ const aboutData = {
         description:
           "Hamdan is the face of Tarlose at networking events and industry meetups, building relationships and bringing in new clients. With a talent for connecting with people and understanding business needs, he drives growth by turning conversations into long-term partnerships.",
         image:
-          ayan,
+          hamdan,
         alt: "Hamdan Shaikh",
         email: "mailto:admin@tarlose.com",
         linkedin: "https://www.linkedin.com/in/mohammed-hamdan-shaikh"
@@ -88,7 +89,9 @@ const About = () => {
 
         {/* Company Section */}
         <div className="about-tarlose container">
-          <h5 className="text-uppercase">{aboutData.company.title}</h5>
+          <div className="left-about-container">
+            <img src={tarloseLogo} />
+          </div>
           <div className="about-experience-container">
             <h2 className="text-uppercase">{aboutData.company.experience.heading}</h2>
             {aboutData.company.experience.description.map((para, index) => (
