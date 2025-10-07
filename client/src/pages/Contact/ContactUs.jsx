@@ -6,6 +6,9 @@ import Cta from "../../components/Cta/Cta";
 import "./ContactUs.css";
 import tarloseIcon from "./tarloseIcon.png";
 import axios from "axios";
+import ayan from "../../assets/founder/ayan.png"
+import huzaifa from "../../assets/founder/huzaifa.png"
+import hamdan from "../../assets/founder/huzaifa.png"
 
 const ContactUs = () => {
   const [firstName, setFirstName] = useState("");
@@ -205,16 +208,12 @@ const ContactUs = () => {
                 <div className="carousel-item active">
                   <h3 className="text-white mb-4">A Message from Our CEO</h3>
                   <p className="text-secondary fs-5 px-3 px-md-5">
-                    “At InnovaAI, our goal is to push the boundaries of AI
-                    technology to create solutions that simplify and enhance
-                    everyday tasks. We are passionate about innovation and
-                    dedicated to delivering exceptional value to our customers.
-                    Thank you for being part of our journey.”
+                    “At Tarlose, our mission has always been simple to help businesses grow with design, strategy, and technology that actually work. Every project we take on is built on trust, clarity, and results.”
                   </p>
                   <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
                     <img
-                      src="https://randomuser.me/api/portraits/men/32.jpg"
-                      alt="CEO"
+                      src={ayan}
+                      alt="Ayan Sayad"
                       className="rounded-circle"
                       width="20"
                       height="20"
@@ -229,14 +228,12 @@ const ContactUs = () => {
                 <div className="carousel-item">
                   <h3 className="text-white mb-4">A Message from Our CTO</h3>
                   <p className="text-secondary fs-5 px-3 px-md-5">
-                    “We believe in creating digital ecosystems that drive results.
-                    Our mission is to support startups and enterprises in crafting
-                    tech-driven strategies with measurable success.”
+                    “We’re not just building websites or campaigns, we’re building partnerships. Tarlose stands for transparency, creativity, and the belief that good work speaks for itself.”
                   </p>
                   <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
                     <img
-                      src="https://randomuser.me/api/portraits/women/44.jpg"
-                      alt="CTO"
+                      src={huzaifa}
+                      alt="Huzaifa Ansari"
                       className="rounded-circle"
                       width="20"
                       height="20"
@@ -250,14 +247,12 @@ const ContactUs = () => {
                 <div className="carousel-item">
                   <h3 className="text-white mb-4">A Message from Our CMO</h3>
                   <p className="text-secondary fs-5 px-3 px-md-5">
-                    “We believe in creating digital ecosystems that drive results.
-                    Our mission is to support startups and enterprises in crafting
-                    tech-driven strategies with measurable success.”
+                    “Tarlose started with a belief that businesses deserve better, better communication, better design, better results. And that’s what we strive to deliver every single day.”
                   </p>
                   <div className="d-flex align-items-center justify-content-center gap-3 mt-4">
                     <img
-                      src="https://randomuser.me/api/portraits/women/44.jpg"
-                      alt="CMO"
+                      src={hamdan}
+                      alt="Hamdan Shaikh"
                       className="rounded-circle"
                       width="20"
                       height="20"
