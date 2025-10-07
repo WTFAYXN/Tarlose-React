@@ -1,5 +1,6 @@
 import React from "react";
-
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import "./Portfolio.css";
 
 const processSteps = [
@@ -34,7 +35,8 @@ const processSteps = [
 const Portfolio = () => {
   return (
     <>
-      <section className="portfolio-section container">
+    <Navbar />
+      <section className="portfolio-section container" style={{ marginTop: "100px" }}>
         <div className="portfolio-container">
           <div className="portfolio-left-container">
             <h2 className="m-0 eco-sub">Fade</h2>
@@ -93,6 +95,8 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

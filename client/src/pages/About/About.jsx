@@ -3,7 +3,9 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import "./about.css";
-
+import ayan from "../../assets/founder/ayan.png"
+import huzaifa from "../../assets/founder/huzaifa.png"
+import hamdan from "../../assets/founder/huzaifa.png"
 
 const aboutData = {
   hero: {
@@ -17,7 +19,7 @@ const aboutData = {
       heading: "Young, Driven, and Unstoppable.",
       description: [
         "Tarlose was founded in 2024 by Ayan, Huzaifa and Hamdan.",
-        "Our vision is simple: to digitalize businesses and empower startups with expert tech solutions, becoming the hands-on support and strategic partner today’s founders need—no in-house CTO required.",
+        "Our vision is simple: to digitalize businesses and empower startups with expert tech solutions, becoming the hands-on support and strategic partner today’s founders need, no in-house CTO required.",
       ],
       cta: {
         text: "Book a Call",
@@ -35,7 +37,7 @@ const aboutData = {
         description:
           "Ayan is a developer, designer, and entrepreneur with a passion for building digital experiences that work. With hands-on expertise in website design, development, and strategy, he leads Tarlose with a client-first approach focused on transparency and results.",
         image:
-          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
+          ayan,
         alt: "Ayan",
       },
       {
@@ -44,8 +46,8 @@ const aboutData = {
         description:
           "Huzaifa ensures everything at Tarlose runs like clockwork. From streamlining operations to overseeing project execution, he brings structure and efficiency to the team, making sure client goals are met with precision and reliability.",
         image:
-          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
-        alt: "Ayan",
+          huzaifa,
+        alt: "Huzaifa Ansari",
       },
       {
         name: "Hamdan Shaikh",
@@ -53,8 +55,8 @@ const aboutData = {
         description:
           "Hamdan is the face of Tarlose at networking events and industry meetups, building relationships and bringing in new clients. With a talent for connecting with people and understanding business needs, he drives growth by turning conversations into long-term partnerships.",
         image:
-          "https://cdn-wp.thesportsrush.com/2024/06/635c8b75-untitled-design.jpg?format=auto&w=3840&q=75",
-        alt: "Ayan",
+          ayan,
+        alt: "Hamdan Shaikh",
       },
     ],
   },

@@ -1,25 +1,26 @@
 import React from "react";
 import "./Testimonial.css";
-
+import tushar from "../../assets/testimonials/tushar-amorfume.jpg"
+import om from "../../assets/testimonials/Om-QualityAcademy.jpg"
 const Testimonial = () => {
   const testimonials = [
     {
-      name: "Will Smith",
-      company: "Harper Education",
+      name: "Tushar Shankaran",
+      company: "CEO, Necessri",
       rating: 5,
       review:
-        "The designs exceeded our expectations! Every element felt purposeful, creating a seamless and visually stunning brand identity",
+        "The team did an amazing job delivering a complete website portal, and marketplace smooth database migrations, and a crucial luxury car portal quickly. Their full-stack development was spot on, and the developers are super skilled.",
       image:
-        "https://framerusercontent.com/images/eFraHAe16muHsBuOQT8J7PtnM.png",
+        tushar
     },
     {
-      name: "Ikta Sollork",
-      company: "PARAL CEO",
-      rating: 5.0,
+      name: "Om Sharma",
+      company: "Quality Academy",
+      rating: 4,
       review:
-        "The designs exceeded our expectations! Every element felt purposeful, creating a seamless and visually stunning brand identity",
+        "They delivered what they promised and more, over the past 2 months it's been a journey, their input really made a difference they weren't afraid to guide us through the project. They're young, talented, and they have that drive that makes them the best in what they do. Loved their work.",
       image:
-        "https://framerusercontent.com/images/54tqpXnovhmg1DaaTUMYucwnE.png?scale-down-to=1024",
+        om,
     },
     {
       name: "Liloch",
@@ -34,12 +35,12 @@ const Testimonial = () => {
 
   const stats = [
     {
-      value: "100+",
+      value: "50+",
       description: "Happy clients",
     },
     {
-      value: "$250m",
-      description: "revenue added",
+      value: "20+",
+      description: "Website Developed",
     },
     {
       value: "4.8",
