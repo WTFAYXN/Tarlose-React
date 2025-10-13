@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import { Helmet } from "react-helmet";
 
+import searchIcon from "../../assets/svgs/search.svg"
 import WhatsNew from "../../components/Blog-tabs/WhatsNew";
 
 import bgheader from "../../assets/svgs/background-header.svg";
@@ -18,7 +19,6 @@ import {
   FaTwitter,
   FaLinkedin,
   FaComment,
-  FaSearch,
   FaFilter,
 } from "react-icons/fa";
 import WebDev from "../../components/Blog-tabs/WebDev";
@@ -31,6 +31,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 const BlogLive = () => {
   // Load the last active tab from localStorage, default to "whats-new" if not set
   const [activeTab, setActiveTab] = useState(() => localStorage.getItem("blogActiveTab") || "whats-new");
+  const [isSearchActive, setIsSearchActive] = useState(true);
 
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -295,10 +296,20 @@ const BlogLive = () => {
                   </li>
                 </ul>
               </nav>
-              <div className="modern-search-container">
-                <div className="search-icon">
-                  <FaSearch />
-                </div>
+              <div className={`search-bar-container ${isSearchActive ? 'active' : ''}`}>
+                <img 
+                  src={searchIcon}
+                  alt="magnifier"
+                  className="magnifier" 
+                  onClick={() => setIsSearchActive(!isSearchActive)}
+                />
+                <input 
+                  type="text" 
+                  className="input" 
+                  placeholder="Search ..." 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
               </div>
             </div>
           </div>
