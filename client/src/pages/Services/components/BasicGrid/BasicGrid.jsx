@@ -6,14 +6,27 @@ import Grid from "@mui/material/Grid";
 import "./BasicGrid.css";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: (theme.vars ?? theme).palette.text.secondary,
-  ...theme.applyStyles("dark", {
-    backgroundColor: "#1A2027",
-  }),
+  backgroundColor: 'rgb(13, 13, 13) !important',
+  borderRadius: '12px !important',
+  border: '1px solid rgba(255, 255, 255, 0.5) !important',
+  color: '#fff !important',
+  padding: theme.spacing(2.5),
+  textAlign: 'left',
+  display: 'flex',
+  flexDirection: 'column',
+  height: 'min-content',
+  justifyContent: 'center',
+  overflow: 'hidden',
+  position: 'relative',
+  '& h3': {
+    color: '#fff',
+    marginBottom: '10px',
+  },
+  '& p': {
+    color: '#f8f8f8b1',
+    fontSize: '16px',
+    lineHeight: '1.5',
+  },
 }));
 
 // Predefined SVG paths to be assigned to the services.

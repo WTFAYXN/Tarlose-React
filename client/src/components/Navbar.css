@@ -162,6 +162,7 @@ h6 {
 .list-unstyled li:hover {
   /* background-color: #8d6a9f; */
   border-radius: 10px;
+  padding-left: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

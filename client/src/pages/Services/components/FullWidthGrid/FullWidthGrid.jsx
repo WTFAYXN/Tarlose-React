@@ -4,16 +4,30 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ViewAllbox from '../ViewAllbox/ViewAllbox';
+import './FullWidthGrid.css';
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#1a1a1a',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: (theme.vars ?? theme).palette.text.secondary,
-  ...theme.applyStyles('dark', {
-    backgroundColor: '#1A2027',
-  }),
+  backgroundColor: 'rgb(13, 13, 13) !important',
+  borderRadius: '12px !important',
+  border: '1px solid rgba(255, 255, 255, 0.5) !important',
+  color: '#fff !important',
+  padding: theme.spacing(2.5),
+  textAlign: 'left',
+  display: 'flex',
+  flexDirection: 'column',
+  height: 'min-content',
+  justifyContent: 'center',
+  overflow: 'hidden',
+  position: 'relative',
+  '& h3': {
+    color: '#fff',
+    marginBottom: '10px',
+  },
+  '& p': {
+    color: '#f8f8f8b1',
+    fontSize: '16px',
+    lineHeight: '1.5',
+  },
 }));
 
 const gridData = [
@@ -35,7 +49,7 @@ const GridItemContent = ({ title, description, svgPath }) => (
           width: "100%",
           height: "100%",
           display: "inline-block",
-          fill: "rgb(26, 26, 26)",
+          fill: "rgb(255, 255, 255)",
           color: "rgb(26, 26, 26)",
           flexShrink: 0,
         }}

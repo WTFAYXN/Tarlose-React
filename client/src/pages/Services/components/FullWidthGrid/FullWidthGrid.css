@@ -6,11 +6,6 @@
   gap: 40px;
 }
 
-.large-basic-grid-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .left-basic-grid {
   text-align: start;
   display: flex;
@@ -28,11 +23,25 @@
   width: 50px;
 }
 
-.svg-container {
-  height: 150px;
-  width: 150px;
+/* Override MUI Paper styling to match TemplateSection styling */
+.MuiPaper-root {
+  background-color: rgb(13, 13, 13) !important;
+  border-radius: 12px !important;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: -moz-min-content;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px !important;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: #fff !important;
 }
 
+/* Additional specific styling for full width grid items */
 .css-16carsw-MuiPaper-root {
   background-color: rgb(13, 13, 13) !important;
   border-radius: 12px !important;
@@ -46,14 +55,6 @@
   overflow: hidden;
   padding: 20px !important;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #fff !important;
-}
-
-/* Additional MUI Paper styling override */
-.MuiPaper-root {
-  background-color: rgb(13, 13, 13) !important;
-  border-radius: 12px !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
   color: #fff !important;
 }
@@ -68,18 +69,4 @@
   color: #f8f8f8b1;
   font-size: 16px;
   line-height: 1.5;
-}
-
-@media (max-width: 480px) {
-  .left-basic-grid {
-    height: 25vh;
-  }
-
-  .large-basic-grid-container {
-    display: block;
-  }
-
-  .right-basic-grid {
-    display: none;
-  }
 }
