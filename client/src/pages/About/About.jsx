@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
-import "./about.css";
+import "./About.css";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
 import hamdan from "../../assets/founder/hamdan.png"
