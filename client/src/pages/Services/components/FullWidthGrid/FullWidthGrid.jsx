@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import ViewAllbox from '../ViewAllbox/ViewAllbox';
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#fff',
+  backgroundColor: '#1a1a1a',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
