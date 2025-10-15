@@ -11,7 +11,7 @@ import lms from "../assets/svgs/lms.svg";
 import seo from "../assets/svgs/SEO.svg";
 import smm from "../assets/svgs/SMM.svg";
 import sem from "../assets/svgs/SEM.svg";
-import socialMarketing from "../assets/svgs/Social-marketing.svg";
+import socialMarketing from "../assets/svgs/Social-Marketing.svg";
 import nocode from "../assets/svgs/no-code.svg";
 import posts from "../assets/svgs/social-posts.svg";
 import poster from "../assets/svgs/poster.svg";

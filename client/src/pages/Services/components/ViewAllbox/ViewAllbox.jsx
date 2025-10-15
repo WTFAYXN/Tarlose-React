@@ -1,5 +1,5 @@
-import React from "react";
-import "../ViewAllbox/viewAllbox.css";
+import React from 'react';
+import "../ViewAllbox/ViewAllbox.css";
 
 const ViewAllbox = ({ title = "More Notion Templates", description = "Completely transform the way you work and live with premium Notion templates. These templates are complete systems with multiple pages inside.", buttonText = "View All Templates", buttonLink = "#", svgWidth = 69, svgHeight = 69 }) => {
   return (
