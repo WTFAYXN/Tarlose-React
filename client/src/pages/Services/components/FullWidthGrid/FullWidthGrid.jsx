@@ -35,7 +35,7 @@ const GridItemContent = ({ title, description, svgPath }) => (
           width: "100%",
           height: "100%",
           display: "inline-block",
-          fill: "rgb(255, 255, 255)",
+          fill: "rgb(26, 26, 26)",
           color: "rgb(26, 26, 26)",
           flexShrink: 0,
         }}
