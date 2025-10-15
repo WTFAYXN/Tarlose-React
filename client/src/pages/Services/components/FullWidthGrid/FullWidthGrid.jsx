@@ -78,7 +78,7 @@ export default function FullWidthGrid({ features }) {
             );
           })}
       </Grid>
-      <ViewAllbox />
+      {/* <ViewAllbox /> */}
     </Box>
   );
 }
