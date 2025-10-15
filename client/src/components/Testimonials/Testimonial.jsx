@@ -2,6 +2,7 @@ import React from "react";
 import "./Testimonial.css";
 import tushar from "../../assets/testimonials/tushar-amorfume.jpg"
 import om from "../../assets/testimonials/Om-QualityAcademy.jpg"
+import Ramya from "../../assets/testimonials/ramya.png"
 const Testimonial = () => {
   const testimonials = [
     {
@@ -23,13 +24,13 @@ const Testimonial = () => {
         om,
     },
     {
-      name: "Liloch",
-      company: "AIO Founder",
+      name: "Ramya Vettath",
+      company: "G4Genius Tutorials",
       rating: 4,
       review:
-        "The designs exceeded our expectations! Every element felt purposeful, creating a seamless and visually stunning brand identity",
+        "Very good service. They not only made a website for my tutorials but also helped launching it on Google. Quick response!",
       image:
-        "https://framerusercontent.com/images/8vljaI1ESGZN8BSOxNQ8nHJdCw.png",
+        Ramya,
     },
   ];
 
