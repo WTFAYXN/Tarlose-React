@@ -21,7 +21,7 @@ const port = process.env.PORT || 5000;
 
 // CORS configuration
 const corsOptions = {
-    origin: [`${url}`, 'http://localhost:5173'],
+    origin: [`${url}`, 'http://localhost:5173', 'https://www.tarlose.com', 'https://tarlose.com'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
