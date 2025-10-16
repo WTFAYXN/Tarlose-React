@@ -207,3 +207,21 @@
     /* width: calc(100% / 1); */
 	/* flex-wrap:nowrap; */
 }
+
+/* Mobile: Make cards smaller */
+@media (max-width: 768px) {
+    .work-card-javTrading,
+    .work-card-fintechcap,
+    .work-card-Prestige,
+    .work-card-zyper,
+    .work-card-qualityAcademy,
+    .work-card-bettermindlabs,
+    .work-card-Cyberkalki,
+    .work-card-HealwithNeha,
+    .works-card-1,
+    .works-card-Amorfume {
+        width: 20rem !important;
+        min-height: 25rem !important;
+        padding: 1.5rem !important;
+    }
+}
