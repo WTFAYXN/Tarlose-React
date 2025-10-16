@@ -206,7 +206,7 @@ const Home = () => {
             </div>
 
             <div className="d-flex justify-content-center">
-              <div id="btn-fade">
+              <div id="btn-fade" className="responsive-btns-hero">
                 {/* <a href="https://drive.google.com/file/d/12wxbZ9BPOBeU0MdNZ5XGHt8Fqu71zacr/view?usp=sharing"> */}
                   <button
                     className="shining-button px-3 py-2 me-3"

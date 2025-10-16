@@ -119,7 +119,7 @@ const ContactUs = () => {
                       <input
                         type="text"
                         className="form-control bg-dark text-white"
-                        placeholder="Your first name"
+                        placeholder="First name"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                         required
@@ -132,7 +132,7 @@ const ContactUs = () => {
                       <input
                         type="text"
                         className="form-control bg-dark text-white border-0"
-                        placeholder="Your last name"
+                        placeholder="Last name"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                         required

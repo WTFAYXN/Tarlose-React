@@ -183,3 +183,17 @@ textarea {
   color: #f8f8f8b1 !important;
   padding-bottom: 40px;
 }
+
+
+
+@media (max-width: 480px) {
+  .modern-contact-container .sub-head {
+    max-width: 90%;
+    font-size: 16px;
+  }
+  .contact-section{
+    max-width: 100%;
+  }
+}
+
+
