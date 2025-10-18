@@ -25,7 +25,7 @@ const Footer = () => {
                 Subscribe <span>→</span>
               </button>
               <p className="footer-consent">
-                By subscribing you agree with our <a href="#">Privacy Policy</a>{" "}
+                By subscribing you agree with our <a href="/privacy-policy">Privacy Policy</a>{" "}
                 and provide consent to receive updates from our company.
               </p>
               <p className="footer-rights">
