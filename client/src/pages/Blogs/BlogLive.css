@@ -761,9 +761,10 @@
   margin: 10px;
   width: 100%;
   outline: none;
-  color: #1a1a1a ;
+  color: #1a1a1a;
   transition: width 1s;
   transition-delay: 0.5s;
+  font-size: 16px;
 }
 
 .active.search-bar-container {
@@ -773,4 +774,165 @@
 .active .input {
   width: 0;
   color: #1a1a1a;
+}
+
+/* Responsive Search Bar */
+@media (max-width: 1200px) {
+  .search-bar-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  .blog-tabs {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    justify-content: center;
+  }
+  
+  .nav-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .nav-menu li {
+    margin-right: 10px;
+  }
+  
+  .search-bar-container {
+    width: 300px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-tabs {
+    padding: 15px 10px;
+  }
+  
+  .nav-menu ul {
+    gap: 8px;
+  }
+  
+  .nav-menu li {
+    margin-right: 8px;
+  }
+  
+  .nav-menu a {
+    font-size: 14px;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .search-bar-container {
+    width: 250px;
+    height: 45px;
+  }
+  
+  .magnifier {
+    width: 22px;
+    right: 15px;
+  }
+  
+  .input {
+    font-size: 14px;
+    margin: 8px;
+  }
+  
+  .active.search-bar-container {
+    width: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-tabs-container {
+    padding: 8px;
+  }
+  
+  .blog-tabs {
+    padding: 10px 5px;
+  }
+  
+  .nav-menu ul {
+    gap: 5px;
+  }
+  
+  .nav-menu li {
+    margin-right: 5px;
+  }
+  
+  .nav-menu a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .search-bar-container {
+    width: 200px;
+    height: 40px;
+    margin: 5px 0;
+  }
+  
+  .magnifier {
+    width: 20px;
+    right: 12px;
+  }
+  
+  .input {
+    font-size: 13px;
+    margin: 6px;
+  }
+  
+  .active.search-bar-container {
+    width: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-menu li {
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .nav-menu a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .search-bar-container {
+    width: 180px;
+    height: 38px;
+  }
+  
+  .magnifier {
+    width: 18px;
+    right: 10px;
+  }
+  
+  .input {
+    font-size: 12px;
+    margin: 5px;
+  }
+  
+  .active.search-bar-container {
+    width: 38px;
+  }
 }
