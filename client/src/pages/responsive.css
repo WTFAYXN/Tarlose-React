@@ -229,6 +229,11 @@
   .slider {
     overflow: hidden;
   }
+  .responsive-btns-hero{
+      display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 }
 
 /* Media Query for Tablets Ipads portrait mode */

@@ -186,11 +186,7 @@
   margin: auto;
 }
 
-.responsive-btns-hero{
-      display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+
 /* .main-heading-text {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(
