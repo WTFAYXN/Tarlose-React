@@ -5,45 +5,45 @@ const TestimonialSlider = () => {
   const [testimonials, setTestimonials] = useState([
     {
         id: 1,
-        name: "Sarah",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Shruti Agarwal",
+        image: "https://lh3.googleusercontent.com/a/ACg8ocLttRNbRtdSiOFHJ_zpvPunnHv3PC7y_U-Q3hLPga6SEcQwYg=s36-c-rp-mo-br100",
         rating: 5,
-        content: "These templates have transformed my workflow! Highly recommend them to everyone."
+        content: "Tarlose has been an amazing team to work with. They are professional, responsive, and really focus on delivering quality work. The designs and solutions they provided were creative and exactly what I was looking for. Communication was smooth throughout, and the project was completed on time. Definitely a company I would recommend for software and design services."
       },
       {
         id: 2,
-        name: "Michael",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Ruhee Ansari",
+        image: "https://lh3.googleusercontent.com/a/ACg8ocKDynALdnELlyL87ik41ffJmREJSqYLidXGqi0aAf_jkgU3Bw=s36-c-rp-mo-br100",
         rating: 4,
-        content: "Great design and easy to customize. My team loves using it daily."
+        content: "Great team to work with as they are professional, creative, and always deliver on time. Highly recommend Tarlose for web and app development!"
       },
       {
         id: 3,
-        name: "Emily",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Keshav Navale",
+        image: "https://lh3.googleusercontent.com/a-/ALV-UjVybxTLWYOF_SUYDL3TiUi9ZNuTRuRIcm3QKAgUfXkW6IFbDvu71A=s36-c-rp-mo-br100",
         rating: 5,
-        content: "The best tool for productivity I've ever used. Saves me so much time!"
+        content: "Tarlose delivered an outstanding service on our software project. Their professionalism, technical expertise, and excellent communication resulted in a high-quality product that exceeded our expectations. We highly recommend them for their commitment to excellence and client satisfaction."
       },
       {
         id: 4,
-        name: "David",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Jahangir",
+        image: "https://lh3.googleusercontent.com/a-/ALV-UjVj3s5VRQSPKASaPL1ZgLxvT1HP_J0-FsVcCyOoTMt3LPAHu2K0IQ=s36-c-rp-mo-ba3-br100",
         rating: 5,
-        content: "Incredible support and features. My projects are more organized now."
+        content: "Working with them for our Wix website was a breeze! They were super easy to communicate with, nailed our vision, and delivered a website that we absolutely love. Highly recommend them for anyone needing top-notch website development!"
       },
       {
         id: 5,
-        name: "Lisa",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Ayanti Gosh",
+        image: "https://lh3.googleusercontent.com/a/ACg8ocIQFEZsOk7GRBn4AMykalxCfW7LvAax2goWnRT4w56D1IMCnQ=s36-c-rp-mo-br100",
         rating: 4,
-        content: "A game changer for my business. Easy to use and very effective."
+        content: "Tarlose provided exceptional graphic design services. They were professional, creative, and efficient. Highly recommended."
       },
       {
         id: 6,
-        name: "James",
-        image: "https://framerusercontent.com/images/lN1CfuAulx1IJ6VQhc4Pbe1sXSA.png",
+        name: "Utkarsh Tripathi",
+        image: "https://yt3.ggpht.com/lsfX1DTx_LGJ1rHs5DTl-EHx--KBpTeSuitP4mxbkWZCvT26UYLceGWJFxOI1sOb9vfJGFwEvA=s120-c-k-c0x00ffffff-no-rj",
         rating: 5,
-        content: "Templates are top-notch! My productivity has soared since I started using them."
+        content: "Their thumbnail design for my youtube channel was outstanding! They captured the essence of my content perfectly and delivered a visually appealing design that attracted more viewers. Highly recommend their services!"
       },
       {
         id: 7,
