@@ -108,7 +108,7 @@ const Services = () => {
                 alt=""
               />
             </div>
-            <p className="mt-4 text-muted p-0">Join 50K+ others who signed up</p>
+            <p className="mt-4 text-muted p-0">Trusted by 100+ businesses</p>
           </div>
         </div>
       </header>

@@ -18,7 +18,7 @@ const TemplateSection = ({ content }) => {
       title: point.title,
       description: point.description,
       // Use a consistent placeholder image for design consistency, as it's not in the data
-      image: "https://framerusercontent.com/images/US5AgZU6K6UjoTYD8lIQXtv2gg.jpg?scale-down-to=1024",
+      image: "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?t=st=1760796645~exp=1760800245~hmac=05abee8d483f801bcd0488ecdc3092156cea57ee80d47ee1ff1c3c2c7ba28922&w=1480",
     }));
   }, [content]); // Dependency array: this logic re-runs only when the 'content' prop changes
 
