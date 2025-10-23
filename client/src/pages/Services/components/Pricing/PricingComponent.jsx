@@ -120,6 +120,7 @@ const PricingComponent = ({ pricing }) => {
           address: formData.address,
           query: formData.query,
           service: serviceSlug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+          pricingType: availableTypes.length > 1 ? formatTypeName(activeType) : null,
           plan: selectedPlan?.name,
           price: selectedPlan?.price,
           priceType: selectedPlan?.priceType
@@ -262,6 +263,9 @@ const PricingComponent = ({ pricing }) => {
                 <h2 className="modal-title">Get Started with {selectedPlan?.name}</h2>
                 <div className="modal-plan-info">
                   <p><strong>Service:</strong> {serviceSlug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</p>
+                  {availableTypes.length > 1 && (
+                    <p><strong>Type:</strong> {formatTypeName(activeType)}</p>
+                  )}
                   <p><strong>Plan:</strong> {selectedPlan?.name}</p>
                   <p><strong>Price:</strong> ₹{selectedPlan?.price} {selectedPlan?.priceType && `(${selectedPlan.priceType})`}</p>
                 </div>

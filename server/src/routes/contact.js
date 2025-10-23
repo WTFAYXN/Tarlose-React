@@ -93,7 +93,14 @@ router.post('/', async (req, res) => {
 // Pricing inquiry route
 router.post('/pricing-inquiry', async (req, res) => {
   try {
-    const { name, phone, email, address, query, service, plan, price, priceType } = req.body;
+    const { name, phone, email, address, query, service, pricingType, plan, price, priceType } = req.body;
+    
+    // Build the message with optional pricing type
+    let messageText = `Phone: ${phone}\nAddress: ${address || 'Not provided'}\nService: ${service}`;
+    if (pricingType) {
+      messageText += `\nPricing Type: ${pricingType}`;
+    }
+    messageText += `\nPlan: ${plan}\nPrice: ₹${price} ${priceType || ''}\n\nQuery: ${query || 'No additional query'}`;
     
     // STEP 1: Save to database FIRST
     const submission = new ContactSubmission({ 
@@ -101,7 +108,7 @@ router.post('/pricing-inquiry', async (req, res) => {
       lastName: name.split(' ').slice(1).join(' ') || '',
       email: email || 'Not provided',
       subject: `Pricing Inquiry - ${service} - ${plan}`,
-      message: `Phone: ${phone}\nAddress: ${address || 'Not provided'}\nService: ${service}\nPlan: ${plan}\nPrice: ₹${price} ${priceType || ''}\n\nQuery: ${query || 'No additional query'}`
+      message: messageText
     });
     await submission.save();
     console.log('✅ Pricing inquiry saved to database');
@@ -116,24 +123,33 @@ router.post('/pricing-inquiry', async (req, res) => {
     const emailTransporter = getTransporter();
     if (emailTransporter) {
       try {
-        await emailTransporter.sendMail({
-          from: process.env.EMAIL_USER,
-          to: 'admin@tarlose.com',
-          subject: `New Pricing Inquiry - ${service} - ${plan}`,
-          html: `
+        // Build HTML email with optional pricing type
+        let emailHTML = `
             <h2>New Pricing Plan Inquiry</h2>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>Email:</strong> ${email || 'Not provided'}</p>
             <p><strong>Address:</strong> ${address || 'Not provided'}</p>
             <hr>
-            <p><strong>Service:</strong> ${service}</p>
+            <p><strong>Service:</strong> ${service}</p>`;
+        
+        if (pricingType) {
+          emailHTML += `\n            <p><strong>Pricing Type:</strong> ${pricingType}</p>`;
+        }
+        
+        emailHTML += `
             <p><strong>Plan:</strong> ${plan}</p>
             <p><strong>Price:</strong> ₹${price} ${priceType || ''}</p>
             <hr>
             <p><strong>Query:</strong></p>
             <p>${query || 'No additional query'}</p>
-          `
+          `;
+        
+        await emailTransporter.sendMail({
+          from: process.env.EMAIL_USER,
+          to: 'admin@tarlose.com',
+          subject: `New Pricing Inquiry - ${service} - ${plan}`,
+          html: emailHTML
         });
         console.log('✅ Pricing inquiry email sent successfully');
       } catch (emailError) {
