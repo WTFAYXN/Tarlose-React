@@ -259,11 +259,11 @@ const PricingComponent = ({ pricing }) => {
               </div>
             ) : (
               <>
-                <h2 className="modal-title">Get Started with {selectedPlan?.name}</h2>
+                <h2 className="modal-title">Fill in the details, <br /> An executive will contact you shortly</h2>
                 <div className="modal-plan-info">
                   <p><strong>Service:</strong> {serviceSlug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</p>
                   <p><strong>Plan:</strong> {selectedPlan?.name}</p>
-                  <p><strong>Price:</strong> ₹{selectedPlan?.price} {selectedPlan?.priceType && `(${selectedPlan.priceType})`}</p>
+                  {/* <p><strong>Price:</strong> ₹{selectedPlan?.price} {selectedPlan?.priceType && `(${selectedPlan.priceType})`}</p> */}
                 </div>
 
                 <form onSubmit={handleSubmit} className="pricing-form">
@@ -275,7 +275,7 @@ const PricingComponent = ({ pricing }) => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Enter your full name"
+                      placeholder="Your Name"
                       required
                     />
                   </div>
@@ -288,37 +288,38 @@ const PricingComponent = ({ pricing }) => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="Enter your phone number"
+                      placeholder="Your Phone Number"
                       required
                     />
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="email">Email <span className="optional">(Optional)</span></label>
+                    <label htmlFor="email">Email <span className="required">*</span></label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Enter your email address"
+                      placeholder="Your Email Address"
+                      required
                     />
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="address">Address <span className="optional">(Optional)</span></label>
+                    <label htmlFor="address">Location <span className="optional">(Optional)</span></label>
                     <input
                       type="text"
                       id="address"
                       name="address"
                       value={formData.address}
                       onChange={handleInputChange}
-                      placeholder="Enter your address"
+                      placeholder="Where are you located?"
                     />
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="query">Query <span className="optional">(Optional)</span></label>
+                    <label htmlFor="query">Have any questions? <span className="optional">(Optional)</span></label>
                     <textarea
                       id="query"
                       name="query"
