@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PricingComponent.css";
+import { useParams } from "react-router-dom";
 
 const TickMark = () => (
   <svg
@@ -25,6 +26,19 @@ const TickMark = () => (
 );
 
 const PricingComponent = ({ pricing }) => {
+  const { serviceSlug } = useParams();
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    query: ''
+  });
+  const [formSubmitting, setFormSubmitting] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
+
   if (!pricing) {
     return null;
   }
@@ -49,6 +63,87 @@ const PricingComponent = ({ pricing }) => {
   // Function to format the display name for buttons
   const formatTypeName = (type) => {
     return type.charAt(0).toUpperCase() + type.slice(1).replace(/([A-Z])/g, ' $1');
+  };
+
+  // Handle opening the modal with selected plan
+  const handleGetPlanClick = (plan) => {
+    setSelectedPlan(plan);
+    setShowModal(true);
+    setFormSuccess(false);
+  };
+
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedPlan(null);
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      address: '',
+      query: ''
+    });
+    setFormSuccess(false);
+  };
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name || !formData.phone) {
+      alert('Please fill in all required fields (Name and Phone)');
+      return;
+    }
+
+    setFormSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact/pricing-inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          address: formData.address,
+          query: formData.query,
+          service: serviceSlug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+          plan: selectedPlan?.name,
+          price: selectedPlan?.price,
+          priceType: selectedPlan?.priceType
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFormSuccess(true);
+        
+        // Close modal after 2 seconds
+        setTimeout(() => {
+          handleCloseModal();
+        }, 2000);
+      } else {
+        throw new Error(data.error || 'Failed to submit');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit form. Please try again.');
+    } finally {
+      setFormSubmitting(false);
+    }
   };
 
   return (
@@ -112,12 +207,12 @@ const PricingComponent = ({ pricing }) => {
                       ))}
                     </ul>
                   )}
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => handleGetPlanClick(plan)}
                     className="btn btn-dark btn-lg me-3 shining-button pricing-btn"
                   >
                     {`Get ${plan.name}`}
-                  </a>
+                  </button>
                 </div>
               ))
             )}
@@ -145,6 +240,108 @@ const PricingComponent = ({ pricing }) => {
           </div>
         )}
       </div>
+
+      {/* Modal Popup */}
+      {showModal && (
+        <div className="pricing-modal-overlay" onClick={handleCloseModal}>
+          <div className="pricing-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={handleCloseModal}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+            </button>
+            
+            {formSuccess ? (
+              <div className="form-success">
+                <div className="success-icon">✓</div>
+                <h3>Request Submitted Successfully!</h3>
+                <p>We'll get back to you shortly.</p>
+              </div>
+            ) : (
+              <>
+                <h2 className="modal-title">Get Started with {selectedPlan?.name}</h2>
+                <div className="modal-plan-info">
+                  <p><strong>Service:</strong> {serviceSlug?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</p>
+                  <p><strong>Plan:</strong> {selectedPlan?.name}</p>
+                  <p><strong>Price:</strong> ₹{selectedPlan?.price} {selectedPlan?.priceType && `(${selectedPlan.priceType})`}</p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="pricing-form">
+                  <div className="form-group">
+                    <label htmlFor="name">Name <span className="required">*</span></label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number <span className="required">*</span></label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email">Email <span className="optional">(Optional)</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="address">Address <span className="optional">(Optional)</span></label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      placeholder="Enter your address"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="query">Query <span className="optional">(Optional)</span></label>
+                    <textarea
+                      id="query"
+                      name="query"
+                      value={formData.query}
+                      onChange={handleInputChange}
+                      placeholder="Any questions or special requirements?"
+                      rows="4"
+                    />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary submit-btn"
+                    disabled={formSubmitting}
+                  >
+                    {formSubmitting ? 'Submitting...' : 'Submit Request'}
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };

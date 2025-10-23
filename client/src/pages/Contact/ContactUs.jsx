@@ -17,7 +17,8 @@ const ContactUs = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const API_URL = import.meta.env.VITE_API_URL;
+  const [formSuccess, setFormSuccess] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,16 +27,22 @@ const ContactUs = () => {
     try {
       const res = await axios.post(`${API_URL}/api/contact`, data);
       if (res.status === 200) {
-        alert("Message sent successfully!");
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
+        setFormSuccess(true);
+        
+        // Reset form and hide success message after 3 seconds
+        setTimeout(() => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          setFormSuccess(false);
+        }, 3000);
       } else {
         alert("Failed to send message. Try again later.");
       }
-    } catch {
+    } catch (error) {
+      console.error("Contact form error:", error);
       alert("Network error. Try again later.");
     }
     setLoading(false);
@@ -110,84 +117,104 @@ const ContactUs = () => {
             {/* Right Card */}
             <div className="col-lg-6">
               <div className="contact-card form-card">
-                <form onSubmit={handleSubmit}>
-                  <div className="row mb-3">
-                    <div className="col">
+                {formSuccess ? (
+                  <div className="form-success text-center py-5">
+                    <div className="success-icon mb-3" style={{
+                      width: '80px',
+                      height: '80px',
+                      margin: '0 auto',
+                      backgroundColor: '#8d6a9f',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '48px',
+                      color: 'white',
+                      animation: 'scaleIn 0.5s ease-out'
+                    }}>✓</div>
+                    <h3 className="text-white mb-3">Message Sent Successfully!</h3>
+                    <p className="text-secondary">We'll get back to you shortly.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    <div className="row mb-3">
+                      <div className="col">
+                        <label className="form-label text-white">
+                          First Name <span>*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control bg-dark text-white"
+                          placeholder="First name"
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="col">
+                        <label className="form-label text-white">
+                          Last Name <span>*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control bg-dark text-white border-0"
+                          placeholder="Last name"
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="mb-3">
                       <label className="form-label text-white">
-                        First Name <span>*</span>
+                        Email <span>*</span>
                       </label>
                       <input
-                        type="text"
-                        className="form-control bg-dark text-white"
-                        placeholder="First name"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
+                        type="email"
+                        className="form-control bg-dark text-white border-0"
+                        placeholder="youremail@gmail.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
-                    <div className="col">
+
+                    <div className="mb-3">
                       <label className="form-label text-white">
-                        Last Name <span>*</span>
+                        Subject <span>*</span>
                       </label>
                       <input
                         type="text"
                         className="form-control bg-dark text-white border-0"
-                        placeholder="Last name"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
+                        placeholder="Write your subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="mb-3">
-                    <label className="form-label text-white">
-                      Email <span>*</span>
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control bg-dark text-white border-0"
-                      placeholder="youremail@gmail.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
+                    <div className="mb-4">
+                      <label className="form-label text-white">Write Message</label>
+                      <textarea
+                        rows="4"
+                        className="form-control bg-dark text-white border-0"
+                        placeholder="Write your message here"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                      ></textarea>
+                    </div>
 
-                  <div className="mb-3">
-                    <label className="form-label text-white">
-                      Subject <span>*</span>
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control bg-dark text-white border-0"
-                      placeholder="Write your subject"
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="mb-4">
-                    <label className="form-label text-white">Write Message</label>
-                    <textarea
-                      rows="4"
-                      className="form-control bg-dark text-white border-0"
-                      placeholder="Write your message here"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      required
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="btn btn-primary rounded px-4 py-2 gradient-button"
-                    disabled={loading}
-                  >
-                    Send Message
-                  </button>
-                </form>
+                    <button
+                      type="submit"
+                      className="btn btn-primary rounded px-4 py-2 gradient-button"
+                      disabled={loading}
+                    >
+                      {loading ? 'Sending...' : 'Send Message'}
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
           </div>

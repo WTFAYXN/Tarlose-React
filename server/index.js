@@ -10,10 +10,16 @@ import connectDB from './src/db.js';
 import blogRoutes from './src/routes/blog.js';
 import contactRoutes from './src/routes/contact.js';
 import serviceRoutes from './src/routes/service.js';
+
+// Load environment variables from .env file FIRST
+dotenv.config({ path: '.env' });
+
+// Debug: Check if email credentials are loaded
+// console.log('Email User:', process.env.EMAIL_USER ? '✓ Loaded' : '✗ Missing');
+// console.log('Email Pass:', process.env.EMAIL_PASS ? '✓ Loaded' : '✗ Missing');
+
 const url = process.env.FRONTEND_URL;
 
-// Load environment variables from .env file
-dotenv.config({ path: '.env' });
 connectDB();
 
 const app = express();
