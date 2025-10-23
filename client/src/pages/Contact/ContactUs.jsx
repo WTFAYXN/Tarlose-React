@@ -9,7 +9,7 @@ import axios from "axios";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
 import hamdan from "../../assets/founder/hamdan.png"
-
+import Chat from "../../assets/svgs/chat.svg";""
 const ContactUs = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -187,7 +187,7 @@ const ContactUs = () => {
                       <input
                         type="text"
                         className="form-control bg-dark text-white border-0"
-                        placeholder="Write your subject"
+                        placeholder="What would you like to discuss?"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         required
@@ -223,8 +223,8 @@ const ContactUs = () => {
           <div className="message-section text-center">
             <div className="message-image mb-4">
               <img
-                src="https://framerusercontent.com/images/QT0FZzKWoPVDhBD0kmSv4UX5zU.png"
-                alt="InnovaAI Logo"
+                src={Chat}
+                alt="Chat Icon"
                 style={{ width: "60px", height: "60px" }}
               />
             </div>
