@@ -249,7 +249,8 @@
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 30px;
-  border-left: 4px solid #8d6a9f;
+  border-right: 4px solid #8d6a9f;
+  border-bottom: 4px solid #8d6a9f;
 }
 
 .modal-plan-info p {
