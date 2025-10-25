@@ -5,7 +5,7 @@ import "./WhatsNew.css";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-function WhatsNew() {
+function WhatsNew({ searchTerm = "" }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -28,8 +28,21 @@ function WhatsNew() {
     fetchPosts();
   }, []);
 
+  // Filter posts based on search term
+  const filteredPosts = posts.filter((post) => {
+    if (!searchTerm) return true;
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      post.title?.toLowerCase().includes(searchLower) ||
+      post.excerpt?.toLowerCase().includes(searchLower) ||
+      post.metaDescription?.toLowerCase().includes(searchLower) ||
+      post.content?.toLowerCase().includes(searchLower) ||
+      post.categories?.some(cat => cat.toLowerCase().includes(searchLower))
+    );
+  });
+
   if (loading) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>Loading...</div>;
-  if (!posts.length) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>No posts found.</div>;
+  if (!filteredPosts.length) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>No posts found{searchTerm ? ` for "${searchTerm}"` : ''}.</div>;
 
   return (
     <div className="container mx-auto p-4">
@@ -43,24 +56,24 @@ function WhatsNew() {
       </div>
       <hr className="hr-blog" />
       <div className="recent-posts mt-4">
-        <Link to={`/blog/${posts[0].slug}`} className="large-post block hover:bg-gray-50 transition">
+        <Link to={`/blog/${filteredPosts[0].slug}`} className="large-post block hover:bg-gray-50 transition">
           <div className="post-image mb-4">
             <img
-              src={posts[0].featuredImage?.url || ''}
-              alt={posts[0].title}
+              src={filteredPosts[0].featuredImage?.url || ''}
+              alt={filteredPosts[0].title}
               className="rounded img-fluid"
             />
           </div>
           <div className="post-content">
-            <p className="post-category">{posts[0].categories?.[0]}</p>
-            <h2 className="post-title mb-3">{posts[0].title}</h2>
+            <p className="post-category">{filteredPosts[0].categories?.[0]}</p>
+            <h2 className="post-title mb-3">{filteredPosts[0].title}</h2>
             <p className="post-description">
-              {posts[0].excerpt || posts[0].metaDescription || ''}
+              {filteredPosts[0].excerpt || filteredPosts[0].metaDescription || ''}
             </p>
           </div>
         </Link>
         <div className="small-posts">
-          {posts.slice(1, 3).map((post, idx) => (
+          {filteredPosts.slice(1, 3).map((post, idx) => (
             <Link
               key={post._id}
               to={`/blog/${post.slug}`}

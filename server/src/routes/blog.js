@@ -58,7 +58,24 @@ router.post('/', upload.single('featuredImage'), async (req, res) => {
 // Get all blog posts
 router.get('/', async (req, res) => {
     try {
-        const blogs = await Blog.find().sort({ publishedAt: -1 });
+        const { search } = req.query;
+        let query = { published: true }; // Only return published blogs
+        
+        // If search parameter exists, create a search query
+        if (search) {
+            query = {
+                published: true,
+                $or: [
+                    { title: { $regex: search, $options: 'i' } },
+                    { content: { $regex: search, $options: 'i' } },
+                    { excerpt: { $regex: search, $options: 'i' } },
+                    { metaDescription: { $regex: search, $options: 'i' } },
+                    { categories: { $regex: search, $options: 'i' } }
+                ]
+            };
+        }
+        
+        const blogs = await Blog.find(query).sort({ publishedAt: -1 });
         // Transform image URLs to include full path
         const blogsWithFullImageUrls = blogs.map(blog => {
             if (blog.featuredImage) {

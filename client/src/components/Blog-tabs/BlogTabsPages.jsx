@@ -36,7 +36,7 @@ function CardList({ cards }) {
   );
 }
 
-const BlogTabsPages = ({ category }) => {
+const BlogTabsPages = ({ category, searchTerm = "" }) => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -61,12 +61,25 @@ const BlogTabsPages = ({ category }) => {
     fetchBlogs();
   }, [category]);
 
+  // Filter cards based on search term
+  const filteredCards = cards.filter((card) => {
+    if (!searchTerm) return true;
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      card.title?.toLowerCase().includes(searchLower) ||
+      card.metaDescription?.toLowerCase().includes(searchLower) ||
+      card.excerpt?.toLowerCase().includes(searchLower) ||
+      card.content?.toLowerCase().includes(searchLower) ||
+      card.categories?.some(cat => cat.toLowerCase().includes(searchLower))
+    );
+  });
+
   if (loading) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>Loading...</div>;
-  if (!cards.length) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>No posts found.</div>;
+  if (!filteredCards.length) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>No posts found{searchTerm ? ` for "${searchTerm}"` : ''}.</div>;
 
   return (
     <div className="container mx-auto p-4">
-      <CardList cards={cards} />
+      <CardList cards={filteredCards} />
     </div>
   );
 };

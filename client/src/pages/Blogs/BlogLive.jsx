@@ -7,8 +7,8 @@ import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
 import { Helmet } from "react-helmet";
 
-import searchIcon from "../../assets/svgs/search.svg"
 import WhatsNew from "../../components/Blog-tabs/WhatsNew";
+import BlogTabsNav from "../../components/Blog-tabs/BlogTabsNav";
 
 import bgheader from "../../assets/svgs/background-header.svg";
 import {
@@ -31,7 +31,6 @@ const API_URL = import.meta.env.VITE_API_URL;
 const BlogLive = () => {
   // Load the last active tab from localStorage, default to "whats-new" if not set
   const [activeTab, setActiveTab] = useState(() => localStorage.getItem("blogActiveTab") || "whats-new");
-  const [isSearchActive, setIsSearchActive] = useState(true);
 
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -201,128 +200,22 @@ const BlogLive = () => {
             </div> */}
 
       <div className="modern-blog-container">
-        <div className="blog-tabs-container">
-            <div className="blog-tabs container">
-              <nav className="nav-menu">
-                <ul>
-                  <li>
-                    <a
-                      href="#"
-                      className={activeTab === "whats-new" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveTab("whats-new");
-                      }}
-                      style={{
-                        color: activeTab === "whats-new" ? "#007bff" : "#333",
-                        fontWeight:
-                          activeTab === "whats-new" ? "bold" : "normal",
-                      }}
-                    >
-                      What's New
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className={
-                        activeTab === "website-development" ? "active" : ""
-                      }
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveTab("website-development");
-                      }}
-                      style={{
-                        color:
-                          activeTab === "website-development" ? "#007bff" : "#333",
-                        fontWeight:
-                          activeTab === "website-development" ? "bold" : "normal",
-                      }}
-                    >
-                      Website Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className={activeTab === "graphic-design" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveTab("graphic-design");
-                      }}
-                      style={{
-                        color:
-                          activeTab === "graphic-design" ? "#007bff" : "#333",
-                        fontWeight:
-                          activeTab === "graphic-design" ? "bold" : "normal",
-                      }}
-                    >
-                      Graphic Design
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className={activeTab === "digital-marketing" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveTab("digital-marketing");
-                      }}
-                      style={{
-                        color:
-                          activeTab === "digital-marketing" ? "#007bff" : "#333",
-                        fontWeight:
-                          activeTab === "digital-marketing" ? "bold" : "normal",
-                      }}
-                    >
-                      Digital Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className={activeTab === "tech-tools" ? "active" : ""}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveTab("tech-tools");
-                      }}
-                      style={{
-                        color: activeTab === "tech-tools" ? "#007bff" : "#333",
-                        fontWeight: activeTab === "tech-tools" ? "bold" : "normal",
-                      }}
-                    >
-                      Tech Tools
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <div className={`search-bar-container ${isSearchActive ? 'active' : ''}`}>
-                <img 
-                  src={searchIcon}
-                  alt="magnifier"
-                  className="magnifier" 
-                  onClick={() => setIsSearchActive(!isSearchActive)}
-                />
-                <input 
-                  type="text" 
-                  className="input" 
-                  placeholder="Search ..." 
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
+        <BlogTabsNav 
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
         <div className="container">
           
 
           {/* Tab Content */}
           <div style={{ marginTop: "2rem" }}>
-            {activeTab === "whats-new" && <WhatsNew />}
-            {activeTab === "website-development" && <WebDev />}
-            {activeTab === "graphic-design" && <GraphicDesign />}
-            {activeTab === "digital-marketing" && <DigitalMarketing />}
-            {activeTab === "tech-tools" && <TechTools />}
+            {activeTab === "whats-new" && <WhatsNew searchTerm={searchTerm} />}
+            {activeTab === "website-development" && <WebDev searchTerm={searchTerm} />}
+            {activeTab === "graphic-design" && <GraphicDesign searchTerm={searchTerm} />}
+            {activeTab === "digital-marketing" && <DigitalMarketing searchTerm={searchTerm} />}
+            {activeTab === "tech-tools" && <TechTools searchTerm={searchTerm} />}
           </div>
         </div>
       </div>

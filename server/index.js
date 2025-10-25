@@ -10,6 +10,8 @@ import connectDB from './src/db.js';
 import blogRoutes from './src/routes/blog.js';
 import contactRoutes from './src/routes/contact.js';
 import serviceRoutes from './src/routes/service.js';
+import Blog from './src/models/blog.js';
+import Service from './src/models/services.js';
 
 // Load environment variables from .env file FIRST
 dotenv.config({ path: '.env' });
@@ -44,32 +46,80 @@ const __dirname = path.dirname(__filename);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Array of URLs to be included in the sitemap
-const urls = [
+// Note: Dynamic routes (blog detail, service slugs) will be fetched from DB
+const staticUrls = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
-  { url: '/career', changefreq: 'weekly', priority: 0.7 },
   { url: '/about', changefreq: 'weekly', priority: 0.7 },
   { url: '/portfolio', changefreq: 'weekly', priority: 0.7 },
-  { url: '/terms', changefreq: 'monthly', priority: 0.5 },
+  { url: '/terms-of-service', changefreq: 'monthly', priority: 0.5 },
   { url: '/blogs', changefreq: 'daily', priority: 0.8 },
-  { url: '/privacy', changefreq: 'monthly', priority: 0.5 }
+  { url: '/privacy-policy', changefreq: 'monthly', priority: 0.5 },
+  { url: '/contact', changefreq: 'monthly', priority: 0.5 },
+  { url: '/login', changefreq: 'monthly', priority: 0.2 },
 ];
 
-// Route to serve the sitemap
+// Route to serve the sitemap with dynamic content from DB
 app.get('/sitemap.xml', async (req, res) => {
   try {
     // Create a writable stream
     const sitemap = new SitemapStream({ hostname: 'https://tarlose.com' });
 
-    // Push the URLs into the sitemap
-    urls.forEach(url => sitemap.write(url));
+    // Add static URLs
+    staticUrls.forEach(url => sitemap.write(url));
+
+    // Fetch and add blog posts dynamically
+    try {
+      // Try without filter first to see all blogs
+      const allBlogs = await Blog.find().select('slug published updatedAt').lean();
+      console.log(`📊 Total blogs in database: ${allBlogs.length}`);
+      console.log(`📊 Published blogs: ${allBlogs.filter(b => b.published).length}`);
+      
+      // Get only published blogs
+      const blogs = await Blog.find({ published: true }).select('slug updatedAt').lean();
+      
+      blogs.forEach(blog => {
+        if (blog.slug) {
+          sitemap.write({
+            url: `/blog/${blog.slug}`,
+            changefreq: 'weekly',
+            priority: 0.6,
+            lastmod: blog.updatedAt ? new Date(blog.updatedAt).toISOString() : undefined
+          });
+        }
+      });
+      console.log(`✅ Added ${blogs.length} blog posts to sitemap`);
+    } catch (blogError) {
+      console.error('⚠️ Error fetching blogs for sitemap:', blogError.message);
+      console.error('Full error:', blogError);
+    }
+
+    // Fetch and add service pages dynamically
+    try {
+      const services = await Service.find().select('serviceSlug updatedAt').lean();
+      services.forEach(service => {
+        if (service.serviceSlug) {
+          sitemap.write({
+            url: `/services/${service.serviceSlug}`,
+            changefreq: 'weekly',
+            priority: 0.7,
+            lastmod: service.updatedAt ? new Date(service.updatedAt).toISOString() : undefined
+          });
+        }
+      });
+      console.log(`✅ Added ${services.length} service pages to sitemap`);
+    } catch (serviceError) {
+      console.error('⚠️ Error fetching services for sitemap:', serviceError.message);
+    }
 
     // End the stream and send the sitemap as response
     sitemap.end();
     const sitemapXML = await streamToPromise(sitemap);
     res.header('Content-Type', 'application/xml');
     res.send(sitemapXML.toString());
+    
+    console.log('✅ Sitemap generated successfully');
   } catch (error) {
-    console.error('Error generating sitemap:', error);
+    console.error('❌ Error generating sitemap:', error);
     res.status(500).send('Error generating sitemap');
   }
 });
