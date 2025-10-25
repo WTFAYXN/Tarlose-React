@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Proxy sitemap requests to backend during development
       '/sitemap.xml': {
-        target: 'http://localhost:5000',
+        target: 'https://api.tarlose.com',
         changeOrigin: true,
       }
     }

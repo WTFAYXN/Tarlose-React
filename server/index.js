@@ -61,8 +61,12 @@ const staticUrls = [
 // Route to serve the sitemap with dynamic content from DB
 app.get('/sitemap.xml', async (req, res) => {
   try {
+    // Use environment variable or default to production URL
+    const baseUrl = process.env.SITE_URL || 'https://tarlose.com';
+    console.log(`🌐 Generating sitemap for: ${baseUrl}`);
+    
     // Create a writable stream
-    const sitemap = new SitemapStream({ hostname: 'https://tarlose.com' });
+    const sitemap = new SitemapStream({ hostname: baseUrl });
 
     // Add static URLs
     staticUrls.forEach(url => sitemap.write(url));
@@ -114,13 +118,17 @@ app.get('/sitemap.xml', async (req, res) => {
     // End the stream and send the sitemap as response
     sitemap.end();
     const sitemapXML = await streamToPromise(sitemap);
-    res.header('Content-Type', 'application/xml');
+    
+    // Set proper headers for XML
+    res.header('Content-Type', 'application/xml; charset=utf-8');
+    res.header('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
     res.send(sitemapXML.toString());
     
-    console.log('✅ Sitemap generated successfully');
+    console.log(`✅ Sitemap generated successfully with ${staticUrls.length} static URLs`);
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
-    res.status(500).send('Error generating sitemap');
+    console.error('Stack trace:', error.stack);
+    res.status(500).set('Content-Type', 'text/plain').send('Error generating sitemap: ' + error.message);
   }
 });
 
