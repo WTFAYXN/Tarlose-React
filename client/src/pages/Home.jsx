@@ -14,6 +14,7 @@ import WebDev from "../assets/svgs/WebsiteDevelopment.svg";
 import GraphicDesign from "../assets/svgs/Design.svg";
 import Marketing from "../assets/svgs/Marketing.svg";
 
+import socialImage from "../assets/Logos/twitterImg.png"
 import Platforms from "../components/Platforms/Platforms";
 
 import Expertise from "../assets/svgs/Expertise.svg";
@@ -129,7 +130,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://tarlose.com/assets/Logos/twitterImg.png"
+          content={socialImage}
         />
         <meta property="og:site_name" content="Tarlose" />
 
