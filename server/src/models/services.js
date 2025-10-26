@@ -10,7 +10,7 @@ const DetailItemSchema = new Schema({
 // Sub-schema for individual pricing plans
 const PricingPlanSchema = new Schema({
   name: { type: String, required: true, enum: ['Starter', 'Growing Businesses', 'Established Brand'] },
-  price: { type: Number, required: true },
+  price: { type: String, required: true },
   priceType: { type: String, default: 'One-time' },
   description: { type: String, required: true },
   features: [{ type: String }],

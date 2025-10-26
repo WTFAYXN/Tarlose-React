@@ -16,6 +16,8 @@ const Blog = () => {
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [activeTab, setActiveTab] = useState(() => localStorage.getItem("blogActiveTab") || "whats-new");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -75,8 +77,13 @@ const Blog = () => {
       </Helmet>
       <Cursor />
       <Navbar />
-      <BlogTabsNav className="blog-tabs-nav" />
-      <header className="blog-detail-header">
+      <BlogTabsNav 
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
+      <header className="blog-detail-header pt-5">
         <div className="container">
           <div className="grid">
             <div className="column-one">
