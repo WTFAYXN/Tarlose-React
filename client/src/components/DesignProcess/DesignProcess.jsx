@@ -45,7 +45,7 @@ const DesignProcess = () => {
           </div>
 
         </div>
-        <h2 className="process-heading eco-sub">How We Delive Results</h2>
+        <h2 className="process-heading eco-sub">How We Deliver Results</h2>
         <p className="process-description">
           Our proven process keeps your project efficient, creative, and on track. From deep discovery to seamless execution, we focus on clarity and collaboration. Bringing your ideas to life across web development, graphic design, and digital marketing.
         </p>
