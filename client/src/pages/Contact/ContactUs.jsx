@@ -9,7 +9,8 @@ import axios from "axios";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
 import hamdan from "../../assets/founder/hamdan.png"
-import Chat from "../../assets/svgs/chat.svg";""
+import Chat from "../../assets/svgs/chat.svg";
+import { getPageMetadata } from "../../utils/seoHelpers";
 const ContactUs = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -19,6 +20,8 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  
+  const pageMetadata = getPageMetadata('contact');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,11 +54,25 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Tarlose</title>
-        <meta
-          name="description"
-          content="Contact Tarlose for digital solutions, web development, and marketing expertise. Reach out to our team for collaboration and support."
-        />
+        <title>{pageMetadata.title}</title>
+        <meta name="description" content={pageMetadata.description} />
+        <link rel="canonical" href={pageMetadata.url} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageMetadata.url} />
+        <meta property="og:title" content={pageMetadata.title} />
+        <meta property="og:description" content={pageMetadata.description} />
+        <meta property="og:image" content={pageMetadata.image} />
+        <meta property="og:site_name" content="Tarlose" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tarlose" />
+        <meta name="twitter:url" content={pageMetadata.url} />
+        <meta name="twitter:title" content={pageMetadata.title} />
+        <meta name="twitter:description" content={pageMetadata.description} />
+        <meta name="twitter:image" content={pageMetadata.image} />
       </Helmet>
       <Navbar />
 

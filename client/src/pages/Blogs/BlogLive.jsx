@@ -25,6 +25,7 @@ import WebDev from "../../components/Blog-tabs/WebDev";
 import GraphicDesign from "../../components/Blog-tabs/GraphicDesign";
 import DigitalMarketing from "../../components/Blog-tabs/DigitalMarketing";
 import TechTools from "../../components/Blog-tabs/TechTools";
+import { getPageMetadata } from "../../utils/seoHelpers";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -154,14 +155,30 @@ const BlogLive = () => {
     );
   }
 
+  const pageMetadata = getPageMetadata('blog');
+  
   return (
     <>
       <Helmet>
-        <title>The Tarlose Blog</title>
-        <meta
-          name="description"
-          content="Explore our latest blog posts about technology, design, and digital solutions."
-        />
+        <title>{pageMetadata.title}</title>
+        <meta name="description" content={pageMetadata.description} />
+        <link rel="canonical" href={pageMetadata.url} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageMetadata.url} />
+        <meta property="og:title" content={pageMetadata.title} />
+        <meta property="og:description" content={pageMetadata.description} />
+        <meta property="og:image" content={pageMetadata.image} />
+        <meta property="og:site_name" content="Tarlose" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tarlose" />
+        <meta name="twitter:url" content={pageMetadata.url} />
+        <meta name="twitter:title" content={pageMetadata.title} />
+        <meta name="twitter:description" content={pageMetadata.description} />
+        <meta name="twitter:image" content={pageMetadata.image} />
       </Helmet>
       <Cursor />
       <Navbar />
