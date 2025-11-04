@@ -16,8 +16,12 @@ function WhatsNew({ searchTerm = "" }) {
           withCredentials: true,
           headers: { 'Content-Type': 'application/json' }
         });
-        // Sort by publishedAt and take the 3 most recent
-        const sorted = response.data.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        // Sort by publishedAt (or fallback to createdAt/updatedAt) and take the 3 most recent
+        const sorted = response.data.sort((a, b) => {
+          const dateA = new Date(a.publishedAt || a.createdAt || a.updatedAt);
+          const dateB = new Date(b.publishedAt || b.createdAt || b.updatedAt);
+          return dateB - dateA;
+        });
         setPosts(sorted.slice(0, 3));
       } catch (err) {
         setPosts([]);

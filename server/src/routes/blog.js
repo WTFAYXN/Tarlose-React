@@ -40,7 +40,7 @@ router.post('/', upload.single('featuredImage'), async (req, res) => {
             ...req.body,
             featuredImage: req.file ? {
                 url: `/uploads/${req.file.filename}`,
-                altText: req.body.title
+                altText: req.body.featuredImageAlt || req.body.title
             } : undefined,
             categories: req.body.categories ? req.body.categories.split(',') : [],
             tags: req.body.tags ? req.body.tags.split(',') : [],
@@ -55,7 +55,30 @@ router.post('/', upload.single('featuredImage'), async (req, res) => {
     }
 });
 
-// Get all blog posts
+// Get all blog posts (admin - includes drafts)
+router.get('/all', async (req, res) => {
+    try {
+        const blogs = await Blog.find({}).sort({ createdAt: -1 });
+        // Transform image URLs to include full path
+        const blogsWithFullImageUrls = blogs.map(blog => {
+            if (blog.featuredImage) {
+                return {
+                    ...blog.toObject(),
+                    featuredImage: {
+                        ...blog.featuredImage,
+                        url: `${API_URL}${blog.featuredImage.url}`
+                    }
+                };
+            }
+            return blog.toObject();
+        });
+        res.json(blogsWithFullImageUrls);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// Get all blog posts (public - only published)
 router.get('/', async (req, res) => {
     try {
         const { search } = req.query;
@@ -194,18 +217,34 @@ router.post('/:id/comment', async (req, res) => {
 // Update a blog post
 router.put('/:id', upload.single('featuredImage'), async (req, res) => {
     try {
+        const existingBlog = await Blog.findById(req.params.id);
+        if (!existingBlog) {
+            return res.status(404).json({ message: 'Blog not found' });
+        }
+
         const blogData = {
             ...req.body,
-            categories: req.body.categories ? req.body.categories.split(',') : [],
-            tags: req.body.tags ? req.body.tags.split(',') : [],
-            metaKeywords: req.body.metaKeywords ? req.body.metaKeywords.split(',') : []
+            categories: req.body.categories ? req.body.categories.split(',').filter(c => c.trim()) : existingBlog.categories,
+            tags: req.body.tags ? req.body.tags.split(',').filter(t => t.trim()) : existingBlog.tags,
+            metaKeywords: req.body.metaKeywords ? req.body.metaKeywords.split(',').filter(k => k.trim()) : existingBlog.metaKeywords
         };
 
         if (req.file) {
             blogData.featuredImage = {
                 url: `/uploads/${req.file.filename}`,
-                altText: req.body.title
+                altText: req.body.featuredImageAlt || req.body.title
             };
+        } else if (req.body.featuredImageAlt) {
+            // Update only alt text if no new image is uploaded
+            if (existingBlog.featuredImage) {
+                blogData.featuredImage = {
+                    url: existingBlog.featuredImage.url,
+                    altText: req.body.featuredImageAlt
+                };
+            }
+        } else if (existingBlog.featuredImage) {
+            // Preserve existing featured image if not updated
+            blogData.featuredImage = existingBlog.featuredImage;
         }
 
         const blog = await Blog.findByIdAndUpdate(

@@ -11,7 +11,7 @@ import Terms from './pages/Company/Terms';
 import PrivacyPolicy from './pages/Company/PrivacyPolicy';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Login from './pages/Login';
-import Admin from './pages/admin';
+import AdminDashboard from './pages/Admin/AdminDashboard';
 import Blog from './pages/Blogs/Blog';
 import BlogDetailPage from './components/Blog-tabs/BlogDetailPage';
 import ContactUs from './pages/Contact/ContactUs';
@@ -33,7 +33,7 @@ function App() {
           <Route path="/blogs" element={<BlogLive />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/BlogDetailPage/:id" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactUs />} />
