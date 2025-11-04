@@ -107,7 +107,7 @@ const Blog = () => {
         <div className="container">
           <div className="grid">
             <div className="column-one">
-              <h2>{blog.title}</h2>
+              <h1>{blog.title}</h1>
               <div className="PostAuthorsstyles">
                 <div className="AvatarsRow">
                   <img
