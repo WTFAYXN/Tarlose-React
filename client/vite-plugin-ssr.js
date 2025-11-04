@@ -8,15 +8,20 @@ export default function htmlMetaTagsPlugin() {
     transformIndexHtml: {
       order: 'pre',
       handler(html, { path }) {
+        // Clean up path - remove /index.html, ensure it starts with /
+        let cleanPath = path.replace('/index.html', '').replace('index.html', '');
+        if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
+        if (cleanPath === '//') cleanPath = '/';
+        
         // Default meta tags for all pages
         let metaTags = `
     <!-- SEO Meta Tags -->
     <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
-    <link rel="canonical" href="https://www.tarlose.com${path}" />
+    <link rel="canonical" href="https://www.tarlose.com${cleanPath}" />
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.tarlose.com${path}" />
+    <meta property="og:url" content="https://www.tarlose.com${cleanPath}" />
     <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
     <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
     <meta property="og:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />
@@ -25,7 +30,7 @@ export default function htmlMetaTagsPlugin() {
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tarlose" />
-    <meta name="twitter:url" content="https://www.tarlose.com${path}" />
+    <meta name="twitter:url" content="https://www.tarlose.com${cleanPath}" />
     <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
     <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
     <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />`;
@@ -59,18 +64,18 @@ export default function htmlMetaTagsPlugin() {
         };
 
         // Check if current path has custom metadata
-        const matchedPath = Object.keys(pageMetadata).find(key => path.startsWith(key));
+        const matchedPath = Object.keys(pageMetadata).find(key => cleanPath.startsWith(key));
         
         if (matchedPath) {
           const meta = pageMetadata[matchedPath];
           metaTags = `
     <!-- SEO Meta Tags -->
     <meta name="description" content="${meta.description}" />
-    <link rel="canonical" href="https://www.tarlose.com${path}" />
+    <link rel="canonical" href="https://www.tarlose.com${cleanPath}" />
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.tarlose.com${path}" />
+    <meta property="og:url" content="https://www.tarlose.com${cleanPath}" />
     <meta property="og:title" content="${meta.title}" />
     <meta property="og:description" content="${meta.description}" />
     <meta property="og:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />
@@ -79,7 +84,7 @@ export default function htmlMetaTagsPlugin() {
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tarlose" />
-    <meta name="twitter:url" content="https://www.tarlose.com${path}" />
+    <meta name="twitter:url" content="https://www.tarlose.com${cleanPath}" />
     <meta name="twitter:title" content="${meta.title}" />
     <meta name="twitter:description" content="${meta.description}" />
     <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />`;
