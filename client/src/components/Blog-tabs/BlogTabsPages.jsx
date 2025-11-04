@@ -5,6 +5,17 @@ import "./BlogTabsPages.css";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+// Helper function to get full image URL
+const getImageUrl = (imageUrl) => {
+  if (!imageUrl) return '';
+  // If URL starts with http:// or https://, return as is
+  if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+    return imageUrl;
+  }
+  // If URL starts with /, prepend API_URL
+  return `${API_URL}${imageUrl}`;
+};
+
 function CardList({ cards }) {
   return (
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
@@ -21,7 +32,7 @@ function CardList({ cards }) {
               tabIndex={0}
               role="button"
             >
-              <img src={card.featuredImage?.url || ''} className="card-img-top" alt={card.title} />
+              <img src={getImageUrl(card.featuredImage?.url)} className="card-img-top" alt={card.featuredImage?.altText || card.title} />
               <div className="card-body">
                 <p className="card-text text-capitalize">{card.title}</p>
                 <p className="card-text">

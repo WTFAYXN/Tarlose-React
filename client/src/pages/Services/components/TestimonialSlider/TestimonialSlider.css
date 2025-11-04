@@ -5,6 +5,10 @@
     padding: 80px 0;
 }
 
+.vertical-slider-parent-container .services-header h2 {
+    color: #fff !important;
+}
+
 .vertical-slider-container {
   margin: 0 auto;
   overflow: hidden;

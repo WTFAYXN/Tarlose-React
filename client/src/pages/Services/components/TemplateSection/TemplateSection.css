@@ -6,6 +6,10 @@
   gap: 40px;
 }
 
+.services-parent-container .services-header h2 {
+  color: #fff !important;
+}
+
 .services-header p {
   width: 45%;
   margin: auto;
