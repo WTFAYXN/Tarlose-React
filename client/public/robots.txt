@@ -1,0 +1,19 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin and login pages
+Disallow: /admin
+Disallow: /login
+
+# Allow all other pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /portfolio
+Allow: /blog
+Allow: /contact
+Allow: /careers
+
+# Sitemap location (update with your actual sitemap URL when available)
+Sitemap: https://www.tarlose.com/sitemap.xml
