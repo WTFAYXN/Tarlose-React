@@ -247,8 +247,12 @@ ul li {
     padding-left: 0;
   }
   
+  .blog-tabs-nav-wrapper {
+    display: none;
+  }
+  
   .blog-detail-header {
-    padding: 0 0 2rem;
+    padding: 100px 0 2rem !important;
   }
   
   .blog-detail-flex {
@@ -308,7 +312,7 @@ ul li {
   }
   
   .blog-detail-header {
-    padding: 0 0 1.5rem;
+    padding: 100px 0 1.5rem !important;
   }
   
   .blog-detail-flex {

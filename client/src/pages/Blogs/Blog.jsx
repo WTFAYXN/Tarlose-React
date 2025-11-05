@@ -120,12 +120,14 @@ const Blog = () => {
       </Helmet>
       <Cursor />
       <Navbar />
-      <BlogTabsNav 
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-      />
+      <div className="blog-tabs-nav-wrapper">
+        <BlogTabsNav 
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
+      </div>
       <header className="blog-detail-header pt-5">
         <div className="container">
           <div className="grid">
