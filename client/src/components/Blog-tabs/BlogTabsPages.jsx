@@ -89,7 +89,7 @@ const BlogTabsPages = ({ category, searchTerm = "" }) => {
   if (!filteredCards.length) return <div style={{ color: '#fff', textAlign: 'center', padding: '2rem' }}>No posts found{searchTerm ? ` for "${searchTerm}"` : ''}.</div>;
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="">
       <CardList cards={filteredCards} />
     </div>
   );
