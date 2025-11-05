@@ -230,7 +230,7 @@ ul li {
   }
   
   .PostAuthorsstyles {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin-bottom: 2rem;
   }
@@ -251,6 +251,7 @@ ul li {
   
   .blog-detail-flex {
     padding: 0 0.5rem;
+    text-align: justify;
   }
   
   .postImage {
@@ -310,8 +311,8 @@ ul li {
   
   .blog-detail-flex {
     padding: 0 0.25rem;
-    margin-right: 10px;
-    margin-left: 10px;
+    /* margin-right: 10px;
+    margin-left: 10px; */
     max-width: 300px;
   }
   
