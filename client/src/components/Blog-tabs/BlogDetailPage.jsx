@@ -54,7 +54,7 @@ const BlogDetailPage = () => {
       <header className="blog-detail-header">
         <div className="container">
           <div className="grid">
-            <div className="column-one">
+            <div className="column-one blog-title-h1">
               <h2>{blog.title}</h2>
               <div className="PostAuthorsstyles">
                 <div className="AvatarsRow">

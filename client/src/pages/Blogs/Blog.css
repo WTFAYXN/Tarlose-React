@@ -135,8 +135,8 @@
     margin-bottom: 1rem;
 }
 
-.column-one{
-    max-width: 75%;
+.blog-title-h1{
+    max-width: 75% !important;
 }
 .badge {
     font-size: 0.9rem;

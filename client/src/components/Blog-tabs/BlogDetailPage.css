@@ -37,7 +37,9 @@
 .blog-detail-header {
   padding: 0 0 var(--spacing--L);
 }
-
+.blog-title-h1 {
+  max-width: 75% !important;
+}
 .column-one {
   text-align: center;
   max-width: 60%;
@@ -170,7 +172,7 @@ ul li {
   }
   
   .column-one {
-    max-width: 80%;
+    max-width: 80% !important;
   }
   
   .blog-detail-flex {
@@ -220,7 +222,7 @@ ul li {
   }
   
   .column-one {
-    max-width: 95%;
+    max-width: 95% !important;
     padding: 0 1rem;
   }
   
@@ -277,7 +279,7 @@ ul li {
   }
   
   .column-one {
-    max-width: 100%;
+    max-width: 100% !important;
     padding: 0 0.5rem;
   }
   

@@ -129,7 +129,7 @@ const Blog = () => {
       <header className="blog-detail-header pt-5">
         <div className="container">
           <div className="grid">
-            <div className="column-one">
+            <div className="column-one blog-title-h1">
               <h1>{blog.title}</h1>
               <div className="PostAuthorsstyles">
                 <div className="AvatarsRow">
