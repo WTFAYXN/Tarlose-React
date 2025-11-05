@@ -2,9 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import path from 'path';
 import { SitemapStream } from 'sitemap';
-import { fileURLToPath } from 'url';
 import { streamToPromise } from '../server/node_modules/sitemap/dist/index.js';
 import connectDB from './src/db.js';
 import blogRoutes from './src/routes/blog.js';
@@ -39,11 +37,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Serve static files from uploads directory
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Array of URLs to be included in the sitemap
 // Note: Dynamic routes (blog detail, service slugs) will be fetched from DB

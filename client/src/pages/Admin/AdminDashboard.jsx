@@ -23,7 +23,7 @@ const AdminDashboard = () => {
         title: "",
         content: "",
         excerpt: "",
-        featuredImage: null,
+        featuredImageUrl: "",
         featuredImageAlt: "",
         author: "",
         categories: [],
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
             title: "",
             content: "",
             excerpt: "",
-            featuredImage: null,
+            featuredImageUrl: "",
             featuredImageAlt: "",
             author: "",
             categories: [],
@@ -102,17 +102,14 @@ const AdminDashboard = () => {
         setBlogData(prev => ({ ...prev, content }));
     };
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setBlogData(prev => ({ ...prev, featuredImage: file }));
-            
-            // Create preview
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
+    const handleImageUrlChange = (e) => {
+        const url = e.target.value;
+        setBlogData(prev => ({ ...prev, featuredImageUrl: url }));
+        // Update preview when URL changes
+        if (url) {
+            setImagePreview(url);
+        } else {
+            setImagePreview(null);
         }
     };
 
@@ -140,32 +137,26 @@ const AdminDashboard = () => {
         setLoading(true);
 
         try {
-            const formData = new FormData();
-            
-            formData.append('slug', generateSlug(blogData.title));
-            
-            Object.keys(blogData).forEach(key => {
-                if (key === 'featuredImage' && blogData[key]) {
-                    formData.append(key, blogData[key]);
-                } else if (key === 'categories') {
-                    formData.append(key, blogData[key].join(','));
-                } else if (key !== 'featuredImage') {
-                    formData.append(key, blogData[key]);
-                }
-            });
+            const payload = {
+                ...blogData,
+                slug: generateSlug(blogData.title),
+                categories: blogData.categories.join(','),
+                tags: blogData.tags,
+                metaKeywords: blogData.metaKeywords
+            };
 
             if (currentBlog) {
                 // Update existing blog
-                await axios.put(`${API_URL}/api/blogs/${currentBlog._id}`, formData, {
+                await axios.put(`${API_URL}/api/blogs/${currentBlog._id}`, payload, {
                     withCredentials: true,
-                    headers: { 'Content-Type': 'multipart/form-data' }
+                    headers: { 'Content-Type': 'application/json' }
                 });
                 setSuccess("Blog post updated successfully!");
             } else {
                 // Create new blog
-                await axios.post(`${API_URL}/api/blogs`, formData, {
+                await axios.post(`${API_URL}/api/blogs`, payload, {
                     withCredentials: true,
-                    headers: { 'Content-Type': 'multipart/form-data' }
+                    headers: { 'Content-Type': 'application/json' }
                 });
                 setSuccess("Blog post created successfully!");
             }
@@ -186,7 +177,7 @@ const AdminDashboard = () => {
             title: blog.title || "",
             content: blog.content || "",
             excerpt: blog.excerpt || "",
-            featuredImage: null,
+            featuredImageUrl: blog.featuredImage?.url || "",
             featuredImageAlt: blog.featuredImage?.altText || "",
             author: blog.author || "",
             categories: blog.categories || [],
@@ -227,30 +218,29 @@ const AdminDashboard = () => {
     const handleTogglePublish = async (blog) => {
         setLoading(true);
         try {
-            const formData = new FormData();
-            formData.append('published', !blog.published);
-            formData.append('slug', blog.slug);
+            const payload = {
+                published: !blog.published,
+                slug: blog.slug,
+                title: blog.title,
+                content: blog.content,
+                excerpt: blog.excerpt || '',
+                author: blog.author,
+                categories: (blog.categories || []).join(','),
+                tags: Array.isArray(blog.tags) ? blog.tags.join(',') : blog.tags || '',
+                metaTitle: blog.metaTitle || '',
+                metaDescription: blog.metaDescription || '',
+                metaKeywords: Array.isArray(blog.metaKeywords) ? blog.metaKeywords.join(',') : blog.metaKeywords || '',
+                featuredImageUrl: blog.featuredImage?.url || '',
+                featuredImageAlt: blog.featuredImage?.altText || ''
+            };
             
-            // Preserve existing data
-            formData.append('title', blog.title);
-            formData.append('content', blog.content);
-            formData.append('excerpt', blog.excerpt || '');
-            formData.append('author', blog.author);
-            formData.append('categories', (blog.categories || []).join(','));
-            formData.append('tags', (blog.tags || []).join(','));
-            formData.append('metaTitle', blog.metaTitle || '');
-            formData.append('metaDescription', blog.metaDescription || '');
-            formData.append('metaKeywords', (blog.metaKeywords || []).join(','));
-            if (blog.featuredImage?.altText) {
-                formData.append('featuredImageAlt', blog.featuredImage.altText);
-            }
             if (blog.publishedAt) {
-                formData.append('publishedAt', blog.publishedAt);
+                payload.publishedAt = blog.publishedAt;
             }
             
-            await axios.put(`${API_URL}/api/blogs/${blog._id}`, formData, {
+            await axios.put(`${API_URL}/api/blogs/${blog._id}`, payload, {
                 withCredentials: true,
-                headers: { 'Content-Type': 'multipart/form-data' }
+                headers: { 'Content-Type': 'application/json' }
             });
             
             setSuccess(`Blog ${!blog.published ? 'published' : 'unpublished'} successfully!`);
@@ -600,14 +590,18 @@ const AdminDashboard = () => {
 
                             <div className="form-row">
                                 <div className="form-group">
-                                    <label htmlFor="featuredImage">Featured Image</label>
+                                    <label htmlFor="featuredImageUrl">Featured Image URL</label>
                                     <input
-                                        type="file"
-                                        id="featuredImage"
-                                        name="featuredImage"
-                                        onChange={handleImageChange}
-                                        accept="image/*"
+                                        type="text"
+                                        id="featuredImageUrl"
+                                        name="featuredImageUrl"
+                                        value={blogData.featuredImageUrl}
+                                        onChange={handleImageUrlChange}
+                                        placeholder="Paste Cloudinary image URL here"
                                     />
+                                    <small style={{ color: '#888', fontSize: '0.875rem', marginTop: '0.25rem', display: 'block' }}>
+                                        Upload your image to Cloudinary first, then paste the URL here
+                                    </small>
                                     {imagePreview && (
                                         <div className="image-preview">
                                             <img src={imagePreview} alt="Preview" />

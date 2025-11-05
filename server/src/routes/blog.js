@@ -1,28 +1,7 @@
 const router = express.Router();
 import express from 'express';
-import multer from 'multer';
-import path from 'path';
 import Blog from '../models/blog.js';
 import BlogView from '../models/blogView.js';
-import { fileURLToPath } from 'url';
-
-const API_URL = process.env.API_URL || 'http://localhost:5000';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Configure multer for image upload
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../../uploads/'));
-    },
-    filename: function (req, file, cb) {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        cb(null, uniqueSuffix + path.extname(file.originalname));
-    }
-});
-
-const upload = multer({ storage: storage });
 
 // Helper function to get user identifier
 const getUserIdentifier = (req) => {
@@ -34,12 +13,12 @@ const getUserIdentifier = (req) => {
 };
 
 // Create a new blog post
-router.post('/', upload.single('featuredImage'), async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const blogData = {
             ...req.body,
-            featuredImage: req.file ? {
-                url: `/uploads/${req.file.filename}`,
+            featuredImage: req.body.featuredImageUrl ? {
+                url: req.body.featuredImageUrl,
                 altText: req.body.featuredImageAlt || req.body.title
             } : undefined,
             categories: req.body.categories ? req.body.categories.split(',') : [],
@@ -59,20 +38,7 @@ router.post('/', upload.single('featuredImage'), async (req, res) => {
 router.get('/all', async (req, res) => {
     try {
         const blogs = await Blog.find({}).sort({ createdAt: -1 });
-        // Transform image URLs to include full path
-        const blogsWithFullImageUrls = blogs.map(blog => {
-            if (blog.featuredImage) {
-                return {
-                    ...blog.toObject(),
-                    featuredImage: {
-                        ...blog.featuredImage,
-                        url: `${API_URL}${blog.featuredImage.url}`
-                    }
-                };
-            }
-            return blog.toObject();
-        });
-        res.json(blogsWithFullImageUrls);
+        res.json(blogs);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -99,20 +65,7 @@ router.get('/', async (req, res) => {
         }
         
         const blogs = await Blog.find(query).sort({ publishedAt: -1 });
-        // Transform image URLs to include full path
-        const blogsWithFullImageUrls = blogs.map(blog => {
-            if (blog.featuredImage) {
-                return {
-                    ...blog.toObject(),
-                    featuredImage: {
-                        ...blog.featuredImage,
-                        url: `${API_URL}${blog.featuredImage.url}`
-                    }
-                };
-            }
-            return blog.toObject();
-        });
-        res.json(blogsWithFullImageUrls);
+        res.json(blogs);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -146,13 +99,7 @@ router.get('/:slug', async (req, res) => {
             }
         }
         
-        // Transform image URL to include full path
-        const blogWithFullImageUrl = blog.toObject();
-        if (blogWithFullImageUrl.featuredImage) {
-            blogWithFullImageUrl.featuredImage.url = `${API_URL}${blogWithFullImageUrl.featuredImage.url}`;
-        }
-        
-        res.json(blogWithFullImageUrl);
+        res.json(blog);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -172,13 +119,7 @@ router.put('/:id/like', async (req, res) => {
         
         await blog.save();
         
-        // Transform image URL to include full path
-        const blogWithFullImageUrl = blog.toObject();
-        if (blogWithFullImageUrl.featuredImage) {
-            blogWithFullImageUrl.featuredImage.url = `${API_URL}${blogWithFullImageUrl.featuredImage.url}`;
-        }
-        
-        res.json(blogWithFullImageUrl);
+        res.json(blog);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -202,20 +143,14 @@ router.post('/:id/comment', async (req, res) => {
         blog.comments.push(comment);
         await blog.save();
         
-        // Transform image URL to include full path
-        const blogWithFullImageUrl = blog.toObject();
-        if (blogWithFullImageUrl.featuredImage) {
-            blogWithFullImageUrl.featuredImage.url = `${API_URL}${blogWithFullImageUrl.featuredImage.url}`;
-        }
-        
-        res.json(blogWithFullImageUrl);
+        res.json(blog);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 });
 
 // Update a blog post
-router.put('/:id', upload.single('featuredImage'), async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const existingBlog = await Blog.findById(req.params.id);
         if (!existingBlog) {
@@ -229,19 +164,18 @@ router.put('/:id', upload.single('featuredImage'), async (req, res) => {
             metaKeywords: req.body.metaKeywords ? req.body.metaKeywords.split(',').filter(k => k.trim()) : existingBlog.metaKeywords
         };
 
-        if (req.file) {
+        // Handle Cloudinary URL for featured image
+        if (req.body.featuredImageUrl) {
             blogData.featuredImage = {
-                url: `/uploads/${req.file.filename}`,
+                url: req.body.featuredImageUrl,
                 altText: req.body.featuredImageAlt || req.body.title
             };
-        } else if (req.body.featuredImageAlt) {
-            // Update only alt text if no new image is uploaded
-            if (existingBlog.featuredImage) {
-                blogData.featuredImage = {
-                    url: existingBlog.featuredImage.url,
-                    altText: req.body.featuredImageAlt
-                };
-            }
+        } else if (req.body.featuredImageAlt && existingBlog.featuredImage) {
+            // Update only alt text if no new image URL is provided
+            blogData.featuredImage = {
+                url: existingBlog.featuredImage.url,
+                altText: req.body.featuredImageAlt
+            };
         } else if (existingBlog.featuredImage) {
             // Preserve existing featured image if not updated
             blogData.featuredImage = existingBlog.featuredImage;
@@ -253,13 +187,7 @@ router.put('/:id', upload.single('featuredImage'), async (req, res) => {
             { new: true }
         );
         
-        // Transform image URL to include full path
-        const blogWithFullImageUrl = blog.toObject();
-        if (blogWithFullImageUrl.featuredImage) {
-            blogWithFullImageUrl.featuredImage.url = `${API_URL}${blogWithFullImageUrl.featuredImage.url}`;
-        }
-        
-        res.json(blogWithFullImageUrl);
+        res.json(blog);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
