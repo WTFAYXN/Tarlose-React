@@ -63,3 +63,10 @@
 .small-post-content {
   margin-bottom: 30px;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .recent-posts {
+    display: block;
+  }
+}

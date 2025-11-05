@@ -2,13 +2,14 @@
 .community-section {
     background-image: linear-gradient(75deg, rgba(135, 156, 196, 0.15), transparent), 
     linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));    padding: 4rem 0;
-    color: #fff;
+    color: #fff ;
 }
 
 .community-section h2 {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 3rem;
+     color: #fff ;
 }
 
 /* Card styles */
@@ -48,12 +49,14 @@
 .card-title {
     font-size: 1.5rem;
     font-weight: 600;
+    color: white;
 }
 
-.card-text {
+.card-text-community {
     font-size: 1.1rem;
     line-height: 1.6;
     opacity: 0.9;
+    color: white
 }
 
 /* Button styles */
