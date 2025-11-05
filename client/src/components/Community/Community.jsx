@@ -17,7 +17,7 @@ const Community = () => {
                                         </svg>
                                     </div>
                                     <h3 className="card-title mb-4">Freelancers Community</h3>
-                                    <p className="card-text mb-4">
+                                    <p className="card-text-community mb-4">
                                         Connect with fellow freelancers, share opportunities, and grow your network in our vibrant community.
                                     </p>
                                     <a href="https://chat.whatsapp.com/IJrPAD6r5fcDJn9y9Prm8S" className="join-btn">
@@ -38,7 +38,7 @@ const Community = () => {
                                         </svg>
                                     </div>
                                     <h3 className="card-title mb-4">Developers Hub</h3>
-                                    <p className="card-text mb-4">
+                                    <p className="card-text-community mb-4">
                                         Join a community of innovative entrepreneurs, share insights, and collaborate on exciting ventures.
                                     </p>
                                     <a href="https://chat.whatsapp.com/KKqS1T1n9lb1TGTgFJyIZE" className="join-btn">

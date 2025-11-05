@@ -35,9 +35,9 @@ function CardList({ cards }) {
               <img src={getImageUrl(card.featuredImage?.url)} className="card-img-top" alt={card.featuredImage?.altText || card.title} />
               <div className="card-body">
                 <p className="card-text text-capitalize">{card.title}</p>
-                <p className="card-text">
+                {/* <p className="card-text">
                   {card.metaDescription?.split(" ").slice(0, 8).join(" ")}...
-                </p>
+                </p> */}
               </div>
             </div>
           </Link>
