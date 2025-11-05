@@ -28,6 +28,7 @@
   font-weight: var(--font-weight--medium);
   line-height: var(--line-height--tight);
   font-family:  var(--font-family--Gilroy);
+      font-weight: 600;
 }
 
 .glass-card {
