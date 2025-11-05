@@ -5,23 +5,32 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Your backend API URL - use production API for build time
-const API_URL = 'https://api.tarlose.com';
 const SITE_URL = 'https://www.tarlose.com';
 const DEFAULT_IMAGE = `${SITE_URL}/assets/Logos/twitterImg.png`;
+
+// Service data - keep this in sync with Navbar.jsx megaMenuItems
+const MOCK_SERVICES = [
+  { serviceSlug: 'ecommerce-development', header: { headline: 'Ecommerce Development - Tarlose', intro: 'Create powerful online stores with our expert ecommerce development services.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'lms-development', header: { headline: 'LMS Development - Tarlose', intro: 'Learning Management Systems for education and corporate training.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'coded-development', header: { headline: 'Custom Coded Development - Tarlose', intro: 'Fully coded custom development solutions tailored to your needs.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'no-code-development', header: { headline: 'No-Code Development - Tarlose', intro: 'Fast and efficient no-code website development solutions.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'social-posts', header: { headline: 'Social Media Post Design - Tarlose', intro: 'Eye-catching designs for social media platforms that drive engagement.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'posters-brochures', header: { headline: 'Posters & Brochures Design - Tarlose', intro: 'Print-ready designs for marketing materials that make an impact.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'illustrations', header: { headline: 'Custom Illustrations - Tarlose', intro: 'Unique custom illustration designs for your brand.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'pitch-decks', header: { headline: 'Professional Pitch Decks - Tarlose', intro: 'Investor-ready pitch deck designs that tell your story.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'search-engine-optimization', header: { headline: 'Search Engine Optimization (SEO) - Tarlose', intro: 'Improve search rankings and organic traffic with expert SEO services.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'social-media-management', header: { headline: 'Social Media Management - Tarlose', intro: 'Professional social media management to grow your online presence.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'search-engine-marketing', header: { headline: 'Search Engine Marketing (SEM) - Tarlose', intro: 'Run effective ads to boost search visibility and conversions.', image: DEFAULT_IMAGE } },
+  { serviceSlug: 'social-media-marketing', header: { headline: 'Social Media Marketing - Tarlose', intro: 'Drive engagement and sales through targeted social media advertising.', image: DEFAULT_IMAGE } }
+];
 
 async function generateServiceHTML() {
   console.log('🚀 Generating service-specific HTML files for social sharing...\n');
 
   try {
-    // 1. Fetch all services from your API
-    const response = await fetch(`${API_URL}/api/service`);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch services: ${response.statusText}`);
-    }
-    
-    const services = await response.json();
-    console.log(`📋 Found ${services.length} services in database\n`);
+    // Use hardcoded service data (sync with Navbar.jsx)
+    const services = MOCK_SERVICES;
+    console.log(`📋 Found ${services.length} services\n`);
 
     // 2. Read the base HTML template
     const distPath = path.join(__dirname, 'dist');
@@ -105,8 +114,10 @@ async function generateServiceHTML() {
     console.log('✅ Social media bots will now see the correct meta tags for each service!\n');
 
   } catch (error) {
-    console.error('❌ Error generating service HTML:', error.message);
-    process.exit(1);
+    // Fail-safe: do not crash the parent build. Log and continue.
+    console.error('❌ Error generating service HTML files:', error.message);
+    console.log('⚠️  Build will continue without service-specific meta tags.\n');
+    return;
   }
 }
 
