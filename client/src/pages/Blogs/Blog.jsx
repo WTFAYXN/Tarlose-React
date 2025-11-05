@@ -20,6 +20,17 @@ const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [copySuccess, setCopySuccess] = useState(false);
 
+  // Helper function to get full image URL
+  const getImageUrl = (imageUrl) => {
+    if (!imageUrl) return "https://hs-marketing-contentful.imgix.net/https%3A%2F%2Fimages.ctfassets.net%2Fp15sglj92v6o%2F1fdaLBuBELIc9AbULUzoDH%2Ffddea4af5e3d31715ddeeac25e3410f6%2FHow_AI_Can_Help_You_Scale_Multilingual_Support__1_.png?ixlib=gatsbySourceUrl-2.1.3&auto=format%2C%20compress&q=75&w=1678&h=942&s=96b2356ac8953ce9c6b50439f9e94ce7";
+    // If URL starts with http:// or https://, return as is
+    if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+      return imageUrl;
+    }
+    // If URL starts with /, prepend API_URL
+    return `${API_URL}${imageUrl}`;
+  };
+
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -83,6 +94,29 @@ const Blog = () => {
         <title>{blog.metaTitle || blog.title} - Tarlose Blog</title>
         <meta name="description" content={blog.metaDescription || blog.excerpt} />
         <meta name="keywords" content={blog.metaKeywords?.join(", ")} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${window.location.origin}/blog/${blog.slug}`} />
+        <meta property="og:title" content={blog.metaTitle || blog.title} />
+        <meta property="og:description" content={blog.metaDescription || blog.excerpt} />
+        <meta property="og:image" content={getImageUrl(blog.featuredImage?.url)} />
+        <meta property="og:site_name" content="Tarlose" />
+        <meta property="article:published_time" content={blog.publishedAt || blog.createdAt} />
+        <meta property="article:author" content={blog.author || "Tarlose"} />
+        {blog.categories?.map((category, index) => (
+          <meta key={index} property="article:tag" content={category} />
+        ))}
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={`${window.location.origin}/blog/${blog.slug}`} />
+        <meta name="twitter:title" content={blog.metaTitle || blog.title} />
+        <meta name="twitter:description" content={blog.metaDescription || blog.excerpt} />
+        <meta name="twitter:image" content={getImageUrl(blog.featuredImage?.url)} />
+        
+        {/* Additional SEO */}
+        <link rel="canonical" href={`${window.location.origin}/blog/${blog.slug}`} />
       </Helmet>
       <Cursor />
       <Navbar />
@@ -125,8 +159,8 @@ const Blog = () => {
             <div className="column-two">
               <div className="postImage">
                 <img
-                  src={blog.featuredImage?.url || "https://hs-marketing-contentful.imgix.net/https%3A%2F%2Fimages.ctfassets.net%2Fp15sglj92v6o%2F1fdaLBuBELIc9AbULUzoDH%2Ffddea4af5e3d31715ddeeac25e3410f6%2FHow_AI_Can_Help_You_Scale_Multilingual_Support__1_.png?ixlib=gatsbySourceUrl-2.1.3&auto=format%2C%20compress&q=75&w=1678&h=942&s=96b2356ac8953ce9c6b50439f9e94ce7"}
-                  alt={blog.title}
+                  src={getImageUrl(blog.featuredImage?.url)}
+                  alt={blog.featuredImage?.altText || blog.title}
                   className="img-fluid"
                 />
               </div>

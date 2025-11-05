@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
@@ -6,8 +7,8 @@ import "./About.css";
 import ayan from "../../assets/founder/ayan.png"
 import huzaifa from "../../assets/founder/huzaifa.png"
 import hamdan from "../../assets/founder/hamdan.png"
-
 import tarloseLogo from "../../assets/Logos/favicon.ico.png"
+import { getPageMetadata } from "../../utils/seoHelpers";
 const aboutData = {
   hero: {
     tagline: "We make digital work for you.",
@@ -70,9 +71,31 @@ const aboutData = {
 };
 
 const About = () => {
+  const pageMetadata = getPageMetadata('about');
 
   return (
     <>
+      <Helmet>
+        <title>{pageMetadata.title}</title>
+        <meta name="description" content={pageMetadata.description} />
+        <link rel="canonical" href={pageMetadata.url} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageMetadata.url} />
+        <meta property="og:title" content={pageMetadata.title} />
+        <meta property="og:description" content={pageMetadata.description} />
+        <meta property="og:image" content={pageMetadata.image} />
+        <meta property="og:site_name" content="Tarlose" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tarlose" />
+        <meta name="twitter:url" content={pageMetadata.url} />
+        <meta name="twitter:title" content={pageMetadata.title} />
+        <meta name="twitter:description" content={pageMetadata.description} />
+        <meta name="twitter:image" content={pageMetadata.image} />
+      </Helmet>
       <Navbar />
       <Cursor />
 

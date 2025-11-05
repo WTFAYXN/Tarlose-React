@@ -38,6 +38,7 @@ html::-webkit-scrollbar {
 
 .hero-content h1 {
   font-size: 48px !important;
+  color: #fff !important;
 }
 
 .hero-content .lead {

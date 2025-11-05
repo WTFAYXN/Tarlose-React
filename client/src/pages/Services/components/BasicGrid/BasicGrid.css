@@ -6,6 +6,10 @@
   gap: 40px;
 }
 
+.basic-grid-container .services-header h2 {
+  color: #fff !important;
+}
+
 .large-basic-grid-container {
   display: flex;
   justify-content: space-between;

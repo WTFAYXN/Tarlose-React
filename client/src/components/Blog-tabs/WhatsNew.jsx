@@ -9,6 +9,17 @@ function WhatsNew({ searchTerm = "" }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Helper function to get full image URL
+  const getImageUrl = (imageUrl) => {
+    if (!imageUrl) return '';
+    // If URL starts with http:// or https://, return as is
+    if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+      return imageUrl;
+    }
+    // If URL starts with /, prepend API_URL
+    return `${API_URL}${imageUrl}`;
+  };
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -63,8 +74,8 @@ function WhatsNew({ searchTerm = "" }) {
         <Link to={`/blog/${filteredPosts[0].slug}`} className="large-post block hover:bg-gray-50 transition">
           <div className="post-image mb-4">
             <img
-              src={filteredPosts[0].featuredImage?.url || ''}
-              alt={filteredPosts[0].title}
+              src={getImageUrl(filteredPosts[0].featuredImage?.url)}
+              alt={filteredPosts[0].featuredImage?.altText || filteredPosts[0].title}
               className="rounded img-fluid"
             />
           </div>
@@ -85,8 +96,8 @@ function WhatsNew({ searchTerm = "" }) {
             >
               <div className="small-post-image mb-3">
                 <img
-                  src={post.featuredImage?.url || ''}
-                  alt={post.title}
+                  src={getImageUrl(post.featuredImage?.url)}
+                  alt={post.featuredImage?.altText || post.title}
                   className="rounded img-fluid"
                 />
               </div>

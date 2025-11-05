@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Cursor from "../../components/Cursor";
@@ -12,6 +13,7 @@ import PricingComponent from "./components/Pricing/PricingComponent";
 import TestimonialSlider from "./components/TestimonialSlider/TestimonialSlider";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import FAQ from "./components/Faqs/Faq";
+import { getPageMetadata } from "../../utils/seoHelpers";
 const Services = () => {
  const { serviceSlug } = useParams(); // 2. Get the slug from the URL
   const [pageData, setPageData] = useState(null);
@@ -60,8 +62,32 @@ const Services = () => {
   if (!pageData) {
       return <p>Error: Could not load content for this service.</p>;
   }
+  
+  const pageMetadata = getPageMetadata('services');
+  
   return (
     <>
+      <Helmet>
+        <title>{pageMetadata.title}</title>
+        <meta name="description" content={pageMetadata.description} />
+        <link rel="canonical" href={pageMetadata.url} />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageMetadata.url} />
+        <meta property="og:title" content={pageMetadata.title} />
+        <meta property="og:description" content={pageMetadata.description} />
+        <meta property="og:image" content={pageMetadata.image} />
+        <meta property="og:site_name" content="Tarlose" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tarlose" />
+        <meta name="twitter:url" content={pageMetadata.url} />
+        <meta name="twitter:title" content={pageMetadata.title} />
+        <meta name="twitter:description" content={pageMetadata.description} />
+        <meta name="twitter:image" content={pageMetadata.image} />
+      </Helmet>
       <Cursor />
       <Navbar />
 

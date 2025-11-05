@@ -16,6 +16,7 @@ import Marketing from "../assets/svgs/Marketing.svg";
 
 import socialImage from "../assets/Logos/twitterImg.png"
 import Platforms from "../components/Platforms/Platforms";
+import { DEFAULT_OG_IMAGE } from "../utils/seoHelpers";
 
 import Expertise from "../assets/svgs/Expertise.svg";
 import Client from "../assets/svgs/Client-Centric.svg";
@@ -130,7 +131,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content={socialImage}
+          content={DEFAULT_OG_IMAGE}
         />
         <meta property="og:site_name" content="Tarlose" />
 
