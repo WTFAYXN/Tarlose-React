@@ -14,41 +14,49 @@ const indexPath = join(distPath, 'index.html');
 let baseHtml = readFileSync(indexPath, 'utf-8');
 
 // Define meta tags for each route
+// Note: Only include standalone pages, not dynamic routes like /services/:slug
 const routes = {
   'about': {
     title: 'About Tarlose - Your Digital Transformation Partner',
     description: "Learn about Tarlose's mission to deliver innovative digital solutions. Meet our team and discover how we help businesses thrive in the digital age.",
     url: 'https://www.tarlose.com/about',
   },
-  'services': {
-    title: 'Our Services - Tarlose Digital Solutions',
-    description: "Explore Tarlose's comprehensive digital services including web development, app development, UI/UX design, and digital marketing solutions.",
-    url: 'https://www.tarlose.com/services',
-  },
   'portfolio': {
     title: 'Portfolio - Tarlose Projects & Case Studies',
     description: "Discover our portfolio of successful digital projects and see how we've helped businesses achieve their goals through innovative solutions.",
     url: 'https://www.tarlose.com/portfolio',
   },
-  'contact': {
+  'Contact': {
     title: 'Contact Us - Get in Touch with Tarlose',
     description: 'Ready to transform your business? Contact Tarlose today to discuss your digital project and discover how we can help you succeed.',
-    url: 'https://www.tarlose.com/contact',
+    url: 'https://www.tarlose.com/Contact',
   },
   'careers': {
     title: 'Careers at Tarlose - Join Our Team',
     description: 'Explore career opportunities at Tarlose. Join our team of talented professionals and help shape the future of digital innovation.',
     url: 'https://www.tarlose.com/careers',
   },
-  'blog': {
+  'blogs': {
     title: 'Tarlose Blog - Digital Insights & Technology Trends',
     description: 'Stay updated with the latest digital trends, technology insights, and industry best practices from Tarlose experts.',
-    url: 'https://www.tarlose.com/blog',
+    url: 'https://www.tarlose.com/blogs',
   },
 };
 
 // Generate HTML with custom meta tags
 function generateHtmlWithMeta(route, metadata) {
+  let html = baseHtml;
+
+  // Step 1: Remove any existing SEO/OG/Twitter meta tags
+  html = html.replace(/<!-- SEO Meta Tags -->[\s\S]*?(?=<title>)/g, '');
+  
+  // Step 2: Replace title
+  html = html.replace(
+    /<title>.*?<\/title>/,
+    `<title>${metadata.title}</title>`
+  );
+
+  // Step 3: Build new meta tags
   const metaTags = `
     <!-- SEO Meta Tags -->
     <meta name="description" content="${metadata.description}" />
@@ -68,24 +76,13 @@ function generateHtmlWithMeta(route, metadata) {
     <meta name="twitter:url" content="${metadata.url}" />
     <meta name="twitter:title" content="${metadata.title}" />
     <meta name="twitter:description" content="${metadata.description}" />
-    <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />`;
+    <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />
+    `;
 
-  let html = baseHtml;
-
-  // Replace existing meta tags (from Vite plugin) with route-specific ones
-  // Remove old meta tags first
-  html = html.replace(/<!-- SEO Meta Tags -->[\s\S]*?(?=<!-- Twitter Card Meta Tags -->)<!-- Twitter Card Meta Tags -->[\s\S]*?(?=<title>)/g, '');
-  
-  // Replace title
+  // Step 4: Insert new meta tags after viewport
   html = html.replace(
-    /<title>.*?<\/title>/,
-    `<title>${metadata.title}</title>`
-  );
-
-  // Insert new meta tags after viewport
-  html = html.replace(
-    /<meta name="viewport"[^>]*>/,
-    `<meta name="viewport" content="width=device-width, initial-scale=1.0" />${metaTags}\n    `
+    /(<meta name="viewport"[^>]*>)/,
+    `$1${metaTags}`
   );
 
   return html;

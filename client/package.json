@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node generate-route-html.js",
+    "build": "vite build && node generate-route-html.js && node generate-service-html.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
