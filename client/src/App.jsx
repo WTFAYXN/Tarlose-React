@@ -3,9 +3,9 @@ import CookieConsentBanner from './components/CookieConsentBanner/CookieConsentB
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Careers from './pages/Careers/Careers';
+// import Careers from './pages/Careers/Careers';
 import About from './pages/About/About';
-import Portfolio from './pages/Portfolio/Portfolio';
+// import Portfolio from './pages/Portfolio/Portfolio';
 import BlogLive from './pages/Blogs/BlogLive';
 import Terms from './pages/Company/Terms';
 import PrivacyPolicy from './pages/Company/PrivacyPolicy';

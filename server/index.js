@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const staticUrls = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/about', changefreq: 'weekly', priority: 0.7 },
-  { url: '/portfolio', changefreq: 'weekly', priority: 0.7 },
+  // { url: '/portfolio', changefreq: 'weekly', priority: 0.7 },
   { url: '/terms-of-service', changefreq: 'monthly', priority: 0.5 },
   { url: '/blogs', changefreq: 'daily', priority: 0.8 },
   { url: '/privacy-policy', changefreq: 'monthly', priority: 0.5 },
