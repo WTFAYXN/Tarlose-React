@@ -189,8 +189,8 @@ const Navbar = () => {
                                     <img src={item.svg} alt={item.title + " icon"} style={{ width: 30, height: 30, marginRight: 10 }} />
                                   )}
                                   <div>
-                                    <strong>{item.title}</strong>
-                                    <p className="small mb-0">{item.description}</p>
+                                    <strong className="nav-service-title">{item.title}</strong>
+                                    <p className="small mb-0 nav-description">{item.description}</p>
                                   </div>
                                 </Link>
                               </li>
