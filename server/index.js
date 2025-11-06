@@ -48,7 +48,7 @@ const staticUrls = [
   { url: '/blogs', changefreq: 'daily', priority: 0.8 },
   { url: '/privacy-policy', changefreq: 'monthly', priority: 0.5 },
   { url: '/contact', changefreq: 'monthly', priority: 0.5 },
-  { url: '/login', changefreq: 'monthly', priority: 0.2 },
+  // { url: '/login', changefreq: 'monthly', priority: 0.2 },
 ];
 
 // Route to serve the sitemap with dynamic content from DB
