@@ -39,7 +39,7 @@ const DesignProcess = () => {
       </div>
 
       <div className="right-design-container">
-        <div className="tag-container">
+        <div className="design-tag-container">
           <div className='tag'>
             <span>•</span> Our Process
           </div>

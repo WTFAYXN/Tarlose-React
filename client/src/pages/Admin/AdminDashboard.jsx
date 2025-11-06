@@ -270,17 +270,17 @@ const AdminDashboard = () => {
         <div className="admin-dashboard">
             {/* Sidebar */}
             <aside className="admin-sidebar">
-                <div className="sidebar-header">
+                <div className="admin-sidebar-header">
                     <h2>Tarlose Admin</h2>
-                    <p className="text-muted">Blog Management</p>
+                    <p className="admin-text-muted">Blog Management</p>
                 </div>
                 
-                <nav className="sidebar-nav">
+                <nav className="admin-sidebar-nav">
                     <button 
-                        className={`nav-item ${activeTab === 'list' ? 'active' : ''}`}
+                        className={`admin-nav-item ${activeTab === 'list' ? 'admin-active' : ''}`}
                         onClick={() => { setActiveTab('list'); resetForm(); }}
                     >
-                        <i className="icon">
+                        <i className="admin-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                                 <polyline points="14 2 14 8 20 8"/>
@@ -292,10 +292,10 @@ const AdminDashboard = () => {
                         All Blogs
                     </button>
                     <button 
-                        className={`nav-item ${activeTab === 'create' ? 'active' : ''}`}
+                        className={`admin-nav-item ${activeTab === 'create' ? 'admin-active' : ''}`}
                         onClick={() => { setActiveTab('create'); resetForm(); }}
                     >
-                        <i className="icon">
+                        <i className="admin-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <circle cx="12" cy="12" r="10"/>
                                 <line x1="12" y1="8" x2="12" y2="16"/>
@@ -306,9 +306,9 @@ const AdminDashboard = () => {
                     </button>
                 </nav>
 
-                <div className="sidebar-footer">
-                    <button className="logout-btn" onClick={handleLogout}>
-                        <i className="icon">
+                <div className="admin-sidebar-footer">
+                    <button className="admin-logout-btn" onClick={handleLogout}>
+                        <i className="admin-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
                                 <polyline points="16 17 21 12 16 7"/>
@@ -331,39 +331,39 @@ const AdminDashboard = () => {
                 </header>
 
                 {error && (
-                    <div className="alert alert-danger">
-                        <span className="alert-icon">⚠️</span>
+                    <div className="admin-alert admin-alert-danger">
+                        <span className="admin-alert-icon">⚠️</span>
                         {error}
-                        <button onClick={() => setError("")} className="alert-close">×</button>
+                        <button onClick={() => setError("")} className="admin-alert-close">×</button>
                     </div>
                 )}
                 
                 {success && (
-                    <div className="alert alert-success">
-                        <span className="alert-icon">✓</span>
+                    <div className="admin-alert admin-alert-success">
+                        <span className="admin-alert-icon">✓</span>
                         {success}
-                        <button onClick={() => setSuccess("")} className="alert-close">×</button>
+                        <button onClick={() => setSuccess("")} className="admin-alert-close">×</button>
                     </div>
                 )}
 
                 {/* Blog List */}
                 {activeTab === 'list' && (
-                    <div className="blog-list-container">
-                        <div className="list-controls">
-                            <div className="search-box">
+                    <div className="admin-blog-list-container">
+                        <div className="admin-list-controls">
+                            <div className="admin-search-box">
                                 <input
                                     type="text"
                                     placeholder="Search blogs..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="search-input"
+                                    className="admin-search-input"
                                 />
                             </div>
-                            <div className="filter-box">
+                            <div className="admin-filter-box">
                                 <select 
                                     value={filterStatus} 
                                     onChange={(e) => setFilterStatus(e.target.value)}
-                                    className="filter-select"
+                                    className="admin-filter-select"
                                 >
                                     <option value="all">All Status</option>
                                     <option value="published">Published</option>
@@ -372,30 +372,30 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        <div className="blog-stats">
-                            <div className="stat-card">
+                        <div className="admin-blog-stats">
+                            <div className="admin-stat-card">
                                 <h3>{blogs.length}</h3>
                                 <p>Total Blogs</p>
                             </div>
-                            <div className="stat-card">
+                            <div className="admin-stat-card">
                                 <h3>{blogs.filter(b => b.published).length}</h3>
                                 <p>Published</p>
                             </div>
-                            <div className="stat-card">
+                            <div className="admin-stat-card">
                                 <h3>{blogs.filter(b => !b.published).length}</h3>
                                 <p>Drafts</p>
                             </div>
-                            <div className="stat-card">
+                            <div className="admin-stat-card">
                                 <h3>{blogs.reduce((sum, b) => sum + (b.views || 0), 0)}</h3>
                                 <p>Total Views</p>
                             </div>
                         </div>
 
                         {loading ? (
-                            <div className="loading">Loading blogs...</div>
+                            <div className="admin-loading">Loading blogs...</div>
                         ) : (
-                            <div className="blog-table-container">
-                                <table className="blog-table">
+                            <div className="admin-blog-table-container">
+                                <table className="admin-blog-table">
                                     <thead>
                                         <tr>
                                             <th>Image</th>
@@ -411,7 +411,7 @@ const AdminDashboard = () => {
                                     <tbody>
                                         {filteredBlogs.length === 0 ? (
                                             <tr>
-                                                <td colSpan="8" className="text-center">
+                                                <td colSpan="8" className="admin-text-center">
                                                     No blogs found
                                                 </td>
                                             </tr>
@@ -423,26 +423,26 @@ const AdminDashboard = () => {
                                                             <img 
                                                                 src={blog.featuredImage.url} 
                                                                 alt={blog.featuredImage.altText || blog.title}
-                                                                className="blog-thumbnail"
+                                                                className="admin-blog-thumbnail"
                                                             />
                                                         ) : (
-                                                            <div className="blog-thumbnail-placeholder">📄</div>
+                                                            <div className="admin-blog-thumbnail-placeholder">📄</div>
                                                         )}
                                                     </td>
-                                                    <td className="blog-title-cell">{blog.title}</td>
+                                                    <td className="admin-blog-title-cell">{blog.title}</td>
                                                     <td>{blog.author}</td>
                                                     <td>
-                                                        <div className="categories">
+                                                        <div className="admin-categories">
                                                             {blog.categories?.slice(0, 2).map((cat, i) => (
-                                                                <span key={i} className="category-badge">{cat}</span>
+                                                                <span key={i} className="admin-category-badge">{cat}</span>
                                                             ))}
                                                             {blog.categories?.length > 2 && (
-                                                                <span className="category-badge">+{blog.categories.length - 2}</span>
+                                                                <span className="admin-category-badge">+{blog.categories.length - 2}</span>
                                                             )}
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span className={`status-badge ${blog.published ? 'published' : 'draft'}`}>
+                                                        <span className={`admin-status-badge ${blog.published ? 'admin-published' : 'admin-draft'}`}>
                                                             {blog.published ? '✓ Published' : '○ Draft'}
                                                         </span>
                                                     </td>
@@ -456,9 +456,9 @@ const AdminDashboard = () => {
                                                         })}
                                                     </td>
                                                     <td>
-                                                        <div className="action-buttons">
+                                                        <div className="admin-action-buttons">
                                                             <button 
-                                                                className="btn-icon btn-edit"
+                                                                className="admin-btn-icon admin-btn-edit"
                                                                 onClick={() => handleEdit(blog)}
                                                                 title="Edit"
                                                             >
@@ -468,7 +468,7 @@ const AdminDashboard = () => {
                                                                 </svg>
                                                             </button>
                                                             <button 
-                                                                className="btn-icon btn-toggle"
+                                                                className="admin-btn-icon admin-btn-toggle"
                                                                 onClick={() => handleTogglePublish(blog)}
                                                                 title={blog.published ? "Unpublish" : "Publish"}
                                                             >
@@ -485,7 +485,7 @@ const AdminDashboard = () => {
                                                                 )}
                                                             </button>
                                                             <button 
-                                                                className="btn-icon btn-delete"
+                                                                className="admin-btn-icon admin-btn-delete"
                                                                 onClick={() => handleDelete(blog._id)}
                                                                 title="Delete"
                                                             >
@@ -510,10 +510,10 @@ const AdminDashboard = () => {
 
                 {/* Create/Edit Form */}
                 {(activeTab === 'create' || activeTab === 'edit') && (
-                    <div className="blog-form-container">
-                        <form onSubmit={handleSubmit} className="blog-form">
-                            <div className="form-row">
-                                <div className="form-group full-width">
+                    <div className="admin-blog-form-container">
+                        <form onSubmit={handleSubmit} className="admin-blog-form">
+                            <div className="admin-form-row">
+                                <div className="admin-form-group admin-full-width">
                                     <label htmlFor="title">Blog Title *</label>
                                     <input
                                         type="text"
@@ -527,8 +527,8 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-row">
-                                <div className="form-group">
+                            <div className="admin-form-row">
+                                <div className="admin-form-group">
                                     <label htmlFor="author">Author *</label>
                                     <input
                                         type="text"
@@ -540,7 +540,7 @@ const AdminDashboard = () => {
                                         required
                                     />
                                 </div>
-                                <div className="form-group">
+                                <div className="admin-form-group">
                                     <label htmlFor="publishedAt">Publish Date</label>
                                     <input
                                         type="datetime-local"
@@ -552,7 +552,7 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-group full-width">
+                            <div className="admin-form-group admin-full-width">
                                 <label htmlFor="excerpt">Excerpt</label>
                                 <textarea
                                     id="excerpt"
@@ -563,10 +563,10 @@ const AdminDashboard = () => {
                                     placeholder="Brief summary (max 300 characters)"
                                     maxLength="300"
                                 ></textarea>
-                                <small className="char-count">{blogData.excerpt.length}/300</small>
+                                <small className="admin-char-count">{blogData.excerpt.length}/300</small>
                             </div>
 
-                            <div className="form-group full-width">
+                            <div className="admin-form-group admin-full-width">
                                 <label htmlFor="content">Content *</label>
                                 <Editor
                                     apiKey={apiKey}
@@ -588,8 +588,8 @@ const AdminDashboard = () => {
                                 />
                             </div>
 
-                            <div className="form-row">
-                                <div className="form-group">
+                            <div className="admin-form-row">
+                                <div className="admin-form-group">
                                     <label htmlFor="featuredImageUrl">Featured Image URL</label>
                                     <input
                                         type="text"
@@ -603,12 +603,12 @@ const AdminDashboard = () => {
                                         Upload your image to Cloudinary first, then paste the URL here
                                     </small>
                                     {imagePreview && (
-                                        <div className="image-preview">
+                                        <div className="admin-image-preview">
                                             <img src={imagePreview} alt="Preview" />
                                         </div>
                                     )}
                                 </div>
-                                <div className="form-group">
+                                <div className="admin-form-group">
                                     <label htmlFor="featuredImageAlt">Image Alt Text</label>
                                     <input
                                         type="text"
@@ -618,15 +618,15 @@ const AdminDashboard = () => {
                                         onChange={handleInputChange}
                                         placeholder="Describe the image for accessibility"
                                     />
-                                    <small className="form-hint">Important for SEO and accessibility</small>
+                                    <small className="admin-form-hint">Important for SEO and accessibility</small>
                                 </div>
                             </div>
 
-                            <div className="form-group full-width">
+                            <div className="admin-form-group admin-full-width">
                                 <label>Categories</label>
-                                <div className="checkbox-grid">
+                                <div className="admin-checkbox-grid">
                                     {predefinedCategories.map((category, index) => (
-                                        <div key={index} className="checkbox-item">
+                                        <div key={index} className="admin-checkbox-item">
                                             <input
                                                 type="checkbox"
                                                 id={`category-${index}`}
@@ -640,8 +640,8 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-row">
-                                <div className="form-group">
+                            <div className="admin-form-row">
+                                <div className="admin-form-group">
                                     <label htmlFor="tags">Tags (comma separated)</label>
                                     <input
                                         type="text"
@@ -654,10 +654,10 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-section">
+                            <div className="admin-form-section">
                                 <h3>SEO Settings</h3>
-                                <div className="form-row">
-                                    <div className="form-group">
+                                <div className="admin-form-row">
+                                    <div className="admin-form-group">
                                         <label htmlFor="metaTitle">Meta Title</label>
                                         <input
                                             type="text"
@@ -668,11 +668,11 @@ const AdminDashboard = () => {
                                             placeholder="SEO title (max 60 characters)"
                                             maxLength="60"
                                         />
-                                        <small className="char-count">{blogData.metaTitle.length}/60</small>
+                                        <small className="admin-char-count">{blogData.metaTitle.length}/60</small>
                                     </div>
                                 </div>
 
-                                <div className="form-group full-width">
+                                <div className="admin-form-group admin-full-width">
                                     <label htmlFor="metaDescription">Meta Description</label>
                                     <textarea
                                         id="metaDescription"
@@ -683,10 +683,10 @@ const AdminDashboard = () => {
                                         placeholder="SEO description (max 160 characters)"
                                         maxLength="160"
                                     ></textarea>
-                                    <small className="char-count">{blogData.metaDescription.length}/160</small>
+                                    <small className="admin-char-count">{blogData.metaDescription.length}/160</small>
                                 </div>
 
-                                <div className="form-group full-width">
+                                <div className="admin-form-group admin-full-width">
                                     <label htmlFor="metaKeywords">Meta Keywords (comma separated)</label>
                                     <input
                                         type="text"
@@ -699,8 +699,8 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-group full-width">
-                                <div className="checkbox-item large">
+                            <div className="admin-form-group admin-full-width">
+                                <div className="admin-checkbox-item admin-large">
                                     <input
                                         type="checkbox"
                                         id="published"
@@ -715,17 +715,17 @@ const AdminDashboard = () => {
                                 </div>
                             </div>
 
-                            <div className="form-actions">
+                            <div className="admin-form-actions">
                                 <button 
                                     type="button" 
-                                    className="btn btn-secondary"
+                                    className="admin-btn admin-btn-secondary"
                                     onClick={() => { setActiveTab('list'); resetForm(); }}
                                 >
                                     Cancel
                                 </button>
                                 <button 
                                     type="submit" 
-                                    className="btn btn-primary"
+                                    className="admin-btn admin-btn-primary"
                                     disabled={loading}
                                 >
                                     {loading ? 'Saving...' : currentBlog ? 'Update Blog' : 'Create Blog'}
