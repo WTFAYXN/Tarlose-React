@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-container container">
-        <hr></hr>
+        <hr style={{ color: "white" }}></hr>
         <div className="footer-content">
           <div className="left-footer">
             <div className="footer-logo">
