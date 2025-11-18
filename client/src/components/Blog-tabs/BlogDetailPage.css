@@ -196,6 +196,7 @@ ul li {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    gap:10px;
   }
   
   .blog-detail-social-share {
@@ -333,8 +334,8 @@ ul li {
   }
   
   .blog-detail-social button {
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 3rem;
+    width: 3rem;
   }
   
   .SocialShare.SocialShare--direction-VERTICAL {
@@ -372,10 +373,11 @@ ul li {
   .date {
     font-size: 0.75rem;
   }
-  
+
   .blog-detail-social button {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
+    
   }
   
   .blog-detail-social-share {
