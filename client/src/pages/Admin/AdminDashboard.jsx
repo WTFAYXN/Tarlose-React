@@ -665,10 +665,10 @@ const AdminDashboard = () => {
                                             name="metaTitle"
                                             value={blogData.metaTitle}
                                             onChange={handleInputChange}
-                                            placeholder="SEO title (max 60 characters)"
-                                            maxLength="60"
+                                            placeholder="SEO title (max 80 characters)"
+                                            maxLength="80"
                                         />
-                                        <small className="admin-char-count">{blogData.metaTitle.length}/60</small>
+                                        <small className="admin-char-count">{blogData.metaTitle.length}/80</small>
                                     </div>
                                 </div>
 
@@ -680,10 +680,10 @@ const AdminDashboard = () => {
                                         rows="2"
                                         value={blogData.metaDescription}
                                         onChange={handleInputChange}
-                                        placeholder="SEO description (max 160 characters)"
-                                        maxLength="160"
+                                        placeholder="SEO description (max 200 characters)"
+                                        maxLength="200"
                                     ></textarea>
-                                    <small className="admin-char-count">{blogData.metaDescription.length}/160</small>
+                                    <small className="admin-char-count">{blogData.metaDescription.length}/200</small>
                                 </div>
 
                                 <div className="admin-form-group admin-full-width">
