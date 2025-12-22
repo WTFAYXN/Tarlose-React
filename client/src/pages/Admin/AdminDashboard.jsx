@@ -583,7 +583,10 @@ const AdminDashboard = () => {
                                         toolbar: 'undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
                                         content_style: 'body { font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; font-size: 16px; line-height: 1.6; }',
                                         skin: 'oxide-dark',
-                                        content_css: 'dark'
+                                        content_css: 'dark',
+                                        relative_urls: false,
+                                        remove_script_host: false,
+                                        document_base_url: 'https://www.tarlose.com/'
                                     }}
                                 />
                             </div>
