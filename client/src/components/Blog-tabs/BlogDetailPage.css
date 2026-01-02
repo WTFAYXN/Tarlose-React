@@ -129,10 +129,6 @@
   z-index: 2;
 }
 
-ul li {
-  list-style: none;
-}
-
 .SocialShare li {
   margin: 0 0 14px;
 }
@@ -149,6 +145,36 @@ ul li {
 }
 .blog-detail-social button:hover {
   background: #886699 !important;
+}
+
+.blog-detail-text table {
+    border-collapse: collapse;
+    border-color: #808080;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1rem 0;
+}
+
+.blog-detail-text tbody,
+.blog-detail-text td,
+.blog-detail-text tfoot,
+.blog-detail-text th,
+.blog-detail-text thead,
+.blog-detail-text tr {
+    border-color: #808080;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.blog-detail-text th,
+.blog-detail-text td {
+    padding: 2px 4px;
+}
+
+.blog-detail-text ul li {
+    list-style-type: disc;
+    margin-left:1.5rem;
+    color: #ffffff;
 }
 
 /* Responsive Design */
