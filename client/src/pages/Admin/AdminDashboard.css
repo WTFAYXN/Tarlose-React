@@ -1063,7 +1063,7 @@
     }
 
     .admin-blog-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
         margin-bottom: 0.75rem;
     }
@@ -1243,6 +1243,7 @@
     }
 
     .admin-blog-stats {
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.4rem;
         margin-bottom: 0.5rem;
     }
@@ -1432,6 +1433,10 @@
     .admin-filter-select {
         padding: 0.4rem;
         font-size: 16px;
+    }
+
+    .admin-blog-stats {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .admin-stat-card {
