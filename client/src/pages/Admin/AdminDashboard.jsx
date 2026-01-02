@@ -16,6 +16,7 @@ const AdminDashboard = () => {
     const [success, setSuccess] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
     const [filterStatus, setFilterStatus] = useState("all"); // 'all', 'published', 'draft'
+    const [filterCategory, setFilterCategory] = useState("all"); // 'all' or specific category
     const [currentBlog, setCurrentBlog] = useState(null);
     const [imagePreview, setImagePreview] = useState(null);
     
@@ -263,7 +264,9 @@ const AdminDashboard = () => {
         const matchesStatus = filterStatus === "all" ? true :
                             filterStatus === "published" ? blog.published :
                             !blog.published;
-        return matchesSearch && matchesStatus;
+        const matchesCategory = filterCategory === "all" ? true :
+                               blog.categories?.includes(filterCategory);
+        return matchesSearch && matchesStatus && matchesCategory;
     });
 
     return (
@@ -368,6 +371,18 @@ const AdminDashboard = () => {
                                     <option value="all">All Status</option>
                                     <option value="published">Published</option>
                                     <option value="draft">Draft</option>
+                                </select>
+                            </div>
+                            <div className="admin-filter-box">
+                                <select 
+                                    value={filterCategory} 
+                                    onChange={(e) => setFilterCategory(e.target.value)}
+                                    className="admin-filter-select"
+                                >
+                                    <option value="all">All Categories</option>
+                                    {predefinedCategories.map((category, index) => (
+                                        <option key={index} value={category}>{category}</option>
+                                    ))}
                                 </select>
                             </div>
                         </div>
