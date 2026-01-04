@@ -7,7 +7,6 @@ import Cursor from "../../components/Cursor";
 import BlogTabsNav from "../../components/Blog-tabs/BlogTabsNav";
 import "../../components/Blog-tabs/BlogDetailPage.css";
 import logo from "../../assets/Logos/favicon.svg"
-import { Helmet } from "react-helmet";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -90,34 +89,6 @@ const Blog = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{blog.metaTitle || blog.title} - Tarlose Blog</title>
-        <meta name="description" content={blog.metaDescription || blog.excerpt} />
-        <meta name="keywords" content={blog.metaKeywords?.join(", ")} />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${window.location.origin}/blog/${blog.slug}`} />
-        <meta property="og:title" content={blog.metaTitle || blog.title} />
-        <meta property="og:description" content={blog.metaDescription || blog.excerpt} />
-        <meta property="og:image" content={getImageUrl(blog.featuredImage?.url)} />
-        <meta property="og:site_name" content="Tarlose" />
-        <meta property="article:published_time" content={blog.publishedAt || blog.createdAt} />
-        <meta property="article:author" content={blog.author || "Tarlose"} />
-        {blog.categories?.map((category, index) => (
-          <meta key={index} property="article:tag" content={category} />
-        ))}
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`${window.location.origin}/blog/${blog.slug}`} />
-        <meta name="twitter:title" content={blog.metaTitle || blog.title} />
-        <meta name="twitter:description" content={blog.metaDescription || blog.excerpt} />
-        <meta name="twitter:image" content={getImageUrl(blog.featuredImage?.url)} />
-        
-        {/* Additional SEO */}
-        <link rel="canonical" href={`${window.location.origin}/blog/${blog.slug}`} />
-      </Helmet>
       <Cursor />
       <Navbar />
       <div className="blog-tabs-nav-wrapper">
