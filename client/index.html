@@ -16,10 +16,8 @@
     <title>Tarlose - Digital Solutions for Modern Businesses</title>
     
     <!-- Dynamic meta tags for blog posts (nginx SSI) -->
-    <!--# set $slug = "" -->
-    <!--# if ($request_uri ~ ^/blog/([a-zA-Z0-9-]+)/?$ ) -->
-        <!--# set $slug = $1 -->
-        <!--# include virtual="/api/meta/blog-html/$slug" -->
+    <!--# if ($request_uri ~ ^/blog/([a-zA-Z0-9-]+) ) -->
+        <!--# include virtual="/api/meta/blog-html/$1" -->
     <!--# endif -->
   </head>
   <body>
