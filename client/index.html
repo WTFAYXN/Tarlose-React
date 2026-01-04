@@ -12,7 +12,15 @@
     })(window,document,'script','dataLayer','GTM-MMLGTZQP');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tarlose - Digital Solutions for Modern Businesses" />
     <title>Tarlose - Digital Solutions for Modern Businesses</title>
+    
+    <!-- Dynamic meta tags for blog posts (nginx SSI) -->
+    <!--# set $slug = "" -->
+    <!--# if ($request_uri ~ ^/blog/([a-zA-Z0-9-]+)/?$ ) -->
+        <!--# set $slug = $1 -->
+        <!--# include virtual="/api/meta/blog-html/$slug" -->
+    <!--# endif -->
   </head>
   <body>
         <!-- Google Tag Manager (noscript) -->

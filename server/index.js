@@ -5,6 +5,7 @@ import cors from 'cors';
 import { SitemapStream } from 'sitemap';
 import { streamToPromise } from '../server/node_modules/sitemap/dist/index.js';
 import connectDB from './src/db.js';
+import metaRoutes from './src/routes/meta.js';
 import blogRoutes from './src/routes/blog.js';
 import contactRoutes from './src/routes/contact.js';
 import serviceRoutes from './src/routes/service.js';
@@ -133,6 +134,7 @@ app.get('/', (req, res) => {
 app.use('/api/blogs', blogRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/service', serviceRoutes);
+app.use('/api/meta', metaRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
