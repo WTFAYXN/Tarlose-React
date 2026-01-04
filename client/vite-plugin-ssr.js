@@ -13,6 +13,11 @@ export default function htmlMetaTagsPlugin() {
         if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
         if (cleanPath === '//') cleanPath = '/';
         
+        // Skip blog routes - they will use SSI for dynamic meta tags
+        if (cleanPath.startsWith('/blog/') || cleanPath === '/blog') {
+          return html; // Don't inject meta tags for blog pages
+        }
+        
         // Default meta tags for all pages
         let metaTags = `
     <!-- SEO Meta Tags -->
