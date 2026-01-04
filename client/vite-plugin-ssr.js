@@ -19,26 +19,27 @@ export default function htmlMetaTagsPlugin() {
         }
         
         // Default meta tags for all pages
-        let metaTags = `
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
-    <link rel="canonical" href="https://www.tarlose.com${cleanPath}" />
+    //     let metaTags = `
+    // <!-- SEO Meta Tags -->
+    // <meta name="description" content="Tarlose delivers innovative digital solutions through expert design, development and strategic services. Transform your business with our cutting-edge technology and creative expertise." />
+    // <link rel="canonical" href="https://www.tarlose.com${cleanPath}" />
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.tarlose.com${cleanPath}" />
-    <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
-    <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-    <meta property="og:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />
-    <meta property="og:site_name" content="Tarlose" />
+    // <!-- Open Graph Meta Tags -->
+    // <meta property="og:type" content="website" />
+    // <meta property="og:url" content="https://www.tarlose.com${cleanPath}" />
+    // <meta property="og:title" content="Tarlose - Digital Solutions for Modern Businesses" />
+    // <meta property="og:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
+    // <meta property="og:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />
+    // <meta property="og:site_name" content="Tarlose" />
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tarlose" />
-    <meta name="twitter:url" content="https://www.tarlose.com${cleanPath}" />
-    <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
-    <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
-    <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />`;
+    // <!-- Twitter Card Meta Tags -->
+    // <meta name="twitter:card" content="summary_large_image" />
+    // <meta name="twitter:site" content="@tarlose" />
+    // <meta name="twitter:url" content="https://www.tarlose.com${cleanPath}" />
+    // <meta name="twitter:title" content="Tarlose - Digital Solutions for Modern Businesses" />
+    // <meta name="twitter:description" content="Transform your business with cutting-edge digital solutions from Tarlose. Expert design, development and strategic services tailored for modern enterprises." />
+    // <meta name="twitter:image" content="https://www.tarlose.com/assets/Logos/twitterImg.png" />`;
+    let metaTags = ``;
 
         // Page-specific meta tags
         const pageMetadata = {
