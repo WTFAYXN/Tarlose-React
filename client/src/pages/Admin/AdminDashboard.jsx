@@ -22,6 +22,7 @@ const AdminDashboard = () => {
     
     const [blogData, setBlogData] = useState({
         title: "",
+        slug: "",
         content: "",
         excerpt: "",
         featuredImageUrl: "",
@@ -72,6 +73,7 @@ const AdminDashboard = () => {
     const resetForm = () => {
         setBlogData({
             title: "",
+            slug: "",
             content: "",
             excerpt: "",
             featuredImageUrl: "",
@@ -93,10 +95,23 @@ const AdminDashboard = () => {
 
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setBlogData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? checked : value
-        }));
+        
+        // Sanitize slug input to replace spaces and special chars with hyphens
+        if (name === 'slug') {
+            const sanitizedSlug = value
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)/g, '');
+            setBlogData(prev => ({
+                ...prev,
+                slug: sanitizedSlug
+            }));
+        } else {
+            setBlogData(prev => ({
+                ...prev,
+                [name]: type === 'checkbox' ? checked : value
+            }));
+        }
     };
 
     const handleEditorChange = (content) => {
@@ -140,7 +155,7 @@ const AdminDashboard = () => {
         try {
             const payload = {
                 ...blogData,
-                slug: generateSlug(blogData.title),
+                slug: blogData.slug.trim() || generateSlug(blogData.title),
                 categories: blogData.categories.join(','),
                 tags: blogData.tags,
                 metaKeywords: blogData.metaKeywords
@@ -176,6 +191,7 @@ const AdminDashboard = () => {
         setCurrentBlog(blog);
         setBlogData({
             title: blog.title || "",
+            slug: blog.slug || "",
             content: blog.content || "",
             excerpt: blog.excerpt || "",
             featuredImageUrl: blog.featuredImage?.url || "",
@@ -539,6 +555,28 @@ const AdminDashboard = () => {
                                         placeholder="Enter an engaging title..."
                                         required
                                     />
+                                </div>
+                            </div>
+
+                            <div className="admin-form-row">
+                                <div className="admin-form-group admin-full-width">
+                                    <label htmlFor="slug">
+                                        Custom URL Slug 
+                                        <span style={{fontSize: '0.85em', color: '#888', marginLeft: '8px'}}>
+                                            (Leave empty to auto-generate from title)
+                                        </span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="slug"
+                                        name="slug"
+                                        value={blogData.slug}
+                                        onChange={handleInputChange}
+                                        placeholder="e.g., my-custom-blog-url"
+                                    />
+                                    <small style={{display: 'block', marginTop: '4px', color: '#666', fontSize: '0.85em'}}>
+                                        Preview: /blog/{blogData.slug || generateSlug(blogData.title) || 'your-slug-here'}
+                                    </small>
                                 </div>
                             </div>
 

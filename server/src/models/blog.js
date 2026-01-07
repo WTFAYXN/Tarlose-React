@@ -86,9 +86,9 @@ const blogSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Create slug from title before saving
+// Create slug from title before saving (only if slug not provided)
 blogSchema.pre('save', function(next) {
-    if (this.isModified('title')) {
+    if (!this.slug || (this.isModified('title') && !this.isModified('slug'))) {
         this.slug = this.title
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, '-')
